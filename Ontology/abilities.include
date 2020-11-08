@@ -2,58 +2,58 @@
 arm:ability/arealore  rdfs:subClassOf owl:GeneralAbility ;
    rdfs:label "(Area) Lore" .
 arm:ability/craft/arealore/hibernia  rdfs:subClassOf arm:ability/arealore ;
-                   a arm:LeafTrait ;
+                   a arm:LeafTraitClass ;
                    rdfs:label "Area Lore: Hibernia" .
 arm:ability/craft/arealore/munster  rdfs:subClassOf arm:ability/arealore ;
-                   a arm:LeafTrait ;
+                   a arm:LeafTraitClass ;
                    rdfs:label "Area Lore: Munster" .
 arm:ability/organisationlore  rdfs:subClassOf owl:GeneralAbility ;
    rdfs:label "(Organisation) Lore" .
 arm:ability/livinglanguage  rdfs:subClassOf owl:GeneralAbility ;
    rdfs:label "Living Language" .
 arm:ability/english  rdfs:subClassOf arm:ability/livinglanguage ;
-                   a arm:LeafTrait ;
+                   a arm:LeafTraitClass ;
                    rdfs:label "Living Language: English" .
 arm:ability/irish  rdfs:subClassOf arm:ability/livinglanguage ;
-                   a arm:LeafTrait ;
+                   a arm:LeafTraitClass ;
                    rdfs:label "Living Language: Irish" .
 arm:ability/profession  rdfs:subClassOf owl:GeneralAbility ;
    rdfs:label "Profession" .
 arm:ability/craft  rdfs:subClassOf owl:GeneralAbility ;
    rdfs:label "Craft" .
 arm:ability/craft/cooking  rdfs:subClassOf arm:ability/craft ;
-                   a arm:LeafTrait ;
+                   a arm:LeafTraitClass ;
                    rdfs:label "Craft: Cooking" .
 arm:ability/craft/fletching  rdfs:subClassOf arm:ability/craft ;
-                   a arm:LeafTrait ;
+                   a arm:LeafTraitClass ;
                    rdfs:label "Craft: Fletching" .
 arm:ability/deadlanguage  rdfs:subClassOf owl:AcademicAbility ;
    rdfs:label "Dead Language" .
 arm:ability/latin  rdfs:subClassOf arm:ability/deadlanguage ;
-                   a arm:LeafTrait ;
+                   a arm:LeafTraitClass ;
                    rdfs:label "Dead Language: Latin" .
 arm:ability/classicgreek  rdfs:subClassOf arm:ability/deadlanguage ;
-                   a arm:LeafTrait ;
+                   a arm:LeafTraitClass ;
                    rdfs:label "Dead Language: Classic Greek" .
 arm:ability/awareness  rdfs:subClassOf owl:GeneralAbility ;
-                       a arm:LeafTrait ;
+                       a arm:LeafTraitClass ;
                        rdfs:label "Awareness" .
 arm:ability/brawl  rdfs:subClassOf owl:GeneralAbility ;
-                   a arm:LeafTrait ;
+                   a arm:LeafTraitClass ;
                    rdfs:label "Brawl" .
 arm:ability/empathy  rdfs:subClassOf owl:GeneralAbility ;
-                     a arm:LeafTrait ;
+                     a arm:LeafTraitClass ;
                      rdfs:label "Empathy" .
 arm:ability/folkken  rdfs:subClassOf owl:GeneralAbility ;
-                     a arm:LeafTrait ;
+                     a arm:LeafTraitClass ;
                      rdfs:label "Folk Ken" .
 
 arm:ability/parmamagica  rdfs:subClassOf owl:ArcaneAbility ;
-                     a arm:LeafTrait ;
+                     a arm:LeafTraitClass ;
                      rdfs:label "Parma Magica" .
 arm:ability/magictheory  rdfs:subClassOf owl:ArcaneAbility ;
-                     a arm:LeafTrait ;
+                     a arm:LeafTraitClass ;
                      rdfs:label "Magic Theory" .
 arm:ability/finesse  rdfs:subClassOf owl:ArcaneAbility ;
-                     a arm:LeafTrait ;
+                     a arm:LeafTraitClass ;
                      rdfs:label "Finesse" .

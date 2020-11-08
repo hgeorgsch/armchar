@@ -135,16 +135,16 @@ arm:Characteristic rdfs:disjointUnionOf (
    arm:char/com arm:char/pre arm:char/dex arm:char/qik
 ) .
 
-arm:char/int a arm:LeafTrait ;  rdfs:label "Intelligence" .
-arm:char/per a arm:LeafTrait ;  rdfs:label "Perception" .
-arm:char/str a arm:LeafTrait ;  rdfs:label "Strenghth" .
-arm:char/sta a arm:LeafTrait ;  rdfs:label "Stamina" .
-arm:char/com a arm:LeafTrait ;  rdfs:label "Communication" .
-arm:char/pre a arm:LeafTrait ;  rdfs:label "Presence" .
-arm:char/dex a arm:LeafTrait ;  rdfs:label "Dexterity" .
-arm:char/qik a arm:LeafTrait ;  rdfs:label "Quickness" .
+arm:char/int a arm:LeafTraitClass ;  rdfs:label "Intelligence" .
+arm:char/per a arm:LeafTraitClass ;  rdfs:label "Perception" .
+arm:char/str a arm:LeafTraitClass ;  rdfs:label "Strenghth" .
+arm:char/sta a arm:LeafTraitClass ;  rdfs:label "Stamina" .
+arm:char/com a arm:LeafTraitClass ;  rdfs:label "Communication" .
+arm:char/pre a arm:LeafTraitClass ;  rdfs:label "Presence" .
+arm:char/dex a arm:LeafTraitClass ;  rdfs:label "Dexterity" .
+arm:char/qik a arm:LeafTraitClass ;  rdfs:label "Quickness" .
 
-arm:ArtClass rdfs:subClassOf arm:LeafTrait ; 
+arm:ArtClass rdfs:subClassOf arm:LeafTraitClass ; 
              rdfs:disjointUnionOf ( arm:TechClass arm:FormClass ) .
 arm:Art rdfs:disjointUnionOf ( arm:Tech arm:Form ) .
 
