@@ -15,4 +15,8 @@
 
 [ traitdescription:
   ( ?t a ?c ) ( ?c a arm:LeafTrait ) ( ?c arm:hasDescription ?d ) 
+  -> ( ?t arm:hasGeneralDescription ?d ) ]
+[ leaftraitdescription:
+  ( ?c a arm:LeafTrait ) noValue( ?c, arm:hasDescription ) 
+  ( ?c rdfs:subClassOf ?s ) ( ?s arm:hasDescription ?d ) 
   -> ( ?c arm:hasGeneralDescription ?d ) ]
