@@ -1,0 +1,370 @@
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix : <https://hg.schaathun.no/schema/arm#> .
+
+
+:virtue rdfs:subClassOf :Trait .
+:flaw rdfs:subClassOf :Trait .
+
+:theGift rdfs:subClassOf :virtue ; rdfs:label "The Gift" .
+
+:majorHermeticVirtue rdfs:subClassOf :virtue ; rdfs:label "Hermetic, Major" .
+:diedneMagic         rdfs:subClassOf :majorHermeticVirtue ;
+                     rdfs:label "Diedne Magic" .
+:elementalMagic      rdfs:subClassOf :majorHermeticVirtue ;
+                     rdfs:label "Elemental Magic" .
+:flawlessMagic          rdfs:subClassOf :majorHermeticVirtue ;
+                        rdfs:label "Flawless Magic" .
+:flexibleFormulaicMagic rdfs:subClassOf :majorHermeticVirtue ;
+                        rdfs:label "Flexible Formulaic Magic" .
+:gentleGift             rdfs:subClassOf :majorHermeticVirtue ;
+                        rdfs:label "Gentle Gift" .
+:lifeLinkedSpontaneousMagic rdfs:subClassOf :majorHermeticVirtue ;
+                            rdfs:label "Life-Linked Spontaneous Magic" .
+:majorMagicalFocus          rdfs:subClassOf :majorHermeticVirtue ;
+                            rdfs:label "Major Magical Focus" .
+:mercurianMagic             rdfs:subClassOf :majorHermeticVirtue ;
+                            rdfs:label "Mercurian Magic" .
+:mythicBlood                rdfs:subClassOf :majorHermeticVirtue ;
+                            rdfs:label "Mythic Blood" .
+:secondaryInsight           rdfs:subClassOf :majorHermeticVirtue ;
+                            rdfs:label "Secondary Insight" .
+
+:majorSupernaturalVirtue rdfs:subClassOf :virtue ;
+             rdfs:label "Supernatural, Major" .
+
+:entrancement           rdfs:subClassOf  :majorSupernaturalVirtue ;
+                        rdfs:label "Entrancement" .
+:greaterImmunity        rdfs:subClassOf  :majorSupernaturalVirtue ;
+                        rdfs:label "Greater Immunity" .
+:greaterPurifyingTouch  rdfs:subClassOf  :majorSupernaturalVirtue ;
+                        rdfs:label "Greater Purifying Touch" .
+:shapeshifter           rdfs:subClassOf  :majorSupernaturalVirtue ;
+                        rdfs:label "Shapeshifter" .
+:strongFaerieBlood      rdfs:subClassOf  :majorSupernaturalVirtue ;
+                        rdfs:label "Strong Faerie Blood" .
+
+:majorSocialStatusVirtue rdfs:subClassOf :virtue ;
+                         rdfs:label "SOCIAL STATUS, MAJOR" .
+:landedNoble       rdfs:subClassOf :majorSocialStatusVirtue ;
+                   rdfs:label "Landed Noble" .
+:magisterInArtibus rdfs:subClassOf :majorSocialStatusVirtue ;
+                   rdfs:label "Magister in Artibus" .
+:redcap            rdfs:subClassOf :majorSocialStatusVirtue ;
+                   rdfs:label "Redcap" .
+
+:majorGeneralVirtue rdfs:subClassOf  :virtue ; rdfs:label "GENERAL, MAJOR" .
+
+:deathProphecy    rdfs:subClassOf   :majorGeneralVirtue ;
+                  rdfs:label "Death Prophecy" .
+:ghostlyWarder    rdfs:subClassOf   :majorGeneralVirtue ;
+                  rdfs:label "Ghostly Warder" .
+:giantBlood       rdfs:subClassOf   :majorGeneralVirtue ;
+                  rdfs:label "Giant Blood" .
+:guardianAngel    rdfs:subClassOf   :majorGeneralVirtue ;
+                  rdfs:label "Guardian Angel" .
+:trueFaith        rdfs:subClassOf   :majorGeneralVirtue ;
+                  rdfs:label "True Faith" .
+:waysOfTheLand    rdfs:subClassOf   :majorGeneralVirtue ;
+                  rdfs:label "Ways of the (Land)" .
+:wealthy          rdfs:subClassOf   :majorGeneralVirtue ;
+                  rdfs:label "Wealthy" .
+
+:minorHermeticVirtue rdfs:subClassOf :virtue ; rdfs:label "Hermetic, Minor" .
+
+:adeptLaboratoryStudent   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Adept Laboratory Student" .
+:affinityWithArt   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Affinity with Art" .
+:cautiousSorcerer   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Cautious Sorcerer" .
+:cyclicMagicPositive   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Cyclic Magic (positive)" .
+:deftForm   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Deft Form" .
+:enduringMagic   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Enduring Magic" .
+:theEnigma   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "The Enigma" .
+:faerieMagic   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Faerie Magic" .
+:fastCaster   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Fast Caster" .
+:freeStudy   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Free Study" .
+:harnessedMagic   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Harnessed Magic" .
+:heartbeast   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Heartbeast" .
+:hermeticPrestige   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Hermetic Prestige" .
+:inoffensiveToAnimals   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Inoffensive to Animals" .
+:inventiveGenius   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Inventive Genius" .
+:lifeBoost   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Life Boost" .
+:minorMagicalFocus   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Minor Magical Focus" .
+:magicalMemory   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Magical Memory" .
+:masteredSpells   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Mastered Spells" .
+:methodCaster   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Method Caster" .
+:personalVisSource   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Personal Vis Source" .
+:puissantArt   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Puissant Art" .
+:quietMagic   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Quiet Magic" .
+:sideEffect   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Side Effect" .
+:skilledParens   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Skilled Parens" .
+:specialCircumstances   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Special Circumstances" .
+:studyBonus   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Study Bonus" .
+:subtleMagic   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Subtle Magic" .
+:verditiusMagic   rdfs:subClassOf :minorHermeticVirtue ;
+                          rdfs:label "Verditius Magic" .
+
+:minorSupernaturalVirtue rdfs:subClassOf :virtue ;
+                         rdfs:label "SUPERNATURAL, MINOR" .
+:animalKen     rdfs:subClassOf :minorSupernaturalVirtue ;
+               rdfs:label "Animal Ken" .
+:dowsing     rdfs:subClassOf :minorSupernaturalVirtue ;
+               rdfs:label "Dowsing" .
+:enchantingMusic     rdfs:subClassOf :minorSupernaturalVirtue ;
+               rdfs:label "Enchanting Music" .
+:lesserImmunity     rdfs:subClassOf :minorSupernaturalVirtue ;
+               rdfs:label "Lesser Immunity" .
+:lesserPurifyingTouch     rdfs:subClassOf :minorSupernaturalVirtue ;
+               rdfs:label "Lesser Purifying Touch" .
+:magicSensitivity     rdfs:subClassOf :minorSupernaturalVirtue ;
+               rdfs:label "Magic Sensitivity" .
+:premonitions     rdfs:subClassOf :minorSupernaturalVirtue ;
+               rdfs:label "Premonitions" .
+:secondSight     rdfs:subClassOf :minorSupernaturalVirtue ;
+               rdfs:label "Second Sight" .
+:senseHolinessAndUnholiness     rdfs:subClassOf :minorSupernaturalVirtue ;
+               rdfs:label "Sense Holiness and Unholiness" .
+:skinchanger     rdfs:subClassOf :minorSupernaturalVirtue ;
+               rdfs:label "Skinchanger" .
+:wildernessSense     rdfs:subClassOf :minorSupernaturalVirtue ;
+               rdfs:label "Wilderness Sense" .
+
+:minorSocialStatusVirtue rdfs:subClassOf :virtue ;
+                         rdfs:label "SOCIAL STATUS, MINOR" .
+:clerk       rdfs:subClassOf  :minorSocialStatusVirtue ;
+             rdfs:label "Clerk" .
+:custos       rdfs:subClassOf  :minorSocialStatusVirtue ;
+             rdfs:label "Custos" .
+:failedapprentice       rdfs:subClassOf  :minorSocialStatusVirtue ;
+             rdfs:label "Failed Apprentice" .
+:gentleman       rdfs:subClassOf  :minorSocialStatusVirtue ;
+             rdfs:label "Gentleman/woman" .
+:knight       rdfs:subClassOf  :minorSocialStatusVirtue ;
+             rdfs:label "Knight" .
+:mendicantFriar       rdfs:subClassOf  :minorSocialStatusVirtue ;
+             rdfs:label "Mendicant Friar" .
+:mercenaryCaptain       rdfs:subClassOf  :minorSocialStatusVirtue ;
+             rdfs:label "Mercenary Captain" .
+:priest       rdfs:subClassOf  :minorSocialStatusVirtue ;
+             rdfs:label "Priest" .
+:wiseOne       rdfs:subClassOf  :minorSocialStatusVirtue ;
+             rdfs:label "Wise One" .
+
+:minorGeneralVirtue rdfs:subClassOf :virtue ;
+                    rdfs:label "Minor General Virtue" .
+:affinityWithAbility    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Affinity with Ability" .
+:aptStudent    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Apt Student" .
+:arcaneLore    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Arcane Lore" .
+:berserk    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Berserk" .
+:bookLearner    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Book Learner" .
+:cautiousWithAbility    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Cautious with Ability" .
+:clearThinker    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Clear Thinker" .
+:commonSense    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Common Sense" .
+:educated    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Educated" .
+:enduringConstitution    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Enduring Constitution" .
+:faerieBlood    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Faerie Blood" .
+:famous    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Famous" .
+:freeExpression    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Free Expression" .
+:goodTeacher    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Good Teacher" .
+:gossip    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Gossip" .
+:greatCharacteristic    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Great (Characteristic)" .
+:improvedCharacteristics    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Improved Characteristics" .
+:inoffensiveToAnimals    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Inoffensive to Animals" .
+:inspirational    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Inspirational" .
+:intuition    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Intuition" .
+:keenVision    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Keen Vision" .
+:large    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Large" .
+:latentMagicalAbility    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Latent Magical Ability" .
+:learnAbilityFromMistakes    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Learn (Ability) from Mistakes" .
+:lightTouch    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Light Touch" .
+:lightningReflexes    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Lightning Reflexes" .
+:longWinded    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Long-Winded" .
+:luck    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Luck" .
+:rapidConvalescence    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Rapid Convalescence" .
+:perfectBalance    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Perfect Balance" .
+:piercingGaze    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Piercing Gaze" .
+:privilegedUpbringing    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Privileged Upbringing" .
+:protection    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Protection" .
+:puissantAbility    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Puissant Ability" .
+:relic    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Relic" .
+:reservesOfStrength    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Reserves of Strength" .
+:selfConfident    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Self-Confident" .
+:sharpEars    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Sharp Ears" .
+:socialContacts    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Social Contacts" .
+:strongWilled    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Strong-Willed" .
+:studentOfRealm    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Student of (Realm)" .
+:temporalInfluence    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Temporal Influence" .
+:tough    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Tough" .
+:troupeUpbringing    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Troupe Upbringing" .
+:trueLovePC    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "True Love (PC)" .
+:unaging    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Unaging" .
+:venusBlessing    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Venus’ Blessing" .
+:warrior    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Warrior" .
+:wellTraveled    rdfs:subClassOf :minorGeneralVirtue ;
+                        rdfs:label "Well-Traveled" .
+
+:freeSocialStatusVirtue  rdfs:subClassOf  :virtue ;
+                         rdfs:label "SOCIAL STATUS, FREE" .
+:covenfolk      rdfs:subClassOf   :freeSocialStatusVirtue ;
+                rdfs:label "Covenfolk" .
+:craftsman      rdfs:subClassOf   :freeSocialStatusVirtue ;
+                rdfs:label "Craftsman" .
+:hermeticMagus      rdfs:subClassOf   :freeSocialStatusVirtue ;
+                rdfs:label "Hermetic Magus" .
+:merchant      rdfs:subClassOf   :freeSocialStatusVirtue ;
+                rdfs:label "Merchant" .
+:peasant      rdfs:subClassOf   :freeSocialStatusVirtue ;
+                rdfs:label "Peasant" .
+:wanderer      rdfs:subClassOf   :freeSocialStatusVirtue ;
+                rdfs:label "Wanderer" .
+
+:majorHermeticFlaw  rdfs:subClassOf   :flaw ;
+                    rdfs:label "Major Hermetic Flaw" .
+:blatantGift    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Blatant Gift" .
+:chaoticMagic    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Chaotic Magic" .
+:deficientTechnique    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Deficient Technique" .
+:difficultLongevity    rdfs:subClassOf :majorHermeticFlaw ;
+                Ritual rdfs:label "Difficult Longevity Ritual" .
+:magicAddiction    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Magic Addiction" .
+:necessaryCondition    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Necessary Condition" .
+:painfulMagic    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Painful Magic" .
+:restriction    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Restriction" .
+:rigidMagic    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Rigid Magic" .
+:shortRangedMagic    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Short-Ranged Magic" .
+:studyRequirement    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Study Requirement" .
+:twilightProne    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Twilight Prone" .
+:unstructuredCaster    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Unstructured Caster" .
+:wasterOfVis    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Waster of Vis" .
+:weakMagicResistance    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Weak Magic Resistance" .
+:weakSpontaneousMagic    rdfs:subClassOf :majorHermeticFlaw ;
+                rdfs:label "Weak Spontaneous Magic" .
+
+:majorPersonalityFlaw  rdfs:subClassOf :flaw ;
+                       rdfs:label "Major or Minor Personality Flaw" .
+:minorPersonalityFlaw  rdfs:subClassOf :flaw ;
+                       rdfs:label "Minor Personality Flaw" .
+:majorSupernaturalFlaw  rdfs:subClassOf  :flaw ;
+                        rdfs:label "Major Supernatural Flaw" .
+:minorSupernaturalFlaw  rdfs:subClassOf  :flaw ;
+                        rdfs:label "Minor Supernatural Flaw" .
+:majorStoryFlaw  rdfs:subClassOf  :flaw ; rdfs:label "Major Story Flaw" .
+:minorStoryFlaw  rdfs:subClassOf  :flaw ; rdfs:label "Minor Story Flaw" .
+:minorsocialStatusFlaw rdfs:subClassOf  :flaw ;
+                       rdfs:label "Minor Social Status Flaw" .
+:majorGeneralFlaw rdfs:subClassOf  :flaw ; rdfs:label "Major General Flaw" .
+:minorGeneralFlaw rdfs:subClassOf  :flaw ; rdfs:label "Minor General Flaw" .
+:minorHermeticFlaw  rdfs:subClassOf   :flaw ;
+                    rdfs:label "Minor Hermetic Flaw" .
+
+
+:weakEnchanter  rdfs:subClassOf   :minorHermeticFlaw ; rdfs:label "Weak Enchanter" .
+:weakMagic  rdfs:subClassOf   :minorHermeticFlaw ; rdfs:label "Weak Magic" .
+:weakParens  rdfs:subClassOf   :minorHermeticFlaw ; rdfs:label " Weak Parens" .
+:weakScholar  rdfs:subClassOf   :minorHermeticFlaw ; rdfs:label " Weak Scholar" .
+:weirdMagic  rdfs:subClassOf   :minorHermeticFlaw ; rdfs:label " Weird Magic" .
+
+:mentor    rdfs:subClassOf  :minorStoryFlaw ; rdfs:label "Mentor" .
+:heir    rdfs:subClassOf  :minorStoryFlaw ; rdfs:label "Heir" .
+
+:visions  rdfs:subClassOf  :minorStoryFlaw, :minorSupernaturalFlaw ;
+          rdfs:label " Visions" .
+:ageQuickly  rdfs:subClassOf   :majorSupernaturalFlaw ;
+             rdfs:label "Age Quickly" .
+
+:ambitious  rdfs:subClassOf  :majorPersonalityFlaw ;
+             rdfs:label "Ambitious" .
+:greaterMalediction  rdfs:subClassOf  :majorSupernaturalFlaw ;
+             rdfs:label " Greater Malediction" .
