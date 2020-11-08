@@ -130,30 +130,31 @@ arm:hasOrder  a   owl:DatatypeProperty ;
         rdfs:domain  arm:Trait ;
         rdfs:range   xsd:float .
 
-arm:char/int  rdfs:subClassOf owl:Characteristic ; rdfs:label "Intelligence" .
-arm:char/per  rdfs:subClassOf owl:Characteristic ; rdfs:label "Perception" .
-arm:char/str  rdfs:subClassOf owl:Characteristic ; rdfs:label "Strenghth" .
-arm:char/sta  rdfs:subClassOf owl:Characteristic ; rdfs:label "Stamina" .
-arm:char/com  rdfs:subClassOf owl:Characteristic ; rdfs:label "Communication" .
-arm:char/pre  rdfs:subClassOf owl:Characteristic ; rdfs:label "Presence" .
-arm:char/dex  rdfs:subClassOf owl:Characteristic ; rdfs:label "Dexterity" .
-arm:char/qik  rdfs:subClassOf owl:Characteristic ; rdfs:label "Quickness" .
+arm:char/int a arm:LeafTrait ; rdfs:subClassOf arm:Characteristic ; rdfs:label "Intelligence" .
+arm:char/per a arm:LeafTrait ; rdfs:subClassOf arm:Characteristic ; rdfs:label "Perception" .
+arm:char/str a arm:LeafTrait ; rdfs:subClassOf arm:Characteristic ; rdfs:label "Strenghth" .
+arm:char/sta a arm:LeafTrait ; rdfs:subClassOf arm:Characteristic ; rdfs:label "Stamina" .
+arm:char/com a arm:LeafTrait ; rdfs:subClassOf arm:Characteristic ; rdfs:label "Communication" .
+arm:char/pre a arm:LeafTrait ; rdfs:subClassOf arm:Characteristic ; rdfs:label "Presence" .
+arm:char/dex a arm:LeafTrait ; rdfs:subClassOf arm:Characteristic ; rdfs:label "Dexterity" .
+arm:char/qik a arm:LeafTrait ; rdfs:subClassOf arm:Characteristic ; rdfs:label "Quickness" .
 
+arm:Form  rdf:subClassOf arm:Art .
+arm:Tech  rdf:subClassOf arm:Art ; owl:disjointWith arm:Form .
+arm:art/creo  rdf:subClassOf arm:Tech ; a arm:LeafTrait ; rdfs:label "Creo" .
+arm:art/intellego  rdf:subClassOf arm:Tech ; a arm:LeafTrait ; rdfs:label "Intellego" ; owl:disjointWith arm:art/creo .
+arm:art/muto  rdf:subClassOf arm:Tech ; a arm:LeafTrait ; rdfs:label "Muto" ; owl:disjointWith arm:art/creo, arm:intellego .
+arm:art/perdo  rdf:subClassOf arm:Tech ; a arm:LeafTrait ; rdfs:label "Perdo" ; owl:disjointWith arm:art/creo, arm:intellego, arm:muto .
+arm:art/rego  rdf:subClassOf arm:Tech ; a arm:LeafTrait ; rdfs:label "Rego" ; owl:disjointWith arm:art/creo, arm:intellego, arm:muto, arm:perdo .
 
-arm:art/creo  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Creo" .
-arm:art/intellego  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Intellego" .
-arm:art/muto  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Muto" .
-arm:art/perdo  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Perdo" .
-arm:art/rego  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Rego" .
-
-arm:art/animal  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Animàl" .
-arm:art/aquam  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Aquam" .
-arm:art/auram  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Auram" .
-arm:art/corpus  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Corpus" .
-arm:art/herbam  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Herbam" .
-arm:art/ignem  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Ignem" .
-arm:art/imaginem  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Imaginem" .
-arm:art/mentem  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Mentem" .
-arm:art/terram  a owl:Art, a arm:LeafTrait ; rdfs:label "Terram" .
-arm:art/vim  a owl:Art, a arm:LeafTrait ; rdfs:label "Vim" .
+arm:art/animal  rdf:subClassOf arm:Form ; a arm:LeafTrait ; rdfs:label "Animàl" .
+arm:art/aquam  rdf:subClassOf arm:Form ; a arm:LeafTrait ; rdfs:label "Aquam" .
+arm:art/auram  rdf:subClassOf arm:Form ; a arm:LeafTrait ; rdfs:label "Auram" .
+arm:art/corpus  rdf:subClassOf arm:Form ; a arm:LeafTrait ; rdfs:label "Corpus" .
+arm:art/herbam  rdf:subClassOf arm:Form ; a arm:LeafTrait ; rdfs:label "Herbam" .
+arm:art/ignem  rdf:subClassOf arm:Form ; a arm:LeafTrait ; rdfs:label "Ignem" .
+arm:art/imaginem  rdf:subClassOf arm:Form ; a arm:LeafTrait ; rdfs:label "Imaginem" .
+arm:art/mentem  rdf:subClassOf arm:Form ; a arm:LeafTrait ; rdfs:label "Mentem" .
+arm:art/terram  rdf:subClassOf arm:Form ; a arm:LeafTrait ; rdfs:label "Terram" .
+arm:art/vim  rdf:subClassOf arm:Form ; a arm:LeafTrait ; rdfs:label "Vim" .
 
