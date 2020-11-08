@@ -5,6 +5,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix arm: <https://hg.schaathun.no/schema/arm#> .
+@prefix : <https://hg.schaathun.no/schema/arm#> .
 
 
 <https://hg.schaathun.no/schema/arm.owl> a owl:Ontology ;
@@ -35,21 +36,33 @@ arm:BaseCharacter a owl:Class ; rdfs:subClassOf arm:Character .
 
 arm:Season a owl:Class ;
    owl:oneOf ( :Winter :Spring :Summer :Autumn ) .
-arm:SeasonTime a owl:Class .
+:beforeSeason a   owl:ObjectProperty ;
+	a owl:TransitiveProperty ;
+        rdfs:domain  arm:Season ;
+        rdfs:range   arm:Season .
+:Winter :beforeSeason :Spring .
+:Spring :beforeSeason :Summer .
+:Summer :beforeSeason :Autumn .
 
-arm:isSeason a   owl:DatatypeProperty ;
+arm:SeasonTime a owl:Class .
+:beforeSeasonTime a   owl:ObjectProperty ;
+	a owl:TransitiveProperty ;
+        rdfs:domain  arm:SeasonTime ;
+        rdfs:range   arm:SeasonTime .
+
+arm:isSeason a   owl:ObjectProperty ;
         rdfs:domain  arm:SeasonTime ;
         rdfs:range   arm:Season .
 arm:isYear a   owl:DatatypeProperty ;
         rdfs:domain  arm:SeasonTime ;
         rdfs:range   xsd:int .
 
-arm:isCharacter a   owl:DatatypeProperty ;
+arm:isCharacter a   owl:ObjectProperty ;
         rdfs:domain  arm:CharacterSheet ;
         rdfs:range   arm:BaseCharacter .
-arm:isCharacter a   owl:DatatypeProperty ;
+arm:atSeasonTime a   owl:ObjectProperty ;
         rdfs:domain  arm:CharacterSheet ;
-        rdfs:range   arm:BaseCharacter .
+        rdfs:range   arm:SeasonTime .
 
 arm:Trait a owl:Class .
 arm:Ability rdfs:subClassOf arm:Trait .
