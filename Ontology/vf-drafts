@@ -1,12 +1,7 @@
 
 
-:avaricious rdfs:label "Avaricious" .
 :lycanthrope rdfs:label " Lycanthrope" .
-:Compassionate rdfs:label "Compassionate"
-:Driven rdfs:label "Driven"
-:Envious rdfs:label "Envious"
 :Branded Criminal rdfs:label " Branded Criminal"
-:Generous rdfs:label "Generous"
 :Busybody rdfs:label " Busybody"
 :Outcast rdfs:label " Outcast"
 :Greedy rdfs:label "Greedy"
@@ -18,9 +13,8 @@
 :Lecherous rdfs:label "Lecherous"
 :Crippled rdfs:label " Crippled"
 :Continence rdfs:label " Continence"
-:Meddler rdfs:label "Meddler"
-:Deaf rdfs:label " Deaf"
-:Covenant Upbringing rdfs:label " Covenant Upbringing"
+:deaf rdfs:label " Deaf"
+:covenantUpbringing rdfs:label " Covenant Upbringing"
 :Optimistic rdfs:label "Optimistic"
 :dwarf rdfs:label " Dwarf"
 :delusion rdfs:label " Delusion"

@@ -81,6 +81,11 @@ arm:Reputation rdfs:subClassOf arm:Trait ;
                      arm:Art .
 
 arm:hasDescription a owl:DatatypeProperty ;
+	rdfs:comment "Source book reference defining the trait" ;
+        rdfs:domain  owl:Class ;
+        rdfs:range   xsd:string .
+arm:hasReference a owl:DatatypeProperty ;
+	rdfs:comment "Source book reference defining the trait" ;
         rdfs:domain  owl:Class ;
         rdfs:range   xsd:string .
 

@@ -357,7 +357,20 @@
 :ageQuickly  rdfs:subClassOf   :majorSupernaturalFlaw ;
              rdfs:label "Age Quickly" .
 
-:ambitious  rdfs:subClassOf  :majorPersonalityFlaw ;
-             rdfs:label "Ambitious" .
+:ambitious     rdfs:subClassOf  :majorPersonalityFlaw ;
+               rdfs:label "Ambitious" .
+:avaricious    rdfs:subClassOf  :majorPersonalityFlaw ;
+               rdfs:label "Avaricious" .
+:compassionate rdfs:subClassOf  :majorPersonalityFlaw ;
+               rdfs:label "Compassionate" .
+:driven        rdfs:subClassOf  :majorPersonalityFlaw ;
+               rdfs:label "Driven" .
+:envious       rdfs:subClassOf  :majorPersonalityFlaw ;
+               rdfs:label "Envious" .
+:generous      rdfs:subClassOf  :majorPersonalityFlaw ;
+               rdfs:label "Generous" .
+:meddler rdfs:subClassOf  :majorPersonalityFlaw ;
+         rdfs:label "Meddler" .
+
 :greaterMalediction  rdfs:subClassOf  :majorSupernaturalFlaw ;
              rdfs:label " Greater Malediction" .
