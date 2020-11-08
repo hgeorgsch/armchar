@@ -13,10 +13,13 @@
 
 [ charsheet: ( ?c arm:isCharacter ?b ) ( ?b ?p ?o ) -> ( ?c ?p ?o ) ]
 
+[ traitlabel:
+  ( ?t rdf:type ?c ) ( ?c rdf:type arm:LeafTrait ) ( ?c rdfs:label ?d ) 
+  -> ( ?t arm:hasLabel ?d ) ]
 [ traitdescription:
-  ( ?t a ?c ) ( ?c a arm:LeafTrait ) ( ?c arm:hasDescription ?d ) 
+  ( ?t rdf:type ?c ) ( ?c rdf:type arm:LeafTrait ) ( ?c arm:hasDescription ?d ) 
   -> ( ?t arm:hasGeneralDescription ?d ) ]
 [ leaftraitdescription:
-  ( ?c a arm:LeafTrait ) noValue( ?c, arm:hasDescription ) 
+  ( ?c rdf:type arm:LeafTrait ) noValue( ?c, arm:hasDescription ) 
   ( ?c rdfs:subClassOf ?s ) ( ?s arm:hasDescription ?d ) 
-  -> ( ?c arm:hasGeneralDescription ?d ) ]
+  -> ( ?c arm:hasDescription ?d ) ]

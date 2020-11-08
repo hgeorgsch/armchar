@@ -80,6 +80,14 @@ arm:Reputation rdfs:subClassOf arm:Trait ;
     owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic,
                      arm:Art .
 
+arm:hasGeneralDescription a owl:DatatypeProperty ;
+	rdfs:comment "Source book reference defining the trait" ;
+        rdfs:domain  arm:Trait ;
+        rdfs:range   xsd:string .
+arm:hasLabel a owl:DatatypeProperty ;
+	rdfs:comment "Source book reference defining the trait" ;
+        rdfs:domain  arm:Trait ;
+        rdfs:range   xsd:string .
 arm:hasDescription a owl:DatatypeProperty ;
 	rdfs:comment "Source book reference defining the trait" ;
         rdfs:domain  owl:Class ;
