@@ -38,7 +38,8 @@
 :shapeshifter           rdfs:subClassOf  :majorSupernaturalVirtue ;
                         rdfs:label "Shapeshifter" .
 :strongFaerieBlood      rdfs:subClassOf  :majorSupernaturalVirtue ;
-                        rdfs:label "Strong Faerie Blood" .
+                        rdfs:label "Strong Faerie Blood" ;
+			arm:hasDescription "<p>The blood of the fay is strong in you.  Perhaps one of your parents was actually a faerie, or maybe you were conceived or born in a place of great faerie power. This ancestry grants you several abilities. </p><p>First, you have natural longevity. You start making aging rolls at the age of fifty, rather than the normal 35, and get –3 to Aging Rolls, cumulative with any other bonuses.  </p><p>Second, you have faerie eyes. This gives you the Virtue Second Sight (see page 48) at no cost, and you can see normally in darkness or semi-darkness, such as in deep woods or at night. Your eyes look mostly normal, but are an unusual and vivid color. </p><p> Third, you may learn Faerie Lore during character generation. </p><p> Finally, you get the benefits of a particular type of fay heritage, as given in the Virtue Faerie Blood (page 42). Your specific fay her- itage is clearly visible. Choose one physical quirk, such as small horns, literally blue blood, or eyes without irises and pupils, appropriate to the faeries from which you are descended. </p><p> You may not have both Faerie Blood and Strong Faerie Blood. </p><p> This is a Supernatural Virtue, and you cannot lose it when being trained as a magus (see page 106). If your master cannot preserve the ability, you cannot be trained. </p> ".
 
 :majorSocialStatusVirtue rdfs:subClassOf :virtue ;
                          rdfs:label "SOCIAL STATUS, MAJOR" .

@@ -12,3 +12,7 @@
   -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
 
 [ charsheet: ( ?c arm:isCharacter ?b ) ( ?b ?p ?o ) -> ( ?c ?p ?o ) ]
+
+[ traitdescription:
+  ( ?t a ?c ) ( ?c a arm:LeafTrait ) ( ?c arm:hasDescription ?d ) 
+  -> ( ?c arm:hasGeneralDescription ?d ) ]
