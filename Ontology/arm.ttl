@@ -12,6 +12,7 @@
      dc:creator "Hans Georg Schaathun" ;
      rdfs:comment "This is a crude attempt to make an ontology for Ars Magica characters." .
 
+arm:Saga a owl:Class .
 
 # Characters
 arm:Character a owl:Class .
@@ -27,6 +28,9 @@ arm:Grog a owl:Class ;
 arm:hasName a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
+arm:hasSaga a   owl:ObjectProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:Saga .
 arm:hasAlmaMater a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
@@ -34,19 +38,33 @@ arm:hasAlmaMater a   owl:DatatypeProperty ;
 arm:CharacterSheet a owl:Class ; rdfs:subClassOf arm:Character .
 arm:BaseCharacter a owl:Class ; rdfs:subClassOf arm:Character .
 
+arm:isCharacter a   owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterSheet ;
+        rdfs:range   arm:BaseCharacter .
+arm:atSeasonTime a   owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterSheet ;
+        rdfs:range   arm:SeasonTime .
+
+# Seasons and Time
 arm:Season a owl:Class ;
    owl:oneOf ( :Winter :Spring :Summer :Autumn ) .
+:precedes a   owl:ObjectProperty ;
+        rdfs:domain  arm:Season ;
+        rdfs:range   arm:Season .
 :beforeSeason a   owl:ObjectProperty ;
 	a owl:TransitiveProperty ;
         rdfs:domain  arm:Season ;
         rdfs:range   arm:Season .
-:Winter :beforeSeason :Spring .
-:Spring :beforeSeason :Summer .
-:Summer :beforeSeason :Autumn .
+:Winter :precedes :Spring .
+:Spring :precedes :Summer .
+:Summer :precedes :Autumn .
 
 arm:SeasonTime a owl:Class .
 :beforeSeasonTime a   owl:ObjectProperty ;
 	a owl:TransitiveProperty ;
+        rdfs:domain  arm:SeasonTime ;
+        rdfs:range   arm:SeasonTime .
+arm:isPrecedingSeasonOf a   owl:ObjectProperty ;
         rdfs:domain  arm:SeasonTime ;
         rdfs:range   arm:SeasonTime .
 
@@ -57,12 +75,6 @@ arm:isYear a   owl:DatatypeProperty ;
         rdfs:domain  arm:SeasonTime ;
         rdfs:range   xsd:int .
 
-arm:isCharacter a   owl:ObjectProperty ;
-        rdfs:domain  arm:CharacterSheet ;
-        rdfs:range   arm:BaseCharacter .
-arm:atSeasonTime a   owl:ObjectProperty ;
-        rdfs:domain  arm:CharacterSheet ;
-        rdfs:range   arm:SeasonTime .
 
 arm:Trait a owl:Class .
 arm:Ability rdfs:subClassOf arm:Trait .
@@ -75,6 +87,10 @@ arm:Art rdfs:subClassOf arm:Trait ;
 arm:Reputation rdfs:subClassOf arm:Trait ;
     owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic,
                      arm:Art .
+
+arm:hasDescription a owl:DatatypeProperty ;
+        rdfs:domain  owl:Class ;
+        rdfs:range   xsd:string .
 
 arm:LeafTraitClass rdfs:subClassOf owl:Class ;
     rdfs:comment  "Classes that are instances of the LeafTraitClass class are traits as they may appear on a character's sheet.  Other traits should be seen as categories of LeafTraits." .
@@ -105,29 +121,43 @@ arm:hasTrait  a   owl:ObjectProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Trait .
 arm:hasOrder  a   owl:DatatypeProperty ;
+        rdfs:comment  "????" ;
         rdfs:domain  arm:Trait ;
         rdfs:range   xsd:float .
 
-arm:ability-arealore  a owl:GeneralAbility ;
+arm:char/int  rdfs:subClassOf owl:Characteristic ; rdfs:label "Intelligence" .
+arm:char/per  rdfs:subClassOf owl:Characteristic ; rdfs:label "Perception" .
+arm:char/str  rdfs:subClassOf owl:Characteristic ; rdfs:label "Strenghth" .
+arm:char/sta  rdfs:subClassOf owl:Characteristic ; rdfs:label "Stamina" .
+arm:char/com  rdfs:subClassOf owl:Characteristic ; rdfs:label "Communication" .
+arm:char/pre  rdfs:subClassOf owl:Characteristic ; rdfs:label "Presence" .
+arm:char/dex  rdfs:subClassOf owl:Characteristic ; rdfs:label "Dexterity" .
+arm:char/qik  rdfs:subClassOf owl:Characteristic ; rdfs:label "Quickness" .
+
+arm:ability/arealore  rdfs:subClassOf owl:GeneralAbility ;
    rdfs:label "(Area) Lore" .
-arm:ability-organisationlore  a owl:GeneralAbility ;
+arm:ability/organisationlore  rdfs:subClassOf owl:GeneralAbility ;
    rdfs:label "(Organisation) Lore" .
-arm:ability-livinglanguage  a owl:GeneralAbility ;
+arm:ability/livinglanguage  rdfs:subClassOf owl:GeneralAbility ;
    rdfs:label "Living Language" .
-arm:ability-profession  a owl:GeneralAbility ;
+arm:ability/profession  rdfs:subClassOf owl:GeneralAbility ;
    rdfs:label "Profession" .
-arm:ability-craft  a owl:GeneralAbility ;
+arm:ability/craft  rdfs:subClassOf owl:GeneralAbility ;
    rdfs:label "Craft" .
-arm:ability-deadlanguage  a owl:AcademicAbility ;
+arm:ability/deadlanguage  rdfs:subClassOf owl:AcademicAbility ;
    rdfs:label "Dead Language" .
-arm:ability-awareness  a owl:GeneralAbility, a arm:LeafTrait ;
-   rdfs:label "Awareness" .
-arm:ability-brawl  a owl:GeneralAbility, a arm:LeafTrait ;
-   rdfs:label "Brawl" .
-arm:ability-empathy  a owl:GeneralAbility, a arm:LeafTrait ;
-   rdfs:label "Empathy" .
-arm:ability-folkken  a owl:GeneralAbility, a arm:LeafTrait ;
-   rdfs:label "Folk Ken" .
+arm:ability/awareness  rdfs:subClassOf owl:GeneralAbility ;
+                       a arm:LeafTrait ;
+                       rdfs:label "Awareness" .
+arm:ability/brawl  rdfs:subClassOf owl:GeneralAbility ;
+                   a arm:LeafTrait ;
+                   rdfs:label "Brawl" .
+arm:ability/empathy  rdfs:subClassOf owl:GeneralAbility ;
+                     a arm:LeafTrait ;
+                     rdfs:label "Empathy" .
+arm:ability/folkken  rdfs:subClassOf owl:GeneralAbility ;
+                     a arm:LeafTrait ;
+                     rdfs:label "Folk Ken" .
 
 arm:art/creo  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Creo" .
 arm:art/intellego  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Intellego" .
