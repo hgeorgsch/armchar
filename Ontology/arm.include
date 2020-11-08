@@ -88,7 +88,7 @@ arm:LeafTraitClass rdfs:subClassOf owl:Class ;
     rdfs:comment  "Classes that are instances of the LeafTraitClass class are traits as they may appear on a character's sheet.  Other traits should be seen as categories of LeafTraits." .
 
 arm:GeneralAbility rdfs:subClassOf arm:Ability .
-arm:ArcaneKnowledge rdfs:subClassOf arm:Ability .
+arm:ArcaneAbility rdfs:subClassOf arm:Ability .
 arm:AcademicKnowledge rdfs:subClassOf arm:Ability .
 arm:MartialAbility rdfs:subClassOf arm:Ability .
 arm:SupernaturalAbility rdfs:subClassOf arm:Ability .
@@ -126,30 +126,6 @@ arm:char/pre  rdfs:subClassOf owl:Characteristic ; rdfs:label "Presence" .
 arm:char/dex  rdfs:subClassOf owl:Characteristic ; rdfs:label "Dexterity" .
 arm:char/qik  rdfs:subClassOf owl:Characteristic ; rdfs:label "Quickness" .
 
-arm:ability/arealore  rdfs:subClassOf owl:GeneralAbility ;
-   rdfs:label "(Area) Lore" .
-arm:ability/organisationlore  rdfs:subClassOf owl:GeneralAbility ;
-   rdfs:label "(Organisation) Lore" .
-arm:ability/livinglanguage  rdfs:subClassOf owl:GeneralAbility ;
-   rdfs:label "Living Language" .
-arm:ability/profession  rdfs:subClassOf owl:GeneralAbility ;
-   rdfs:label "Profession" .
-arm:ability/craft  rdfs:subClassOf owl:GeneralAbility ;
-   rdfs:label "Craft" .
-arm:ability/deadlanguage  rdfs:subClassOf owl:AcademicAbility ;
-   rdfs:label "Dead Language" .
-arm:ability/awareness  rdfs:subClassOf owl:GeneralAbility ;
-                       a arm:LeafTrait ;
-                       rdfs:label "Awareness" .
-arm:ability/brawl  rdfs:subClassOf owl:GeneralAbility ;
-                   a arm:LeafTrait ;
-                   rdfs:label "Brawl" .
-arm:ability/empathy  rdfs:subClassOf owl:GeneralAbility ;
-                     a arm:LeafTrait ;
-                     rdfs:label "Empathy" .
-arm:ability/folkken  rdfs:subClassOf owl:GeneralAbility ;
-                     a arm:LeafTrait ;
-                     rdfs:label "Folk Ken" .
 
 arm:art/creo  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Creo" .
 arm:art/intellego  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Intellego" .
