@@ -1,0 +1,44 @@
+
+arm:SpellClass rdfs:subClassOf owl:Class . 
+arm:Spell rdfs:subClassOf arm:Trait ;
+    owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic,
+                     arm:Art, arm:Reputation .
+
+arm:Range a owl:Class .
+arm:Duration a owl:Class .
+arm:Target a owl:Class .
+
+arm:range/per a arm:Range ; rdfs:label  "Personal" ; arm:hasMagnitudeCost 0 .
+arm:range/touch a arm:Range ; rdfs:label  "Touch" ; arm:hasMagnitudeCost 1 .
+arm:duration/mom a arm:Range ; rdfs:label  "Momentary" ; arm:hasMagnitudeCost 0 .
+arm:duration/conc a arm:Range ; rdfs:label  "Concentration" ; arm:hasMagnitudeCost 1 .
+arm:target/ind a arm:Range ; rdfs:label  "Individual" ; arm:hasMagnitudeCost 1 .
+
+arm:hasMagnitudeCost a owl:DatatypeProperty ;
+           rdfs:domain [ owl:unionOf ( arm:Range arm:Duration arm:Target ) ] ;
+           rdfs:range xsd:int .
+
+arm:hasLevel a owl:DatatypeProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range xsd:int .
+arm:hasTechnique a owl:ObjectProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range arm:TechClass .
+arm:hasForm a owl:ObjectProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range arm:FormClass .
+arm:hasRequisite a owl:ObjectProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range arm:ArtClass .
+arm:hasRange a owl:ObjectProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range arm:Range .
+arm:hasDuration a owl:ObjectProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range arm:Duration .
+arm:hasTarget a owl:ObjectProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range arm:Target .
+arm:hasSize a owl:DatatypeProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range xsd:int .
