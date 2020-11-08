@@ -157,23 +157,3 @@ arm:art/mentem  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Mentem" .
 arm:art/terram  a owl:Art, a arm:LeafTrait ; rdfs:label "Terram" .
 arm:art/vim  a owl:Art, a arm:LeafTrait ; rdfs:label "Vim" .
 
-arm:xpassignment a owl:Class .
-arm:advancement a owl:Class .
-arm:hasAdvancement a owl:ObjectProperty ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:advancement .
-arm:hasXPassignment a owl:ObjectProperty ;
-        rdfs:domain  arm:advancement ;
-        rdfs:range   arm:xpassignment .
-arm:hasNewXP a   owl:DatatypeProperty ;
-        rdfs:domain  arm:xpassignment ;
-        rdfs:range   xsd:int .
-arm:hasTraitForXP a   owl:ObjectProperty ;
-        rdfs:domain  arm:xpassignment ;
-        rdfs:range   arm:Trait .
-
-arm:SeasonAdvancement rdfs:subClassOf arm:advancement .
-arm:EarlyChildhood rdfs:subClassOf arm:advancement .
-arm:LaterLife rdfs:subClassOf arm:advancement .
-arm:Apprenticeship rdfs:subClassOf arm:advancement .
-arm:PostApprenticeship rdfs:subClassOf arm:advancement .
