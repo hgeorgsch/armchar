@@ -1,0 +1,155 @@
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix arm: <https://hg.schaathun.no/schema/arm#> .
+
+
+<https://hg.schaathun.no/schema/arm.owl> a owl:Ontology ;
+     dc:creator "Hans Georg Schaathun" ;
+     rdfs:comment "This is a crude attempt to make an ontology for Ars Magica characters." .
+
+
+# Characters
+arm:Character a owl:Class .
+arm:Magus a owl:Class ;
+    rdfs:subClassOf arm:Character .
+arm:Companion a owl:Class ;
+    rdfs:subClassOf arm:Character ;
+    owl:disjointWith arm:Magus .
+arm:Grog a owl:Class ;
+    rdfs:subClassOf arm:Character ;
+    owl:disjointWith arm:Companion, arm:Magus .
+
+arm:hasName a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   xsd:string .
+arm:hasAlmaMater a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   xsd:string .
+
+arm:CharacterSheet a owl:Class ; rdfs:subClassOf arm:Character .
+arm:BaseCharacter a owl:Class ; rdfs:subClassOf arm:Character .
+
+arm:Season a owl:Class ;
+   owl:oneOf ( :Winter :Spring :Summer :Autumn ) .
+arm:SeasonTime a owl:Class .
+
+arm:isSeason a   owl:DatatypeProperty ;
+        rdfs:domain  arm:SeasonTime ;
+        rdfs:range   arm:Season .
+arm:isYear a   owl:DatatypeProperty ;
+        rdfs:domain  arm:SeasonTime ;
+        rdfs:range   xsd:int .
+
+arm:isCharacter a   owl:DatatypeProperty ;
+        rdfs:domain  arm:CharacterSheet ;
+        rdfs:range   arm:BaseCharacter .
+arm:isCharacter a   owl:DatatypeProperty ;
+        rdfs:domain  arm:CharacterSheet ;
+        rdfs:range   arm:BaseCharacter .
+
+arm:Trait a owl:Class .
+arm:Ability rdfs:subClassOf arm:Trait .
+arm:PersonalityTrait rdfs:subClassOf arm:Trait ;
+    owl:disjointWith arm:Ability .
+arm:Characteristic rdfs:subClassOf arm:Trait ;
+    owl:disjointWith arm:Ability, arm:PersonalityTrait .
+arm:Art rdfs:subClassOf arm:Trait ;
+    owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic .
+arm:Reputation rdfs:subClassOf arm:Trait ;
+    owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic,
+                     arm:Art .
+
+arm:LeafTraitClass rdfs:subClassOf owl:Class ;
+    rdfs:comment  "Classes that are instances of the LeafTraitClass class are traits as they may appear on a character's sheet.  Other traits should be seen as categories of LeafTraits." .
+
+arm:GeneralAbility rdfs:subClassOf arm:Ability .
+arm:ArcaneKnowledge rdfs:subClassOf arm:Ability .
+arm:AcademicKnowledge rdfs:subClassOf arm:Ability .
+arm:MartialAbility rdfs:subClassOf arm:Ability .
+arm:SupernaturalAbility rdfs:subClassOf arm:Ability .
+
+arm:hasScore  a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Trait ;
+        rdfs:range   xsd:int .
+arm:hasTotalXP  a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Trait ;
+        rdfs:range   xsd:int .
+arm:hasXP  a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Trait ;
+        rdfs:range   xsd:int .
+arm:hasSpecialty  a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Ability ;
+        rdfs:range   xsd:string .
+arm:hasSubability  a   owl:DatatypeProperty ;
+        rdfs:domain  arm:GenericAbility ;
+        rdfs:range   xsd:string .
+
+arm:hasTrait  a   owl:ObjectProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:Trait .
+arm:hasOrder  a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Trait ;
+        rdfs:range   xsd:float .
+
+arm:ability-arealore  a owl:GeneralAbility ;
+   rdfs:label "(Area) Lore" .
+arm:ability-organisationlore  a owl:GeneralAbility ;
+   rdfs:label "(Organisation) Lore" .
+arm:ability-livinglanguage  a owl:GeneralAbility ;
+   rdfs:label "Living Language" .
+arm:ability-profession  a owl:GeneralAbility ;
+   rdfs:label "Profession" .
+arm:ability-craft  a owl:GeneralAbility ;
+   rdfs:label "Craft" .
+arm:ability-deadlanguage  a owl:AcademicAbility ;
+   rdfs:label "Dead Language" .
+arm:ability-awareness  a owl:GeneralAbility, a arm:LeafTrait ;
+   rdfs:label "Awareness" .
+arm:ability-brawl  a owl:GeneralAbility, a arm:LeafTrait ;
+   rdfs:label "Brawl" .
+arm:ability-empathy  a owl:GeneralAbility, a arm:LeafTrait ;
+   rdfs:label "Empathy" .
+arm:ability-folkken  a owl:GeneralAbility, a arm:LeafTrait ;
+   rdfs:label "Folk Ken" .
+
+arm:art/creo  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Creo" .
+arm:art/intellego  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Intellego" .
+arm:art/muto  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Muto" .
+arm:art/perdo  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Perdo" .
+arm:art/rego  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Rego" .
+
+arm:art/animal  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Animàl" .
+arm:art/aquam  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Aquam" .
+arm:art/auram  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Auram" .
+arm:art/corpus  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Corpus" .
+arm:art/herbam  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Herbam" .
+arm:art/ignem  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Ignem" .
+arm:art/imaginem  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Imaginem" .
+arm:art/mentem  rdf:subClassOf owl:Art, a arm:LeafTrait ; rdfs:label "Mentem" .
+arm:art/terram  a owl:Art, a arm:LeafTrait ; rdfs:label "Terram" .
+arm:art/vim  a owl:Art, a arm:LeafTrait ; rdfs:label "Vim" .
+
+arm:xpassignment a owl:Class .
+arm:advancement a owl:Class .
+arm:hasAdvancement a owl:ObjectProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:advancement .
+arm:hasXPassignment a owl:ObjectProperty ;
+        rdfs:domain  arm:advancement ;
+        rdfs:range   arm:xpassignment .
+arm:hasNewXP a   owl:DatatypeProperty ;
+        rdfs:domain  arm:xpassignment ;
+        rdfs:range   xsd:int .
+arm:hasTraitForXP a   owl:ObjectProperty ;
+        rdfs:domain  arm:xpassignment ;
+        rdfs:range   arm:Trait .
+
+arm:SeasonAdvancement rdfs:subClassOf arm:advancement .
+arm:EarlyChildhood rdfs:subClassOf arm:advancement .
+arm:LaterLife rdfs:subClassOf arm:advancement .
+arm:Apprenticeship rdfs:subClassOf arm:advancement .
+arm:PostApprenticeship rdfs:subClassOf arm:advancement .
