@@ -5,324 +5,324 @@
 :theGift rdfs:subClassOf :virtue ; rdfs:label "The Gift" .
 
 :majorHermeticVirtue rdfs:subClassOf :virtue ; rdfs:label "Hermetic, Major" .
-:diedneMagic         rdfs:subClassOf :majorHermeticVirtue ;
+:diedneMagic         rdfs:subClassOf :majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                      rdfs:label "Diedne Magic" .
-:elementalMagic      rdfs:subClassOf :majorHermeticVirtue ;
+:elementalMagic      rdfs:subClassOf :majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                      rdfs:label "Elemental Magic" .
-:flawlessMagic          rdfs:subClassOf :majorHermeticVirtue ;
+:flawlessMagic          rdfs:subClassOf :majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Flawless Magic" .
-:flexibleFormulaicMagic rdfs:subClassOf :majorHermeticVirtue ;
+:flexibleFormulaicMagic rdfs:subClassOf :majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Flexible Formulaic Magic" .
-:gentleGift             rdfs:subClassOf :majorHermeticVirtue ;
+:gentleGift             rdfs:subClassOf :majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Gentle Gift" .
-:lifeLinkedSpontaneousMagic rdfs:subClassOf :majorHermeticVirtue ;
+:lifeLinkedSpontaneousMagic rdfs:subClassOf :majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                             rdfs:label "Life-Linked Spontaneous Magic" .
-:majorMagicalFocus          rdfs:subClassOf :majorHermeticVirtue ;
+:majorMagicalFocus          rdfs:subClassOf :majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                             rdfs:label "Major Magical Focus" .
-:mercurianMagic             rdfs:subClassOf :majorHermeticVirtue ;
+:mercurianMagic             rdfs:subClassOf :majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                             rdfs:label "Mercurian Magic" .
-:mythicBlood                rdfs:subClassOf :majorHermeticVirtue ;
+:mythicBlood                rdfs:subClassOf :majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                             rdfs:label "Mythic Blood" .
-:secondaryInsight           rdfs:subClassOf :majorHermeticVirtue ;
+:secondaryInsight           rdfs:subClassOf :majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                             rdfs:label "Secondary Insight" .
 
 :majorSupernaturalVirtue rdfs:subClassOf :virtue ;
              rdfs:label "Supernatural, Major" .
 
-:entrancement           rdfs:subClassOf  :majorSupernaturalVirtue ;
+:entrancement           rdfs:subClassOf  :majorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Entrancement" .
-:greaterImmunity        rdfs:subClassOf  :majorSupernaturalVirtue ;
+:greaterImmunity        rdfs:subClassOf  :majorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Greater Immunity" .
-:greaterPurifyingTouch  rdfs:subClassOf  :majorSupernaturalVirtue ;
+:greaterPurifyingTouch  rdfs:subClassOf  :majorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Greater Purifying Touch" .
-:shapeshifter           rdfs:subClassOf  :majorSupernaturalVirtue ;
+:shapeshifter           rdfs:subClassOf  :majorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Shapeshifter" .
-:strongFaerieBlood      rdfs:subClassOf  :majorSupernaturalVirtue ;
+:strongFaerieBlood      rdfs:subClassOf  :majorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Strong Faerie Blood" ;
 			arm:hasDescription "<p>The blood of the fay is strong in you.  Perhaps one of your parents was actually a faerie, or maybe you were conceived or born in a place of great faerie power. This ancestry grants you several abilities. </p><p>First, you have natural longevity. You start making aging rolls at the age of fifty, rather than the normal 35, and get –3 to Aging Rolls, cumulative with any other bonuses.  </p><p>Second, you have faerie eyes. This gives you the Virtue Second Sight (see page 48) at no cost, and you can see normally in darkness or semi-darkness, such as in deep woods or at night. Your eyes look mostly normal, but are an unusual and vivid color. </p><p> Third, you may learn Faerie Lore during character generation. </p><p> Finally, you get the benefits of a particular type of fay heritage, as given in the Virtue Faerie Blood (page 42). Your specific fay her- itage is clearly visible. Choose one physical quirk, such as small horns, literally blue blood, or eyes without irises and pupils, appropriate to the faeries from which you are descended. </p><p> You may not have both Faerie Blood and Strong Faerie Blood. </p><p> This is a Supernatural Virtue, and you cannot lose it when being trained as a magus (see page 106). If your master cannot preserve the ability, you cannot be trained. </p> ".
 
 :majorSocialStatusVirtue rdfs:subClassOf :virtue ;
                          rdfs:label "SOCIAL STATUS, MAJOR" .
-:landedNoble       rdfs:subClassOf :majorSocialStatusVirtue ;
+:landedNoble       rdfs:subClassOf :majorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                    rdfs:label "Landed Noble" .
-:magisterInArtibus rdfs:subClassOf :majorSocialStatusVirtue ;
+:magisterInArtibus rdfs:subClassOf :majorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                    rdfs:label "Magister in Artibus" .
-:redcap            rdfs:subClassOf :majorSocialStatusVirtue ;
+:redcap            rdfs:subClassOf :majorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                    rdfs:label "Redcap" .
 
 :majorGeneralVirtue rdfs:subClassOf  :virtue ; rdfs:label "GENERAL, MAJOR" .
 
-:deathProphecy    rdfs:subClassOf   :majorGeneralVirtue ;
+:deathProphecy    rdfs:subClassOf   :majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                   rdfs:label "Death Prophecy" .
-:ghostlyWarder    rdfs:subClassOf   :majorGeneralVirtue ;
+:ghostlyWarder    rdfs:subClassOf   :majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                   rdfs:label "Ghostly Warder" .
-:giantBlood       rdfs:subClassOf   :majorGeneralVirtue ;
+:giantBlood       rdfs:subClassOf   :majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                   rdfs:label "Giant Blood" .
-:guardianAngel    rdfs:subClassOf   :majorGeneralVirtue ;
+:guardianAngel    rdfs:subClassOf   :majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                   rdfs:label "Guardian Angel" .
-:trueFaith        rdfs:subClassOf   :majorGeneralVirtue ;
+:trueFaith        rdfs:subClassOf   :majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                   rdfs:label "True Faith" .
-:waysOfTheLand    rdfs:subClassOf   :majorGeneralVirtue ;
+:waysOfTheLand    rdfs:subClassOf   :majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                   rdfs:label "Ways of the (Land)" .
-:wealthy          rdfs:subClassOf   :majorGeneralVirtue ;
+:wealthy          rdfs:subClassOf   :majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                   rdfs:label "Wealthy" .
 
 :minorHermeticVirtue rdfs:subClassOf :virtue ; rdfs:label "Hermetic, Minor" .
 
-:adeptLaboratoryStudent   rdfs:subClassOf :minorHermeticVirtue ;
+:adeptLaboratoryStudent   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Adept Laboratory Student" .
-:affinityWithArt   rdfs:subClassOf :minorHermeticVirtue ;
+:affinityWithArt   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Affinity with Art" .
-:cautiousSorcerer   rdfs:subClassOf :minorHermeticVirtue ;
+:cautiousSorcerer   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Cautious Sorcerer" .
-:cyclicMagicPositive   rdfs:subClassOf :minorHermeticVirtue ;
+:cyclicMagicPositive   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Cyclic Magic (positive)" .
-:deftForm   rdfs:subClassOf :minorHermeticVirtue ;
+:deftForm   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Deft Form" .
-:enduringMagic   rdfs:subClassOf :minorHermeticVirtue ;
+:enduringMagic   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Enduring Magic" .
-:theEnigma   rdfs:subClassOf :minorHermeticVirtue ;
+:theEnigma   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "The Enigma" .
-:faerieMagic   rdfs:subClassOf :minorHermeticVirtue ;
+:faerieMagic   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Faerie Magic" .
-:fastCaster   rdfs:subClassOf :minorHermeticVirtue ;
+:fastCaster   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Fast Caster" .
-:freeStudy   rdfs:subClassOf :minorHermeticVirtue ;
+:freeStudy   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Free Study" .
-:harnessedMagic   rdfs:subClassOf :minorHermeticVirtue ;
+:harnessedMagic   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Harnessed Magic" .
-:heartbeast   rdfs:subClassOf :minorHermeticVirtue ;
+:heartbeast   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Heartbeast" .
-:hermeticPrestige   rdfs:subClassOf :minorHermeticVirtue ;
+:hermeticPrestige   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Hermetic Prestige" .
-:inoffensiveToAnimals   rdfs:subClassOf :minorHermeticVirtue ;
+:inoffensiveToAnimals   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Inoffensive to Animals" .
-:inventiveGenius   rdfs:subClassOf :minorHermeticVirtue ;
+:inventiveGenius   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Inventive Genius" .
-:lifeBoost   rdfs:subClassOf :minorHermeticVirtue ;
+:lifeBoost   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Life Boost" .
-:minorMagicalFocus   rdfs:subClassOf :minorHermeticVirtue ;
+:minorMagicalFocus   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Minor Magical Focus" .
-:magicalMemory   rdfs:subClassOf :minorHermeticVirtue ;
+:magicalMemory   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Magical Memory" .
-:masteredSpells   rdfs:subClassOf :minorHermeticVirtue ;
+:masteredSpells   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Mastered Spells" .
-:methodCaster   rdfs:subClassOf :minorHermeticVirtue ;
+:methodCaster   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Method Caster" .
-:personalVisSource   rdfs:subClassOf :minorHermeticVirtue ;
+:personalVisSource   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Personal Vis Source" .
-:puissantArt   rdfs:subClassOf :minorHermeticVirtue ;
+:puissantArt   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Puissant Art" .
-:quietMagic   rdfs:subClassOf :minorHermeticVirtue ;
+:quietMagic   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Quiet Magic" .
-:sideEffect   rdfs:subClassOf :minorHermeticVirtue ;
+:sideEffect   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Side Effect" .
-:skilledParens   rdfs:subClassOf :minorHermeticVirtue ;
+:skilledParens   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Skilled Parens" .
-:specialCircumstances   rdfs:subClassOf :minorHermeticVirtue ;
+:specialCircumstances   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Special Circumstances" .
-:studyBonus   rdfs:subClassOf :minorHermeticVirtue ;
+:studyBonus   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Study Bonus" .
-:subtleMagic   rdfs:subClassOf :minorHermeticVirtue ;
+:subtleMagic   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Subtle Magic" .
-:verditiusMagic   rdfs:subClassOf :minorHermeticVirtue ;
+:verditiusMagic   rdfs:subClassOf :minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                           rdfs:label "Verditius Magic" .
 
 :minorSupernaturalVirtue rdfs:subClassOf :virtue ;
                          rdfs:label "SUPERNATURAL, MINOR" .
-:animalKen     rdfs:subClassOf :minorSupernaturalVirtue ;
+:animalKen     rdfs:subClassOf :minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Animal Ken" .
-:dowsing     rdfs:subClassOf :minorSupernaturalVirtue ;
+:dowsing     rdfs:subClassOf :minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Dowsing" .
-:enchantingMusic     rdfs:subClassOf :minorSupernaturalVirtue ;
+:enchantingMusic     rdfs:subClassOf :minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Enchanting Music" .
-:lesserImmunity     rdfs:subClassOf :minorSupernaturalVirtue ;
+:lesserImmunity     rdfs:subClassOf :minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Lesser Immunity" .
-:lesserPurifyingTouch     rdfs:subClassOf :minorSupernaturalVirtue ;
+:lesserPurifyingTouch     rdfs:subClassOf :minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Lesser Purifying Touch" .
-:magicSensitivity     rdfs:subClassOf :minorSupernaturalVirtue ;
+:magicSensitivity     rdfs:subClassOf :minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Magic Sensitivity" .
-:premonitions     rdfs:subClassOf :minorSupernaturalVirtue ;
+:premonitions     rdfs:subClassOf :minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Premonitions" .
-:secondSight     rdfs:subClassOf :minorSupernaturalVirtue ;
+:secondSight     rdfs:subClassOf :minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Second Sight" .
-:senseHolinessAndUnholiness     rdfs:subClassOf :minorSupernaturalVirtue ;
+:senseHolinessAndUnholiness     rdfs:subClassOf :minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Sense Holiness and Unholiness" .
-:skinchanger     rdfs:subClassOf :minorSupernaturalVirtue ;
+:skinchanger     rdfs:subClassOf :minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Skinchanger" .
-:wildernessSense     rdfs:subClassOf :minorSupernaturalVirtue ;
+:wildernessSense     rdfs:subClassOf :minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Wilderness Sense" .
 
 :minorSocialStatusVirtue rdfs:subClassOf :virtue ;
                          rdfs:label "SOCIAL STATUS, MINOR" .
-:clerk       rdfs:subClassOf  :minorSocialStatusVirtue ;
+:clerk       rdfs:subClassOf  :minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
              rdfs:label "Clerk" .
-:custos       rdfs:subClassOf  :minorSocialStatusVirtue ;
+:custos       rdfs:subClassOf  :minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
              rdfs:label "Custos" .
-:failedapprentice       rdfs:subClassOf  :minorSocialStatusVirtue ;
+:failedapprentice       rdfs:subClassOf  :minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
              rdfs:label "Failed Apprentice" .
-:gentleman       rdfs:subClassOf  :minorSocialStatusVirtue ;
+:gentleman       rdfs:subClassOf  :minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
              rdfs:label "Gentleman/woman" .
-:knight       rdfs:subClassOf  :minorSocialStatusVirtue ;
+:knight       rdfs:subClassOf  :minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
              rdfs:label "Knight" .
-:mendicantFriar       rdfs:subClassOf  :minorSocialStatusVirtue ;
+:mendicantFriar       rdfs:subClassOf  :minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
              rdfs:label "Mendicant Friar" .
-:mercenaryCaptain       rdfs:subClassOf  :minorSocialStatusVirtue ;
+:mercenaryCaptain       rdfs:subClassOf  :minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
              rdfs:label "Mercenary Captain" .
-:priest       rdfs:subClassOf  :minorSocialStatusVirtue ;
+:priest       rdfs:subClassOf  :minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
              rdfs:label "Priest" .
-:wiseOne       rdfs:subClassOf  :minorSocialStatusVirtue ;
+:wiseOne       rdfs:subClassOf  :minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
              rdfs:label "Wise One" .
 
 :minorGeneralVirtue rdfs:subClassOf :virtue ;
                     rdfs:label "Minor General Virtue" .
-:affinityWithAbility    rdfs:subClassOf :minorGeneralVirtue ;
+:affinityWithAbility    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Affinity with Ability" .
-:aptStudent    rdfs:subClassOf :minorGeneralVirtue ;
+:aptStudent    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Apt Student" .
-:arcaneLore    rdfs:subClassOf :minorGeneralVirtue ;
+:arcaneLore    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Arcane Lore" .
-:berserk    rdfs:subClassOf :minorGeneralVirtue ;
+:berserk    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Berserk" .
-:bookLearner    rdfs:subClassOf :minorGeneralVirtue ;
+:bookLearner    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Book Learner" .
-:cautiousWithAbility    rdfs:subClassOf :minorGeneralVirtue ;
+:cautiousWithAbility    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Cautious with Ability" .
-:clearThinker    rdfs:subClassOf :minorGeneralVirtue ;
+:clearThinker    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Clear Thinker" .
-:commonSense    rdfs:subClassOf :minorGeneralVirtue ;
+:commonSense    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Common Sense" .
-:educated    rdfs:subClassOf :minorGeneralVirtue ;
+:educated    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Educated" .
-:enduringConstitution    rdfs:subClassOf :minorGeneralVirtue ;
+:enduringConstitution    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Enduring Constitution" .
-:faerieBlood    rdfs:subClassOf :minorGeneralVirtue ;
+:faerieBlood    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Faerie Blood" .
-:famous    rdfs:subClassOf :minorGeneralVirtue ;
+:famous    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Famous" .
-:freeExpression    rdfs:subClassOf :minorGeneralVirtue ;
+:freeExpression    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Free Expression" .
-:goodTeacher    rdfs:subClassOf :minorGeneralVirtue ;
+:goodTeacher    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Good Teacher" .
-:gossip    rdfs:subClassOf :minorGeneralVirtue ;
+:gossip    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Gossip" .
-:greatCharacteristic    rdfs:subClassOf :minorGeneralVirtue ;
+:greatCharacteristic    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Great (Characteristic)" .
-:improvedCharacteristics    rdfs:subClassOf :minorGeneralVirtue ;
+:improvedCharacteristics    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Improved Characteristics" .
-:inoffensiveToAnimals    rdfs:subClassOf :minorGeneralVirtue ;
+:inoffensiveToAnimals    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Inoffensive to Animals" .
-:inspirational    rdfs:subClassOf :minorGeneralVirtue ;
+:inspirational    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Inspirational" .
-:intuition    rdfs:subClassOf :minorGeneralVirtue ;
+:intuition    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Intuition" .
-:keenVision    rdfs:subClassOf :minorGeneralVirtue ;
+:keenVision    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Keen Vision" .
-:large    rdfs:subClassOf :minorGeneralVirtue ;
+:large    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Large" .
-:latentMagicalAbility    rdfs:subClassOf :minorGeneralVirtue ;
+:latentMagicalAbility    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Latent Magical Ability" .
-:learnAbilityFromMistakes    rdfs:subClassOf :minorGeneralVirtue ;
+:learnAbilityFromMistakes    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Learn (Ability) from Mistakes" .
-:lightTouch    rdfs:subClassOf :minorGeneralVirtue ;
+:lightTouch    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Light Touch" .
-:lightningReflexes    rdfs:subClassOf :minorGeneralVirtue ;
+:lightningReflexes    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Lightning Reflexes" .
-:longWinded    rdfs:subClassOf :minorGeneralVirtue ;
+:longWinded    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Long-Winded" .
-:luck    rdfs:subClassOf :minorGeneralVirtue ;
+:luck    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Luck" .
-:rapidConvalescence    rdfs:subClassOf :minorGeneralVirtue ;
+:rapidConvalescence    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Rapid Convalescence" .
-:perfectBalance    rdfs:subClassOf :minorGeneralVirtue ;
+:perfectBalance    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Perfect Balance" .
-:piercingGaze    rdfs:subClassOf :minorGeneralVirtue ;
+:piercingGaze    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Piercing Gaze" .
-:privilegedUpbringing    rdfs:subClassOf :minorGeneralVirtue ;
+:privilegedUpbringing    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Privileged Upbringing" .
-:protection    rdfs:subClassOf :minorGeneralVirtue ;
+:protection    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Protection" .
-:puissantAbility    rdfs:subClassOf :minorGeneralVirtue ;
+:puissantAbility    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Puissant Ability" .
-:relic    rdfs:subClassOf :minorGeneralVirtue ;
+:relic    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Relic" .
-:reservesOfStrength    rdfs:subClassOf :minorGeneralVirtue ;
+:reservesOfStrength    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Reserves of Strength" .
-:selfConfident    rdfs:subClassOf :minorGeneralVirtue ;
+:selfConfident    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Self-Confident" .
-:sharpEars    rdfs:subClassOf :minorGeneralVirtue ;
+:sharpEars    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Sharp Ears" .
-:socialContacts    rdfs:subClassOf :minorGeneralVirtue ;
+:socialContacts    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Social Contacts" .
-:strongWilled    rdfs:subClassOf :minorGeneralVirtue ;
+:strongWilled    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Strong-Willed" .
-:studentOfRealm    rdfs:subClassOf :minorGeneralVirtue ;
+:studentOfRealm    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Student of (Realm)" .
-:temporalInfluence    rdfs:subClassOf :minorGeneralVirtue ;
+:temporalInfluence    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Temporal Influence" .
-:tough    rdfs:subClassOf :minorGeneralVirtue ;
+:tough    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Tough" .
-:troupeUpbringing    rdfs:subClassOf :minorGeneralVirtue ;
+:troupeUpbringing    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Troupe Upbringing" .
-:trueLovePC    rdfs:subClassOf :minorGeneralVirtue ;
+:trueLovePC    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "True Love (PC)" .
-:unaging    rdfs:subClassOf :minorGeneralVirtue ;
+:unaging    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Unaging" .
-:venusBlessing    rdfs:subClassOf :minorGeneralVirtue ;
+:venusBlessing    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Venus’ Blessing" .
-:warrior    rdfs:subClassOf :minorGeneralVirtue ;
+:warrior    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Warrior" .
-:wellTraveled    rdfs:subClassOf :minorGeneralVirtue ;
+:wellTraveled    rdfs:subClassOf :minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                         rdfs:label "Well-Traveled" .
 
 :freeSocialStatusVirtue  rdfs:subClassOf  :virtue ;
                          rdfs:label "SOCIAL STATUS, FREE" .
-:covenfolk      rdfs:subClassOf   :freeSocialStatusVirtue ;
+:covenfolk      rdfs:subClassOf   :freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Covenfolk" .
-:craftsman      rdfs:subClassOf   :freeSocialStatusVirtue ;
+:craftsman      rdfs:subClassOf   :freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Craftsman" .
-:hermeticMagus      rdfs:subClassOf   :freeSocialStatusVirtue ;
+:hermeticMagus      rdfs:subClassOf   :freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Hermetic Magus" .
-:merchant      rdfs:subClassOf   :freeSocialStatusVirtue ;
+:merchant      rdfs:subClassOf   :freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Merchant" .
-:peasant      rdfs:subClassOf   :freeSocialStatusVirtue ;
+:peasant      rdfs:subClassOf   :freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Peasant" .
-:wanderer      rdfs:subClassOf   :freeSocialStatusVirtue ;
+:wanderer      rdfs:subClassOf   :freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Wanderer" .
 
 :majorHermeticFlaw  rdfs:subClassOf   :flaw ;
                     rdfs:label "Major Hermetic Flaw" .
-:blatantGift    rdfs:subClassOf :majorHermeticFlaw ;
+:blatantGift    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Blatant Gift" .
-:chaoticMagic    rdfs:subClassOf :majorHermeticFlaw ;
+:chaoticMagic    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Chaotic Magic" .
-:deficientTechnique    rdfs:subClassOf :majorHermeticFlaw ;
+:deficientTechnique    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Deficient Technique" .
-:difficultLongevity    rdfs:subClassOf :majorHermeticFlaw ;
+:difficultLongevity    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 Ritual rdfs:label "Difficult Longevity Ritual" .
-:magicAddiction    rdfs:subClassOf :majorHermeticFlaw ;
+:magicAddiction    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Magic Addiction" .
-:necessaryCondition    rdfs:subClassOf :majorHermeticFlaw ;
+:necessaryCondition    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Necessary Condition" .
-:painfulMagic    rdfs:subClassOf :majorHermeticFlaw ;
+:painfulMagic    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Painful Magic" .
-:restriction    rdfs:subClassOf :majorHermeticFlaw ;
+:restriction    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Restriction" .
-:rigidMagic    rdfs:subClassOf :majorHermeticFlaw ;
+:rigidMagic    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Rigid Magic" .
-:shortRangedMagic    rdfs:subClassOf :majorHermeticFlaw ;
+:shortRangedMagic    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Short-Ranged Magic" .
-:studyRequirement    rdfs:subClassOf :majorHermeticFlaw ;
+:studyRequirement    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Study Requirement" .
-:twilightProne    rdfs:subClassOf :majorHermeticFlaw ;
+:twilightProne    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Twilight Prone" .
-:unstructuredCaster    rdfs:subClassOf :majorHermeticFlaw ;
+:unstructuredCaster    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Unstructured Caster" .
-:wasterOfVis    rdfs:subClassOf :majorHermeticFlaw ;
+:wasterOfVis    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Waster of Vis" .
-:weakMagicResistance    rdfs:subClassOf :majorHermeticFlaw ;
+:weakMagicResistance    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Weak Magic Resistance" .
-:weakSpontaneousMagic    rdfs:subClassOf :majorHermeticFlaw ;
+:weakSpontaneousMagic    rdfs:subClassOf :majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                 rdfs:label "Weak Spontaneous Magic" .
 
 :majorPersonalityFlaw  rdfs:subClassOf :flaw ;
@@ -333,44 +333,44 @@
                         rdfs:label "Major Supernatural Flaw" .
 :minorSupernaturalFlaw  rdfs:subClassOf  :flaw ;
                         rdfs:label "Minor Supernatural Flaw" .
-:majorStoryFlaw  rdfs:subClassOf  :flaw ; rdfs:label "Major Story Flaw" .
-:minorStoryFlaw  rdfs:subClassOf  :flaw ; rdfs:label "Minor Story Flaw" .
+:majorStoryFlaw  rdfs:subClassOf  :flaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Major Story Flaw" .
+:minorStoryFlaw  rdfs:subClassOf  :flaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Minor Story Flaw" .
 :minorsocialStatusFlaw rdfs:subClassOf  :flaw ;
                        rdfs:label "Minor Social Status Flaw" .
-:majorGeneralFlaw rdfs:subClassOf  :flaw ; rdfs:label "Major General Flaw" .
-:minorGeneralFlaw rdfs:subClassOf  :flaw ; rdfs:label "Minor General Flaw" .
+:majorGeneralFlaw rdfs:subClassOf  :flaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Major General Flaw" .
+:minorGeneralFlaw rdfs:subClassOf  :flaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Minor General Flaw" .
 :minorHermeticFlaw  rdfs:subClassOf   :flaw ;
                     rdfs:label "Minor Hermetic Flaw" .
 
 
-:weakEnchanter  rdfs:subClassOf   :minorHermeticFlaw ; rdfs:label "Weak Enchanter" .
-:weakMagic  rdfs:subClassOf   :minorHermeticFlaw ; rdfs:label "Weak Magic" .
-:weakParens  rdfs:subClassOf   :minorHermeticFlaw ; rdfs:label " Weak Parens" .
-:weakScholar  rdfs:subClassOf   :minorHermeticFlaw ; rdfs:label " Weak Scholar" .
-:weirdMagic  rdfs:subClassOf   :minorHermeticFlaw ; rdfs:label " Weird Magic" .
+:weakEnchanter  rdfs:subClassOf   :minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Weak Enchanter" .
+:weakMagic  rdfs:subClassOf   :minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Weak Magic" .
+:weakParens  rdfs:subClassOf   :minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label " Weak Parens" .
+:weakScholar  rdfs:subClassOf   :minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label " Weak Scholar" .
+:weirdMagic  rdfs:subClassOf   :minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label " Weird Magic" .
 
-:mentor    rdfs:subClassOf  :minorStoryFlaw ; rdfs:label "Mentor" .
-:heir    rdfs:subClassOf  :minorStoryFlaw ; rdfs:label "Heir" .
+:mentor    rdfs:subClassOf  :minorStoryFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Mentor" .
+:heir    rdfs:subClassOf  :minorStoryFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Heir" .
 
-:visions  rdfs:subClassOf  :minorStoryFlaw, :minorSupernaturalFlaw ;
+:visions  rdfs:subClassOf  :minorStoryFlaw, :minorSupernaturalFlaw ; arm:hasReference   "[ArM5]" ;
           rdfs:label " Visions" .
-:ageQuickly  rdfs:subClassOf   :majorSupernaturalFlaw ;
+:ageQuickly  rdfs:subClassOf   :majorSupernaturalFlaw ; arm:hasReference   "[ArM5]" ;
              rdfs:label "Age Quickly" .
 
-:ambitious     rdfs:subClassOf  :majorPersonalityFlaw ;
+:ambitious     rdfs:subClassOf  :majorPersonalityFlaw ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Ambitious" .
-:avaricious    rdfs:subClassOf  :majorPersonalityFlaw ;
+:avaricious    rdfs:subClassOf  :majorPersonalityFlaw ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Avaricious" .
-:compassionate rdfs:subClassOf  :majorPersonalityFlaw ;
+:compassionate rdfs:subClassOf  :majorPersonalityFlaw ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Compassionate" .
-:driven        rdfs:subClassOf  :majorPersonalityFlaw ;
+:driven        rdfs:subClassOf  :majorPersonalityFlaw ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Driven" .
-:envious       rdfs:subClassOf  :majorPersonalityFlaw ;
+:envious       rdfs:subClassOf  :majorPersonalityFlaw ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Envious" .
-:generous      rdfs:subClassOf  :majorPersonalityFlaw ;
+:generous      rdfs:subClassOf  :majorPersonalityFlaw ; arm:hasReference   "[ArM5]" ;
                rdfs:label "Generous" .
-:meddler rdfs:subClassOf  :majorPersonalityFlaw ;
+:meddler rdfs:subClassOf  :majorPersonalityFlaw ; arm:hasReference   "[ArM5]" ;
          rdfs:label "Meddler" .
 
-:greaterMalediction  rdfs:subClassOf  :majorSupernaturalFlaw ;
+:greaterMalediction  rdfs:subClassOf  :majorSupernaturalFlaw ; arm:hasReference   "[ArM5]" ;
              rdfs:label " Greater Malediction" .
