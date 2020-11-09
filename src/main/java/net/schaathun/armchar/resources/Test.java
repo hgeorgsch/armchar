@@ -8,8 +8,8 @@ import javax.ws.rs.core.Response;
  *
  * @author 
  */
-@Path("javaee8")
-public class JavaEE8Resource {
+@Path("test")
+public class Test {
     
     @GET
     public Response ping(){

@@ -1,4 +1,4 @@
-@prefix : <https://hg.schaathun.no/armcharacter/cieran/> .
+@prefix : <https://hg.schaathun.no/armchar/character/cieran/> .
 
 <https://hg.schaathun.no/armcharacter/cieran> a owl:Ontology ;
      dc:creator "Hans Georg Schaathun" ;

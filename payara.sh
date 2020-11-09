@@ -1,4 +1,4 @@
-mvn install
+mvn install || exit
 docker stop armchar
 docker rm armchar
 cp target/armchar-1.0-SNAPSHOT.war payara/armchar.war

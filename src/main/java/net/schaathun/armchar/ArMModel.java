@@ -53,13 +53,8 @@ public class ArMModel {
 
    private ArMModel() {
 
-      dataset = TDBFactory.createDataset( tdbLocation);
-      dataset.begin(ReadWrite.WRITE);
-      try {
-         data = dataset.getDefaultModel();
-      } finally {
-         dataset.end();
-      }
+      this.dataset = TDBFactory.createDataset( tdbLocation);
+      this.data = dataset.getDefaultModel();
 
       // The schema and resources should be kept constant.
       // They are built into the OWL Reasoner
