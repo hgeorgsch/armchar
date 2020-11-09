@@ -5,8 +5,8 @@
      rdfs:comment "This is a sample character for the ArM ontology." .
 
 armchar:cieran a arm:Magus ; 
-               hasName "Cieran the Fletcher" ;
-               hasAlmaMater "Stonehenge" .
+               arm:hasName "Cieran the Fletcher" ;
+               arm:hasAlmaMater "Stonehenge" .
 
 arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 
@@ -14,36 +14,36 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
             arm:atSeasonTime arm:winter1223 .
 
 
-:winter1224 arm:hasPersonalityTrait [ a arm:personality/meticulous ; arm:hasScore 3 ] . 
-:winter1224 arm:hasPersonalityTrait [ a arm:personality/villager ; arm:hasScore 1 ] . 
-:winter1224 arm:hasPersonalityTrait [ a arm:personality/carefree ; arm:hasScore 3 ] . 
-:winter1224 arm:hasPersonalityTrait [ a arm:personality/meddler ; arm:hasScore 6 ] . 
+:winter1224 arm:hasPersonalityTrait [ a arm:personality-meticulous ; arm:hasScore 3 ] . 
+:winter1224 arm:hasPersonalityTrait [ a arm:personality-villager ; arm:hasScore 1 ] . 
+:winter1224 arm:hasPersonalityTrait [ a arm:personality-carefree ; arm:hasScore 3 ] . 
+:winter1224 arm:hasPersonalityTrait [ a arm:personality-meddler ; arm:hasScore 6 ] . 
 
-:winter1224 arm:hasAbility [ a arm:ability/parmamagica ; hasTotalXP 30 ; arm:hasSpeciality "Mentem" ] . 
+:winter1224 arm:hasAbility [ a arm:ability-parmamagica ; arm:hasTotalXP 30 ; arm:hasSpeciality "Mentem" ] . 
 
 :winter1224 arm:hasVirtue [ a arm:strongFaerieBlood ] . 
 
-:winter1224 arm:hasCharacteristic [ a arm:char/int ; arm:hasScore 3 ] . 
-:winter1224 arm:hasCharacteristic [ a arm:char/per ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a arm:char/com ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a arm:char/pre ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a arm:char/str ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a arm:char/sta ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a arm:char/dex ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a arm:char/qik ; arm:hasScore -1 ] . 
+:winter1224 arm:hasCharacteristic [ a armr:int ; arm:hasScore 3 ] . 
+:winter1224 arm:hasCharacteristic [ a armr:per ; arm:hasScore -1 ] . 
+:winter1224 arm:hasCharacteristic [ a armr:com ; arm:hasScore -1 ] . 
+:winter1224 arm:hasCharacteristic [ a armr:pre ; arm:hasScore -1 ] . 
+:winter1224 arm:hasCharacteristic [ a armr:str ; arm:hasScore -1 ] . 
+:winter1224 arm:hasCharacteristic [ a armr:sta ; arm:hasScore -1 ] . 
+:winter1224 arm:hasCharacteristic [ a armr:dex ; arm:hasScore -1 ] . 
+:winter1224 arm:hasCharacteristic [ a armr:qik ; arm:hasScore -1 ] . 
 
-:winter1224 arm:hasArt [ a arm:art/creo ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/intellego ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/muto ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/perdo ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/rego ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/animal ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/aquam ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/auram ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/corpus ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/ignem ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/imaginem ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/herbam ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/mentem ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/terram ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a arm:art/vim ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:creo ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:intellego ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:muto ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:perdo ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:rego ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:animal ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:aquam ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:auram ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:corpus ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:ignem ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:imaginem ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:herbam ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:mentem ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:terram ; arm:hasTotalXP 17 ] . 
+:winter1224 arm:hasArt [ a armr:vim ; arm:hasTotalXP 17 ] . 

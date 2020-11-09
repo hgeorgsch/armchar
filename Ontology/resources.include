@@ -1,0 +1,39 @@
+arm:Characteristic rdfs:disjointUnionOf ( 
+   armr:int armr:per armr:str armr:sta
+   armr:com armr:pre armr:dex armr:qik
+) .
+
+armr:int a arm:LeafTraitClass ;  rdfs:label "Intelligence" .
+armr:per a arm:LeafTraitClass ;  rdfs:label "Perception" .
+armr:str a arm:LeafTraitClass ;  rdfs:label "Strenghth" .
+armr:sta a arm:LeafTraitClass ;  rdfs:label "Stamina" .
+armr:com a arm:LeafTraitClass ;  rdfs:label "Communication" .
+armr:pre a arm:LeafTraitClass ;  rdfs:label "Presence" .
+armr:dex a arm:LeafTraitClass ;  rdfs:label "Dexterity" .
+armr:qik a arm:LeafTraitClass ;  rdfs:label "Quickness" .
+
+arm:Tech rdfs:disjointUnionOf ( 
+   armr:creo armr:intellego armr:muto armr:perdo armr:rego
+) .
+arm:Form rdfs:disjointUnionOf ( 
+   armr:animal armr:aquam armr:auram armr:corpus armr:herbam
+   armr:ignem armr:imaginem armr:mentem armr:terram armr:vim  
+
+) .
+
+armr:creo  a arm:TechClass ; rdfs:label "Creo" .
+armr:intellego   a arm:TechClass ; rdfs:label "Intellego" .
+armr:muto  a arm:TechClass ; rdfs:label "Muto" .
+armr:perdo  a arm:TechClass ; rdfs:label "Perdo" .
+armr:rego   a arm:TechClass ; rdfs:label "Rego" .
+
+armr:animal   a arm:FormClass ; rdfs:label "Animàl" .
+armr:aquam   a arm:FormClass ; rdfs:label "Aquam" .
+armr:auram   a arm:FormClass ; rdfs:label "Auram" .
+armr:corpus  a arm:FormClass ; rdfs:label "Corpus" .
+armr:herbam  a arm:FormClass ; rdfs:label "Herbam" .
+armr:ignem   a arm:FormClass ; rdfs:label "Ignem" .
+armr:imaginem a arm:FormClass ; rdfs:label "Imaginem" .
+armr:mentem   a arm:FormClass ; rdfs:label "Mentem" .
+armr:terram   a arm:FormClass ; rdfs:label "Terram" .
+armr:vim      a arm:FormClass ; rdfs:label "Vim" .

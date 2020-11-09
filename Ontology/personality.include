@@ -1,13 +1,13 @@
 
-arm:personality/meticulous rdfs:subClassOf arm:PersonalityTrait ;
+arm:personality-meticulous rdfs:subClassOf arm:PersonalityTrait ;
                            a arm:LeafTraitClass ;
                            rdfs:label "Meticulous" .
-arm:personality/villager   rdfs:subClassOf arm:PersonalityTrait ;
+arm:personality-villager   rdfs:subClassOf arm:PersonalityTrait ;
                            a arm:LeafTraitClass ;
                            rdfs:label "Villager" .
-arm:personality/carefree   rdfs:subClassOf arm:PersonalityTrait ;
+arm:personality-carefree   rdfs:subClassOf arm:PersonalityTrait ;
                            a arm:LeafTraitClass ;
                            rdfs:label "Carefree" .
-arm:personality/meddler    rdfs:subClassOf arm:PersonalityTrait ;
+arm:personality-meddler    rdfs:subClassOf arm:PersonalityTrait ;
                            a arm:LeafTraitClass ;
                            rdfs:label "Meddler" .

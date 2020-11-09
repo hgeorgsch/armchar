@@ -1,5 +1,3 @@
-@prefix : <https://hg.schaathun.no/schema/arm#> .
-
 <https://hg.schaathun.no/schema/arm.owl> a owl:Ontology ;
      dc:creator "Hans Georg Schaathun" ;
      rdfs:comment "This is a crude attempt to make an ontology for Ars Magica characters." .
@@ -39,20 +37,20 @@ arm:atSeasonTime a   owl:ObjectProperty ;
 
 # Seasons and Time
 arm:Season a owl:Class ;
-   owl:oneOf ( :Winter :Spring :Summer :Autumn ) .
-:precedes a   owl:ObjectProperty ;
+   owl:oneOf ( arm:Winter arm:Spring arm:Summer arm:Autumn ) .
+arm:precedes a   owl:ObjectProperty ;
         rdfs:domain  arm:Season ;
         rdfs:range   arm:Season .
-:beforeSeason a   owl:ObjectProperty ;
+arm:beforeSeason a   owl:ObjectProperty ;
 	a owl:TransitiveProperty ;
         rdfs:domain  arm:Season ;
         rdfs:range   arm:Season .
-:Winter :precedes :Spring .
-:Spring :precedes :Summer .
-:Summer :precedes :Autumn .
+arm:Winter arm:precedes arm:Spring .
+arm:Spring arm:precedes arm:Summer .
+arm:Summer arm:precedes arm:Autumn .
 
 arm:SeasonTime a owl:Class .
-:beforeSeasonTime a   owl:ObjectProperty ;
+arm:beforeSeasonTime a   owl:ObjectProperty ;
 	a owl:TransitiveProperty ;
         rdfs:domain  arm:SeasonTime ;
         rdfs:range   arm:SeasonTime .
@@ -145,47 +143,6 @@ arm:hasOrder  a   owl:DatatypeProperty ;
         rdfs:domain  arm:Trait ;
         rdfs:range   xsd:float .
 
-arm:Characteristic rdfs:disjointUnionOf ( 
-   arm:char/int arm:char/per arm:char/str arm:char/sta
-   arm:char/com arm:char/pre arm:char/dex arm:char/qik
-) .
-
-arm:char/int a arm:LeafTraitClass ;  rdfs:label "Intelligence" .
-arm:char/per a arm:LeafTraitClass ;  rdfs:label "Perception" .
-arm:char/str a arm:LeafTraitClass ;  rdfs:label "Strenghth" .
-arm:char/sta a arm:LeafTraitClass ;  rdfs:label "Stamina" .
-arm:char/com a arm:LeafTraitClass ;  rdfs:label "Communication" .
-arm:char/pre a arm:LeafTraitClass ;  rdfs:label "Presence" .
-arm:char/dex a arm:LeafTraitClass ;  rdfs:label "Dexterity" .
-arm:char/qik a arm:LeafTraitClass ;  rdfs:label "Quickness" .
-
 arm:ArtClass rdfs:subClassOf arm:LeafTraitClass ; 
              rdfs:disjointUnionOf ( arm:TechClass arm:FormClass ) .
 arm:Art rdfs:disjointUnionOf ( arm:Tech arm:Form ) .
-
-arm:Tech rdfs:disjointUnionOf ( 
-   arm:art/creo arm:art/intellego arm:art/muto arm:art/perdo arm:art/rego
-) .
-arm:Form rdfs:disjointUnionOf ( 
-   arm:art/animal arm:art/aquam arm:art/auram arm:art/corpus arm:art/herbam
-   arm:art/ignem arm:art/imaginem arm:art/mentem arm:art/terram arm:art/vim  
-
-) .
-
-arm:art/creo  a arm:TechClass ; rdfs:label "Creo" .
-arm:art/intellego   a arm:TechClass ; rdfs:label "Intellego" .
-arm:art/muto  a arm:TechClass ; rdfs:label "Muto" .
-arm:art/perdo  a arm:TechClass ; rdfs:label "Perdo" .
-arm:art/rego   a arm:TechClass ; rdfs:label "Rego" .
-
-arm:art/animal   a arm:FormClass ; rdfs:label "Animàl" .
-arm:art/aquam   a arm:FormClass ; rdfs:label "Aquam" .
-arm:art/auram   a arm:FormClass ; rdfs:label "Auram" .
-arm:art/corpus  a arm:FormClass ; rdfs:label "Corpus" .
-arm:art/herbam  a arm:FormClass ; rdfs:label "Herbam" .
-arm:art/ignem   a arm:FormClass ; rdfs:label "Ignem" .
-arm:art/imaginem a arm:FormClass ; rdfs:label "Imaginem" .
-arm:art/mentem   a arm:FormClass ; rdfs:label "Mentem" .
-arm:art/terram   a arm:FormClass ; rdfs:label "Terram" .
-arm:art/vim      a arm:FormClass ; rdfs:label "Vim" .
-
