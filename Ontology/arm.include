@@ -125,6 +125,24 @@ arm:hasSubability  a   owl:DatatypeProperty ;
 arm:hasTrait  a   owl:ObjectProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Trait .
+arm:hasPersonalityTrait  rdfs:subPropertyOf   arm:hasTrait ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:Ability .
+arm:hasAbility  rdfs:subPropertyOf   arm:hasTrait ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:Ability .
+arm:hasCharacteristic  rdfs:subPropertyOf   arm:hasTrait ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:Characteristic .
+arm:hasVirtue  rdfs:subPropertyOf   arm:hasTrait ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:Virtue .
+arm:hasFlaw  rdfs:subPropertyOf   arm:hasTrait ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:Flaw .
+arm:hasSpell  rdfs:subPropertyOf   arm:hasTrait ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:Spell .
 arm:hasOrder  a   owl:DatatypeProperty ;
         rdfs:comment  "????" ;
         rdfs:domain  arm:Trait ;
