@@ -49,10 +49,11 @@ public class ArMModel {
    public static String schemaFile = "/opt/payara/serverdata/arm.ttl" ;
    public static String resourcesFile = "/opt/payara/serverdata/resources.ttl" ;
    public static String rulesFile = "/opt/payara/serverdata/logic.rules" ;
+   public static String tdbLocation = "/opt/payara/tdb" ;
 
    private ArMModel() {
-      // Exists only to defeat instantiation.
-      dataset = TDBFactory.createDataset(""); // OnsiteOntologyNS.location);
+
+      dataset = TDBFactory.createDataset( tdbLocation);
       dataset.begin(ReadWrite.WRITE);
       try {
          data = dataset.getDefaultModel();
