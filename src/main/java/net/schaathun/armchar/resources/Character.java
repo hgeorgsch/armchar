@@ -36,11 +36,10 @@ public class Character {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCharacter(@PathParam("id") String ID) {
 
-        String uri = "<https://hg.schaathun.net/armchar/character/" + ID + ">" ;
         String queryString = Config.prefix
-                    + "CONSTRUCT {" + uri + " ?p1 ?o1 ; "
-		    + " ?o1 ?p2 ? o2 . } \r\n"
-                    + "WHERE { " + uri + " ?p1 ?o1 ;\r\n"
+                    + "CONSTRUCT { armchar:" + ID + " ?p1 ?o1 . "
+		    + " ?o1 ?p2 ?o2 . } \r\n"
+                    + "WHERE { armchar:" + ID + " ?p1 ?o1 .\r\n"
                     + "  OPTIONAL { ?o1 ?p2 ?o2 } \r\n"
                     + "}";
         String result = ArMModel.construct(queryString);

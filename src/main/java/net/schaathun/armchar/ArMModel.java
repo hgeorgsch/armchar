@@ -96,7 +96,7 @@ public class ArMModel {
 
         QueryExecution qexec ;
         Model m ;
-        dataset.begin(ReadWrite.WRITE);
+        dataset.begin(ReadWrite.READ);
         try {
            qexec = QueryExecutionFactory.create(query, model);
            m = qexec.execConstruct();
@@ -146,7 +146,7 @@ public class ArMModel {
                     return this.string.toString();
                 }
         };
-        dataset.begin(ReadWrite.WRITE);
+        dataset.begin(ReadWrite.READ);
         try {
            QueryExecution qexec = QueryExecutionFactory.create(query, model);
            ResultSet results = qexec.execSelect();
