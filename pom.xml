@@ -23,6 +23,12 @@
             <version>${jakartaee}</version>
             <scope>provided</scope>
         </dependency>
+	<dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>apache-jena-libs</artifactId>
+            <type>pom</type>
+            <version>3.16.0</version>
+        </dependency>
     </dependencies>
     
      <build>
