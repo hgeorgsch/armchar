@@ -5,4 +5,5 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix arm: <https://hg.schaathun.no/armchar/schema#> .
 @prefix armr: <https://hg.schaathun.no/armchar/resources#> .
+@prefix armab: <https://hg.schaathun.no/armchar/resources/abilities#> .
 @prefix armchar: <https://hg.schaathun.no/armchar/character/> .

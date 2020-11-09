@@ -8,11 +8,11 @@ arm:Range a owl:Class .
 arm:Duration a owl:Class .
 arm:Target a owl:Class .
 
-arm:range/per a arm:Range ; rdfs:label  "Personal" ; arm:hasMagnitudeCost 0 .
-arm:range/touch a arm:Range ; rdfs:label  "Touch" ; arm:hasMagnitudeCost 1 .
-arm:duration/mom a arm:Range ; rdfs:label  "Momentary" ; arm:hasMagnitudeCost 0 .
-arm:duration/conc a arm:Range ; rdfs:label  "Concentration" ; arm:hasMagnitudeCost 1 .
-arm:target/ind a arm:Range ; rdfs:label  "Individual" ; arm:hasMagnitudeCost 1 .
+arm:Rper a arm:Range ; rdfs:label  "Personal" ; arm:hasMagnitudeCost 0 .
+arm:Rtouch a arm:Range ; rdfs:label  "Touch" ; arm:hasMagnitudeCost 1 .
+arm:Dmom a arm:Range ; rdfs:label  "Momentary" ; arm:hasMagnitudeCost 0 .
+arm:Dconc a arm:Range ; rdfs:label  "Concentration" ; arm:hasMagnitudeCost 1 .
+arm:Tind a arm:Range ; rdfs:label  "Individual" ; arm:hasMagnitudeCost 1 .
 
 arm:hasMagnitudeCost a owl:DatatypeProperty ;
            rdfs:domain [ owl:unionOf ( arm:Range arm:Duration arm:Target ) ] ;

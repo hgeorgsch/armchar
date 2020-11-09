@@ -1,9 +1,7 @@
-all: arm.ttl cieran.ttl logic.rules
+all: arm.ttl cieran.ttl logic.rules resources.ttl
 
-arm.ttl: prefix.ttl arm.include 
-	cat $^ > $@
-
-arm.ttl: prefix.ttl resources.include vf.include abilities.include personality.include spell.include
+resources.ttl: prefix.ttl resources.include vf.include abilities.include personality.include 
+arm.ttl: prefix.ttl arm.include spell.include
 
 %.ttl: prefix.ttl %.include
 	cat $^ > $@
