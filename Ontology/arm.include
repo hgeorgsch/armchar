@@ -116,10 +116,7 @@ arm:hasXP  a   owl:DatatypeProperty ;
         rdfs:domain  arm:Trait ;
         rdfs:range   xsd:int .
 arm:hasSpecialty  a   owl:DatatypeProperty ;
-        rdfs:domain  arm:Ability ;
-        rdfs:range   xsd:string .
-arm:hasSubability  a   owl:DatatypeProperty ;
-        rdfs:domain  arm:GenericAbility ;
+        rdfs:domain  [ owl:unionOf ( arm:Ability arm:Characteristic ) ] ;
         rdfs:range   xsd:string .
 
 arm:hasTrait  a   owl:ObjectProperty ;
