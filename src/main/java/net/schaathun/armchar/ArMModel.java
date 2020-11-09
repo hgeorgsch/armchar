@@ -25,6 +25,7 @@ import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.riot.RDFFormat;
 import org.apache.jena.query.ReadWrite;
+import org.apache.jena.graph.compose.Union;
 
 import org.apache.jena.reasoner.Reasoner;
 import org.apache.jena.reasoner.ReasonerRegistry ;
@@ -45,8 +46,9 @@ public class ArMModel {
    private Reasoner owlR, ourR ;
    private Model data ;
 
-   public static String ontologyFile = "/var/onsite/onsite.ttl" ;
-   public static String rulesFile = "/var/onsite/signal.rules" ;
+   public static String schemaFile = "/opt/payara/serverdata/arm.ttl" ;
+   public static String resourcesFile = "/opt/payara/serverdata/resources.ttl" ;
+   public static String rulesFile = "/opt/payara/serverdata/logic.rules" ;
 
    private ArMModel() {
       // Exists only to defeat instantiation.
@@ -57,11 +59,20 @@ public class ArMModel {
       } finally {
          dataset.end();
       }
-      Model schema = FileManager.get().loadModel(ontologyFile);
+
+      // The schema and resources should be kept constant.
+      // They are built into the OWL Reasoner
+      Model schema = FileManager.get().loadModel(schemaFile);
+      FileManager.get().readModel(schema,resourcesFile);
       this.owlR = ReasonerRegistry.getOWLMicroReasoner().bindSchema(schema);
+
+      // The rules file is similarly constant, and gives
+      // rise to a general purpose reasoner on top
       List rules = Rule.rulesFromURL("file:" + rulesFile );
-      InfModel owlM = ModelFactory.createInfModel(owlR, data);
       this.ourR = new GenericRuleReasoner(rules);
+
+      // Finally, we establish the inference models.
+      InfModel owlM = ModelFactory.createInfModel(owlR, data);
       this.model = ModelFactory.createInfModel(ourR, owlM);
    }
 
