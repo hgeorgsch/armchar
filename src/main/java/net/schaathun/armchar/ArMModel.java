@@ -118,8 +118,10 @@ public class ArMModel {
         };
         DatasetGraph g = DatasetFactory.create(m).asDatasetGraph();
 	if ( frame == null ) { 
+               JsonLDWriteContext ctx = new JsonLDWriteContext();
+               ctx.setJsonLDContext("{ " + Config.prefixJS_LD + " }");
                Writer.write(output, g,
-	          RDFFormat.JSONLD_COMPACT_PRETTY, null);
+	          RDFFormat.JSONLD_COMPACT_PRETTY, ctx );
 	} else {
                JsonLDWriteContext ctx = new JsonLDWriteContext();
                ctx.setFrame(frame);
