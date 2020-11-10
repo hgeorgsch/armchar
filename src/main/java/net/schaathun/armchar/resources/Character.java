@@ -33,7 +33,13 @@ public class Character {
 
     String frame = null ;
        // "{ \"@context\": { " + Config.prefixJS_LD + " },"
-       // + "\"@type\" : [ \"arm:Magus\" ] }" ;
+       // + "\"@type\" : [ \"arm:Character\" ]," 
+       // + "\"arm:hasCharacteristic\" : [ \"arm:Characteristic\" ], "
+       // + "\"arm:hasArt\" : [ \"arm:Art\" ], "
+       // + "\"arm:hasVirtue\" : [ \"arm:Virtue\" ], "
+       // + "\"arm:hasFlaw\" : [ \"arm:Flaw\" ], "
+       // + "\"arm:hasAbility\" : [ \"arm:Ability\" ] "
+       // + " }" ;
 
     @GET
     @Path("/{id}")

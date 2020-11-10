@@ -11,6 +11,13 @@
   ( ?s1 arm:isYear ?y1 ) addOne(?y1,?y2) ( ?s2 arm:isYear ?y2 )
   -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
 
+[ addlabel: 
+  ( ?t rdf:type arm:LeafTraitClass )
+  ( ?s rdf:type ?t ) 
+  noValue( ?s,rdfs:label )
+  ( ?t rdfs:label ?l ) 
+  -> ( ?s rdfs:label ?l ) ]
+
 [ charsheet: ( ?c arm:isCharacter ?b ) ( ?b ?p ?o ) -> ( ?c ?p ?o ) ]
 
 [ traitlabel:
