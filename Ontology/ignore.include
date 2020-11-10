@@ -1,4 +1,4 @@
 
 
 owl:differentFrom a arm:ignoredProperty .
-rdf:type a arm:ignoredProperty .
+# rdf:type a arm:ignoredProperty .

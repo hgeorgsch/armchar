@@ -31,6 +31,10 @@ import net.schaathun.armchar.Config ;
 @Path("/Character")
 public class Character {
 
+    String frame = null ;
+       // "{ \"@context\": { " + Config.prefixJS_LD + " },"
+       // + "\"@type\" : [ \"arm:Magus\" ] }" ;
+
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -72,7 +76,7 @@ public class Character {
 		    + "     NOT EXISTS { ?p2 rdf:type arm:ignoredProperty }  \r\n"
                     + " } \r\n"
                     + "}";
-        String result = ArMModel.construct(queryString);
+        String result = ArMModel.construct(queryString,frame);
         return Response
                 .ok(result)
                 .build();

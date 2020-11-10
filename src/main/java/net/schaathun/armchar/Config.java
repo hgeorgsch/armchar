@@ -19,6 +19,6 @@ public class Config {
             + "    \"rdf\" : \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\",\n"
             + "    \"rdfs\" : \"http://www.w3.org/2000/01/rdf-schema#\",\n"
             + "    \"foaf\" : \"http://xmlns.com/foaf/0.1/\",\n"
-            + "    \"arm\" : \"https://hg.schaathun.net/armchar/schema#\"" 
+            + "    \"arm\" : \"https://hg.schaathun.net/armchar/schema#\"," 
             + "    \"armchar\" : \"https://hg.schaathun.net/armchar/character/\"" ;
 }
