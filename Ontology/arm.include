@@ -1,4 +1,4 @@
-<https://hg.schaathun.no/schema/arm.owl> a owl:Ontology ;
+<https://hg.schaathun.net/schema/arm.owl> a owl:Ontology ;
      dc:creator "Hans Georg Schaathun" ;
      rdfs:comment "This is a crude attempt to make an ontology for Ars Magica characters." .
 

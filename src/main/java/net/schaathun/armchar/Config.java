@@ -2,10 +2,7 @@ package net.schaathun.armchar ;
 
 public class Config {
 
-    public static final String NS = "http://localhost:8080/onsite/v0.3.1/";
-    // public static final String NS = "http://reed.uials.no:8031/onsite/v0.3.1/";
-
-    public static final String location = "/var/onsite/tdb";
+    // public static final String location = "/var/onsite/tdb";
 
     public static String prefix = 
               "prefix owl: <http://www.w3.org/2002/07/owl#>\r\n"
