@@ -10,6 +10,7 @@ public class Config {
             + "prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\r\n"
             + "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\r\n"
             + "prefix foaf: <http://xmlns.com/foaf/0.1/>\r\n" 
+            + "prefix arm: <https://hg.schaathun.net/armchar/schema#>\r\n" 
             + "prefix armchar: <https://hg.schaathun.net/armchar/character/>\r\n" ;
 
     public static String prefixJS_LD = 
@@ -18,5 +19,6 @@ public class Config {
             + "    \"rdf\" : \"http://www.w3.org/1999/02/22-rdf-syntax-ns#\",\n"
             + "    \"rdfs\" : \"http://www.w3.org/2000/01/rdf-schema#\",\n"
             + "    \"foaf\" : \"http://xmlns.com/foaf/0.1/\",\n"
-            + "    \" armchar\" : \"https://hg.schaathun.net/armchar/character/\"" ;
+            + "    \"arm\" : \"https://hg.schaathun.net/armchar/schema#\"" 
+            + "    \"armchar\" : \"https://hg.schaathun.net/armchar/character/\"" ;
 }

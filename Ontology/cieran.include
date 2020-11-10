@@ -1,4 +1,4 @@
-@prefix : <https://hg.schaathun.net/armchar/character/cieran/> .
+@prefix : <https://hg.schaathun.net/armchar/character/cieran#> .
 
 <https://hg.schaathun.net/armcharacter/cieran> a owl:Ontology ;
      dc:creator "Hans Georg Schaathun" ;
@@ -11,7 +11,7 @@ armchar:cieran a arm:Magus ;
 arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 
 :winter1224 arm:isCharacter armchar:cieran ; a arm:CharacterSheet ;
-            arm:atSeasonTime arm:winter1223 .
+            arm:atSeasonTime arm:winter1224 .
 
 
 :winter1224 arm:hasPersonalityTrait [ a arm:personality-meticulous ; arm:hasScore 3 ] . 
