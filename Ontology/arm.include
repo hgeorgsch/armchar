@@ -67,14 +67,17 @@ arm:isYear a   owl:DatatypeProperty ;
 
 
 arm:Trait a owl:Class .
-arm:Ability rdfs:subClassOf arm:Trait .
+arm:XPTrait rdfs:subClassOf arm:Trait .
+arm:AccelleratedTrait rdfs:subClassOf arm:Trait ;
+    owl:disjointWith arm:XPTrait .
+arm:Ability rdfs:subClassOf arm:XPTrait .
 arm:PersonalityTrait rdfs:subClassOf arm:Trait ;
     owl:disjointWith arm:Ability .
 arm:Characteristic rdfs:subClassOf arm:Trait ;
     owl:disjointWith arm:Ability, arm:PersonalityTrait .
-arm:Art rdfs:subClassOf arm:Trait ;
+arm:Art rdfs:subClassOf arm:AccelleratedTrait ;
     owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic .
-arm:Reputation rdfs:subClassOf arm:Trait ;
+arm:Reputation rdfs:subClassOf arm:XPTrait ;
     owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic,
                      arm:Art .
 
@@ -111,6 +114,7 @@ arm:hasTotalXP  a   owl:DatatypeProperty ;
         rdfs:domain  arm:Trait ;
         rdfs:range   xsd:int .
 arm:hasXP  a   owl:DatatypeProperty ;
+	rdfs:comment "XP towards next level" ;
         rdfs:domain  arm:Trait ;
         rdfs:range   xsd:int .
 arm:hasSpecialty  a   owl:DatatypeProperty ;

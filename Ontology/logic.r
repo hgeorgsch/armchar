@@ -30,3 +30,27 @@
   ( ?c rdf:type arm:LeafTrait ) noValue( ?c, arm:hasDescription ) 
   ( ?c rdfs:subClassOf ?s ) ( ?s arm:hasDescription ?d ) 
   -> ( ?c arm:hasDescription ?d ) ]
+
+[ artscore:
+  ( ?s arm:hasTotalXP ?xp )
+  ( ?s rdf:type arm:AccelleratedTrait )
+  ( ?e rdf:type armpyramid:xpTableEntry )
+  ( ?e armpyramid:xp ?xp )
+  ( ?e :artScore ?score )
+  ( ?e :artRemainder ?rem )
+  ->
+     ( ?s arm:hasScore ?score )
+     ( ?s arm:hasXP ?rem )
+ ]
+
+[ abscore:
+  ( ?s arm:hasTotalXP ?xp )
+  ( ?s rdf:type arm:XPTrait )
+  ( ?e rdf:type armpyramid:xpTableEntry )
+  ( ?e armpyramid:xp ?xp )
+  ( ?e :artScore ?score )
+  ( ?e :artRemainder ?rem )
+  ->
+     ( ?s arm:hasScore ?score )
+     ( ?s arm:hasXP ?rem )
+ ]
