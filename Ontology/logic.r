@@ -36,8 +36,8 @@
   ( ?s rdf:type arm:AccelleratedTrait )
   ( ?e rdf:type armpyramid:xpTableEntry )
   ( ?e armpyramid:xp ?xp )
-  ( ?e :artScore ?score )
-  ( ?e :artRemainder ?rem )
+  ( ?e armpyramid:artScore ?score )
+  ( ?e armpyramid:artRemainder ?rem )
   ->
      ( ?s arm:hasScore ?score )
      ( ?s arm:hasXP ?rem )
@@ -48,8 +48,8 @@
   ( ?s rdf:type arm:XPTrait )
   ( ?e rdf:type armpyramid:xpTableEntry )
   ( ?e armpyramid:xp ?xp )
-  ( ?e :artScore ?score )
-  ( ?e :artRemainder ?rem )
+  ( ?e armpyramid:abScore ?score )
+  ( ?e armpyramid:abRemainder ?rem )
   ->
      ( ?s arm:hasScore ?score )
      ( ?s arm:hasXP ?rem )

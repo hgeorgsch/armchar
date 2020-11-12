@@ -13,8 +13,7 @@ n = 1400
 
 print(":xpTable a owl:Class ; :isTable") 
 
-for x in range(n): 
-    print( "[ :xp %i ; :artScore %i ; :artRemainder %i ; :abScore %i ; :abRemainder %i  ]," % line(x) )
+for x in range(n+1): 
+    print( "[ :xp %i ; :artScore %i ; :artRemainder %i ; :abScore %i ; :abRemainder %i  ]" % line(x) )
 
-print( "[ :xp %i ; :artScore %i ; :artRemainder %i ; :abScore %i ; :abRemainder %i  ]" % line(n) )
 print ( ") ." )
