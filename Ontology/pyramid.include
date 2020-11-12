@@ -1,3 +1,4 @@
+@prefix : <https://hg.schaathun.net/armchar/pyramid#> .
 
 :xpTableEntry a owl:Class .
 :xp a owl:DatatypePropery ;

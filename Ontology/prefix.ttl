@@ -8,3 +8,4 @@
 @prefix armr: <https://hg.schaathun.net/armchar/resources#> .
 @prefix armab: <https://hg.schaathun.net/armchar/resources/abilities#> .
 @prefix armchar: <https://hg.schaathun.net/armchar/character/> .
+@prefix armpyramid: <https://hg.schaathun.net/armchar/pyramid#> .
