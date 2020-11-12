@@ -11,7 +11,10 @@ def gauss(x): return int(x*(x+1)/2)
 
 n = 1400
 
-for x in range(n): 
-    print( "[ :xp %i ; :artScore %i ; artRemainder %i ; :abScore %i ; :abRemainder %i  ]," % line(x) )
+print(":xpTable a owl:Class ; :isTable") 
 
-print( "[ :xp %i ; :artScore %i ; artRemainder %i ; :abScore %i ; :abRemainder %i  ]" % line(n) )
+for x in range(n): 
+    print( "[ :xp %i ; :artScore %i ; :artRemainder %i ; :abScore %i ; :abRemainder %i  ]," % line(x) )
+
+print( "[ :xp %i ; :artScore %i ; :artRemainder %i ; :abScore %i ; :abRemainder %i  ]" % line(n) )
+print ( ") ." )
