@@ -5,10 +5,10 @@ arm:Characteristic rdfs:disjointUnionOf (
 
 armr:int a arm:LeafTraitClass ;  rdfs:label "Intelligence" ; arm:hasOrder 1 .
 armr:per a arm:LeafTraitClass ;  rdfs:label "Perception" ; arm:hasOrder 2 .
-armr:str a arm:LeafTraitClass ;  rdfs:label "Strenghth" ; arm:hasOrder 3 .
-armr:sta a arm:LeafTraitClass ;  rdfs:label "Stamina" ; arm:hasOrder 4 .
-armr:com a arm:LeafTraitClass ;  rdfs:label "Communication" ; arm:hasOrder 5 .
-armr:pre a arm:LeafTraitClass ;  rdfs:label "Presence" ; arm:hasOrder 6 .
+armr:com a arm:LeafTraitClass ;  rdfs:label "Communication" ; arm:hasOrder 3 .
+armr:pre a arm:LeafTraitClass ;  rdfs:label "Presence" ; arm:hasOrder 4 .
+armr:str a arm:LeafTraitClass ;  rdfs:label "Strenghth" ; arm:hasOrder 5 .
+armr:sta a arm:LeafTraitClass ;  rdfs:label "Stamina" ; arm:hasOrder 6 .
 armr:dex a arm:LeafTraitClass ;  rdfs:label "Dexterity" ; arm:hasOrder 7 .
 armr:qik a arm:LeafTraitClass ;  rdfs:label "Quickness" ; arm:hasOrder 8 .
 
