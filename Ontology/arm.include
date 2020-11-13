@@ -98,6 +98,21 @@ arm:Art rdfs:subClassOf arm:AccelleratedTrait ;
 arm:Reputation rdfs:subClassOf arm:XPTrait ;
     owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic,
                      arm:Art .
+arm:OtherTrait rdfs:subClassOf arm:Trait ;
+    owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic,
+                     arm:Art, arm:Reputation  .
+
+arm:Size a arm:LeafTraitClass ; rdfs:label "Size" .
+arm:Warping a arm:LeafTraitClass ; rdfs:label "Warping" .
+arm:Decrepitude a arm:LeafTraitClass ; rdfs:label "Decrepitude" .
+arm:Confidence a arm:LeafTraitClass ; rdfs:label "Confidence" .
+arm:hasEffects a owl:DatatypeProperty ;
+        rdfs:domain  [ owl:unionOf ( arm:warping arm:decrepitude ) ] ;
+        rdfs:range   xsd:string .
+arm:hasPoints a owl:DatatypeProperty ;
+        rdfs:domain arm:confidence ;
+        rdfs:range   xsd:int .
+    
 
 arm:hasGeneralDescription a owl:DatatypeProperty ;
 	rdfs:comment "Source book reference defining the trait" ;
@@ -138,10 +153,20 @@ arm:hasXP  a   owl:DatatypeProperty ;
 arm:hasSpecialty  a   owl:DatatypeProperty ;
         rdfs:domain  [ owl:unionOf ( arm:Ability arm:Characteristic ) ] ;
         rdfs:range   xsd:string .
-
+arm:hasType  a   owl:ObjectProperty ;
+        rdfs:domain  arm:Reputation ;
+        rdfs:range   arm:ReputationType .
+arm:ReputationType a owl:class ;
+   owl:oneOf ( arm:ecclesiastical arm:hermetic arm:local ) .
+arm:ecclesiastical rdfs:label "Ecclesiastical " .
+arm:hermetic rdfs:label "Hermetic" .
+arm:local rdfs:label "Local" .
 arm:hasTrait  a   owl:ObjectProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Trait .
+arm:hasOtherTrait  rdfs:subPropertyOf   arm:hasTrait ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:OtherTrait .
 arm:hasPersonalityTrait  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Ability .
