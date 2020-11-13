@@ -24,6 +24,15 @@ arm:Grog a owl:Class ;
 arm:hasName a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
+arm:hasGender a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   xsd:string .
+arm:hasProfession a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   xsd:string .
+arm:hasNationality a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   xsd:string .
 arm:hasSaga a   owl:ObjectProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Saga .

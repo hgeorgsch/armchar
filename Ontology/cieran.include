@@ -6,6 +6,9 @@
 
 armchar:cieran a arm:Magus ; 
                arm:hasName "Cieran the Fletcher" ;
+	       arm:hasGender "Male" ;
+	       arm:hasProfession "Rusticus (magus ex Miscellanea)" ;
+	       arm:hasNationality "Irish" ;
                arm:hasAlmaMater "Stonehenge" ;
                arm:hasSaga armchar:contestedlands .
 
