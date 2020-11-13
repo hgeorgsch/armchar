@@ -17,6 +17,11 @@
 [ addsaga: 
   ( ?c rdf:type arm:Character ) ( ?c arm:hasSaga ?s ) ( ?s arm:hasTitle ?t ) 
   -> ( ?c arm:hasSagaTitle ?t ) ]
+[ addsize: 
+  ( ?c rdf:type arm:Character ) ( ?c arm:hasOtherTrait ?s ) 
+  ( ?s rdf:type arm:Size ) 
+  ( ?s arm:hasScore ?size ) 
+  -> ( ?c arm:hasSize ?size ) ]
 
 [ addlabel: 
   ( ?t rdf:type arm:LeafTraitClass )

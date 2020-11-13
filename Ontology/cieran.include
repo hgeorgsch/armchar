@@ -17,10 +17,10 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 :winter1224 arm:isCharacter armchar:cieran ; a arm:CharacterSheet ;
             arm:atSeasonTime arm:winter1224 .
 
-:winter1224 arm:hasTrait [ a arm:Size ; arm:hasScore 0 ] ;
-            arm:hasDecrepitude [ arm:hasTotalXP 0 ] ;
-            arm:hasWarping [ arm:hasTotalXP 1 ] ;
-            arm:hasConfidence [ arm:hasScore 1 ; arm:hasPoints 6 ] .
+:winter1224 arm:hasOtherTrait [ a arm:Size ; arm:hasScore 0 ] ;
+            arm:hasOtherTrait [ a arm:Decrepitude ; arm:hasTotalXP 0 ; arm:hasEffects "no effects" ] ;
+            arm:hasOtherTrait [ a arm:Warping ; arm:hasTotalXP 1 ; arm:hasEffects "no effects" ] ;
+            arm:hasOtherTrait [ a arm:Confidence ; arm:hasScore 1 ; arm:hasPoints 6 ] .
 
 
 :winter1224 arm:hasPersonalityTrait [ a arm:personality-meticulous ; arm:hasScore 3 ] . 
