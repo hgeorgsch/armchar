@@ -1,15 +1,20 @@
 
-armab:arealore  rdfs:subClassOf owl:GeneralAbility ;
+# General Abilities
+armab:arealore  rdfs:subClassOf arm:GeneralAbility ;
    rdfs:label "(Area) Lore" .
-armab:arealore-hibernia  rdfs:subClassOf armab:arealore ;
+armab:arealore-ireland  rdfs:subClassOf armab:arealore ;
                    a arm:LeafTraitClass ;
-                   rdfs:label "Area Lore: Hibernia" .
+                   rdfs:label "Area Lore: Ireland" .
 armab:arealore-munster  rdfs:subClassOf armab:arealore ;
                    a arm:LeafTraitClass ;
                    rdfs:label "Area Lore: Munster" .
-armab:organisationlore  rdfs:subClassOf owl:GeneralAbility ;
+armab:organisationlore  rdfs:subClassOf arm:GeneralAbility ;
    rdfs:label "(Organisation) Lore" .
-armab:livinglanguage  rdfs:subClassOf owl:GeneralAbility ;
+armab:hermeslore  rdfs:subClassOf armab:organisationlore ;
+   rdfs:label "Order of Hermes Lore" .
+armab:socplore  rdfs:subClassOf armab:organisationlore ;
+   rdfs:label "Servants of the Common People Lore" .
+armab:livinglanguage  rdfs:subClassOf arm:GeneralAbility ;
    rdfs:label "Living Language" .
 armab:english  rdfs:subClassOf armab:livinglanguage ;
                    a arm:LeafTraitClass ;
@@ -17,9 +22,12 @@ armab:english  rdfs:subClassOf armab:livinglanguage ;
 armab:irish  rdfs:subClassOf armab:livinglanguage ;
                    a arm:LeafTraitClass ;
                    rdfs:label "Living Language: Irish" .
-armab:profession  rdfs:subClassOf owl:GeneralAbility ;
+armab:gaelic  rdfs:subClassOf armab:livinglanguage ;
+                   a arm:LeafTraitClass ;
+                   rdfs:label "Living Language: Gaelic" .
+armab:profession  rdfs:subClassOf arm:GeneralAbility ;
    rdfs:label "Profession" .
-armab:craft  rdfs:subClassOf owl:GeneralAbility ;
+armab:craft  rdfs:subClassOf arm:GeneralAbility ;
    rdfs:label "Craft" .
 armab:craft-cooking  rdfs:subClassOf armab:craft ;
                    a arm:LeafTraitClass ;
@@ -27,7 +35,50 @@ armab:craft-cooking  rdfs:subClassOf armab:craft ;
 armab:craft-fletching  rdfs:subClassOf armab:craft ;
                    a arm:LeafTraitClass ;
                    rdfs:label "Craft: Fletching" .
-armab:deadlanguage  rdfs:subClassOf owl:AcademicAbility ;
+armab:awareness  rdfs:subClassOf arm:GeneralAbility ;
+                       a arm:LeafTraitClass ;
+                       rdfs:label "Awareness" .
+armab:brawl  rdfs:subClassOf arm:GeneralAbility ;
+                   a arm:LeafTraitClass ;
+                   rdfs:label "Brawl" .
+armab:carouse  rdfs:subClassOf arm:GeneralAbility ;
+                   a arm:LeafTraitClass ;
+                   rdfs:label "Carouse" .
+armab:empathy  rdfs:subClassOf arm:GeneralAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Empathy" .
+armab:folkken  rdfs:subClassOf arm:GeneralAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Folk Ken" .
+
+# Arcane Abilities
+armab:parmamagica  rdfs:subClassOf arm:ArcaneAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Parma Magica" .
+armab:magictheory  rdfs:subClassOf arm:ArcaneAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Magic Theory" .
+armab:finesse  rdfs:subClassOf arm:ArcaneAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Finesse" .
+armab:penetration  rdfs:subClassOf arm:ArcaneAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Penetration" .
+armab:hermescode  rdfs:subClassOf arm:ArcaneAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Code of Hermes" .
+armab:infernallore  rdfs:subClassOf arm:ArcaneAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Infernal Lore" .
+
+# Academic Abilities
+armab:artlib  rdfs:subClassOf owl:AcademicAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Artes Liberales" .
+armab:philosophiae  rdfs:subClassOf owl:AcademicAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Philosophiae" .
+armab:deadlanguage  rdfs:subClassOf arm:AcademicAbility ;
    rdfs:label "Dead Language" .
 armab:latin  rdfs:subClassOf armab:deadlanguage ;
                    a arm:LeafTraitClass ;
@@ -35,29 +86,15 @@ armab:latin  rdfs:subClassOf armab:deadlanguage ;
 armab:classicgreek  rdfs:subClassOf armab:deadlanguage ;
                    a arm:LeafTraitClass ;
                    rdfs:label "Dead Language: Classic Greek" .
-armab:awareness  rdfs:subClassOf owl:GeneralAbility ;
-                       a arm:LeafTraitClass ;
-                       rdfs:label "Awareness" .
-armab:brawl  rdfs:subClassOf owl:GeneralAbility ;
-                   a arm:LeafTraitClass ;
-                   rdfs:label "Brawl" .
-armab:empathy  rdfs:subClassOf owl:GeneralAbility ;
-                     a arm:LeafTraitClass ;
-                     rdfs:label "Empathy" .
-armab:folkken  rdfs:subClassOf owl:GeneralAbility ;
-                     a arm:LeafTraitClass ;
-                     rdfs:label "Folk Ken" .
 
-armab:parmamagica  rdfs:subClassOf owl:ArcaneAbility ;
+# Martial Abilities
+armab:bows  rdfs:subClassOf arm:MartialAbility ;
                      a arm:LeafTraitClass ;
-                     rdfs:label "Parma Magica" .
-armab:magictheory  rdfs:subClassOf owl:ArcaneAbility ;
+                     rdfs:label "Bows" .
+armab:thrown  rdfs:subClassOf arm:MartialAbility ;
                      a arm:LeafTraitClass ;
-                     rdfs:label "Magic Theory" .
-armab:finesse  rdfs:subClassOf owl:ArcaneAbility ;
+                     rdfs:label "Thrown Weapon" .
+# Supernatural Abilities
+armab:secondsight  rdfs:subClassOf arm:SupernaturalAbility ;
                      a arm:LeafTraitClass ;
-                     rdfs:label "Finesse" .
-
-armab:philosophiae  rdfs:subClassOf owl:ArcaneAbility ;
-                     a arm:LeafTraitClass ;
-                     rdfs:label "Philosophiae" .
+                     rdfs:label "Second Sight" .

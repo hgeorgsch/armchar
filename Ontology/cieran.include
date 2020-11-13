@@ -28,10 +28,6 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 :winter1224 arm:hasPersonalityTrait [ a arm:personality-carefree ; arm:hasScore 3 ] . 
 :winter1224 arm:hasPersonalityTrait [ a arm:personality-meddler ; arm:hasScore 6 ] . 
 
-:winter1224 arm:hasAbility [ a armab:parmamagica ; arm:hasTotalXP 30 ; arm:hasSpeciality "Mentem" ] . 
-:winter1224 arm:hasAbility [ a armab:philosophiae ; arm:hasTotalXP 7 ; arm:hasSpeciality "Mentem" ] . 
-:winter1224 arm:hasAbility [ a armab:craft-cooking ; arm:hasTotalXP 30  ] . 
-:winter1224 arm:hasAbility [ a armab:craft-fletching ; arm:hasTotalXP 30  ] . 
 
 :winter1224 arm:hasVirtue [ a arm:strongFaerieBlood ] . 
 
@@ -59,3 +55,39 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 :winter1224 arm:hasArt [ a armr:mentem ; arm:hasTotalXP 17 ] . 
 :winter1224 arm:hasArt [ a armr:terram ; arm:hasTotalXP 17 ] . 
 :winter1224 arm:hasArt [ a armr:vim ; arm:hasTotalXP 17 ] . 
+
+
+# General Abilities
+:winter1224 arm:hasAbility [ a armab:gaelic ; arm:hasSpeciality "Leinster" ; arm:hasTotalXP 75  ] . 
+:winter1224 arm:hasAbility [ a armab:arealore-ireland ; arm:hasSpeciality "Legends" ; arm:hasTotalXP 5  ] . 
+:winter1224 arm:hasAbility [ a armab:arealore-munster ; arm:hasSpeciality "Hiding places" ; arm:hasTotalXP 5  ] . 
+:winter1224 arm:hasAbility [ a armab:awareness ; arm:hasSpeciality "searching" ; arm:hasTotalXP 15  ] . 
+:winter1224 arm:hasAbility [ a armab:bargain ;  arm:hasTotalXP 5  ] . 
+:winter1224 arm:hasAbility [ a armab:brawl ; arm:hasSpeciality "Dodge" ;  arm:hasTotalXP 15  ] . 
+:winter1224 arm:hasAbility [ a armab:concentration ; arm:hasSpeciality "Spell Concentration" ;  arm:hasTotalXP 5  ] . 
+:winter1224 arm:hasAbility [ a armab:craft-cooking ; arm:hasTotalXP 30  ] . 
+:winter1224 arm:hasAbility [ a armab:craft-fletching ; arm:hasTotalXP 30  ] . 
+:winter1224 arm:hasAbility [ a armab:folkken ; arm:hasSpeciality "Villagers" ; arm:hasTotalXP 5  ] . 
+:winter1224 arm:hasAbility [ a armab:folkken ; arm:hasSpeciality "Villagers" ; arm:hasTotalXP 5  ] . 
+:winter1224 arm:hasAbility [ a armab:hermeslore ; arm:hasSpeciality "Hibernia" ; arm:hasTotalXP 5  ] . 
+:winter1224 arm:hasAbility [ a armab:socplore ; arm:hasSpeciality "Self Initiation" ; arm:hasTotalXP 17  ] . 
+:winter1224 arm:hasAbility [ a armab:stealth ; arm:hasSpeciality "Hiding" ; arm:hasTotalXP 5  ] . 
+
+# Academic Abilities
+:winter1224 arm:hasAbility [ a armab:artlib ; arm:hasTotalXP 5 ; arm:hasSpeciality "rituals" ] . 
+:winter1225 arm:hasAbility [ a armab:philosophiae ; arm:hasTotalXP 7 ; arm:hasSpeciality "rituals" ] . 
+:winter1225 arm:hasAbility [ a armab:latin ; arm:hasTotalXP 50 ; arm:hasSpeciality "Hermetic Usage" ] . 
+
+# Arcane Abilities
+:winter1224 arm:hasAbility [ a armab:parmamagica ; arm:hasTotalXP 30 ; arm:hasSpeciality "Mentem" ] . 
+:winter1224 arm:hasAbility [ a armab:hermescode ; arm:hasTotalXP 5 ; arm:hasSpeciality "Stonehenge" ] . 
+:winter1224 arm:hasAbility [ a armab:infernallore ; arm:hasTotalXP 5 ; arm:hasSpeciality "Undead" ] . 
+:winter1224 arm:hasAbility [ a armab:magictheory ; arm:hasTotalXP 30 ; arm:hasSpeciality "Spells" ] . 
+:winter1224 arm:hasAbility [ a armab:penetration ; arm:hasTotalXP 5 ; arm:hasSpeciality "Rego" ] . 
+
+# Martial Abilities
+:winter1224 arm:hasAbility [ a armab:bows ; arm:hasTotalXP 30 ; arm:hasSpeciality "Longbow" ] . 
+:winter1224 arm:hasAbility [ a armab:thrown ; arm:hasTotalXP 5 ; arm:hasSpeciality "Dart" ] . 
+
+# Supernatural Abilities
+:winter1224 arm:hasAbility [ a armab:secondsight ; arm:hasTotalXP 14 ; arm:hasSpeciality "Faerie Illusions" ] . 
