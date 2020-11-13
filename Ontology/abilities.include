@@ -57,3 +57,7 @@ armab:magictheory  rdfs:subClassOf owl:ArcaneAbility ;
 armab:finesse  rdfs:subClassOf owl:ArcaneAbility ;
                      a arm:LeafTraitClass ;
                      rdfs:label "Finesse" .
+
+armab:philosophiae  rdfs:subClassOf owl:ArcaneAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Philosophiae" .

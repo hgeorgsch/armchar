@@ -3,6 +3,12 @@
      rdfs:comment "This is a crude attempt to make an ontology for Ars Magica characters." .
 
 arm:Saga a owl:Class .
+arm:hasSG a   owl:DatatypeProperty ;
+        rdfs:domain  [ owl:unionOf ( arm:Saga arm:Character ) ] ;
+        rdfs:range   xsd:string .
+arm:hasTitle a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Saga ;
+        rdfs:range   xsd:string .
 
 # Characters
 arm:Character a owl:Class .
@@ -21,6 +27,9 @@ arm:hasName a   owl:DatatypeProperty ;
 arm:hasSaga a   owl:ObjectProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Saga .
+arm:hasSagaTitle a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   xsd:string .
 arm:hasAlmaMater a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .

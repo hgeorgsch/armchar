@@ -6,7 +6,8 @@
 
 armchar:cieran a arm:Magus ; 
                arm:hasName "Cieran the Fletcher" ;
-               arm:hasAlmaMater "Stonehenge" .
+               arm:hasAlmaMater "Stonehenge" ;
+               arm:hasSaga armchar:contestedlands .
 
 arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 
@@ -20,6 +21,9 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 :winter1224 arm:hasPersonalityTrait [ a arm:personality-meddler ; arm:hasScore 6 ] . 
 
 :winter1224 arm:hasAbility [ a armab:parmamagica ; arm:hasTotalXP 30 ; arm:hasSpeciality "Mentem" ] . 
+:winter1224 arm:hasAbility [ a armab:philosophiae ; arm:hasTotalXP 7 ; arm:hasSpeciality "Mentem" ] . 
+:winter1224 arm:hasAbility [ a armab:craft-cooking ; arm:hasTotalXP 30  ] . 
+:winter1224 arm:hasAbility [ a armab:craft-fletching ; arm:hasTotalXP 30  ] . 
 
 :winter1224 arm:hasVirtue [ a arm:strongFaerieBlood ] . 
 

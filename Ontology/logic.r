@@ -11,6 +11,12 @@
   ( ?s1 arm:isYear ?y1 ) addOne(?y1,?y2) ( ?s2 arm:isYear ?y2 )
   -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
 
+[ addsg: 
+  ( ?c arm:hasSaga ?s ) ( ?s arm:hasSG ?sg ) -> ( ?c arm:hasSG ?sg ) ]
+[ addsaga: 
+  ( ?c arm:hasSaga ?s ) ( ?s arm:hasSaga ?t ) 
+  -> ( ?c arm:hasSagaTitle ?t ) ]
+
 [ addlabel: 
   ( ?t rdf:type arm:LeafTraitClass )
   ( ?s rdf:type ?t ) 
