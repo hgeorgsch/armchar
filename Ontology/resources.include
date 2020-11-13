@@ -3,14 +3,14 @@ arm:Characteristic rdfs:disjointUnionOf (
    armr:com armr:pre armr:dex armr:qik
 ) .
 
-armr:int a arm:LeafTraitClass ;  rdfs:label "Intelligence" .
-armr:per a arm:LeafTraitClass ;  rdfs:label "Perception" .
-armr:str a arm:LeafTraitClass ;  rdfs:label "Strenghth" .
-armr:sta a arm:LeafTraitClass ;  rdfs:label "Stamina" .
-armr:com a arm:LeafTraitClass ;  rdfs:label "Communication" .
-armr:pre a arm:LeafTraitClass ;  rdfs:label "Presence" .
-armr:dex a arm:LeafTraitClass ;  rdfs:label "Dexterity" .
-armr:qik a arm:LeafTraitClass ;  rdfs:label "Quickness" .
+armr:int a arm:LeafTraitClass ;  rdfs:label "Intelligence" ; arm:hasOrder 1 .
+armr:per a arm:LeafTraitClass ;  rdfs:label "Perception" ; arm:hasOrder 2 .
+armr:str a arm:LeafTraitClass ;  rdfs:label "Strenghth" ; arm:hasOrder 3 .
+armr:sta a arm:LeafTraitClass ;  rdfs:label "Stamina" ; arm:hasOrder 4 .
+armr:com a arm:LeafTraitClass ;  rdfs:label "Communication" ; arm:hasOrder 5 .
+armr:pre a arm:LeafTraitClass ;  rdfs:label "Presence" ; arm:hasOrder 6 .
+armr:dex a arm:LeafTraitClass ;  rdfs:label "Dexterity" ; arm:hasOrder 7 .
+armr:qik a arm:LeafTraitClass ;  rdfs:label "Quickness" ; arm:hasOrder 8 .
 
 arm:Tech rdfs:disjointUnionOf ( 
    armr:creo armr:intellego armr:muto armr:perdo armr:rego
