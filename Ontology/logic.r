@@ -12,9 +12,10 @@
   -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
 
 [ addsg: 
-  ( ?c arm:hasSaga ?s ) ( ?s arm:hasSG ?sg ) -> ( ?c arm:hasSG ?sg ) ]
+  ( ?c rdf:type arm:Character ) ( ?c arm:hasSaga ?s ) ( ?s arm:hasSG ?sg ) 
+  -> ( ?c arm:hasSG ?sg ) ]
 [ addsaga: 
-  ( ?c arm:hasSaga ?s ) ( ?s arm:hasSaga ?t ) 
+  ( ?c rdf:type arm:Character ) ( ?c arm:hasSaga ?s ) ( ?s arm:hasTitle ?t ) 
   -> ( ?c arm:hasSagaTitle ?t ) ]
 
 [ addlabel: 
