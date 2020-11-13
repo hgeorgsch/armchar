@@ -18,6 +18,13 @@
   ( ?t rdfs:label ?l ) 
   -> ( ?s rdfs:label ?l ) ]
 
+[ addorder: 
+  ( ?t rdf:type arm:LeafTraitClass )
+  ( ?s rdf:type ?t ) 
+  noValue( ?s,arm:hasOrder )
+  ( ?t arm:hasOrder ?l ) 
+  -> ( ?s arm:hasOrder ?l ) ]
+
 [ charsheet: ( ?c arm:isCharacter ?b ) ( ?b ?p ?o ) -> ( ?c ?p ?o ) ]
 
 [ traitlabel:

@@ -143,8 +143,8 @@ arm:hasSpell  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Spell .
 arm:hasOrder  a   owl:DatatypeProperty ;
-        rdfs:comment  "????" ;
-        rdfs:domain  arm:Trait ;
+        rdfs:comment  "This is used to sort traits for display purposes" ;
+        rdfs:domain  [ owl:unionOf ( arm:Trait arm:LeafTraitClass ) ] ;
         rdfs:range   xsd:float .
 
 arm:ArtClass rdfs:subClassOf arm:LeafTraitClass ;
