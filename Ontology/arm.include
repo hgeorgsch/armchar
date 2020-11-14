@@ -110,6 +110,7 @@ arm:hasEffects a owl:DatatypeProperty ;
         rdfs:domain  [ owl:unionOf ( arm:warping arm:decrepitude ) ] ;
         rdfs:range   xsd:string .
 arm:hasPoints a owl:DatatypeProperty ;
+        rdfs:subPropertyOf arm:hasXP ;
         rdfs:domain arm:confidence ;
         rdfs:range   xsd:int .
     
