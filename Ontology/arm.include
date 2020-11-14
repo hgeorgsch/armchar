@@ -182,6 +182,9 @@ arm:hasVirtue  rdfs:subPropertyOf   arm:hasTrait ;
 arm:hasFlaw  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Flaw .
+arm:hasArt  rdfs:subPropertyOf   arm:hasTrait ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:Art .
 arm:hasSpell  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Spell .
