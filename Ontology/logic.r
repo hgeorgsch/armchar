@@ -105,3 +105,9 @@
    noValue(?v,arm:hasScore)
    -> ( ?v arm:hasScore '-1'^^xsd:int ) ]
 
+[ spellstats:
+   ( ?s rdf:type ?t )
+   ( ?t rdf:type arm:SpellClass )
+   ( ?t ?p ?o )
+   ( ?t rdf:type arm:TraitProperty )
+   -> ( ?s ?p ?o ) ]
