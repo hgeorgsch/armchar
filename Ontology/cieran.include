@@ -29,16 +29,16 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 :winter1224 arm:hasPersonalityTrait [ a arm:personality-meddler ; arm:hasScore 6 ] . 
 
 
-:winter1224 arm:hasVirtue [ a arm:strongFaerieBlood ; arm:hasDetail "Ettin Blood" ] . 
-:winter1224 arm:hasVirtue [ a arm:craftmagic ] . 
-:winter1224 arm:hasVirtue [ a arm:spellfoci ] . 
-:winter1224 arm:hasVirtue [ a arm:flawlessMagic ] . 
-:winter1224 arm:hasVirtue [ a arm:skilledParens ] . 
-:winter1224 arm:hasVirtue [ a arm:bookLearner ] . 
-:winter1224 arm:hasVirtue [ a arm:affinityWithArt ; arm:hasDetail "Imaginem" ] . 
-:winter1224 arm:hasVirtue [ a arm:minorMagicalFocus ; arm:hasDetail "Magical Arrows" ] . 
-:winter1224 arm:hasFlaw [ a arm:meddler ] . 
-:winter1224 arm:hasFlaw [ a arm:shortRangedMagic ] . 
+:winter1224 arm:hasVirtue [ a armr:strongFaerieBlood ; arm:hasDetail "Ettin Blood" ] . 
+:winter1224 arm:hasVirtue [ a armr:craftmagic ] . 
+:winter1224 arm:hasVirtue [ a armr:spellfoci ] . 
+:winter1224 arm:hasVirtue [ a armr:flawlessMagic ] . 
+:winter1224 arm:hasVirtue [ a armr:skilledParens ] . 
+:winter1224 arm:hasVirtue [ a armr:bookLearner ] . 
+:winter1224 arm:hasVirtue [ a armr:affinityWithArt ; arm:hasDetail "Imaginem" ] . 
+:winter1224 arm:hasVirtue [ a armr:minorMagicalFocus ; arm:hasDetail "Magical Arrows" ] . 
+:winter1224 arm:hasFlaw [ a armr:meddler ] . 
+:winter1224 arm:hasFlaw [ a armr:shortRangedMagic ] . 
 :winter1224 arm:hasFlaw [ a armr:weakSpontaneousMagic ] .
 :winter1224 arm:hasFlaw [ a armr:mistakenIdentity ] .
 :winter1224 arm:hasFlaw [ a armr:carefree ] .

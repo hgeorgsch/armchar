@@ -82,6 +82,10 @@
    ( ?v owl:subClassOf armr:minorVirtue )
    ( ?v rdf:type arm:LeafTraitClass )
    -> ( ?v arm:hasScore +1 ) ]
+[ freevirtuescore:
+   ( ?v owl:subClassOf armr:freeVirtue )
+   ( ?v rdf:type arm:LeafTraitClass )
+   -> ( ?v arm:hasScore 0 ) ]
 [ majorflawscore:
    ( ?v owl:subClassOf armr:majorFlaw )
    ( ?v rdf:type arm:LeafTraitClass )
