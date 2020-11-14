@@ -73,3 +73,20 @@
      ( ?s arm:hasScore ?score )
      ( ?s arm:hasXP ?rem )
  ]
+
+[ majorvirtuescore:
+   ( ?v owl:subClassOf armr:majorVirtue )
+   ( ?v rdf:type arm:LeafTraitClass )
+   -> ( ?v arm:hasScore +3 ) ]
+[ minorvirtuescore:
+   ( ?v owl:subClassOf armr:minorVirtue )
+   ( ?v rdf:type arm:LeafTraitClass )
+   -> ( ?v arm:hasScore +1 ) ]
+[ majorflawscore:
+   ( ?v owl:subClassOf armr:majorFlaw )
+   ( ?v rdf:type arm:LeafTraitClass )
+   -> ( ?v arm:hasScore -3 ) ]
+[ minorflawscore:
+   ( ?v owl:subClassOf armr:minorFlaw )
+   ( ?v rdf:type arm:LeafTraitClass )
+   -> ( ?v arm:hasScore -1 ) ]
