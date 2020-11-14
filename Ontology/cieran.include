@@ -72,8 +72,9 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 
 
 # General Abilities
-:winter1224 arm:hasAbility [ a armab:gaelic ; arm:hasSpeciality "Leinster" ; arm:hasTotalXP 75  ] . 
-:winter1224 arm:hasAbility [ a armab:arealore-ireland ; arm:hasSpeciality "Legends" ; arm:hasTotalXP 5  ] . 
+:winter1224 arm:hasAbility
+   [ a armab:gaelic ; arm:hasSpeciality "Leinster" ; arm:hasTotalXP 75  ],
+   [ a armab:arealore-ireland ; arm:hasSpeciality "Legends" ; arm:hasTotalXP 5  ] . 
 :winter1224 arm:hasAbility [ a armab:arealore-munster ; arm:hasSpeciality "Hiding places" ; arm:hasTotalXP 5  ] . 
 :winter1224 arm:hasAbility [ a armab:awareness ; arm:hasSpeciality "searching" ; arm:hasTotalXP 15  ] . 
 :winter1224 arm:hasAbility [ a armab:bargain ;  arm:hasTotalXP 5  ] . 
@@ -104,3 +105,23 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 
 # Supernatural Abilities
 :winter1224 arm:hasAbility [ a armab:secondsight ; arm:hasTotalXP 14 ; arm:hasSpeciality "Faerie Illusions" ] . 
+
+# Spells
+:winter1224 arm:hasSpell
+   [ a armr:PeCo20Wound ; arm:hasTotalXP 5 ],
+   [ a armr:ReCo5Spasms ; arm:hasTotalXP 5 ],
+   [ a armr:CrIg15Lamp ; arm:hasTotalXP 5 ],
+   [ a armr:PeIm20Veil ; arm:hasTotalXP 5 ],
+   [ a armr:CrIm10Clarity ; arm:hasTotalXP 5 ],
+   [ a armr:MuIm10Aura ; arm:hasTotalXP 5 ],
+   [ a armr:PeMe10Trust ; arm:hasTotalXP 5 ],
+   [ a armr:ReMe15Arrow ; arm:hasTotalXP 5 ],
+   [ a armr:ReMe5Touch ; arm:hasTotalXP 5 ],
+   [ a armr:InTe30Stone  ; arm:hasTotalXP 5 ],
+   [ a armr:PeTe20Obliteration  ; arm:hasTotalXP 5 ],
+   [ a armr:PeTe20End  ; arm:hasTotalXP 5 ],
+   [ a armr:PeVi5Fist  ; arm:hasTotalXP 5 ],
+   [ a armr:PeVi15Fist  ; arm:hasTotalXP 5 ],
+   [ a armr:InVi5Sense  ; arm:hasTotalXP 5 ],
+   [ a armr:InVi5Spot  ; arm:hasTotalXP 5 ],
+   [ a armr:InVi5Scales ; arm:hasTotalXP 5 ] .
