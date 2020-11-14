@@ -3,7 +3,7 @@ all: $A
 install: $A
 	cp $A ../serverdata/
 
-resources.ttl: prefix.ttl resources.include vf.include abilities.include personality.include 
+resources.ttl: prefix.ttl resources.include vf.include abilities.include personality.include grimoire.include
 arm.ttl: prefix.ttl arm.include spell.include ignore.include pyramid.include
 
 %.ttl: prefix.ttl %.include

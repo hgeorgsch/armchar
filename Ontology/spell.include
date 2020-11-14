@@ -12,7 +12,12 @@ arm:Rper a arm:Range ; rdfs:label  "Personal" ; arm:hasMagnitudeCost 0 .
 arm:Rtouch a arm:Range ; rdfs:label  "Touch" ; arm:hasMagnitudeCost 1 .
 arm:Dmom a arm:Range ; rdfs:label  "Momentary" ; arm:hasMagnitudeCost 0 .
 arm:Dconc a arm:Range ; rdfs:label  "Concentration" ; arm:hasMagnitudeCost 1 .
-arm:Tind a arm:Range ; rdfs:label  "Individual" ; arm:hasMagnitudeCost 1 .
+arm:Ddiam a arm:Range ; rdfs:label  "Diameter" ; arm:hasMagnitudeCost 1 .
+arm:Dsun a arm:Range ; rdfs:label  "Sun" ; arm:hasMagnitudeCost 2 .
+arm:Dmoon a arm:Range ; rdfs:label  "Moon" ; arm:hasMagnitudeCost 3 .
+arm:Tind a arm:Range ; rdfs:label  "Individual" ; arm:hasMagnitudeCost 0 .
+arm:Tgroup a arm:Range ; rdfs:label  "Structure" ; arm:hasMagnitudeCost 2 .
+arm:Tstr a arm:Range ; rdfs:label  "Structure" ; arm:hasMagnitudeCost 3 .
 
 arm:hasMagnitudeCost a owl:DatatypeProperty ;
            rdfs:domain [ owl:unionOf ( arm:Range arm:Duration arm:Target ) ] ;

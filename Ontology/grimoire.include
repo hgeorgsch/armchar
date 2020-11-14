@@ -1,0 +1,146 @@
+
+armr:PeCo20Wound a arm:SpellClass ;
+    arm:hasTechnique armr:perdo ;
+    arm:hasForm      armr:corpus ;
+    arm:hasLevel     20 ;
+    rdfs:label       "Wound without Cause" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dmom ;
+    arm:hasTarget    arm:Tind ;
+    rdfs:comment     "Causes a heavy wound (Base 15, touch +1)" .
+
+armr:ReCo5Spasms a arm:SpellClass ;
+    arm:hasTechnique armr:rego ;
+    arm:hasForm      armr:corpus ;
+    arm:hasLevel     5 ;
+    rdfs:label       "Spasms of the Uncontrolled Body" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dsun ;
+    arm:hasTarget    arm:Tind .
+
+
+armr:CrIg15Lamp a arm:SpellClass ;
+    arm:hasTechnique armr:creo ;
+    arm:hasForm      armr:ignem ;
+    arm:hasLevel     15	 ;
+    rdfs:label       "Lamp till Morning without Flame" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dsun ;
+    arm:hasTarget    arm:Tind .
+
+armr:PeIm20Veil a arm:SpellClass ;
+    arm:hasTechnique armr:perdo ;
+    arm:hasForm      armr:imaginem ;
+    arm:hasLevel     20 ;
+    rdfs:label       "Veil of Invisibility" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dsun ;
+    arm:hasTarget    arm:Tind .
+
+armr:CrIm10Clarity a arm:SpellClass ;
+    arm:hasTechnique armr:creo ;
+    arm:hasForm      armr:imaginem ;
+    arm:hasLevel     10 ;
+    rdfs:label       "Clarity of Public Speech" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dsun ;
+    arm:hasTarget    arm:Troom ;
+    rdfs:comment     "After Notes of Delightful Sound, but the focus is on human speech, loud and clear." .
+
+armr:MuIm10Aura a arm:SpellClass ;
+    arm:hasTechnique armr:muto ;
+    arm:hasForm      armr:imaginem ;
+    arm:hasLevel     10 ;
+    rdfs:label       "Aura of Ennobled Presence" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dsun ;
+    arm:hasTarget    arm:Tind .
+    
+armr:PeMe10Trust a arm:SpellClass ;
+    arm:hasTechnique armr:perdo	 ;
+    arm:hasForm      armr:mentem ;
+    arm:hasLevel      10 ;
+    rdfs:label       "Trust of the Childlike Faith" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Ddiam ;
+    arm:hasTarget    arm:Tind .
+
+armr:ReMe15Arrow a arm:SpellClass ;
+    arm:hasTechnique armr:rego ;
+    arm:hasForm      armr:mentem ;
+    arm:hasLevel      15 ;
+    rdfs:label       "Arrow of Peaceful Slumber" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dmom ;
+    arm:hasTarget    arm:Tgroup .
+armr:ReMe5Touch a arm:SpellClass ;
+    arm:hasTechnique armr:rego ;
+    arm:hasForm      armr:mentem ;
+    arm:hasLevel      5 ;
+    rdfs:label       "Touch of Slumber" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dmom ;
+    arm:hasTarget    arm:Tind .
+
+armr:InTe30Stone  a arm:SpellClass ;
+    arm:hasTechnique armr:intellego ;
+    arm:hasForm      armr:terram ;
+    arm:hasLevel      30 ;
+    rdfs:label       "Stone Tell of the Mind that Sits" .
+
+
+
+armr:PeTe20Obliteration  a arm:SpellClass ;
+    arm:hasTechnique armr:perdo ;
+    arm:hasForm      armr:terram ;
+    arm:hasLevel      20 ;
+    rdfs:label       "Obliteration of the Metallic Barrier" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dmom ;
+    arm:hasTarget    arm:Tind .
+
+armr:PeTe20End  a arm:SpellClass ;
+    arm:hasTechnique armr:perdo ;
+    arm:hasForm      armr:terram ;
+    arm:hasLevel      20 ;
+    rdfs:label       "End of the Mighty Castle" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dmom ;
+    arm:hasTarget    arm:Tstr .
+
+armr:PeVi5Fist  a arm:SpellClass ;
+    arm:hasTechnique armr:perdo	 ;
+    arm:hasForm      armr:vim ;
+    arm:hasLevel     5 ;
+    rdfs:label       "Fist of Demon's Oblivion" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dmom ;
+    arm:hasTarget    arm:Tind .
+armr:PeVi15Fist  a arm:SpellClass ;
+    arm:hasTechnique armr:perdo	 ;
+    arm:hasForm      armr:vim ;
+    arm:hasLevel     15 ;
+    rdfs:label       "Fist of Demon's Oblivion" ;
+    arm:hasRange     arm:Rtouch ;
+    arm:hasDuration  arm:Dmom ;
+    arm:hasTarget    arm:Tind .
+
+armr:InVi5Sense  a arm:SpellClass ;
+    arm:hasTechnique armr:intellego ;
+    arm:hasForm      armr:vim ;
+    arm:hasLevel     5 ;
+    rdfs:label       "Sense the Nature of Vis" .
+
+armr:InVi5Spot  a arm:SpellClass ;
+    arm:hasTechnique armr:intellego ;
+    arm:hasForm      armr:vim ;
+    arm:hasLevel     5 ;
+    rdfs:label       "Spot the Presence Vis" .
+
+
+armr:InVi5Scales a arm:SpellClass ;
+    arm:hasTechnique armr:intellego ;
+    arm:hasForm      armr:vim ;
+    arm:hasLevel     5 ;
+    rdfs:label       "Scales of Magical Weight" .
+
