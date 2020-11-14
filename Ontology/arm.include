@@ -24,6 +24,9 @@ arm:Grog a owl:Class ;
 arm:hasName a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
+arm:hasPlayer a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   xsd:string .
 arm:hasGender a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .

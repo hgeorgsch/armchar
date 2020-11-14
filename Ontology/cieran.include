@@ -7,6 +7,7 @@
 armchar:cieran a arm:Magus ; 
                arm:hasName "Cieran the Fletcher" ;
 	       arm:hasGender "Male" ;
+	       arm:hasPlayer "George" ;
                arm:hasOtherTrait [ a arm:Size ; arm:hasScore 0 ] ;
 	       arm:hasProfession "Rusticus (magus ex Miscellanea)" ;
 	       arm:hasNationality "Irish" ;
@@ -20,7 +21,7 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 
 :winter1224 arm:hasOtherTrait
   [ a arm:Decrepitude ; arm:hasTotalXP 0  ],
-  [ a arm:Warping ; arm:hasTotalXP 1  ],
+  [ a arm:Warping ; arm:hasTotalXP 1 ; arm:hasEffect "foo", "bar" ],
   [ a arm:Confidence ; arm:hasScore 1 ; arm:hasPoints 6 ] .
 
 
