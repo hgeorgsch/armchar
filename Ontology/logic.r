@@ -77,21 +77,21 @@
 [ majorvirtuescore:
    ( ?v rdf:type armr:majorVirtue )
    noValue(?v,arm:hasScore)
-   -> ( ?v arm:hasScore +3 ) ]
+   -> ( ?v arm:hasScore '+3'^^xsd:int ) ]
 [ minorvirtuescore:
    ( ?v rdf:type armr:minorVirtue )
    noValue(?v,arm:hasScore)
-   -> ( ?v arm:hasScore +1 ) ]
+   -> ( ?v arm:hasScore '+1'^^xsd:int ) ]
 [ freevirtuescore:
    ( ?v rdf:type armr:freeVirtue )
    noValue(?v,arm:hasScore)
-   -> ( ?v arm:hasScore 0 ) ]
+   -> ( ?v arm:hasScore '0'^^xsd:int ) ]
 [ majorflawscore:
    ( ?v rdf:type armr:majorFlaw )
    noValue(?v,arm:hasScore)
-   -> ( ?v arm:hasScore -3 ) ]
+   -> ( ?v arm:hasScore '-3'^^xsd:int ) ]
 [ minorflawscore:
    ( ?v rdf:type armr:minorFlaw )
    noValue(?v,arm:hasScore)
-   -> ( ?v arm:hasScore -1 ) ]
+   -> ( ?v arm:hasScore '-1'^^xsd:int ) ]
 

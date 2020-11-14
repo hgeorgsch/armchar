@@ -192,4 +192,7 @@ arm:hasOrder  a   owl:DatatypeProperty ;
 
 arm:ArtClass rdfs:subClassOf arm:LeafTraitClass ;
              owl:disjointUnionOf ( arm:TechClass arm:FormClass ) .
+arm:TechClass rdfs:subClassOf arm:LeafTraitClass .
+arm:FormClass rdfs:subClassOf arm:LeafTraitClass .
 arm:Art owl:disjointUnionOf ( arm:Tech arm:Form ) .
+
