@@ -4,8 +4,8 @@ armr:flaw owl:subClassOf armr:Trait .
 
 armr:theGift owl:subClassOf armr:freeVirtue ; rdfs:label "The Gift" .
 
-armr:virtue rdfs:disjointUnionOf ( armr:majorVirtue armr:minorVirtue armr:freeVirtue ) .
-armr:flaw rdfs:disjointUnionOf ( armr:majorFlaw armr:minorFlaw ) .
+armr:virtue owl:disjointUnionOf ( armr:majorVirtue armr:minorVirtue armr:freeVirtue ) .
+armr:flaw owl:disjointUnionOf ( armr:majorFlaw armr:minorFlaw ) .
 
 armr:majorHermeticVirtue owl:subClassOf armr:majorVirtue ;
                          rdfs:label "Hermetic, Major" .
@@ -438,12 +438,14 @@ armr:wanderer      owl:subClassOf   armr:freeSocialStatusVirtue ; arm:hasReferen
 armr:majorHermeticFlaw  owl:subClassOf   armr:majorFlaw ;
                         a arm:LeafTraitClass ;
                         rdfs:label "Major Hermetic Flaw" .
-armr:blatantGift    owl:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
-                 a arm:LeafTraitClass ;
-                rdfs:label "Blatant Gift" .
-armr:chaoticMagic    owl:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
-                 a arm:LeafTraitClass ;
-                rdfs:label "Chaotic Magic" .
+armr:blatantGift    owl:subClassOf armr:majorHermeticFlaw ;
+                    arm:hasReference   "[ArM5]" ;
+                    a arm:LeafTraitClass ;
+                    rdfs:label "Blatant Gift" .
+armr:chaoticMagic   owl:subClassOf armr:majorHermeticFlaw ;
+                    arm:hasReference   "[ArM5]" ;
+                    a arm:LeafTraitClass ;
+                    rdfs:label "Chaotic Magic" .
 armr:deficientTechnique    owl:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
                 rdfs:label "Deficient Technique" .
@@ -465,9 +467,10 @@ armr:restriction    owl:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "
 armr:rigidMagic    owl:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
                 rdfs:label "Rigid Magic" .
-armr:shortRangedMagic    owl:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
-                 a arm:LeafTraitClass ;
-                rdfs:label "Short-Ranged Magic" .
+armr:shortRangedMagic    owl:subClassOf armr:majorHermeticFlaw ;
+                         arm:hasReference   "[ArM5]" ;
+                         a arm:LeafTraitClass ;
+                         rdfs:label "Short-Ranged Magic" .
 armr:studyRequirement    owl:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
                 rdfs:label "Study Requirement" .

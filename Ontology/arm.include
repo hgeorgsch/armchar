@@ -191,5 +191,5 @@ arm:hasOrder  a   owl:DatatypeProperty ;
         rdfs:range   xsd:float .
 
 arm:ArtClass rdfs:subClassOf arm:LeafTraitClass ;
-             rdfs:disjointUnionOf ( arm:TechClass arm:FormClass ) .
-arm:Art rdfs:disjointUnionOf ( arm:Tech arm:Form ) .
+             owl:disjointUnionOf ( arm:TechClass arm:FormClass ) .
+arm:Art owl:disjointUnionOf ( arm:Tech arm:Form ) .

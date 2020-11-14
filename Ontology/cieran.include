@@ -30,8 +30,8 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 
 
 :winter1224 arm:hasVirtue [ a armr:strongFaerieBlood ; arm:hasDetail "Ettin Blood" ] . 
-:winter1224 arm:hasVirtue [ a armr:craftmagic ] . 
-:winter1224 arm:hasVirtue [ a armr:spellfoci ] . 
+:winter1224 arm:hasVirtue [ a armr:craftmagic ; arm:hasScore 0 ] . 
+:winter1224 arm:hasVirtue [ a armr:spellfoci ; arm:hasScore 0 ] . 
 :winter1224 arm:hasVirtue [ a armr:flawlessMagic ] . 
 :winter1224 arm:hasVirtue [ a armr:skilledParens ] . 
 :winter1224 arm:hasVirtue [ a armr:bookLearner ] . 
@@ -39,7 +39,7 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 :winter1224 arm:hasVirtue [ a armr:minorMagicalFocus ; arm:hasDetail "Magical Arrows" ] . 
 :winter1224 arm:hasFlaw [ a armr:meddler ] . 
 :winter1224 arm:hasFlaw [ a armr:shortRangedMagic ] . 
-:winter1224 arm:hasFlaw [ a armr:weakSpontaneousMagic ] .
+:winter1224 arm:hasFlaw [ a armr:weakSpontaneousMagic ; arm:hasScore 0 ] .
 :winter1224 arm:hasFlaw [ a armr:mistakenIdentity ] .
 :winter1224 arm:hasFlaw [ a armr:carefree ] .
 

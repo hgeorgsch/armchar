@@ -75,22 +75,23 @@
  ]
 
 [ majorvirtuescore:
-   ( ?v owl:subClassOf armr:majorVirtue )
-   ( ?v rdf:type arm:LeafTraitClass )
+   ( ?v rdf:type armr:majorVirtue )
+   noValue(?v,arm:hasScore)
    -> ( ?v arm:hasScore +3 ) ]
 [ minorvirtuescore:
-   ( ?v owl:subClassOf armr:minorVirtue )
-   ( ?v rdf:type arm:LeafTraitClass )
+   ( ?v rdf:type armr:minorVirtue )
+   noValue(?v,arm:hasScore)
    -> ( ?v arm:hasScore +1 ) ]
 [ freevirtuescore:
-   ( ?v owl:subClassOf armr:freeVirtue )
-   ( ?v rdf:type arm:LeafTraitClass )
+   ( ?v rdf:type armr:freeVirtue )
+   noValue(?v,arm:hasScore)
    -> ( ?v arm:hasScore 0 ) ]
 [ majorflawscore:
-   ( ?v owl:subClassOf armr:majorFlaw )
-   ( ?v rdf:type arm:LeafTraitClass )
+   ( ?v rdf:type armr:majorFlaw )
+   noValue(?v,arm:hasScore)
    -> ( ?v arm:hasScore -3 ) ]
 [ minorflawscore:
-   ( ?v owl:subClassOf armr:minorFlaw )
-   ( ?v rdf:type arm:LeafTraitClass )
+   ( ?v rdf:type armr:minorFlaw )
+   noValue(?v,arm:hasScore)
    -> ( ?v arm:hasScore -1 ) ]
+
