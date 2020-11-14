@@ -109,5 +109,5 @@
    ( ?s rdf:type ?t )
    ( ?t rdf:type arm:SpellClass )
    ( ?t ?p ?o )
-   ( ?t rdf:type arm:TraitProperty )
+   ( ?p rdf:type arm:TraitProperty )
    -> ( ?s ?p ?o ) ]
