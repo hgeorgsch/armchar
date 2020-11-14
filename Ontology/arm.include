@@ -106,7 +106,7 @@ arm:Size a arm:LeafTraitClass ; rdfs:label "Size" .
 arm:Warping a arm:LeafTraitClass ; rdfs:label "Warping" .
 arm:Decrepitude a arm:LeafTraitClass ; rdfs:label "Decrepitude" .
 arm:Confidence a arm:LeafTraitClass ; rdfs:label "Confidence" .
-arm:hasEffects a owl:DatatypeProperty ;
+arm:hasEffect a owl:DatatypeProperty ;
         rdfs:domain  [ owl:unionOf ( arm:warping arm:decrepitude ) ] ;
         rdfs:range   xsd:string .
 arm:hasPoints a owl:DatatypeProperty ;
