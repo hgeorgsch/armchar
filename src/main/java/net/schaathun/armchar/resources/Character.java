@@ -90,7 +90,7 @@ public class Character {
     @GET
     @Path("/test/{id}/{season}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getCharacter(@PathParam("id") String id,
+    public Response testCharacter(@PathParam("id") String id,
                                  @PathParam("season") String season ) {
 
         String rid = "armchar:" + id ;

@@ -169,7 +169,7 @@ arm:hasOtherTrait  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:range   arm:OtherTrait .
 arm:hasPersonalityTrait  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
-        rdfs:range   arm:Ability .
+        rdfs:range   arm:PersonalityTrait .
 arm:hasAbility  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Ability .
