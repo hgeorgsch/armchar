@@ -1,11 +1,11 @@
 
-armr:virtue rdfs:subClassOf armr:Trait .
-armr:flaw rdfs:subClassOf armr:Trait .
+armr:Virtue rdfs:subClassOf armr:Trait .
+armr:Flaw rdfs:subClassOf armr:Trait .
 
 armr:theGift rdfs:subClassOf armr:freeVirtue ; rdfs:label "The Gift" .
 
-armr:virtue owl:disjointUnionOf ( armr:majorVirtue armr:minorVirtue armr:freeVirtue ) .
-armr:flaw owl:disjointUnionOf ( armr:majorFlaw armr:minorFlaw ) .
+armr:Virtue owl:disjointUnionOf ( armr:majorVirtue armr:minorVirtue armr:freeVirtue ) .
+armr:Flaw owl:disjointUnionOf ( armr:majorFlaw armr:minorFlaw ) .
 
 armr:majorHermeticVirtue rdfs:subClassOf armr:majorVirtue ;
                          rdfs:label "Hermetic, Major" .
