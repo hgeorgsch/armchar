@@ -21,19 +21,19 @@ arm:Form owl:disjointUnionOf (
 
 ) .
 
-armr:creo  a arm:TechClass ; rdfs:label "Creo" .
-armr:intellego   a arm:TechClass ; rdfs:label "Intellego" .
-armr:muto  a arm:TechClass ; rdfs:label "Muto" .
-armr:perdo  a arm:TechClass ; rdfs:label "Perdo" .
-armr:rego   a arm:TechClass ; rdfs:label "Rego" .
+armr:creo  a arm:TechClass ; rdfs:label "Creo" ; arm:abbr "Cr" .
+armr:intellego   a arm:TechClass ; rdfs:label "Intellego" ; arm:abbr "In" .
+armr:muto  a arm:TechClass ; rdfs:label "Muto" ; arm:abbr "Mu" .
+armr:perdo  a arm:TechClass ; rdfs:label "Perdo" ; arm:abbr "Pe" .
+armr:rego   a arm:TechClass ; rdfs:label "Rego" ; arm:abbr "Re" .
 
-armr:animal   a arm:FormClass ; rdfs:label "Animal" ; arm:hasID "Animal" .
-armr:aquam   a arm:FormClass ; rdfs:label "Aquam" .
-armr:auram   a arm:FormClass ; rdfs:label "Auram" .
-armr:corpus  a arm:FormClass ; rdfs:label "Corpus" .
-armr:herbam  a arm:FormClass ; rdfs:label "Herbam" .
-armr:ignem   a arm:FormClass ; rdfs:label "Ignem" .
-armr:imaginem a arm:FormClass ; rdfs:label "Imaginem" .
-armr:mentem   a arm:FormClass ; rdfs:label "Mentem" .
-armr:terram   a arm:FormClass ; rdfs:label "Terram" .
-armr:vim      a arm:FormClass ; rdfs:label "Vim" .
+armr:animal   a arm:FormClass ; rdfs:label "Animal" ; arm:hasID "Animal" ; arm:abbr "An" .
+armr:aquam   a arm:FormClass ; rdfs:label "Aquam" ; arm:abbr "Aq" .
+armr:auram   a arm:FormClass ; rdfs:label "Auram" ; arm:abbr "Au" .
+armr:corpus  a arm:FormClass ; rdfs:label "Corpus" ; arm:abbr "Co" .
+armr:herbam  a arm:FormClass ; rdfs:label "Herbam" ; arm:abbr "He" .
+armr:ignem   a arm:FormClass ; rdfs:label "Ignem" ; arm:abbr "Ig" .
+armr:imaginem a arm:FormClass ; rdfs:label "Imaginem" ; arm:abbr "Im" .
+armr:mentem   a arm:FormClass ; rdfs:label "Mentem" ; arm:abbr "Me" .
+armr:terram   a arm:FormClass ; rdfs:label "Terram" ; arm:abbr "Te" .
+armr:vim      a arm:FormClass ; rdfs:label "Vim" ; arm:abbr "Vi" .
