@@ -89,6 +89,7 @@ arm:isYear a   owl:DatatypeProperty ;
 
 arm:Trait a owl:Class .
 arm:TraitProperty a owl:Property .
+rdfs:label a arm:TraitProperty .
 arm:XPTrait rdfs:subClassOf arm:Trait .
 arm:AccelleratedTrait rdfs:subClassOf arm:Trait ;
     owl:disjointWith arm:XPTrait .
