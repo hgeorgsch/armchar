@@ -29,6 +29,16 @@
   noValue( ?s,rdfs:label )
   ( ?t rdfs:label ?l ) 
   -> ( ?s rdfs:label ?l ) ]
+[ addid1: 
+  ( ?t rdf:type arm:LeafTraitClass )
+  ( ?s rdf:type ?t ) 
+  ( ?t arm:hasID ?l ) 
+  -> ( ?s arm:hasID ?l ) ]
+[ addid2: 
+  ( ?s rdf:type arm:Trait ) 
+  noValue( ?s,arm:hasID )
+  ( ?s rdfs:label ?l ) 
+  -> ( ?s arm:hasID ?l ) ]
 
 [ addorder: 
   ( ?t rdf:type arm:LeafTraitClass )
