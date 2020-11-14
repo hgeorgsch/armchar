@@ -64,10 +64,9 @@ arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 :winter1224 arm:hasAbility [ a armab:awareness ; arm:hasSpeciality "searching" ; arm:hasTotalXP 15  ] . 
 :winter1224 arm:hasAbility [ a armab:bargain ;  arm:hasTotalXP 5  ] . 
 :winter1224 arm:hasAbility [ a armab:brawl ; arm:hasSpeciality "Dodge" ;  arm:hasTotalXP 15  ] . 
-:winter1224 arm:hasAbility [ a armab:concentration ; arm:hasSpeciality "Spell Concentration" ;  arm:hasTotalXP 5  ] . 
+:winter1224 arm:hasAbility [ a armab:conc ; arm:hasSpeciality "Spell Concentration" ;  arm:hasTotalXP 5  ] . 
 :winter1224 arm:hasAbility [ a armab:craft-cooking ; arm:hasTotalXP 30  ] . 
 :winter1224 arm:hasAbility [ a armab:craft-fletching ; arm:hasTotalXP 30  ] . 
-:winter1224 arm:hasAbility [ a armab:folkken ; arm:hasSpeciality "Villagers" ; arm:hasTotalXP 5  ] . 
 :winter1224 arm:hasAbility [ a armab:folkken ; arm:hasSpeciality "Villagers" ; arm:hasTotalXP 5  ] . 
 :winter1224 arm:hasAbility [ a armab:hermeslore ; arm:hasSpeciality "Hibernia" ; arm:hasTotalXP 5  ] . 
 :winter1224 arm:hasAbility [ a armab:socplore ; arm:hasSpeciality "Self Initiation" ; arm:hasTotalXP 17  ] . 

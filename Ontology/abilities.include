@@ -11,8 +11,10 @@ armab:arealore-munster  rdfs:subClassOf armab:arealore ;
 armab:organisationlore  rdfs:subClassOf arm:GeneralAbility ;
    rdfs:label "(Organisation) Lore" .
 armab:hermeslore  rdfs:subClassOf armab:organisationlore ;
+                   a arm:LeafTraitClass ;
    rdfs:label "Order of Hermes Lore" .
 armab:socplore  rdfs:subClassOf armab:organisationlore ;
+                   a arm:LeafTraitClass ;
    rdfs:label "Servants of the Common People Lore" .
 armab:livinglanguage  rdfs:subClassOf arm:GeneralAbility ;
    rdfs:label "Living Language" .
@@ -38,6 +40,9 @@ armab:craft-fletching  rdfs:subClassOf armab:craft ;
 armab:awareness  rdfs:subClassOf arm:GeneralAbility ;
                        a arm:LeafTraitClass ;
                        rdfs:label "Awareness" .
+armab:bargain  rdfs:subClassOf arm:GeneralAbility ;
+                   a arm:LeafTraitClass ;
+                   rdfs:label "Bargain" .
 armab:brawl  rdfs:subClassOf arm:GeneralAbility ;
                    a arm:LeafTraitClass ;
                    rdfs:label "Brawl" .
@@ -50,6 +55,12 @@ armab:empathy  rdfs:subClassOf arm:GeneralAbility ;
 armab:folkken  rdfs:subClassOf arm:GeneralAbility ;
                      a arm:LeafTraitClass ;
                      rdfs:label "Folk Ken" .
+armab:stealth  rdfs:subClassOf arm:GeneralAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Stealth" .
+armab:conc  rdfs:subClassOf arm:GeneralAbility ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Concentration" .
 
 # Arcane Abilities
 armab:parmamagica  rdfs:subClassOf arm:ArcaneAbility ;
