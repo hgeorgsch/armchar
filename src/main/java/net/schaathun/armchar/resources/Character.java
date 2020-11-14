@@ -87,6 +87,32 @@ public class Character {
                 .ok(result)
                 .build();
     }
+    @GET
+    @Path("/test/{id}/{season}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getCharacter(@PathParam("id") String id,
+                                 @PathParam("season") String season ) {
+
+        String rid = "armchar:" + id ;
+        String queryString = Config.prefix
+                    + "CONSTRUCT { \r\n" 
+		    + " ?s ?p1 ?o1 .  \r\n"
+		    + " ?o1 ?p2 ?o2 . \r\n"
+                    + "} WHERE { \r\n " 
+                    + " ?s arm:isCharacter " + rid + " . \r\n"
+		    + " ?s arm:atSeasonTime arm:" + season + " . \r\n"
+		    + " ?s ?p1 ?o1 . \r\n"
+		    // + " NOT EXISTS { ?p1 rdf:type arm:ignoredProperty }  \r\n"
+                    + "  OPTIONAL { \r\n" 
+                    + "     ?o1 ?p2 ?o2 . \r\n" 
+		    // + "     NOT EXISTS { ?p2 rdf:type arm:ignoredProperty }  \r\n"
+                    + " } \r\n"
+                    + "}";
+        String result = ArMModel.construct(queryString,frame);
+        return Response
+                .ok(result)
+                .build();
+    }
 
 
 }
