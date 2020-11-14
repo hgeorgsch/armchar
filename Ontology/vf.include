@@ -374,3 +374,16 @@ armr:meddler rdfs:subClassOf  armr:majorPersonalityFlaw ; arm:hasReference   "[A
 
 armr:greaterMalediction  rdfs:subClassOf  armr:majorSupernaturalFlaw ; arm:hasReference   "[ArM5]" ;
              rdfs:label "Greater Malediction" .
+
+armr:carefree  rdfs:subClassOf  armr:minorPersonalityFlaw ; arm:hasReference   "[ArM5]" ;
+             rdfs:label "Carefree" .
+armr:mistakenIdentity  rdfs:subClassOf  armr:majorStoryFlaw ; arm:hasReference   "[ArM5]" ;
+             rdfs:label "Mistaken Identity" .
+
+# [HoH:S]
+armr:craftmagic  rdfs:subClassOf  armr:majorSupernaturalVirtue ;
+                 arm:hasReference   "[HoH:S]" ;
+                 rdfs:label "Craft Magic" .
+armr:spellfoci   rdfs:subClassOf  armr:minorHermeticVirtue ;
+                 arm:hasReference   "[HoH:S]" ;
+                 rdfs:label "Spell Foci" .
