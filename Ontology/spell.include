@@ -1,5 +1,5 @@
 
-arm:SpellClass rdfs:subClassOf owl:LeafTraitClass ; .
+arm:SpellClass rdfs:subClassOf owl:LeafTraitClass .
 arm:Spell rdfs:subClassOf arm:Trait ;
     owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic,
                      arm:Art, arm:Reputation .

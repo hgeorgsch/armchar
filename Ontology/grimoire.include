@@ -1,5 +1,5 @@
 
-armr:PeCo20Wound a arm:SpellClass ;
+armr:PeCo20Wound a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:perdo ;
     arm:hasForm      armr:corpus ;
     arm:hasLevel     20 ;
@@ -9,7 +9,7 @@ armr:PeCo20Wound a arm:SpellClass ;
     arm:hasTarget    arm:Tind ;
     arm:hasDescription "Causes a heavy wound (Base 15, touch +1)" .
 
-armr:ReCo5Spasms a arm:SpellClass ;
+armr:ReCo5Spasms a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:rego ;
     arm:hasForm      armr:corpus ;
     arm:hasLevel     5 ;
@@ -19,7 +19,7 @@ armr:ReCo5Spasms a arm:SpellClass ;
     arm:hasTarget    arm:Tind .
 
 
-armr:CrIg15Lamp a arm:SpellClass ;
+armr:CrIg15Lamp a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:creo ;
     arm:hasForm      armr:ignem ;
     arm:hasLevel     15	 ;
@@ -28,7 +28,7 @@ armr:CrIg15Lamp a arm:SpellClass ;
     arm:hasDuration  arm:Dsun ;
     arm:hasTarget    arm:Tind .
 
-armr:PeIm20Veil a arm:SpellClass ;
+armr:PeIm20Veil a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:perdo ;
     arm:hasForm      armr:imaginem ;
     arm:hasLevel     20 ;
@@ -38,7 +38,7 @@ armr:PeIm20Veil a arm:SpellClass ;
     arm:hasTarget    arm:Tind ;
     arm:hasDescription "The target becomes completely undetectable to normal sight, regardless of what he does, but still casts a shadow.  (Base 4, +1 Touch, +2 Sun, +1 changing image)".
 
-armr:CrIm10Clarity a arm:SpellClass ;
+armr:CrIm10Clarity a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:creo ;
     arm:hasForm      armr:imaginem ;
     arm:hasLevel     10 ;
@@ -48,7 +48,7 @@ armr:CrIm10Clarity a arm:SpellClass ;
     arm:hasTarget    arm:Troom ;
     arm:hasDescription "After Notes of Delightful Sound, but the focus is on human speech, loud and clear." .
 
-armr:MuIm10Aura a arm:SpellClass ;
+armr:MuIm10Aura a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:muto ;
     arm:hasForm      armr:imaginem ;
     arm:hasLevel     10 ;
@@ -57,7 +57,7 @@ armr:MuIm10Aura a arm:SpellClass ;
     arm:hasDuration  arm:Dsun ;
     arm:hasTarget    arm:Tind .
     
-armr:PeMe10Trust a arm:SpellClass ;
+armr:PeMe10Trust a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:perdo	 ;
     arm:hasForm      armr:mentem ;
     arm:hasLevel      10 ;
@@ -66,7 +66,7 @@ armr:PeMe10Trust a arm:SpellClass ;
     arm:hasDuration  arm:Ddiam ;
     arm:hasTarget    arm:Tind .
 
-armr:ReMe15Arrow a arm:SpellClass ;
+armr:ReMe15Arrow a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:rego ;
     arm:hasForm      armr:mentem ;
     arm:hasLevel      15 ;
@@ -74,7 +74,7 @@ armr:ReMe15Arrow a arm:SpellClass ;
     arm:hasRange     arm:Rtouch ;
     arm:hasDuration  arm:Dmom ;
     arm:hasTarget    arm:Tgroup .
-armr:ReMe5Touch a arm:SpellClass ;
+armr:ReMe5Touch a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:rego ;
     arm:hasForm      armr:mentem ;
     arm:hasLevel      5 ;
@@ -83,7 +83,7 @@ armr:ReMe5Touch a arm:SpellClass ;
     arm:hasDuration  arm:Dmom ;
     arm:hasTarget    arm:Tind .
 
-armr:InTe30Stone  a arm:SpellClass ;
+armr:InTe30Stone  a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:intellego ;
     arm:hasForm      armr:terram ;
     arm:hasLevel      30 ;
@@ -91,7 +91,7 @@ armr:InTe30Stone  a arm:SpellClass ;
 
 
 
-armr:PeTe20Obliteration  a arm:SpellClass ;
+armr:PeTe20Obliteration  a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:perdo ;
     arm:hasForm      armr:terram ;
     arm:hasLevel      20 ;
@@ -100,7 +100,7 @@ armr:PeTe20Obliteration  a arm:SpellClass ;
     arm:hasDuration  arm:Dmom ;
     arm:hasTarget    arm:Tind .
 
-armr:PeTe20End  a arm:SpellClass ;
+armr:PeTe20End  a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:perdo ;
     arm:hasForm      armr:terram ;
     arm:hasLevel      20 ;
@@ -109,7 +109,7 @@ armr:PeTe20End  a arm:SpellClass ;
     arm:hasDuration  arm:Dmom ;
     arm:hasTarget    arm:Tstr .
 
-armr:PeVi5Fist  a arm:SpellClass ;
+armr:PeVi5Fist  a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:perdo	 ;
     arm:hasForm      armr:vim ;
     arm:hasLevel     5 ;
@@ -117,7 +117,7 @@ armr:PeVi5Fist  a arm:SpellClass ;
     arm:hasRange     arm:Rtouch ;
     arm:hasDuration  arm:Dmom ;
     arm:hasTarget    arm:Tind .
-armr:PeVi15Fist  a arm:SpellClass ;
+armr:PeVi15Fist  a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:perdo	 ;
     arm:hasForm      armr:vim ;
     arm:hasLevel     15 ;
@@ -126,20 +126,20 @@ armr:PeVi15Fist  a arm:SpellClass ;
     arm:hasDuration  arm:Dmom ;
     arm:hasTarget    arm:Tind .
 
-armr:InVi5Sense  a arm:SpellClass ;
+armr:InVi5Sense  a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:intellego ;
     arm:hasForm      armr:vim ;
     arm:hasLevel     5 ;
     rdfs:label       "Sense the Nature of Vis" .
 
-armr:InVi5Spot  a arm:SpellClass ;
+armr:InVi5Spot  a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:intellego ;
     arm:hasForm      armr:vim ;
     arm:hasLevel     5 ;
     rdfs:label       "Spot the Presence Vis" .
 
 
-armr:InVi5Scales a arm:SpellClass ;
+armr:InVi5Scales a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasTechnique armr:intellego ;
     arm:hasForm      armr:vim ;
     arm:hasLevel     5 ;

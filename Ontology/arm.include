@@ -111,9 +111,6 @@ arm:Size a arm:LeafTraitClass ; rdfs:label "Size" .
 arm:Warping a arm:LeafTraitClass ; rdfs:label "Warping" .
 arm:Decrepitude a arm:LeafTraitClass ; rdfs:label "Decrepitude" .
 arm:Confidence a arm:LeafTraitClass ; rdfs:label "Confidence" .
-arm:hasID a owl:DatatypeProperty ;
-        rdfs:domain  arm:Trait ;
-        rdfs:range   xsd:string .
 arm:hasEffect a owl:DatatypeProperty ;
         rdfs:domain  [ owl:unionOf ( arm:warping arm:decrepitude ) ] ;
         rdfs:range   xsd:string .
@@ -124,15 +121,11 @@ arm:hasPoints a owl:DatatypeProperty ;
     
 
 arm:hasGeneralDescription a owl:DatatypeProperty ;
-	rdfs:comment "Source book reference defining the trait" ;
-        rdfs:domain  arm:Trait ;
-        rdfs:range   xsd:string .
-arm:hasLabel a owl:DatatypeProperty ;
-	rdfs:comment "Source book reference defining the trait" ;
+	rdfs:comment "Description of the trait, inherited from the class." ;
         rdfs:domain  arm:Trait ;
         rdfs:range   xsd:string .
 arm:hasDescription a owl:DatatypeProperty ;
-	rdfs:comment "Source book reference defining the trait" ;
+	rdfs:comment "Description of the trait." ;
         rdfs:domain  owl:Class ;
         rdfs:range   xsd:string .
 arm:hasReference a owl:DatatypeProperty ;

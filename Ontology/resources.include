@@ -27,7 +27,7 @@ armr:muto  a arm:TechClass ; rdfs:label "Muto" ; arm:abbr "Mu" .
 armr:perdo  a arm:TechClass ; rdfs:label "Perdo" ; arm:abbr "Pe" .
 armr:rego   a arm:TechClass ; rdfs:label "Rego" ; arm:abbr "Re" .
 
-armr:animal   a arm:FormClass ; rdfs:label "Animal" ; arm:hasID "Animal" ; arm:abbr "An" .
+armr:animal   a arm:FormClass ; rdfs:label "Animal" ; arm:abbr "An" .
 armr:aquam   a arm:FormClass ; rdfs:label "Aquam" ; arm:abbr "Aq" .
 armr:auram   a arm:FormClass ; rdfs:label "Auram" ; arm:abbr "Au" .
 armr:corpus  a arm:FormClass ; rdfs:label "Corpus" ; arm:abbr "Co" .

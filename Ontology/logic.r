@@ -1,4 +1,5 @@
 
+# Seasons
 
 [ seasonsequence1:
   ( ?s1 arm:isSeason ?o1 ) ( ?s2 arm:isSeason ?o2 )
@@ -10,6 +11,8 @@
   ( ?s1 arm:isSeason arm:Autumn ) ( ?s2 arm:isSeason arm:Winter )
   ( ?s1 arm:isYear ?y1 ) addOne(?y1,?y2) ( ?s2 arm:isYear ?y2 )
   -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
+
+# Base Character
 
 [ addsg: 
   ( ?c rdf:type arm:Character ) ( ?c arm:hasSaga ?s ) ( ?s arm:hasSG ?sg ) 
@@ -23,43 +26,38 @@
   ( ?s arm:hasScore ?size ) 
   -> ( ?c arm:hasSize ?size ) ]
 
+# Character sheet inherits from the base character
+[ charsheet: ( ?c arm:isCharacter ?b ) ( ?b ?p ?o ) -> ( ?c ?p ?o ) ]
+
+# Trait instances inherit properties from their class
+
 [ addlabel: 
   ( ?t rdf:type arm:LeafTraitClass )
   ( ?s rdf:type ?t ) 
   noValue( ?s,rdfs:label )
   ( ?t rdfs:label ?l ) 
   -> ( ?s rdfs:label ?l ) ]
-[ addid1: 
-  ( ?t rdf:type arm:LeafTraitClass )
-  ( ?s rdf:type ?t ) 
-  ( ?t arm:hasID ?l ) 
-  -> ( ?s arm:hasID ?l ) ]
-[ addid2: 
-  ( ?s rdf:type arm:Trait ) 
-  noValue( ?s,arm:hasID )
-  ( ?s rdfs:label ?l ) 
-  -> ( ?s arm:hasID ?l ) ]
-
 [ addorder: 
   ( ?t rdf:type arm:LeafTraitClass )
   ( ?s rdf:type ?t ) 
   noValue( ?s,arm:hasOrder )
   ( ?t arm:hasOrder ?l ) 
   -> ( ?s arm:hasOrder ?l ) ]
-
-[ charsheet: ( ?c arm:isCharacter ?b ) ( ?b ?p ?o ) -> ( ?c ?p ?o ) ]
-
-[ traitlabel:
-  ( ?t rdf:type ?c ) ( ?c rdf:type arm:LeafTraitClass ) ( ?c rdfs:label ?d ) 
-  -> ( ?t arm:hasLabel ?d ) ]
 [ traitdescription:
   ( ?t rdf:type ?c ) ( ?c rdf:type arm:LeafTraitClass ) 
+  ( ?c arm:hasDescription ?d ) 
+  -> ( ?t arm:hasGeneralDescription ?d ) ]
+# TODO: spelldescription should be a special case of leaftraitdescription
+[ spelldescription:
+  ( ?t rdf:type ?c ) ( ?c rdf:type arm:SpellClass ) 
   ( ?c arm:hasDescription ?d ) 
   -> ( ?t arm:hasGeneralDescription ?d ) ]
 [ leaftraitdescription:
   ( ?c rdf:type arm:LeafTraitClass ) noValue( ?c, arm:hasDescription ) 
   ( ?c rdfs:subClassOf ?s ) ( ?s arm:hasDescription ?d ) 
   -> ( ?c arm:hasDescription ?d ) ]
+
+# Abilities and Arts (XP)
 
 [ artscore:
   ( ?s arm:hasTotalXP ?xp )
@@ -72,7 +70,6 @@
      ( ?s arm:hasScore ?score )
      ( ?s arm:hasXP ?rem )
  ]
-
 [ abscore:
   ( ?s arm:hasTotalXP ?xp )
   ( ?s rdf:type arm:XPTrait )
@@ -85,6 +82,7 @@
      ( ?s arm:hasXP ?rem )
  ]
 
+# Virtues and Flaws
 [ majorvirtuescore:
    ( ?v rdf:type armr:majorVirtue )
    noValue(?v,arm:hasScore)
@@ -105,6 +103,8 @@
    ( ?v rdf:type armr:minorFlaw )
    noValue(?v,arm:hasScore)
    -> ( ?v arm:hasScore '-1'^^xsd:int ) ]
+
+# Spells
 
 [ spellstats:
    ( ?s rdf:type ?t )
