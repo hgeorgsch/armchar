@@ -121,3 +121,9 @@
 [ spelltarget:
    ( ?s rdf:type arm:Spell ) ( ?s arm:hasTarget ?o ) ( ?o rdfs:label ?st )
    -> ( ?s arm:hasTargetString ?st ) ]
+[ spelltech:
+   ( ?s rdf:type arm:Spell ) ( ?s arm:hasTechnique ?o ) ( ?o rdfs:label ?st )
+   -> ( ?s arm:hasTechniqueString ?st ) ]
+[ spellform:
+   ( ?s rdf:type arm:Spell ) ( ?s arm:hasForm ?o ) ( ?o rdfs:label ?st )
+   -> ( ?s arm:hasFormString ?st ) ]
