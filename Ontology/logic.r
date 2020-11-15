@@ -111,3 +111,13 @@
    ( ?t ?p ?o )
    ( ?p rdf:type arm:TraitProperty )
    -> ( ?s ?p ?o ) ]
+
+[ spellrange:
+   ( ?s rdf:type arm:Spell ) ( ?s arm:hasRange ?o ) ( ?o rdfs:label ?st )
+   -> ( ?s arm:hasRangeString ?st ) ]
+[ spellduration:
+   ( ?s rdf:type arm:Spell ) ( ?s arm:hasDuration ?o ) ( ?o rdfs:label ?st )
+   -> ( ?s arm:hasDurationString ?st ) ]
+[ spelltarget:
+   ( ?s rdf:type arm:Spell ) ( ?s arm:hasTarget ?o ) ( ?o rdfs:label ?st )
+   -> ( ?s arm:hasTargetString ?st ) ]
