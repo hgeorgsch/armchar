@@ -42,7 +42,7 @@
        makeInstance( ?nc, ?p, ?nt )
        ( ?trait arm:hasTotalXP ?xp )
        ( ?adv arm:withXP ?xxp )
-       -> ( ?nc arm:hasTotalXP sum(?xp,?xxp )
+       -> ( ?nc arm:hasTotalXP sum(?xp,?xxp ) )
 ]   
 ]
 

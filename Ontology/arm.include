@@ -85,7 +85,7 @@ arm:isYear a   owl:DatatypeProperty ;
 
 
 # Character Sheet and Base Character
-arm:CharacterSheet a owl:Class ; rdfs:subClassOf arm:Character 
+arm:CharacterSheet a owl:Class ; rdfs:subClassOf arm:Character ;
     rdfs:comment "A CharacterSheet represents the character at a particular point in time, is contains the character's dynamic properties and a reference to the base character." .
 arm:BaseCharacter a owl:Class ; rdfs:subClassOf arm:Character ;
     rdfs:comment "The BaseCharacter represents the character itself, and contains the character's static properties." .
@@ -121,7 +121,7 @@ arm:advanceCharacterSheet a owl:ObjectProperty ;
         rdfs:range   arm:CharacterSheet .
 arm:advanceTrait a owl:ObjectProperty ;
         rdfs:domain  arm:TraitAdvancement ;
-        rdfs:range   arm:LeafTrait|Class .
+        rdfs:range   arm:LeafTraitClass .
 arm:withXP a   owl:DatatypeProperty ;
         rdfs:domain  arm:TraitAdvancement ;
         rdfs:range   xsd:int .
