@@ -36,11 +36,7 @@ armr:PeIm20Veil a arm:SpellClass ;
     arm:hasRange     arm:Rtouch ;
     arm:hasDuration  arm:Dsun ;
     arm:hasTarget    arm:Tind ;
-    arm:hasDescription "The target becomes completely unde-
-tectable to normal sight, regardless of what he
-does, but still casts a shadow.
-(Base 4, +1 Touch, +2 Sun, +1 changing image)
-".
+    arm:hasDescription "The target becomes completely undetectable to normal sight, regardless of what he does, but still casts a shadow.  (Base 4, +1 Touch, +2 Sun, +1 changing image)".
 
 armr:CrIm10Clarity a arm:SpellClass ;
     arm:hasTechnique armr:creo ;
