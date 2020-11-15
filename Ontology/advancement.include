@@ -1,8 +1,4 @@
 
-arm:Advancement a owl:Class .
-arm:hasAdvancement a owl:ObjectProperty ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:Advancement .
 
 
 arm:SeasonAdvancement rdfs:subClassOf arm:Advancement .
@@ -11,16 +7,3 @@ arm:LaterLife rdfs:subClassOf arm:Advancement .
 arm:Apprenticeship rdfs:subClassOf arm:Advancement .
 arm:PostApprenticeship rdfs:subClassOf arm:Advancement .
 
-arm:xpassignment a owl:Class .
-arm:hasXPassignment a owl:ObjectProperty ;
-        rdfs:domain  arm:Advancement ;
-        rdfs:range   arm:xpassignment .
-arm:hasNewXP a   owl:DatatypeProperty ;
-        rdfs:domain  arm:xpassignment ;
-        rdfs:range   xsd:int .
-arm:hasTraitForXP a   owl:ObjectProperty ;
-        rdfs:domain  arm:xpassignment ;
-        rdfs:range   arm:Trait .
-arm:assignSpeciality a   owl:DatatypeProperty ;
-        rdfs:domain  arm:xpassignment ;
-        rdfs:range   xsd:string .

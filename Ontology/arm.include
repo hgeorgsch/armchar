@@ -2,6 +2,7 @@
      dc:creator "Hans Georg Schaathun" ;
      rdfs:comment "This is a crude attempt to make an ontology for Ars Magica characters." .
 
+# Saga
 arm:Saga a owl:Class .
 arm:hasSG a   owl:DatatypeProperty ;
         rdfs:domain  [ owl:unionOf ( arm:Saga arm:Character ) ] ;
@@ -10,8 +11,10 @@ arm:hasTitle a   owl:DatatypeProperty ;
         rdfs:domain  arm:Saga ;
         rdfs:range   xsd:string .
 
-# Characters
-arm:Character a owl:Class .
+# Covenant and Character
+arm:GeneralCharacter a owl:Class .
+arm:Covenant a owl:Class ; rdfs:subClassOf   arm:GeneralCharacter .
+arm:Character a owl:Class ; rdfs:subClassOf   arm:GeneralCharacter .
 arm:Magus a owl:Class ;
     rdfs:subClassOf arm:Character .
 arm:Companion a owl:Class ;
@@ -21,9 +24,23 @@ arm:Grog a owl:Class ;
     rdfs:subClassOf arm:Character ;
     owl:disjointWith arm:Companion, arm:Magus .
 
+# Covenant and Character - Shared Properties
 arm:hasName a   owl:DatatypeProperty ;
-        rdfs:domain  arm:Character ;
+        rdfs:domain  arm:GeneralCharacter ;
         rdfs:range   xsd:string .
+arm:hasSaga a   owl:ObjectProperty ;
+        rdfs:domain  arm:GeneralCharacter ;
+        rdfs:range   arm:Saga .
+arm:hasSagaTitle a   owl:DatatypeProperty ;
+        rdfs:domain  arm:GeneralCharacter ;
+        rdfs:range   xsd:string .
+
+# Covenant Properties
+arm:hasTribunal a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Covenant ;
+        rdfs:range   xsd:string .
+
+# Character Properties
 arm:hasPlayer a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
@@ -36,34 +53,14 @@ arm:hasProfession a   owl:DatatypeProperty ;
 arm:hasNationality a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
-arm:hasSaga a   owl:ObjectProperty ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:Saga .
-arm:hasSagaTitle a   owl:DatatypeProperty ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   xsd:string .
 arm:hasAlmaMater a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
-
-arm:CharacterSheet a owl:Class ; rdfs:subClassOf arm:Character .
-arm:BaseCharacter a owl:Class ; rdfs:subClassOf arm:Character .
-
-arm:isCharacter a   owl:ObjectProperty ;
-        rdfs:domain  arm:CharacterSheet ;
-        rdfs:range   arm:BaseCharacter .
-arm:atSeasonTime a   owl:ObjectProperty ;
-        rdfs:domain  arm:CharacterSheet ;
-        rdfs:range   arm:SeasonTime .
 
 # Seasons and Time
 arm:Season a owl:Class ;
    owl:oneOf ( arm:Winter arm:Spring arm:Summer arm:Autumn ) .
 arm:precedes a   owl:ObjectProperty ;
-        rdfs:domain  arm:Season ;
-        rdfs:range   arm:Season .
-arm:beforeSeason a   owl:ObjectProperty ;
-	a owl:TransitiveProperty ;
         rdfs:domain  arm:Season ;
         rdfs:range   arm:Season .
 arm:Winter arm:precedes arm:Spring .
@@ -87,117 +84,47 @@ arm:isYear a   owl:DatatypeProperty ;
         rdfs:range   xsd:int .
 
 
-arm:Trait a owl:Class .
-arm:TraitProperty a owl:Property .
-rdfs:label a arm:TraitProperty .
-arm:XPTrait rdfs:subClassOf arm:Trait .
-arm:AccelleratedTrait rdfs:subClassOf arm:Trait ;
-    owl:disjointWith arm:XPTrait .
-arm:Ability rdfs:subClassOf arm:XPTrait .
-arm:PersonalityTrait rdfs:subClassOf arm:Trait ;
-    owl:disjointWith arm:Ability .
-arm:Characteristic rdfs:subClassOf arm:Trait ;
-    owl:disjointWith arm:Ability, arm:PersonalityTrait .
-arm:Art rdfs:subClassOf arm:AccelleratedTrait ;
-    owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic .
-arm:Reputation rdfs:subClassOf arm:XPTrait ;
-    owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic,
-                     arm:Art .
-arm:OtherTrait rdfs:subClassOf arm:Trait ;
-    owl:disjointWith arm:Ability, arm:PersonalityTrait, arm:Characteristic,
-                     arm:Art, arm:Reputation  .
+# Character Sheet and Base Character
+arm:CharacterSheet a owl:Class ; rdfs:subClassOf arm:Character 
+    rdfs:comment "A CharacterSheet represents the character at a particular point in time, is contains the character's dynamic properties and a reference to the base character." .
+arm:BaseCharacter a owl:Class ; rdfs:subClassOf arm:Character ;
+    rdfs:comment "The BaseCharacter represents the character itself, and contains the character's static properties." .
 
-arm:Size a arm:LeafTraitClass ; rdfs:label "Size" .
-arm:Warping a arm:LeafTraitClass ; rdfs:label "Warping" .
-arm:Decrepitude a arm:LeafTraitClass ; rdfs:label "Decrepitude" .
-arm:Confidence a arm:LeafTraitClass ; rdfs:label "Confidence" .
-arm:hasEffect a owl:DatatypeProperty ;
-        rdfs:domain  [ owl:unionOf ( arm:warping arm:decrepitude ) ] ;
-        rdfs:range   xsd:string .
-arm:hasPoints a owl:DatatypeProperty ;
-        rdfs:subPropertyOf arm:hasXP ;
-        rdfs:domain arm:confidence ;
+arm:isCharacter a   owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterSheet ;
+        rdfs:range   arm:BaseCharacter .
+
+# Character Advancement
+arm:CharacterAdvancement a owl:Class .
+arm:hasCharacter a owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterAdvancement ;
+        rdfs:range   arm:Character .
+arm:atSeasonTime a   owl:ObjectProperty ;
+        rdfs:domain  [ owl:disjointUnionOf ( arm:CharacterSheet
+                                             arm:CharacterAdvancement ) ] ;
+        rdfs:range   arm:SeasonTime .
+arm:hasTraitAdvancement a owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterAdvancement ;
+        rdfs:range   arm:TraitAdvancement .
+
+arm:hasNextCharacterSheet a owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterSheet ;
+        rdfs:range   arm:CharacterSheet .
+
+# Trait Advancement
+arm:TraitAdvancement a arm:LeafTraitClass .
+arm:advanceCharacter a owl:ObjectProperty ;
+        rdfs:domain  arm:TraitAdvancement ;
+        rdfs:range   arm:BaseCharacter .
+arm:advanceCharacterSheet a owl:ObjectProperty ;
+        rdfs:domain  arm:TraitAdvancement ;
+        rdfs:range   arm:CharacterSheet .
+arm:advanceTrait a owl:ObjectProperty ;
+        rdfs:domain  arm:TraitAdvancement ;
+        rdfs:range   arm:LeafTrait|Class .
+arm:withXP a   owl:DatatypeProperty ;
+        rdfs:domain  arm:TraitAdvancement ;
         rdfs:range   xsd:int .
-    
-
-arm:hasGeneralDescription a owl:DatatypeProperty ;
-	rdfs:comment "Description of the trait, inherited from the class." ;
-        rdfs:domain  arm:Trait ;
+arm:assignSpeciality a   owl:DatatypeProperty ;
+        rdfs:domain  arm:TraitAdvancement ;
         rdfs:range   xsd:string .
-arm:hasDescription a owl:DatatypeProperty ;
-	rdfs:comment "Description of the trait." ;
-        rdfs:domain  owl:Class ;
-        rdfs:range   xsd:string .
-arm:hasReference a owl:DatatypeProperty ;
-	rdfs:comment "Source book reference defining the trait" ;
-        rdfs:domain  owl:Class ;
-        rdfs:range   xsd:string .
-
-arm:LeafTraitClass rdfs:subClassOf owl:Class ;
-    rdfs:comment  "Classes that are instances of the LeafTraitClass class are traits as they may appear on a character's sheet.  Other traits should be seen as categories of LeafTraits." .
-
-arm:GeneralAbility rdfs:subClassOf arm:Ability .
-arm:ArcaneAbility rdfs:subClassOf arm:Ability .
-arm:AcademicKnowledge rdfs:subClassOf arm:Ability .
-arm:MartialAbility rdfs:subClassOf arm:Ability .
-arm:SupernaturalAbility rdfs:subClassOf arm:Ability .
-
-arm:hasScore  a   owl:DatatypeProperty ;
-        rdfs:domain  arm:Trait ;
-        rdfs:range   xsd:int .
-arm:hasTotalXP  a   owl:DatatypeProperty ;
-        rdfs:domain  arm:Trait ;
-        rdfs:range   xsd:int .
-arm:hasXP  a   owl:DatatypeProperty ;
-	rdfs:comment "XP towards next level" ;
-        rdfs:domain  arm:Trait ;
-        rdfs:range   xsd:int .
-arm:hasSpecialty  a   owl:DatatypeProperty ;
-        rdfs:domain  [ owl:unionOf ( arm:Ability arm:Characteristic ) ] ;
-        rdfs:range   xsd:string .
-arm:hasType  a   owl:ObjectProperty ;
-        rdfs:domain  arm:Reputation ;
-        rdfs:range   arm:ReputationType .
-arm:ReputationType a owl:class ;
-   owl:oneOf ( arm:ecclesiastical arm:hermetic arm:local ) .
-arm:ecclesiastical rdfs:label "Ecclesiastical " .
-arm:hermetic rdfs:label "Hermetic" .
-arm:local rdfs:label "Local" .
-arm:hasTrait  a   owl:ObjectProperty ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:Trait .
-arm:hasOtherTrait  rdfs:subPropertyOf   arm:hasTrait ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:OtherTrait .
-arm:hasPersonalityTrait  rdfs:subPropertyOf   arm:hasTrait ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:PersonalityTrait .
-arm:hasAbility  rdfs:subPropertyOf   arm:hasTrait ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:Ability .
-arm:hasCharacteristic  rdfs:subPropertyOf   arm:hasTrait ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:Characteristic .
-arm:hasVirtue  rdfs:subPropertyOf   arm:hasTrait ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:Virtue .
-arm:hasFlaw  rdfs:subPropertyOf   arm:hasTrait ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:Flaw .
-arm:hasArt  rdfs:subPropertyOf   arm:hasTrait ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:Art .
-arm:hasSpell  rdfs:subPropertyOf   arm:hasTrait ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:Spell .
-arm:hasOrder  a   owl:DatatypeProperty ;
-        rdfs:comment  "This is used to sort traits for display purposes" ;
-        rdfs:domain  [ owl:unionOf ( arm:Trait arm:LeafTraitClass ) ] ;
-        rdfs:range   xsd:float .
-
-arm:ArtClass rdfs:subClassOf arm:LeafTraitClass ;
-             owl:disjointUnionOf ( arm:TechClass arm:FormClass ) .
-arm:TechClass rdfs:subClassOf arm:LeafTraitClass .
-arm:FormClass rdfs:subClassOf arm:LeafTraitClass .
-arm:Art owl:disjointUnionOf ( arm:Tech arm:Form ) .
-
