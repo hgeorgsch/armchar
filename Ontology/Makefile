@@ -8,7 +8,7 @@ arm.ttl: prefix.ttl arm.include trait.include spell.include ignore.include pyram
 
 %.ttl: prefix.ttl %.include
 	cat $^ > $@
-%.rules: prefix.ttl %.r
+logic.rules: prefix.ttl logic.r advancement.r
 	cat $^ > $@
 clean:
 	-rm $A

@@ -39,10 +39,15 @@
    ( ?cs   arm:hasnextcharacter ?nc ) 
    ( ?trait arm:isadvancedby ?adv ) 
    -> [
-       makeInstance( ?nc, ?p, ?nt )
-       ( ?trait arm:hasTotalXP ?xp )
-       ( ?adv arm:withXP ?xxp )
-       -> ( ?nc arm:hasTotalXP sum(?xp,?xxp ) )
+       makeInstance( ?nc, ?p, ?nt ) ->
+	  [ ( ?trait arm:hasTotalXP ?xp )
+            ( ?adv arm:withXP ?xxp )
+            -> ( ?nc arm:hasTotalXP sum(?xp,?xxp ) ) ]
+	  [ ( ?adv arm:assignSpeciality ?spec )
+            -> ( ?nc arm:hasSpeciality ?spec ) ]
+	  [ noValue( ?adv, arm:assignSpeciality  )
+            ( ?trait arm:hasSpeciality ?spec ) 
+            -> ( ?nc arm:hasSpeciality ?spec ) ]
 ]   
 ]
 
