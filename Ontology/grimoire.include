@@ -7,7 +7,7 @@ armr:PeCo20Wound a arm:SpellClass ;
     arm:hasRange     arm:Rtouch ;
     arm:hasDuration  arm:Dmom ;
     arm:hasTarget    arm:Tind ;
-    rdfs:comment     "Causes a heavy wound (Base 15, touch +1)" .
+    arm:hasDescription "Causes a heavy wound (Base 15, touch +1)" .
 
 armr:ReCo5Spasms a arm:SpellClass ;
     arm:hasTechnique armr:rego ;
@@ -35,7 +35,12 @@ armr:PeIm20Veil a arm:SpellClass ;
     rdfs:label       "Veil of Invisibility" ;
     arm:hasRange     arm:Rtouch ;
     arm:hasDuration  arm:Dsun ;
-    arm:hasTarget    arm:Tind .
+    arm:hasTarget    arm:Tind ;
+    arm:hasDescription "The target becomes completely unde-
+tectable to normal sight, regardless of what he
+does, but still casts a shadow.
+(Base 4, +1 Touch, +2 Sun, +1 changing image)
+".
 
 armr:CrIm10Clarity a arm:SpellClass ;
     arm:hasTechnique armr:creo ;
@@ -45,7 +50,7 @@ armr:CrIm10Clarity a arm:SpellClass ;
     arm:hasRange     arm:Rtouch ;
     arm:hasDuration  arm:Dsun ;
     arm:hasTarget    arm:Troom ;
-    rdfs:comment     "After Notes of Delightful Sound, but the focus is on human speech, loud and clear." .
+    arm:hasDescription "After Notes of Delightful Sound, but the focus is on human speech, loud and clear." .
 
 armr:MuIm10Aura a arm:SpellClass ;
     arm:hasTechnique armr:muto ;
