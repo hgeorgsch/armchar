@@ -95,7 +95,6 @@ armchar:cieran  arm:hasAdvancement
   ],
 
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1222 ;
-" ;
   arm:hasAdvancementDescription "Read Intellego L15Q13+3" ;
   arm:advanceTrait [ a armr:intellego ; arm:addedXP 16 ]  ;
   arm:advanceToCharacterSheet :spring1222 
