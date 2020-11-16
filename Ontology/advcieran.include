@@ -124,7 +124,8 @@ armchar:cieran  arm:hasAdvancement
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1223 ;
   arm:hasAdvancementDescription "Lab work: InVi5 Sense the Nature of Vis + InVi20 Piercing the magic veil (from texts) + 2xp parma" ;
   arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ],
-   [ a armr:InVi5Sense  ; arm:addedXP 5 ] ;
+   [ a armr:InVi5Sense  ; arm:addedXP 5 ],
+   [ a armr:InVi5PiercingMagical  ; arm:addedXP 5 ] ;
   arm:advanceToCharacterSheet :spring1223 
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1222 ;
@@ -137,7 +138,8 @@ armchar:cieran  arm:hasAdvancement
   arm:hasAdvancementDescription "Story (2conf pts) Lab work: InVi5 Spot the Vis + InVi5 Scales of M W + InVi20 Piercing the faerie veil (from texts) (lab total InVi 14 + Int 3 + MT 4 + Aura 5 + similar spell 4 = 30) + 2xp parma" ;
   arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ],
    [ a armr:InVi5Spot  ; arm:addedXP 5 ],
-   [ a armr:InVi5Scales ; arm:addedXP 5 ] ;
+   [ a armr:InVi5Scales ; arm:addedXP 5 ],
+   [ a armr:InVi5PiercingFaerie  ; arm:addedXP 5 ] ;
   arm:advanceToCharacterSheet :autumn1223 
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1223 ;
