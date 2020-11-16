@@ -116,7 +116,10 @@ arm:TraitAdvancement a arm:LeafTraitClass .
 arm:advanceCharacter a owl:ObjectProperty ;
         rdfs:domain  arm:TraitAdvancement ;
         rdfs:range   arm:BaseCharacter .
-arm:advanceCharacterSheet a owl:ObjectProperty ;
+arm:advanceFromCharacterSheet a owl:ObjectProperty ;
+        rdfs:domain  arm:TraitAdvancement ;
+        rdfs:range   arm:CharacterSheet .
+arm:advanceToCharacterSheet a owl:ObjectProperty ;
         rdfs:domain  arm:TraitAdvancement ;
         rdfs:range   arm:CharacterSheet .
 arm:advanceTrait a owl:ObjectProperty ;

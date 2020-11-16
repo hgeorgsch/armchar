@@ -1,21 +1,20 @@
-[ advancecharsheet:
+# Identify the Base Character of an Advancement
+[ advancecharsheet1:
   ( ?adv rdf:type arm:TraitAdvancement )
-  ( ?adv arm:advanceCharacter ?bc )
-  ( ?adv arm:atSeasonTime ?time )
+  ( ?adv arm:advanceFromCharacterSheet ?cs )
   ( ?cs arm:isCharacter ?bc )
-  ( ?cs arm:atSeasonTime ?time )
-  -> ( ?adv  arm:advanceCharacterSheet ?cs ) ]
+  -> ( ?adv  arm:advanceCharacter ?cs ) ]
 
+# Character Sheet points to next season Character Sheet
 [ nextcharactersheet:
-  ( ?cs rdf:type arm:CharacterSheet )
-  ( ?cs arm:isCharacter ?c )
-  ( ?cs arm:atSeasonTime ?time )
-  ( ?time arm:isPrecedingSeasonOf ?nt )
-  -> makeInstance(?cs, arm:hasNextCharacterSheet, arm:CharacterSheet, ?x)	
-  ( ?x arm:atSeasonTime ?nt )
-  ( ?x arm:isCharacter ?c )
+  ( ?adv rdf:type arm:CharacterAdvancement )
+  ( ?adv arm:advanceFromCharacterSheet ?cs1 )
+  ( ?adv arm:advanceToCharacterSheet ?cs2 )
+  -> 
+  ( ?cs1 arm:hasNextCharacter ?cs2 )
   ]
 
+# Trait instance points to its advancement
 [ advancedtrait:
    ( ?adv rdf:type arm:hasTraitAdvancement )
    ( ?adv  arm:advanceCharacterSheet ?cs ) 
@@ -24,15 +23,24 @@
    ( ?trait  rdf:type ?tc )
    -> ( ?trait arm:isAdvancedBy ?adv ) ]
 
+# Three alternatives.
+# 1. Trait copied (noadvancetrait)
+# 2. Trait improved
+# 3. Trait created
+
+# Traits without Advancement are carried forward
 [ noadvancetrait:
-   ( ?cs   rdf:type arm:charactersheet )
-   ( ?cs   arm:hastrait ?trait ) 
+   ( ?cs   rdf:type arm:CharacterSheet )
+   ( ?cs   arm:hasTrait ?trait ) 
    ( ?cs   ?p ?trait ) 
-   ( ?cs   arm:hasnextcharacter ?nc ) 
-   novalue( ?trait arm:isadvancedby ?adv ) 
+   ( ?cs   arm:hasNextCharacter ?nc ) 
+   noValue( ?trait arm:isaDvancedBy ?adv ) 
    -> ( ?nc ?p ?trait )
 ]
-[ noadvancetrait:
+
+# TODO: New trait instances upon advancement
+# Note that we will need backward rules to create new traits.
+[ advancetrait1:
    ( ?cs   rdf:type arm:charactersheet )
    ( ?cs   arm:hastrait ?trait ) 
    ( ?cs   ?p ?trait ) 
@@ -51,7 +59,7 @@
 ]   
 ]
 
-[ advancedtrait:
+[ advancedtrait2:
    ( ?adv rdf:type arm:hasTraitAdvancement )
    ( ?adv  arm:advanceCharacterSheet ?cs ) 
    ( ?adv  arm:advanceTrait ?tc )
@@ -60,7 +68,3 @@
    -> ( ?trait arm:isAdvancedBy ?adv ) 
 ]
 
-# Three alternatives.
-# 1. Trait copied
-# 2. Trait improved
-# 3. Trait created
