@@ -1,17 +1,27 @@
-# Identify the Base Character of an Advancement
+# Identify Character Sheets of an Advancement
+<- table(arm:advanceFromCharacterSheet)  .
+<- table(arm:advanceToCharacterSheet) .
 [ advancecharsheet1:
-  ( ?adv rdf:type arm:TraitAdvancement )
-  ( ?adv arm:advanceFromCharacterSheet ?cs )
-  ( ?cs arm:isCharacter ?bc )
-  -> ( ?adv  arm:advanceCharacter ?cs ) ]
+  ( ?adv rdf:type arm:CharacterAdvancement )
+  ( ?adv  arm:advanceCharacter ?char ) 
+  ( ?adv  arm:atSeasonTime ?time ) 
+  ( ?time  arm:isPrecedingSeasonOf ?nexttime ) 
+  -> 
+     [ ( ?oldcs arm:isCharacter ?char )
+       ( ?oldcs arm:atSeasonTime ?time )
+       <- makeInstance( ?adv, arm:advanceFromCharacterSheet, ?oldcs ) ]
+     [ ( ?newcs arm:isCharacter ?char )
+       ( ?newcs arm:atSeasonTime ?newtime )
+       <- makeInstance( ?adv, arm:advanceToCharacterSheet, ?newcs ) ]
+  ]
 
 # Character Sheet points to next season Character Sheet
 [ nextcharactersheet:
+  ( ?cs1 arm:hasNextCharacter ?cs2 )
+  <-
   ( ?adv rdf:type arm:CharacterAdvancement )
   ( ?adv arm:advanceFromCharacterSheet ?cs1 )
   ( ?adv arm:advanceToCharacterSheet ?cs2 )
-  -> 
-  ( ?cs1 arm:hasNextCharacter ?cs2 )
   ]
 
 # Trait instance points to its advancement
