@@ -11,6 +11,10 @@ arm:CharacterAdvancement a owl:Class .
 arm:advanceCharacter a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterAdvancement ;
         rdfs:range   arm:Character .
+arm:hasAdvancement a owl:ObjectProperty ;
+	owl:inversePropertyOf  arm:advanceCharacter  ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:CharacterAdvancement .
 arm:advanceFromCharacterSheet a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterAdvancement ;
         rdfs:range   arm:CharacterSheet .
@@ -21,6 +25,13 @@ arm:atSeasonTime a   owl:ObjectProperty ;
         rdfs:domain  [ owl:disjointUnionOf ( arm:CharacterSheet
                                              arm:CharacterAdvancement ) ] ;
         rdfs:range   arm:SeasonTime .
+arm:hasAdvancementDescription a owl:DatatypeProperty ;
+        rdfs:domain  arm:CharacterAdvancement ;
+        rdfs:range   xsd:string .
+arm:awardsXP a owl:DatatypeProperty ;
+        rdfs:domain  arm:CharacterAdvancement ;
+        rdfs:range   xsd:int .
+
 arm:hasNextCharacterSheet a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterSheet ;
         rdfs:range   arm:CharacterSheet .
