@@ -5,9 +5,12 @@
 # Saga
 arm:Saga a owl:Class .
 arm:hasSG a   owl:DatatypeProperty ;
-        rdfs:domain  [ owl:unionOf ( arm:Saga arm:Character ) ] ;
+        rdfs:domain  [ owl:unionOf ( arm:Saga arm:GeneralCharacter ) ] ;
         rdfs:range   xsd:string .
 arm:hasTitle a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Saga ;
+        rdfs:range   xsd:string .
+arm:hasSetting a   owl:DatatypeProperty ;
         rdfs:domain  arm:Saga ;
         rdfs:range   xsd:string .
 arm:hasCharacter a   owl:ObjectProperty ;
@@ -65,9 +68,6 @@ arm:hasNationality a   owl:DatatypeProperty ;
 arm:hasAlmaMater a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
-arm:hasCharacter a   owl:ObjectProperty ;
-        rdfs:domain  arm:Saga ;
-        rdfs:range   arm:Character .
 
 # Seasons and Time
 arm:Season a owl:Class ;

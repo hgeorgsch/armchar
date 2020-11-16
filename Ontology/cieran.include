@@ -14,6 +14,11 @@ armchar:cieran a arm:Magus ;
                arm:hasAlmaMater "Stonehenge" ;
                arm:hasSaga armchar:contestedlands .
 
+armchar:elksrun  a arm:Covenant ; 
+               arm:hasName "Elk's Run" ;
+	       arm:hasSetting "Hibernia" ;
+               arm:hasSaga armchar:contestedlands .
+
 arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 arm:spring1224   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1224 .
 armchar:contestedlands a arm:Saga ;

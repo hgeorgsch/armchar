@@ -26,14 +26,12 @@
   ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:Covenant ) 
   -> ( ?s arm:hasCovenant ?c ) ]
 [ charactersaga:
-  ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:Character ) 
+  ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:BaseCharacter ) 
   -> ( ?s arm:hasCharacter ?c ) ]
 
 # Base Character
 
-[ addsg: 
-  ( ?c rdf:type arm:Character ) ( ?c arm:hasSaga ?s ) ( ?s arm:hasSG ?sg ) 
-  -> ( ?c arm:hasSG ?sg ) ]
+[ addsg: ( ?c arm:hasSaga ?s ) ( ?s arm:hasSG ?sg ) -> ( ?c arm:hasSG ?sg ) ]
 [ addsaga: 
   ( ?c rdf:type arm:Character ) ( ?c arm:hasSaga ?s ) ( ?s arm:hasTitle ?t ) 
   -> ( ?c arm:hasSagaTitle ?t ) ]
@@ -44,7 +42,9 @@
   -> ( ?c arm:hasSize ?size ) ]
 
 # Character sheet inherits from the base character
-[ charsheet: ( ?c arm:isCharacter ?b ) ( ?b ?p ?o ) -> ( ?c ?p ?o ) ]
+[ charsheet: ( ?c arm:isCharacter ?b ) ( ?b ?p ?o )
+             noValue(?p,rdf:type,arm:ignoredProperty)
+	     -> ( ?c ?p ?o ) ]
 
 # Trait instances inherit properties from their class
 
