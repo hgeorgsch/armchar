@@ -35,8 +35,8 @@ arm:winter1224, arm:spring1224, arm:summer1224, arm:autumn1224 .
 
 :summer1217 arm:hasOtherTrait
   [ a arm:Decrepitude ; arm:hasTotalXP 0  ],
-  [ a arm:Warping ; arm:hasTotalXP 1 ; arm:hasEffect "foo", "bar" ],
-  [ a arm:Confidence ; arm:hasScore 1 ; arm:hasPoints 6 ] .
+  [ a arm:Warping ; arm:hasTotalXP 1 ],
+  [ a arm:Confidence ; arm:hasScore 1 ; arm:hasPoints 8 ] .
 
 
 :summer1217 arm:hasPersonalityTrait [ a arm:personality-meticulous ; arm:hasScore 3 ] . 
@@ -131,12 +131,6 @@ arm:winter1224, arm:spring1224, arm:summer1224, arm:autumn1224 .
    [ a armr:PeMe10Trust ; arm:hasTotalXP 5 ],
    [ a armr:ReMe15Arrow ; arm:hasTotalXP 5 ],
    [ a armr:ReMe5Touch ; arm:hasTotalXP 5 ],
-   [ a armr:InTe30Stone  ; arm:hasTotalXP 5 ],
    [ a armr:PeTe20Obliteration  ; arm:hasTotalXP 5 ],
-   [ a armr:PeTe20End  ; arm:hasTotalXP 5 ],
-   [ a armr:PeVi5Fist  ; arm:hasTotalXP 5 ],
-   [ a armr:PeVi15Fist  ; arm:hasTotalXP 5 ],
-   [ a armr:InVi5Sense  ; arm:hasTotalXP 5 ],
-   [ a armr:InVi5Spot  ; arm:hasTotalXP 5 ],
-   [ a armr:InVi5Scales ; arm:hasTotalXP 5 ] .
+   [ a armr:PeTe20End  ; arm:hasTotalXP 5 ] .
 

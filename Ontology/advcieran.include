@@ -17,6 +17,9 @@ armchar:cieran  arm:hasAdvancement
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1218 ;
   arm:hasAdvancementDescription "Covenant Service 1217- Cieran's adventure 14xp; 3p Rego, 1p Perdo vis" ;
+  arm:advanceTrait [ a armr:infernallore ; arm:addedXP 5 ]  ;
+  arm:advanceTrait [ a armr:parma ; arm:addedXP 5 ]  ;
+  arm:advanceTrait [ a armr:secondsight ; arm:addedXP 4 ]  ;
   arm:advanceToCharacterSheet :summer1218 
   ],
 
@@ -54,7 +57,9 @@ armchar:cieran  arm:hasAdvancement
 
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1220 ;
   arm:hasAdvancementDescription "Learn fist of demon's Oblivion + 2xp Latin" ;
-  arm:advanceTrait [ a armr:latin ; arm:addedXP 2 ]  ;
+  arm:advanceTrait [ a armr:latin ; arm:addedXP 2 ], 
+    [ a armr:PeVi5Fist  ; arm:addedXP 5 ],
+    [ a armr:PeVi15Fist  ; arm:addedXP 5 ] ;
   arm:advanceToCharacterSheet :spring1220 
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1220 ;
@@ -64,6 +69,7 @@ armchar:cieran  arm:hasAdvancement
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1220 ;
   arm:hasAdvancementDescription "Vim L15Q13 - 16xp" ;
+  arm:advanceTrait [ a armr:vim ; arm:addedXP 16 ]  ;
   arm:advanceToCharacterSheet :autumn1220 
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1220 ;
@@ -117,17 +123,21 @@ armchar:cieran  arm:hasAdvancement
 
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1223 ;
   arm:hasAdvancementDescription "Lab work: InVi5 Sense the Nature of Vis + InVi20 Piercing the magic veil (from texts) + 2xp parma" ;
-  arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ]  ;
+  arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ],
+   [ a armr:InVi5Sense  ; arm:addedXP 5 ] ;
   arm:advanceToCharacterSheet :spring1223 
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1222 ;
   arm:hasAdvancementDescription "Lab work: spell from text: Stone Tell of Mind that Sits InTe30  + 2xp parma" ;
-  arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ]  ;
+  arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ],
+   [ a armr:InTe30Stone  ; arm:addedXP 5 ] ;
   arm:advanceToCharacterSheet :summer1223 
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1223 ;
   arm:hasAdvancementDescription "Story (2conf pts) Lab work: InVi5 Spot the Vis + InVi5 Scales of M W + InVi20 Piercing the faerie veil (from texts) (lab total InVi 14 + Int 3 + MT 4 + Aura 5 + similar spell 4 = 30) + 2xp parma" ;
-  arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ]  ;
+  arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ],
+   [ a armr:InVi5Spot  ; arm:addedXP 5 ],
+   [ a armr:InVi5Scales ; arm:addedXP 5 ] ;
   arm:advanceToCharacterSheet :autumn1223 
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1223 ;
