@@ -54,6 +54,11 @@
    ( ?oldtrait arm:hasSpeciality ?oldspec ) 
    ->
    ( ?trait arm:hasSpeciality ?oldspec ) ]
+[ advancetraitEffect:
+   ( ?trait arm:advancedFromTrait ?oldtrait  )
+   ( ?oldtrait arm:hasEffect ?effect ) 
+   ->
+   ( ?trait arm:hasEffect ?effect ) ]
 
 # 3. Convert addedXP to TotalXP when there was no prior trait.
 [ newtraitXP:
