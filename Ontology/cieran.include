@@ -62,11 +62,11 @@ arm:winter1224, arm:spring1224, arm:summer1224, arm:autumn1224 .
 :summer1217 arm:hasCharacteristic [ a armr:int ; arm:hasScore 3 ] . 
 :summer1217 arm:hasCharacteristic [ a armr:per ; arm:hasScore -1 ] . 
 :summer1217 arm:hasCharacteristic [ a armr:com ; arm:hasScore -1 ] . 
-:summer1217 arm:hasCharacteristic [ a armr:pre ; arm:hasScore -1 ] . 
-:summer1217 arm:hasCharacteristic [ a armr:str ; arm:hasScore -1 ] . 
-:summer1217 arm:hasCharacteristic [ a armr:sta ; arm:hasScore -1 ] . 
-:summer1217 arm:hasCharacteristic [ a armr:dex ; arm:hasScore -1 ] . 
-:summer1217 arm:hasCharacteristic [ a armr:qik ; arm:hasScore -1 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:pre ; arm:hasScore 0 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:str ; arm:hasScore 2 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:sta ; arm:hasScore 3 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:dex ; arm:hasScore 2 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:qik ; arm:hasScore -3 ] . 
 
 :summer1217 arm:hasArt [ a armr:creo ; arm:hasTotalXP 17 ] . 
 :summer1217 arm:hasArt [ a armr:intellego ; arm:hasTotalXP 17 ] . 
