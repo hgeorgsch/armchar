@@ -10,6 +10,12 @@ arm:hasSG a   owl:DatatypeProperty ;
 arm:hasTitle a   owl:DatatypeProperty ;
         rdfs:domain  arm:Saga ;
         rdfs:range   xsd:string .
+arm:hasCharacter a   owl:ObjectProperty ;
+        rdfs:domain  arm:Saga ;
+        rdfs:range   arm:Character .
+arm:hasSeasonTime a   owl:ObjectProperty ;
+        rdfs:domain  arm:Saga ;
+        rdfs:range   arm:Character .
 
 # Covenant and Character
 arm:GeneralCharacter a owl:Class .
@@ -39,6 +45,9 @@ arm:hasSagaTitle a   owl:DatatypeProperty ;
 arm:hasTribunal a   owl:DatatypeProperty ;
         rdfs:domain  arm:Covenant ;
         rdfs:range   xsd:string .
+arm:hasCovenant a   owl:ObjectProperty ;
+        rdfs:domain  arm:Saga ;
+        rdfs:range   arm:Covenant .
 
 # Character Properties
 arm:hasPlayer a   owl:DatatypeProperty ;
@@ -56,6 +65,9 @@ arm:hasNationality a   owl:DatatypeProperty ;
 arm:hasAlmaMater a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
+arm:hasCharacter a   owl:ObjectProperty ;
+        rdfs:domain  arm:Saga ;
+        rdfs:range   arm:Character .
 
 # Seasons and Time
 arm:Season a owl:Class ;
@@ -75,7 +87,8 @@ arm:beforeSeasonTime a   owl:ObjectProperty ;
 arm:isPrecedingSeasonOf a   owl:ObjectProperty ;
         rdfs:domain  arm:SeasonTime ;
         rdfs:range   arm:SeasonTime .
-
+arm:isSuccedingSeasonOf a   owl:ObjectProperty ;
+        owl:inverseOf arm:isPrecedingSeasonOf .
 arm:isSeason a   owl:ObjectProperty ;
         rdfs:domain  arm:SeasonTime ;
         rdfs:range   arm:Season .

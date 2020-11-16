@@ -12,6 +12,14 @@
   ( ?s1 arm:isYear ?y1 ) ( ?s2 arm:isYear addOne(?y1)  )
   -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
 
+# Saga Affiliation
+[ covenantsaga:
+  ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:Covenant ) 
+  -> ( ?s arm:hasCovenant ?c ) ]
+[ charactersaga:
+  ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:Character ) 
+  -> ( ?s arm:hasCharacter ?c ) ]
+
 # Base Character
 
 [ addsg: 

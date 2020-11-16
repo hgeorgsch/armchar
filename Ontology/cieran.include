@@ -16,6 +16,8 @@ armchar:cieran a arm:Magus ;
 
 arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
 arm:spring1224   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1224 .
+armchar:contestedlands a arm:Saga ;
+   arm:hasSeasonTime  arm:winter1224, arm:spring1224 .
 
 :winter1224 arm:isCharacter armchar:cieran ; a arm:CharacterSheet ;
             arm:atSeasonTime arm:winter1224 .
