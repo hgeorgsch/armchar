@@ -15,7 +15,11 @@
 [ seasonlabel:
   ( ?s rdf:type arm:SeasonTime )
   ( ?s arm:isSeason ?season ) ( ?s arm:isYear ?y )
-  -> ( ?s rdfs:label strConcat(?season," ",?y) ) ]
+  ( ?season rdfs:label ?st ) ( ?s arm:isYear ?y )
+  strConcat(?st,?y,?l)
+  -> ( ?s rdfs:label ?l ) ]
+
+# -> ( ?s rdfs:label strConcat(?season," ",?y) ) ]
 
 # Saga Affiliation
 [ covenantsaga:
