@@ -1,0 +1,73 @@
+armchar:cieran  arm:hasAdvancement ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1217 ;
+  arm:hasAdvancementDescription "Studies Herbam L6 Q21 +3" ;
+  arm:advanceTrait [ a armr:herbam ; arm:addedXP 21 ]  ;
+  arm:advanceToCharacterSheet :autumn1217 
+  ],
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1217 ;
+  arm:hasAdvancementDescription "Studies Mentem L16 Q13 +3" ;
+  arm:advanceTrait [ a armr:mentem ; arm:addedXP 16 ]  ;
+  arm:advanceToCharacterSheet :winter1218 
+  ],
+
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1218 ;
+  arm:hasAdvancementDescription "Studies Terram L8 Q15 +3" ;
+  arm:advanceTrait [ a armr:terram ; arm:addedXP 18 ]  ;
+  arm:advanceToCharacterSheet :spring1218 
+  ],
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1218 ;
+  arm:hasAdvancementDescription "Covenant Service 1217- Cieran's adventure 14xp; 3p Rego, 1p Perdo vis" ;
+  arm:advanceToCharacterSheet :summer1218 
+  ],
+
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1218 ;
+  arm:hasAdvancementDescription "Studies Servants of the People 14xp+3" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1218 ;
+  arm:hasAdvancementDescription "Covenant Service 1218 - Enchants Bookstand of Hespera (using 3p He). Earns 3p Terram vis  + 2xp in Parma." ;
+
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1219 ;
+  arm:hasAdvancementDescription "Read Intellego Q13+3" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1219 ;
+  arm:hasAdvancementDescription "Read Terram Q10+3" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1219 ;
+  arm:hasAdvancementDescription "Read Rego Q13+3" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1219 ;
+  arm:hasAdvancementDescription "Read Latin L5Q15+3" ;
+
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1220 ;
+  arm:hasAdvancementDescription "Learn fist of demon's Oblivion + 2xp Latin" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1220 ;
+  arm:hasAdvancementDescription "Jerome's Tower 5xp Parma" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1220 ;
+  arm:hasAdvancementDescription "Vim L15Q13 - 16xp" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1220 ;
+  arm:hasAdvancementDescription "Muto L6Q20 - 21xp" ;
+
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1221 ;
+  arm:hasAdvancementDescription "Read Aquam root 18+3= 21xp" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1221 ;
+  arm:hasAdvancementDescription "Jerome's Tower 10xp (Second Sight 5, Parma 5) 3 conf" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1221 ;
+  arm:hasAdvancementDescription "Read Philosophiæ (Causes and Curies) half xp due to injuries = 8" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1221 ;
+  arm:hasAdvancementDescription "Read Auram 21xp" ;
+
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1222 ;
+" ;
+  arm:hasAdvancementDescription "Read Intellego L15Q13+3" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1222 ;
+  arm:hasAdvancementDescription "Read Ignem L8Q15+3" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1222 ;
+  arm:hasAdvancementDescription "Covenant Service 1222. Lab work: ReTe items from text + 2xp parma;  earn 3p vis " ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1222 ;
+  arm:hasAdvancementDescription "Read Intellego L15Q13+3" ;
+" ;
+
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1223 ;
+  arm:hasAdvancementDescription "Lab work: InVi5 Sense the Nature of Vis + InVi20 Piercing the magic veil (from texts) + 2xp parma" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1222 ;
+  arm:hasAdvancementDescription "Lab work: spell from text: Stone Tell of Mind that Sits InTe30  + 2xp parma" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1223 ;
+  arm:hasAdvancementDescription "Story (2conf pts) Lab work: InVi5 Spot the Vis + InVi5 Scales of M W + InVi20 Piercing the faerie veil (from texts) (lab total InVi 14 + Int 3 + MT 4 + Aura 5 + similar spell 4 = 30) + 2xp parma" ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1223 ;
+  arm:hasAdvancementDescription "Read Animàl L15Q14+3" ;

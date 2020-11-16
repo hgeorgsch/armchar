@@ -129,8 +129,8 @@ armchar:contestedlands a arm:Saga ;
    [ a armr:InVi5Spot  ; arm:hasTotalXP 5 ],
    [ a armr:InVi5Scales ; arm:hasTotalXP 5 ] .
 
-:advance1224winter a arm:CharacterAdvancement ;
-   arm:advanceFromCharacterSheet :winter1224 ;
-   arm:advanceToCharacterSheet :spring1224 ;
-   arm:atSeasonTime arm:winter1224 ;
-   arm:advanceTrait [ a armr:creo ; arm:addedXP 17 ] .
+### :advance1224winter a arm:CharacterAdvancement ;
+###    arm:advanceFromCharacterSheet :winter1224 ;
+###    arm:advanceToCharacterSheet :spring1224 ;
+###    arm:atSeasonTime arm:winter1224 ;
+###    arm:advanceTrait [ a armr:creo ; arm:addedXP 17 ] .
