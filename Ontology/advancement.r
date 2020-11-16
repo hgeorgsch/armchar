@@ -61,3 +61,31 @@
    noValue( ?trait, arm:advancedFromTrait   )
    noValue( ?trait, arm:hasTotalXP  ) 
    -> (  ?trait arm:hasTotalXP ?xp ) ]
+
+[ fixhasAbility:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Ability )
+  -> ( ?c arm:hasAbility ?t ) ]
+[ fixhasSpell:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Spell )
+  -> ( ?c arm:hasSpell ?t ) ]
+[ fixhasArt:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Art )
+  -> ( ?c arm:hasArt ?t ) ]
+[ fixhasPersonalityTrait:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:PersonalityTrait )
+  -> ( ?c arm:hasPersonalityTrait ?t ) ]
+[ fixhasOtherTrait:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:OtherTrait )
+  -> ( ?c arm:hasOtherTrait ?t ) ]
+[ fixhasReputation:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Reputation )
+  -> ( ?c arm:hasReputation ?t ) ]
+[ fixhasVirtue:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Virtue )
+  -> ( ?c arm:hasVirtue ?t ) ]
+[ fixhasFlaw:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Flaw )
+  -> ( ?c arm:hasFlaw ?t ) ]
+[ fixhasCharacteristic:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Characteristic )
+  -> ( ?c arm:hasCharacteristic ?t ) ]
