@@ -1,3 +1,27 @@
+# Infer Character Sheets
+[ infercharsheet1:
+  ( ?char rdf:type arm:Character )
+  ( ?char arm:hasAdvancement ?adv )
+  ( ?adv arm:advanceCharacter ?c )
+  ( ?adv arm:atSeasonTime ?t )
+  ( ?cs1 arm:atSeasonTime ?t )
+  ->
+  ( ?adv arm:advanceFromCharacterSheet ?cs1 )
+  ]
+[ infercharsheet1:
+  ( ?char rdf:type arm:Character )
+  ( ?char arm:hasAdvancement ?adv )
+  ( ?adv arm:advanceFromCharacterSheet ?cs1 )
+  ->
+  ( ?cs1 arm:isCharacter ?char )
+  ]
+[ infercharsheet2:
+  ( ?char rdf:type arm:Character )
+  ( ?char arm:hasAdvancement ?adv )
+  ( ?adv arm:advanceToCharacterSheet ?cs2 )
+  ->
+  ( ?cs2 arm:isCharacter ?char )
+  ]
 
 # Character Sheet points to next season Character Sheet
 [ nextcharactersheet:

@@ -12,9 +12,7 @@ arm:advanceCharacter a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterAdvancement ;
         rdfs:range   arm:Character .
 arm:hasAdvancement a owl:ObjectProperty ;
-	owl:inversePropertyOf  arm:advanceCharacter  ;
-        rdfs:domain  arm:Character ;
-        rdfs:range   arm:CharacterAdvancement .
+	owl:inverseOf  arm:advanceCharacter  .
 arm:advanceFromCharacterSheet a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterAdvancement ;
         rdfs:range   arm:CharacterSheet .
