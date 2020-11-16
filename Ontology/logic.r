@@ -12,6 +12,11 @@
   ( ?s1 arm:isYear ?y1 ) ( ?s2 arm:isYear addOne(?y1)  )
   -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
 
+[ seasonlabel:
+  ( ?s rdf:type arm:SeasonTime )
+  ( ?s arm:isSeason ?season ) ( ?s arm:isYear ?y )
+  -> ( ?s rdfs:label strConcat(?season," ",?y) ) ]
+
 # Saga Affiliation
 [ covenantsaga:
   ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:Covenant ) 

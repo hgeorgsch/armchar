@@ -15,7 +15,7 @@ arm:hasCharacter a   owl:ObjectProperty ;
         rdfs:range   arm:Character .
 arm:hasSeasonTime a   owl:ObjectProperty ;
         rdfs:domain  arm:Saga ;
-        rdfs:range   arm:Character .
+        rdfs:range   arm:SeasonTime .
 
 # Covenant and Character
 arm:GeneralCharacter a owl:Class .
@@ -72,6 +72,10 @@ arm:hasCharacter a   owl:ObjectProperty ;
 # Seasons and Time
 arm:Season a owl:Class ;
    owl:oneOf ( arm:Winter arm:Spring arm:Summer arm:Autumn ) .
+arm:Winter  rdfs:label   "Winter" .
+arm:Spring  rdfs:label   "Spring" .
+arm:Summer  rdfs:label   "Summer" .
+arm:Autumn   rdfs:label   "Autumn" .
 arm:precedes a   owl:ObjectProperty ;
         rdfs:domain  arm:Season ;
         rdfs:range   arm:Season .
