@@ -179,9 +179,10 @@ armr:quietMagic   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   
 armr:sideEffect   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
                           rdfs:label "Side Effect" .
-armr:skilledParens   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
-                              a arm:LeafTraitClass ;
-                          rdfs:label "Skilled Parens" .
+armr:skilledParens   rdfs:subClassOf armr:minorHermeticVirtue ;
+                     arm:hasReference   "[ArM5]" ;
+                     a arm:LeafTraitClass ;
+                     rdfs:label "Skilled Parens" .
 armr:specialCircumstances   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
                           rdfs:label "Special Circumstances" .
@@ -265,7 +266,6 @@ armr:wiseOne       rdfs:subClassOf  armr:minorSocialStatusVirtue ; arm:hasRefere
              rdfs:label "Wise One" .
 
 armr:minorGeneralVirtue rdfs:subClassOf armr:minorVirtue ;
-                            a arm:LeafTraitClass ;
                     rdfs:label "Minor General Virtue" .
 armr:affinityWithAbility    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
@@ -276,12 +276,14 @@ armr:aptStudent    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   
 armr:arcaneLore    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
                         rdfs:label "Arcane Lore" .
-armr:berserk    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
-                            a arm:LeafTraitClass ;
-                        rdfs:label "Berserk" .
-armr:bookLearner    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
-                            a arm:LeafTraitClass ;
-                        rdfs:label "Book Learner" .
+armr:berserk    rdfs:subClassOf armr:minorGeneralVirtue ;
+                    arm:hasReference   "[ArM5]" ;
+                    a arm:LeafTraitClass ;
+                    rdfs:label "Berserk" .
+armr:bookLearner    rdfs:subClassOf armr:minorGeneralVirtue ; 
+                    arm:hasReference   "[ArM5]" ;
+                    a arm:LeafTraitClass ;
+                    rdfs:label "Book Learner" .
 armr:cautiousWithAbility    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
                         rdfs:label "Cautious with Ability" .
@@ -436,7 +438,6 @@ armr:wanderer      rdfs:subClassOf   armr:freeSocialStatusVirtue ; arm:hasRefere
                 rdfs:label "Wanderer" .
 
 armr:majorHermeticFlaw  rdfs:subClassOf   armr:majorFlaw ;
-                        a arm:LeafTraitClass ;
                         rdfs:label "Major Hermetic Flaw" .
 armr:blatantGift    rdfs:subClassOf armr:majorHermeticFlaw ;
                     arm:hasReference   "[ArM5]" ;
