@@ -9,7 +9,7 @@
 
 [ seasonsequence2: 
   ( ?s1 arm:isSeason arm:Autumn ) ( ?s2 arm:isSeason arm:Winter )
-  ( ?s1 arm:isYear ?y1 ) addOne(?y1,?y2) ( ?s2 arm:isYear ?y2 )
+  ( ?s1 arm:isYear ?y1 ) ( ?s2 arm:isYear addOne(?y1)  )
   -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
 
 # Base Character

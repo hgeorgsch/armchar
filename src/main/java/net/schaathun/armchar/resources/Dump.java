@@ -27,6 +27,9 @@ import org.apache.jena.tdb.TDBFactory;
 import org.apache.jena.sparql.core.DatasetGraph;
 import org.apache.jena.riot.WriterDatasetRIOT;
 
+import org.apache.jena.query.DatasetFactory;
+import org.apache.jena.rdf.model.Model;
+
 import net.schaathun.armchar.ArMModel;
 
 @Path("/dump")
@@ -49,6 +52,15 @@ public class Dump {
                 .ok(result)
                 .build();
     }
+    @GET
+    @Path("/jsonld-inf")
+    @Produces("application/ld+json")
+    public Response jsonldInf() {
+        String result = getInfDump( RDFFormat.JSONLD_COMPACT_PRETTY );
+        return Response
+                .ok(result)
+                .build();
+    }
 
     public String getDump( RDFFormat f ) {
         Dataset dataset = ArMModel.getDataset() ;
@@ -67,10 +79,37 @@ public class Dump {
         };
         dataset.begin(ReadWrite.READ);
         try {
-            DatasetGraph g = dataset.asDatasetGraph();
-            WriterDatasetRIOT w = RDFDataMgr.createDatasetWriter(f) ;
-            PrefixMap pm = RiotLib.prefixMap(g);
-            w.write(output, g, pm, null, null);
+          DatasetGraph g = dataset.asDatasetGraph();
+          WriterDatasetRIOT w = RDFDataMgr.createDatasetWriter(f) ;
+          PrefixMap pm = RiotLib.prefixMap(g);
+          w.write(output, g, pm, null, null);
+        } finally {
+            dataset.end();
+        }
+	return output.toString();
+    }
+    public String getInfDump( RDFFormat f ) {
+        Dataset dataset = ArMModel.getDataset() ;
+        Model m = ArMModel.getModel() ;
+
+        OutputStream output = new OutputStream() {
+                private StringBuilder string = new StringBuilder();
+
+                @Override
+                public void write(int b) throws IOException {
+                    this.string.append((char) b);
+                }
+
+                public String toString() {
+                    return this.string.toString();
+                }
+        };
+        dataset.begin(ReadWrite.READ);
+        try {
+           DatasetGraph g = DatasetFactory.create(m).asDatasetGraph();
+           WriterDatasetRIOT w = RDFDataMgr.createDatasetWriter(f) ;
+           PrefixMap pm = RiotLib.prefixMap(g);
+           w.write(output, g, pm, null, null);
         } finally {
             dataset.end();
         }

@@ -8,21 +8,15 @@
   ( ?time  arm:isPrecedingSeasonOf ?nexttime ) 
   -> 
      [ ( ?oldcs arm:isCharacter ?char )
-       ( ?oldcs arm:atSeasonTime ?time )
+       <- makeInstance( ?adv, arm:advanceFromCharacterSheet, ?oldcs ) ]
+     [ ( ?oldcs arm:atSeasonTime ?time )
        <- makeInstance( ?adv, arm:advanceFromCharacterSheet, ?oldcs ) ]
      [ ( ?newcs arm:isCharacter ?char )
-       ( ?newcs arm:atSeasonTime ?newtime )
+       <- makeInstance( ?adv, arm:advanceToCharacterSheet, ?newcs ) ]
+     [ ( ?newcs arm:atSeasonTime ?newtime )
        <- makeInstance( ?adv, arm:advanceToCharacterSheet, ?newcs ) ]
   ]
 
-# Character Sheet points to next season Character Sheet
-[ nextcharactersheet:
-  ( ?cs1 arm:hasNextCharacter ?cs2 )
-  <-
-  ( ?adv rdf:type arm:CharacterAdvancement )
-  ( ?adv arm:advanceFromCharacterSheet ?cs1 )
-  ( ?adv arm:advanceToCharacterSheet ?cs2 )
-  ]
 
 # Trait instance points to its advancement
 [ advancedtrait:
