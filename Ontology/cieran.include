@@ -128,9 +128,7 @@ arm:spring1224   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1224 .
    [ a armr:InVi5Scales ; arm:hasTotalXP 5 ] .
 
 :advance1224winter a arm:CharacterAdvancement ;
-   arm:advanceCharacter armchar:cieran ;
+   arm:advanceFromCharacterSheet :winter1224 ;
+   arm:advanceToCharacterSheet :spring1224 ;
    arm:atSeasonTime arm:winter1224 ;
-   arm:hasTraitAdvancement [
-      arm:advanceTrait armr:creo ;
-      arm:withXP 17 
-   ] .
+   arm:advanceTrait [ a armr:creo ; arm:addedXP 17 ] .

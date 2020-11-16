@@ -1,9 +1,40 @@
 
+## arm:SeasonAdvancement rdfs:subClassOf arm:Advancement .
+## arm:EarlyChildhood rdfs:subClassOf arm:Advancement .
+## arm:LaterLife rdfs:subClassOf arm:Advancement .
+## arm:Apprenticeship rdfs:subClassOf arm:Advancement .
+## arm:PostApprenticeship rdfs:subClassOf arm:Advancement .
 
 
-arm:SeasonAdvancement rdfs:subClassOf arm:Advancement .
-arm:EarlyChildhood rdfs:subClassOf arm:Advancement .
-arm:LaterLife rdfs:subClassOf arm:Advancement .
-arm:Apprenticeship rdfs:subClassOf arm:Advancement .
-arm:PostApprenticeship rdfs:subClassOf arm:Advancement .
+# Character Advancement
+arm:CharacterAdvancement a owl:Class .
+arm:advanceCharacter a owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterAdvancement ;
+        rdfs:range   arm:Character .
+arm:advanceFromCharacterSheet a owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterAdvancement ;
+        rdfs:range   arm:CharacterSheet .
+arm:advanceToCharacterSheet a owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterAdvancement ;
+        rdfs:range   arm:CharacterSheet .
+arm:atSeasonTime a   owl:ObjectProperty ;
+        rdfs:domain  [ owl:disjointUnionOf ( arm:CharacterSheet
+                                             arm:CharacterAdvancement ) ] ;
+        rdfs:range   arm:SeasonTime .
+arm:hasNextCharacterSheet a owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterSheet ;
+        rdfs:range   arm:CharacterSheet .
 
+# Trait Advancement
+# arm:TraitAdvancement a arm:LeafTraitClass .
+arm:advanceTrait a owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterAdvancement ;
+        rdfs:range   arm:Trait .
+arm:advancedFromTrait a owl:ObjectProperty ;
+        rdfs:comment "Reference to a previous trait instance from which this trait instance has been advanced." ;
+        rdfs:domain  arm:Trait ;
+        rdfs:range   arm:Trait .
+arm:addedXP a   owl:DatatypeProperty ;
+        rdfs:comment  "XP added in the last advancement of the trait.  This is a bit of a hack, allowing the trait defined as an advancement to be reused as a trait in future character sheets.  Thus we do not depend on creating new nodes in the reasoner." ;
+        rdfs:domain  arm:Trait ;
+        rdfs:range   xsd:int .

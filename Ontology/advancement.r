@@ -1,31 +1,22 @@
-# Identify Character Sheets of an Advancement
-<- table(arm:advanceFromCharacterSheet)  .
-<- table(arm:advanceToCharacterSheet) .
-[ advancecharsheet1:
+
+# Character Sheet points to next season Character Sheet
+[ nextcharactersheet:
   ( ?adv rdf:type arm:CharacterAdvancement )
-  ( ?adv  arm:advanceCharacter ?char ) 
-  ( ?adv  arm:atSeasonTime ?time ) 
-  ( ?time  arm:isPrecedingSeasonOf ?nexttime ) 
-  -> 
-     [ ( ?oldcs arm:isCharacter ?char )
-       <- makeInstance( ?adv, arm:advanceFromCharacterSheet, ?oldcs ) ]
-     [ ( ?oldcs arm:atSeasonTime ?time )
-       <- makeInstance( ?adv, arm:advanceFromCharacterSheet, ?oldcs ) ]
-     [ ( ?newcs arm:isCharacter ?char )
-       <- makeInstance( ?adv, arm:advanceToCharacterSheet, ?newcs ) ]
-     [ ( ?newcs arm:atSeasonTime ?newtime )
-       <- makeInstance( ?adv, arm:advanceToCharacterSheet, ?newcs ) ]
+  ( ?adv arm:advanceFromCharacterSheet ?cs1 )
+  ( ?adv arm:advanceToCharacterSheet ?cs2 )
+  ->
+  ( ?cs1 arm:hasNextCharacter ?cs2 )
   ]
 
-
-# Trait instance points to its advancement
+# Trait instance points to its predecessor from before advancement
 [ advancedtrait:
-   ( ?adv rdf:type arm:hasTraitAdvancement )
-   ( ?adv  arm:advanceCharacterSheet ?cs ) 
-   ( ?adv  arm:advanceTrait ?tc )
-   ( ?cs  arm:hasTrait ?trait )
+   ( ?adv rdf:type arm:CharacterAdvancement )
+   ( ?adv  arm:advanceFromCharacterSheet ?cs ) 
+   ( ?adv  arm:advanceTrait ?trait )
    ( ?trait  rdf:type ?tc )
-   -> ( ?trait arm:isAdvancedBy ?adv ) ]
+   ( ?cs  arm:hasTrait ?oldtrait )
+   ( ?oldtrait  rdf:type ?tc )
+   -> ( ?trait arm:advancedFromTrait ?oldtrait ) ]
 
 # Three alternatives.
 # 1. Trait copied (noadvancetrait)
@@ -35,40 +26,38 @@
 # Traits without Advancement are carried forward
 [ noadvancetrait:
    ( ?cs   rdf:type arm:CharacterSheet )
-   ( ?cs   arm:hasTrait ?trait ) 
-   ( ?cs   ?p ?trait ) 
+   ( ?cs   arm:hasTrait ?oldtrait ) 
    ( ?cs   arm:hasNextCharacter ?nc ) 
-   noValue( ?trait arm:isaDvancedBy ?adv ) 
-   -> ( ?nc ?p ?trait )
-]
+   ( ?cs   ?p ?oldtrait ) 
+   noValue( ?trait arm:advancedFromTrait ?oldtrait ) 
+   -> ( ?nc ?p ?oldtrait ) ]
 
-# TODO: New trait instances upon advancement
-# Note that we will need backward rules to create new traits.
-[ advancetrait1:
-   ( ?cs   rdf:type arm:charactersheet )
-   ( ?cs   arm:hastrait ?trait ) 
-   ( ?cs   ?p ?trait ) 
-   ( ?cs   arm:hasnextcharacter ?nc ) 
-   ( ?trait arm:isadvancedby ?adv ) 
-   -> [
-       makeInstance( ?nc, ?p, ?nt ) ->
-	  [ ( ?trait arm:hasTotalXP ?xp )
-            ( ?adv arm:withXP ?xxp )
-            -> ( ?nc arm:hasTotalXP sum(?xp,?xxp ) ) ]
-	  [ ( ?adv arm:assignSpeciality ?spec )
-            -> ( ?nc arm:hasSpeciality ?spec ) ]
-	  [ noValue( ?adv, arm:assignSpeciality  )
-            ( ?trait arm:hasSpeciality ?spec ) 
-            -> ( ?nc arm:hasSpeciality ?spec ) ]
-]   
-]
+# 2-3. Traits from the CharacterAdvancement are added to the new charactersheet
+[ advancementtrait:
+   ( ?cs   rdf:type arm:CharacterSheet )
+   ( ?cs   arm:hasTrait ?oldtrait ) 
+   ( ?cs   arm:hasNextCharacter ?nc ) 
+   ( ?cs   ?p ?oldtrait ) 
+   -> 
+   ( ?nc ?p ?trait )
+]        
 
-[ advancedtrait2:
-   ( ?adv rdf:type arm:hasTraitAdvancement )
-   ( ?adv  arm:advanceCharacterSheet ?cs ) 
-   ( ?adv  arm:advanceTrait ?tc )
-   ( ?c  arm:hasTrait ?trait )
-   ( ?trait  rdf:type ?tc )
-   -> ( ?trait arm:isAdvancedBy ?adv ) 
-]
+# 2. Traits which already existed are updated
+[ advancetraitXP:
+   ( ?trait arm:advancedFromTrait ?oldtrait  )
+   ( ?trait arm:addedXP ?xp2 ) 
+   ( ?oldtrait arm:hasTotalXP ?xp1 ) 
+   -> (  ?trait arm:hasTotalXP sum(?xp1,?xp2 ) ) ]
+[ advancetraitSpec:
+   ( ?trait arm:advancedFromTrait ?oldtrait  )
+   noValue( ?trait arm:hasSpeciality ?spec ) 
+   ( ?oldtrait arm:hasSpeciality ?oldspec ) 
+   ->
+   ( ?trait arm:hasSpeciality ?oldspec ) ]
 
+# 3. Convert addedXP to TotalXP when there was no prior trait.
+[ newtraitXP:
+   ( ?trait arm:addedXP ?xp ) 
+   noValue( ?trait, arm:advancedFromTrait   )
+   noValue( ?trait, arm:hasTotalXP  ) 
+   -> (  ?trait arm:hasTotalXP ?xp ) ]
