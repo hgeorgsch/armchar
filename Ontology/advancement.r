@@ -22,6 +22,12 @@
   ->
   ( ?cs2 arm:isCharacter ?char )
   ]
+[ advtype:
+  ( ?adv arm:hasAdvancementType ?type )
+  ( ?type rdfs:label ?l )
+  ->
+  ( ?adv arm:hasAdvancementTypeString ?l )
+  ]
 
 # Character Sheet points to next season Character Sheet
 [ nextcharactersheet:

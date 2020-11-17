@@ -19,6 +19,12 @@ arm:advanceFromCharacterSheet a owl:ObjectProperty ;
 arm:advanceToCharacterSheet a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterAdvancement ;
         rdfs:range   arm:CharacterSheet .
+arm:hasAdvancementType   a owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterAdvancement ;
+        rdfs:range   arm:AdvancementType .
+arm:hasAdvancementTypeString   a owl:DatatypeProperty ;
+        rdfs:domain  arm:CharacterAdvancement ;
+        rdfs:range   xsd:string .
 arm:atSeasonTime a   owl:ObjectProperty ;
         rdfs:domain  [ owl:disjointUnionOf ( arm:CharacterSheet
                                              arm:CharacterAdvancement ) ] ;
@@ -42,6 +48,16 @@ arm:awardsXP a owl:DatatypeProperty ;
 arm:hasNextCharacterSheet a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterSheet ;
         rdfs:range   arm:CharacterSheet .
+
+arm:AdvancementType a owl:Class ;
+     owl:oneOf ( arm:Exposure arm:Practice arm:Adventure arm:Training
+        arm:Teaching arm:Reading ) .
+arm:Exposure  rdfs:label  "Exposure" .
+arm:Practice  rdfs:label  "Practice" .
+arm:Adventure  rdfs:label  "Adventure" .
+arm:Training  rdfs:label  "Training" .
+arm:Teaching  rdfs:label  "Teaching" .
+arm:Reading  rdfs:label  "Reading" .
 
 # Trait Advancement
 # arm:TraitAdvancement a arm:LeafTraitClass .
