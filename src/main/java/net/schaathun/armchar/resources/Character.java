@@ -49,11 +49,14 @@ public class Character {
         String queryString = Config.prefix
                 + "CONSTRUCT { armchar:" + ID + " ?p1 ?o1 . "
 		+ " ?o1 ?p2 ?o2 .  \r\n"
+		+ " ?o2 ?p3 ?o3 .  \r\n"
                 + "} WHERE { armchar:" + ID + " ?p1 ?o1 .\r\n"
 		+ "   NOT EXISTS { ?p1 rdf:type arm:ignoredProperty }  \r\n"
                 + "  OPTIONAL { ?o1 ?p2 ?o2 .\r\n"
 		+ "   NOT EXISTS { ?p2 rdf:type arm:ignoredProperty }  \r\n"
-                + "} \r\n"
+                + "      OPTIONAL { ?o2 ?p3 ?o3 .\r\n"
+		+ "      NOT EXISTS { ?p3 rdf:type arm:ignoredProperty }  \r\n"
+                + "} } \r\n"
                 + "}";
         String result = ArMModel.construct(queryString);
         return Response
