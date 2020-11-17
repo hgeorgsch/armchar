@@ -169,7 +169,7 @@ armchar:cieran  arm:hasAdvancement
   arm:hasAdvancementDescription "Lab work: InVi5 Sense the Nature of Vis + InVi20 Piercing the magic veil (from texts) + 2xp parma" ;
   arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 2 ],
    [ a armr:InVi5Sense  ; arm:addedXP 5 ],
-   [ a armr:InVi5PiercingMagical  ; arm:addedXP 5 ] ;
+   [ a armr:InVi20PiercingMagical  ; arm:addedXP 5 ] ;
   arm:awardsXP 2 ;
   arm:hasAdvancementType arm:Exposure ;
   arm:advanceToCharacterSheet :spring1223 
@@ -187,7 +187,7 @@ armchar:cieran  arm:hasAdvancement
   arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 2 ],
    [ a armr:InVi5Spot  ; arm:addedXP 5 ],
    [ a armr:InVi5Scales ; arm:addedXP 5 ],
-   [ a armr:InVi5PiercingFaerie  ; arm:addedXP 5 ] ;
+   [ a armr:InVi20PiercingFaerie  ; arm:addedXP 5 ] ;
   arm:awardsXP 2 ;
   arm:hasAdvancementType arm:Exposure ;
   arm:advanceToCharacterSheet :autumn1223 
