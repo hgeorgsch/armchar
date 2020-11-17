@@ -72,7 +72,7 @@ armchar:cieran  arm:hasAdvancement
   arm:advanceTrait [ a armab:latin ; arm:addedXP 18 ]  ;
   arm:awardsXP 18 ;
   arm:hasAdvancementType arm:Reading ;
-  arm:advanceToCharacterSheet :winter1219 
+  arm:advanceToCharacterSheet :winter1220 
   ],
 
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1220 ;
@@ -103,7 +103,7 @@ armchar:cieran  arm:hasAdvancement
   arm:advanceTrait [ a armr:muto ; arm:addedXP 21 ]  ;
   arm:awardsXP 21 ;
   arm:hasAdvancementType arm:Reading ;
-  arm:advanceToCharacterSheet :winter1220 
+  arm:advanceToCharacterSheet :winter1221 
   ],
 
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1221 ;
@@ -133,7 +133,7 @@ armchar:cieran  arm:hasAdvancement
   arm:advanceTrait [ a armr:auram ; arm:addedXP 21 ]  ;
   arm:awardsXP 21 ;
   arm:hasAdvancementType arm:Reading ;
-  arm:advanceToCharacterSheet :winter1221 
+  arm:advanceToCharacterSheet :winter1222 
   ],
 
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1222 ;
@@ -162,7 +162,7 @@ armchar:cieran  arm:hasAdvancement
   arm:advanceTrait [ a armr:intellego ; arm:addedXP 16 ]  ;
   arm:awardsXP 16 ;
   arm:hasAdvancementType arm:Reading ;
-  arm:advanceToCharacterSheet :winter1221 
+  arm:advanceToCharacterSheet :winter1223 
   ],
 
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1223 ;
@@ -196,5 +196,5 @@ armchar:cieran  arm:hasAdvancement
   arm:hasAdvancementDescription "Read Animàl L15Q14+3" ;
   arm:advanceTrait [ a armr:animal ; arm:addedXP 17 ]  ;
   arm:hasAdvancementType arm:Reading ;
-  arm:advanceToCharacterSheet :winter1223 
+  arm:advanceToCharacterSheet :winter1224 
   ] .
