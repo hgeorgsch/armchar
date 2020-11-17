@@ -14,7 +14,8 @@
 
 [ seasonanyear: 
   ( ?r arm:atSeasonTime ?time )
-  ( ?time arm:isSeason ?season )
+  ( ?time arm:isSeason ?s )
+  ( ?s rdfs:label ?season )
   ( ?time arm:isYear ?year )
   ->
   ( ?r arm:atSeason ?season )

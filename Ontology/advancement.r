@@ -42,7 +42,7 @@
   ( ?adv arm:advanceFromCharacterSheet ?cs1 )
   ( ?adv arm:advanceToCharacterSheet ?cs2 )
   ->
-  ( ?cs1 arm:hasNextCharacter ?cs2 )
+  ( ?cs1 arm:hasNextCharacterSheet ?cs2 )
   ]
 
 # Trait instance points to its predecessor from before advancement
@@ -64,7 +64,7 @@
 [ noadvancetrait:
    ( ?cs   rdf:type arm:CharacterSheet )
    ( ?cs   arm:hasTrait ?oldtrait ) 
-   ( ?cs   arm:hasNextCharacter ?nc ) 
+   ( ?cs   arm:hasNextCharacterSheet ?nc ) 
    ( ?cs   ?p ?oldtrait ) 
    noValue( ?trait arm:advancedFromTrait ?oldtrait ) 
    -> ( ?nc ?p ?oldtrait ) ]
@@ -73,7 +73,7 @@
 [ advancementtrait:
    ( ?cs   rdf:type arm:CharacterSheet )
    ( ?cs   arm:hasTrait ?oldtrait ) 
-   ( ?cs   arm:hasNextCharacter ?nc ) 
+   ( ?cs   arm:hasNextCharacterSheet ?nc ) 
    ( ?cs   ?p ?oldtrait ) 
    -> 
    ( ?nc ?p ?trait )
