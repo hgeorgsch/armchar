@@ -51,6 +51,7 @@
    ( ?adv  arm:advanceFromCharacterSheet ?cs ) 
    ( ?adv  arm:advanceTrait ?trait )
    ( ?trait  rdf:type ?tc )
+   ( ?tc  rdf:type arm:LeafTraitClass )
    ( ?cs  arm:hasTrait ?oldtrait )
    ( ?oldtrait  rdf:type ?tc )
    -> ( ?trait arm:advancedFromTrait ?oldtrait ) ]
