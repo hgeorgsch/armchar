@@ -22,6 +22,13 @@
   ->
   ( ?cs2 arm:isCharacter ?char )
   ]
+[ inferseasontime:
+  ( ?adv arm:advanceToCharacterSheet ?cs )
+  ( ?adv arm:atSeasonTime ?pretime )
+  ( ?pretime arm:isPrecedingSeasonOf ?time )
+  ->
+  ( ?cs arm:atSeasonTime ?time )
+  ]
 [ advtype:
   ( ?adv arm:hasAdvancementType ?type )
   ( ?type rdfs:label ?l )

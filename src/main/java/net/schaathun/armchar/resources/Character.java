@@ -47,14 +47,14 @@ public class Character {
     public Response getCharacter(@PathParam("id") String ID) {
 
         String queryString = Config.prefix
-                    + "CONSTRUCT { armchar:" + ID + " ?p1 ?o1 . "
-		    + " ?o1 ?p2 ?o2 .  \r\n"
-                    + "} WHERE { armchar:" + ID + " ?p1 ?o1 .\r\n"
-		    + "   NOT EXISTS { ?p1 rdf:type arm:ignoredProperty }  \r\n"
-                    + "  OPTIONAL { ?o1 ?p2 ?o2 .\r\n"
-		    + "   NOT EXISTS { ?p2 rdf:type arm:ignoredProperty }  \r\n"
-                    + "} \r\n"
-                    + "}";
+                + "CONSTRUCT { armchar:" + ID + " ?p1 ?o1 . "
+		+ " ?o1 ?p2 ?o2 .  \r\n"
+                + "} WHERE { armchar:" + ID + " ?p1 ?o1 .\r\n"
+		+ "   NOT EXISTS { ?p1 rdf:type arm:ignoredProperty }  \r\n"
+                + "  OPTIONAL { ?o1 ?p2 ?o2 .\r\n"
+		+ "   NOT EXISTS { ?p2 rdf:type arm:ignoredProperty }  \r\n"
+                + "} \r\n"
+                + "}";
         String result = ArMModel.construct(queryString);
         return Response
                 .ok(result)
