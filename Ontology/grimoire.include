@@ -145,3 +145,14 @@ armr:InVi5Scales a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
     arm:hasLevel     5 ;
     rdfs:label       "Scales of Magical Weight" .
 
+armr:InVi20PiercingFaerie a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
+    arm:hasTechnique armr:intellego ;
+    arm:hasForm      armr:vim ;
+    arm:hasLevel     20 ;
+    rdfs:label       "Piercing the Faerie Veil" .
+
+armr:InVi20PiercingMagical  a arm:SpellClass ; rdfs:subClassOf  arm:Spell ;
+    arm:hasTechnique armr:intellego ;
+    arm:hasForm      armr:vim ;
+    arm:hasLevel     20 ;
+    rdfs:label       "Piercing the Magical  Veil" .

@@ -1,0 +1,40 @@
+
+arm:winter1217   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1217 .
+arm:spring1217   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1217 .
+arm:summer1217   a arm:SeasonTime ; arm:isSeason arm:Summer ; arm:isYear 1217 .
+arm:autumn1217   a arm:SeasonTime ; arm:isSeason arm:Autumn ; arm:isYear 1217 .
+
+arm:winter1218   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1218 .
+arm:spring1218   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1218 .
+arm:summer1218   a arm:SeasonTime ; arm:isSeason arm:Summer ; arm:isYear 1218 .
+arm:autumn1218   a arm:SeasonTime ; arm:isSeason arm:Autumn ; arm:isYear 1218 .
+
+arm:winter1219   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1219 .
+arm:spring1219   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1219 .
+arm:summer1219   a arm:SeasonTime ; arm:isSeason arm:Summer ; arm:isYear 1219 .
+arm:autumn1219   a arm:SeasonTime ; arm:isSeason arm:Autumn ; arm:isYear 1219 .
+
+arm:winter1220   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1220 .
+arm:spring1220   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1220 .
+arm:summer1220   a arm:SeasonTime ; arm:isSeason arm:Summer ; arm:isYear 1220 .
+arm:autumn1220   a arm:SeasonTime ; arm:isSeason arm:Autumn ; arm:isYear 1220 .
+
+arm:winter1221   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1221 .
+arm:spring1221   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1221 .
+arm:summer1221   a arm:SeasonTime ; arm:isSeason arm:Summer ; arm:isYear 1221 .
+arm:autumn1221   a arm:SeasonTime ; arm:isSeason arm:Autumn ; arm:isYear 1221 .
+
+arm:winter1222   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1222 .
+arm:spring1222   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1222 .
+arm:summer1222   a arm:SeasonTime ; arm:isSeason arm:Summer ; arm:isYear 1222 .
+arm:autumn1222   a arm:SeasonTime ; arm:isSeason arm:Autumn ; arm:isYear 1222 .
+
+arm:winter1223   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1223 .
+arm:spring1223   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1223 .
+arm:summer1223   a arm:SeasonTime ; arm:isSeason arm:Summer ; arm:isYear 1223 .
+arm:autumn1223   a arm:SeasonTime ; arm:isSeason arm:Autumn ; arm:isYear 1223 .
+
+arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
+arm:spring1224   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1224 .
+arm:summer1224   a arm:SeasonTime ; arm:isSeason arm:Summer ; arm:isYear 1224 .
+arm:autumn1224   a arm:SeasonTime ; arm:isSeason arm:Autumn ; arm:isYear 1224 .

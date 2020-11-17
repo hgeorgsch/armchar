@@ -14,101 +14,114 @@ armchar:cieran a arm:Magus ;
                arm:hasAlmaMater "Stonehenge" ;
                arm:hasSaga armchar:contestedlands .
 
-arm:winter1224   a arm:SeasonTime ; arm:isSeason arm:Winter ; arm:isYear 1224 .
-arm:spring1224   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1224 .
+armchar:elksrun  a arm:Covenant ; 
+               arm:hasName "Elk's Run" ;
+	       arm:hasSetting "Hibernia" ;
+               arm:hasSaga armchar:contestedlands .
 
-:winter1224 arm:isCharacter armchar:cieran ; a arm:CharacterSheet ;
-            arm:atSeasonTime arm:winter1224 .
+armchar:contestedlands a arm:Saga ;
+   arm:hasSeasonTime  
+arm:winter1217, arm:spring1217, arm:summer1217, arm:autumn1217, 
+arm:winter1218, arm:spring1218, arm:summer1218, arm:autumn1218, 
+arm:winter1219, arm:spring1219, arm:summer1219, arm:autumn1219, 
+arm:winter1220, arm:spring1220, arm:summer1220, arm:autumn1220, 
+arm:winter1221, arm:spring1221, arm:summer1221, arm:autumn1221, 
+arm:winter1222, arm:spring1222, arm:summer1222, arm:autumn1222, 
+arm:winter1223, arm:spring1223, arm:summer1223, arm:autumn1223, 
+arm:winter1224, arm:spring1224, arm:summer1224, arm:autumn1224 .
 
-:winter1224 arm:hasOtherTrait
+:summer1217 arm:isCharacter armchar:cieran ; a arm:CharacterSheet ;
+            arm:atSeasonTime arm:summer1217 .
+
+:summer1217 arm:hasOtherTrait
   [ a arm:Decrepitude ; arm:hasTotalXP 0  ],
-  [ a arm:Warping ; arm:hasTotalXP 1 ; arm:hasEffect "foo", "bar" ],
-  [ a arm:Confidence ; arm:hasScore 1 ; arm:hasPoints 6 ] .
+  [ a arm:Warping ; arm:hasTotalXP 1 ],
+  [ a arm:Confidence ; arm:hasScore 1 ; arm:hasPoints 8 ] .
 
 
-:winter1224 arm:hasPersonalityTrait [ a arm:personality-meticulous ; arm:hasScore 3 ] . 
-:winter1224 arm:hasPersonalityTrait [ a arm:personality-villager ; arm:hasScore 1 ] . 
-:winter1224 arm:hasPersonalityTrait [ a arm:personality-carefree ; arm:hasScore 3 ] . 
-:winter1224 arm:hasPersonalityTrait [ a arm:personality-meddler ; arm:hasScore 6 ] . 
+:summer1217 arm:hasPersonalityTrait [ a arm:personality-meticulous ; arm:hasScore 3 ] . 
+:summer1217 arm:hasPersonalityTrait [ a arm:personality-villager ; arm:hasScore 1 ] . 
+:summer1217 arm:hasPersonalityTrait [ a arm:personality-carefree ; arm:hasScore 3 ] . 
+:summer1217 arm:hasPersonalityTrait [ a arm:personality-meddler ; arm:hasScore 6 ] . 
 
 
-:winter1224 arm:hasVirtue [ a armr:strongFaerieBlood ; arm:hasDetail "Ettin Blood" ] . 
-:winter1224 arm:hasVirtue [ a armr:craftmagic ; arm:hasScore 0 ] . 
-:winter1224 arm:hasVirtue [ a armr:spellfoci ; arm:hasScore 0 ] . 
-:winter1224 arm:hasVirtue [ a armr:flawlessMagic ] . 
-:winter1224 arm:hasVirtue [ a armr:skilledParens ] . 
-:winter1224 arm:hasVirtue [ a armr:bookLearner ] . 
-:winter1224 arm:hasVirtue [ a armr:affinityWithArt ; arm:hasDetail "Imaginem" ] . 
-:winter1224 arm:hasVirtue [ a armr:minorMagicalFocus ; arm:hasDetail "Magical Arrows" ] . 
-:winter1224 arm:hasFlaw [ a armr:meddler ] . 
-:winter1224 arm:hasFlaw [ a armr:shortRangedMagic ] . 
-:winter1224 arm:hasFlaw [ a armr:weakSpontaneousMagic ; arm:hasScore 0 ] .
-:winter1224 arm:hasFlaw [ a armr:mistakenIdentity ] .
-:winter1224 arm:hasFlaw [ a armr:carefree ] .
+:summer1217 arm:hasVirtue [ a armr:strongFaerieBlood ; arm:hasDetail "Ettin Blood" ] . 
+:summer1217 arm:hasVirtue [ a armr:craftmagic ; arm:hasScore 0 ] . 
+:summer1217 arm:hasVirtue [ a armr:spellfoci ; arm:hasScore 0 ] . 
+:summer1217 arm:hasVirtue [ a armr:flawlessMagic ] . 
+:summer1217 arm:hasVirtue [ a armr:skilledParens ] . 
+:summer1217 arm:hasVirtue [ a armr:bookLearner ] . 
+:summer1217 arm:hasVirtue [ a armr:affinityWithArt ; arm:hasDetail "Imaginem" ] . 
+:summer1217 arm:hasVirtue [ a armr:minorMagicalFocus ; arm:hasDetail "Magical Arrows" ] . 
+:summer1217 arm:hasFlaw [ a armr:meddler ] . 
+:summer1217 arm:hasFlaw [ a armr:shortRangedMagic ] . 
+:summer1217 arm:hasFlaw [ a armr:weakSpontaneousMagic ; arm:hasScore 0 ] .
+:summer1217 arm:hasFlaw [ a armr:mistakenIdentity ] .
+:summer1217 arm:hasFlaw [ a armr:carefree ] .
 
-:winter1224 arm:hasCharacteristic [ a armr:int ; arm:hasScore 3 ] . 
-:winter1224 arm:hasCharacteristic [ a armr:per ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a armr:com ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a armr:pre ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a armr:str ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a armr:sta ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a armr:dex ; arm:hasScore -1 ] . 
-:winter1224 arm:hasCharacteristic [ a armr:qik ; arm:hasScore -1 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:int ; arm:hasScore 3 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:per ; arm:hasScore -1 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:com ; arm:hasScore -1 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:pre ; arm:hasScore 0 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:str ; arm:hasScore 2 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:sta ; arm:hasScore 3 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:dex ; arm:hasScore 2 ] . 
+:summer1217 arm:hasCharacteristic [ a armr:qik ; arm:hasScore -3 ] . 
 
-:winter1224 arm:hasArt [ a armr:creo ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:intellego ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:muto ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:perdo ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:rego ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:animal ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:aquam ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:auram ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:corpus ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:ignem ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:imaginem ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:herbam ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:mentem ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:terram ; arm:hasTotalXP 17 ] . 
-:winter1224 arm:hasArt [ a armr:vim ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:creo ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:intellego ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:muto ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:perdo ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:rego ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:animal ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:aquam ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:auram ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:corpus ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:ignem ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:imaginem ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:herbam ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:mentem ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:terram ; arm:hasTotalXP 17 ] . 
+:summer1217 arm:hasArt [ a armr:vim ; arm:hasTotalXP 17 ] . 
 
 
 # General Abilities
-:winter1224 arm:hasAbility
+:summer1217 arm:hasAbility
    [ a armab:gaelic ; arm:hasSpeciality "Leinster" ; arm:hasTotalXP 75  ],
    [ a armab:arealore-ireland ; arm:hasSpeciality "Legends" ; arm:hasTotalXP 5  ] . 
-:winter1224 arm:hasAbility [ a armab:arealore-munster ; arm:hasSpeciality "Hiding places" ; arm:hasTotalXP 5  ] . 
-:winter1224 arm:hasAbility [ a armab:awareness ; arm:hasSpeciality "searching" ; arm:hasTotalXP 15  ] . 
-:winter1224 arm:hasAbility [ a armab:bargain ;  arm:hasTotalXP 5  ] . 
-:winter1224 arm:hasAbility [ a armab:brawl ; arm:hasSpeciality "Dodge" ;  arm:hasTotalXP 15  ] . 
-:winter1224 arm:hasAbility [ a armab:conc ; arm:hasSpeciality "Spell Concentration" ;  arm:hasTotalXP 5  ] . 
-:winter1224 arm:hasAbility [ a armab:craft-cooking ; arm:hasTotalXP 30  ] . 
-:winter1224 arm:hasAbility [ a armab:craft-fletching ; arm:hasTotalXP 30  ] . 
-:winter1224 arm:hasAbility [ a armab:folkken ; arm:hasSpeciality "Villagers" ; arm:hasTotalXP 5  ] . 
-:winter1224 arm:hasAbility [ a armab:hermeslore ; arm:hasSpeciality "Hibernia" ; arm:hasTotalXP 5  ] . 
-:winter1224 arm:hasAbility [ a armab:socplore ; arm:hasSpeciality "Self Initiation" ; arm:hasTotalXP 17  ] . 
-:winter1224 arm:hasAbility [ a armab:stealth ; arm:hasSpeciality "Hiding" ; arm:hasTotalXP 5  ] . 
+:summer1217 arm:hasAbility [ a armab:arealore-munster ; arm:hasSpeciality "Hiding places" ; arm:hasTotalXP 5  ] . 
+:summer1217 arm:hasAbility [ a armab:awareness ; arm:hasSpeciality "searching" ; arm:hasTotalXP 15  ] . 
+:summer1217 arm:hasAbility [ a armab:bargain ;  arm:hasTotalXP 5  ] . 
+:summer1217 arm:hasAbility [ a armab:brawl ; arm:hasSpeciality "Dodge" ;  arm:hasTotalXP 15  ] . 
+:summer1217 arm:hasAbility [ a armab:conc ; arm:hasSpeciality "Spell Concentration" ;  arm:hasTotalXP 5  ] . 
+:summer1217 arm:hasAbility [ a armab:craft-cooking ; arm:hasTotalXP 30  ] . 
+:summer1217 arm:hasAbility [ a armab:craft-fletching ; arm:hasTotalXP 30  ] . 
+:summer1217 arm:hasAbility [ a armab:folkken ; arm:hasSpeciality "Villagers" ; arm:hasTotalXP 5  ] . 
+:summer1217 arm:hasAbility [ a armab:hermeslore ; arm:hasSpeciality "Hibernia" ; arm:hasTotalXP 5  ] . 
+:summer1217 arm:hasAbility [ a armab:socplore ; arm:hasSpeciality "Self Initiation" ; arm:hasTotalXP 17  ] . 
+:summer1217 arm:hasAbility [ a armab:stealth ; arm:hasSpeciality "Hiding" ; arm:hasTotalXP 5  ] . 
 
 # Academic Abilities
-:winter1224 arm:hasAbility [ a armab:artlib ; arm:hasTotalXP 5 ; arm:hasSpeciality "rituals" ] . 
+:summer1217 arm:hasAbility [ a armab:artlib ; arm:hasTotalXP 5 ; arm:hasSpeciality "rituals" ] . 
 :winter1225 arm:hasAbility [ a armab:philosophiae ; arm:hasTotalXP 7 ; arm:hasSpeciality "rituals" ] . 
 :winter1225 arm:hasAbility [ a armab:latin ; arm:hasTotalXP 50 ; arm:hasSpeciality "Hermetic Usage" ] . 
 
 # Arcane Abilities
-:winter1224 arm:hasAbility [ a armab:parmamagica ; arm:hasTotalXP 30 ; arm:hasSpeciality "Mentem" ] . 
-:winter1224 arm:hasAbility [ a armab:hermescode ; arm:hasTotalXP 5 ; arm:hasSpeciality "Stonehenge" ] . 
-:winter1224 arm:hasAbility [ a armab:infernallore ; arm:hasTotalXP 5 ; arm:hasSpeciality "Undead" ] . 
-:winter1224 arm:hasAbility [ a armab:magictheory ; arm:hasTotalXP 30 ; arm:hasSpeciality "Spells" ] . 
-:winter1224 arm:hasAbility [ a armab:penetration ; arm:hasTotalXP 5 ; arm:hasSpeciality "Rego" ] . 
+:summer1217 arm:hasAbility [ a armab:parmamagica ; arm:hasTotalXP 30 ; arm:hasSpeciality "Mentem" ] . 
+:summer1217 arm:hasAbility [ a armab:hermescode ; arm:hasTotalXP 5 ; arm:hasSpeciality "Stonehenge" ] . 
+:summer1217 arm:hasAbility [ a armab:infernallore ; arm:hasTotalXP 5 ; arm:hasSpeciality "Undead" ] . 
+:summer1217 arm:hasAbility [ a armab:magictheory ; arm:hasTotalXP 30 ; arm:hasSpeciality "Spells" ] . 
+:summer1217 arm:hasAbility [ a armab:penetration ; arm:hasTotalXP 5 ; arm:hasSpeciality "Rego" ] . 
 
 # Martial Abilities
-:winter1224 arm:hasAbility [ a armab:bows ; arm:hasTotalXP 30 ; arm:hasSpeciality "Longbow" ] . 
-:winter1224 arm:hasAbility [ a armab:thrown ; arm:hasTotalXP 5 ; arm:hasSpeciality "Dart" ] . 
+:summer1217 arm:hasAbility [ a armab:bows ; arm:hasTotalXP 30 ; arm:hasSpeciality "Longbow" ] . 
+:summer1217 arm:hasAbility [ a armab:thrown ; arm:hasTotalXP 5 ; arm:hasSpeciality "Dart" ] . 
 
 # Supernatural Abilities
-:winter1224 arm:hasAbility [ a armab:secondsight ; arm:hasTotalXP 14 ; arm:hasSpeciality "Faerie Illusions" ] . 
+:summer1217 arm:hasAbility [ a armab:secondsight ; arm:hasTotalXP 14 ; arm:hasSpeciality "Faerie Illusions" ] . 
 
 # Spells
-:winter1224 arm:hasSpell
+:summer1217 arm:hasSpell
    [ a armr:PeCo20Wound ; arm:hasTotalXP 5 ],
    [ a armr:ReCo5Spasms ; arm:hasTotalXP 5 ],
    [ a armr:CrIg15Lamp ; arm:hasTotalXP 5 ],
@@ -118,17 +131,6 @@ arm:spring1224   a arm:SeasonTime ; arm:isSeason arm:Spring ; arm:isYear 1224 .
    [ a armr:PeMe10Trust ; arm:hasTotalXP 5 ],
    [ a armr:ReMe15Arrow ; arm:hasTotalXP 5 ],
    [ a armr:ReMe5Touch ; arm:hasTotalXP 5 ],
-   [ a armr:InTe30Stone  ; arm:hasTotalXP 5 ],
    [ a armr:PeTe20Obliteration  ; arm:hasTotalXP 5 ],
-   [ a armr:PeTe20End  ; arm:hasTotalXP 5 ],
-   [ a armr:PeVi5Fist  ; arm:hasTotalXP 5 ],
-   [ a armr:PeVi15Fist  ; arm:hasTotalXP 5 ],
-   [ a armr:InVi5Sense  ; arm:hasTotalXP 5 ],
-   [ a armr:InVi5Spot  ; arm:hasTotalXP 5 ],
-   [ a armr:InVi5Scales ; arm:hasTotalXP 5 ] .
+   [ a armr:PeTe20End  ; arm:hasTotalXP 5 ] .
 
-:advance1224winter a arm:CharacterAdvancement ;
-   arm:advanceFromCharacterSheet :winter1224 ;
-   arm:advanceToCharacterSheet :spring1224 ;
-   arm:atSeasonTime arm:winter1224 ;
-   arm:advanceTrait [ a armr:creo ; arm:addedXP 17 ] .

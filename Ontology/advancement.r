@@ -1,3 +1,27 @@
+# Infer Character Sheets
+[ infercharsheet1:
+  ( ?char rdf:type arm:Character )
+  ( ?char arm:hasAdvancement ?adv )
+  ( ?adv arm:advanceCharacter ?c )
+  ( ?adv arm:atSeasonTime ?t )
+  ( ?cs1 arm:atSeasonTime ?t )
+  ->
+  ( ?adv arm:advanceFromCharacterSheet ?cs1 )
+  ]
+[ infercharsheet1:
+  ( ?char rdf:type arm:Character )
+  ( ?char arm:hasAdvancement ?adv )
+  ( ?adv arm:advanceFromCharacterSheet ?cs1 )
+  ->
+  ( ?cs1 arm:isCharacter ?char )
+  ]
+[ infercharsheet2:
+  ( ?char rdf:type arm:Character )
+  ( ?char arm:hasAdvancement ?adv )
+  ( ?adv arm:advanceToCharacterSheet ?cs2 )
+  ->
+  ( ?cs2 arm:isCharacter ?char )
+  ]
 
 # Character Sheet points to next season Character Sheet
 [ nextcharactersheet:
@@ -54,6 +78,11 @@
    ( ?oldtrait arm:hasSpeciality ?oldspec ) 
    ->
    ( ?trait arm:hasSpeciality ?oldspec ) ]
+[ advancetraitEffect:
+   ( ?trait arm:advancedFromTrait ?oldtrait  )
+   ( ?oldtrait arm:hasEffect ?effect ) 
+   ->
+   ( ?trait arm:hasEffect ?effect ) ]
 
 # 3. Convert addedXP to TotalXP when there was no prior trait.
 [ newtraitXP:
@@ -61,3 +90,31 @@
    noValue( ?trait, arm:advancedFromTrait   )
    noValue( ?trait, arm:hasTotalXP  ) 
    -> (  ?trait arm:hasTotalXP ?xp ) ]
+
+[ fixhasAbility:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Ability )
+  -> ( ?c arm:hasAbility ?t ) ]
+[ fixhasSpell:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Spell )
+  -> ( ?c arm:hasSpell ?t ) ]
+[ fixhasArt:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Art )
+  -> ( ?c arm:hasArt ?t ) ]
+[ fixhasPersonalityTrait:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:PersonalityTrait )
+  -> ( ?c arm:hasPersonalityTrait ?t ) ]
+[ fixhasOtherTrait:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:OtherTrait )
+  -> ( ?c arm:hasOtherTrait ?t ) ]
+[ fixhasReputation:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Reputation )
+  -> ( ?c arm:hasReputation ?t ) ]
+[ fixhasVirtue:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Virtue )
+  -> ( ?c arm:hasVirtue ?t ) ]
+[ fixhasFlaw:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Flaw )
+  -> ( ?c arm:hasFlaw ?t ) ]
+[ fixhasCharacteristic:
+  ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Characteristic )
+  -> ( ?c arm:hasCharacteristic ?t ) ]

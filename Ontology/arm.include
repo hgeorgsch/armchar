@@ -5,11 +5,20 @@
 # Saga
 arm:Saga a owl:Class .
 arm:hasSG a   owl:DatatypeProperty ;
-        rdfs:domain  [ owl:unionOf ( arm:Saga arm:Character ) ] ;
+        rdfs:domain  [ owl:unionOf ( arm:Saga arm:GeneralCharacter ) ] ;
         rdfs:range   xsd:string .
 arm:hasTitle a   owl:DatatypeProperty ;
         rdfs:domain  arm:Saga ;
         rdfs:range   xsd:string .
+arm:hasSetting a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Saga ;
+        rdfs:range   xsd:string .
+arm:hasCharacter a   owl:ObjectProperty ;
+        rdfs:domain  arm:Saga ;
+        rdfs:range   arm:Character .
+arm:hasSeasonTime a   owl:ObjectProperty ;
+        rdfs:domain  arm:Saga ;
+        rdfs:range   arm:SeasonTime .
 
 # Covenant and Character
 arm:GeneralCharacter a owl:Class .
@@ -39,6 +48,9 @@ arm:hasSagaTitle a   owl:DatatypeProperty ;
 arm:hasTribunal a   owl:DatatypeProperty ;
         rdfs:domain  arm:Covenant ;
         rdfs:range   xsd:string .
+arm:hasCovenant a   owl:ObjectProperty ;
+        rdfs:domain  arm:Saga ;
+        rdfs:range   arm:Covenant .
 
 # Character Properties
 arm:hasPlayer a   owl:DatatypeProperty ;
@@ -60,6 +72,10 @@ arm:hasAlmaMater a   owl:DatatypeProperty ;
 # Seasons and Time
 arm:Season a owl:Class ;
    owl:oneOf ( arm:Winter arm:Spring arm:Summer arm:Autumn ) .
+arm:Winter  rdfs:label   "Winter" .
+arm:Spring  rdfs:label   "Spring" .
+arm:Summer  rdfs:label   "Summer" .
+arm:Autumn   rdfs:label   "Autumn" .
 arm:precedes a   owl:ObjectProperty ;
         rdfs:domain  arm:Season ;
         rdfs:range   arm:Season .
@@ -75,7 +91,8 @@ arm:beforeSeasonTime a   owl:ObjectProperty ;
 arm:isPrecedingSeasonOf a   owl:ObjectProperty ;
         rdfs:domain  arm:SeasonTime ;
         rdfs:range   arm:SeasonTime .
-
+arm:isSuccedingSeasonOf a   owl:ObjectProperty ;
+        owl:inverseOf arm:isPrecedingSeasonOf .
 arm:isSeason a   owl:ObjectProperty ;
         rdfs:domain  arm:SeasonTime ;
         rdfs:range   arm:Season .

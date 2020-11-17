@@ -20,11 +20,24 @@
   ( ?r arm:atSeason ?season )
   ( ?r arm:inYear ?year ) ]
 
+[ seasonlabel:
+  ( ?s rdf:type arm:SeasonTime )
+  ( ?s arm:isSeason ?season ) ( ?s arm:isYear ?y )
+  ( ?season rdfs:label ?st ) ( ?s arm:isYear ?y )
+  strConcat(?st,?y,?l)
+  -> ( ?s rdfs:label ?l ) ]
+
+# Saga Affiliation
+[ covenantsaga:
+  ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:Covenant ) 
+  -> ( ?s arm:hasCovenant ?c ) ]
+[ charactersaga:
+  ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:BaseCharacter ) 
+  -> ( ?s arm:hasCharacter ?c ) ]
+
 # Base Character
 
-[ addsg: 
-  ( ?c rdf:type arm:Character ) ( ?c arm:hasSaga ?s ) ( ?s arm:hasSG ?sg ) 
-  -> ( ?c arm:hasSG ?sg ) ]
+[ addsg: ( ?c arm:hasSaga ?s ) ( ?s arm:hasSG ?sg ) -> ( ?c arm:hasSG ?sg ) ]
 [ addsaga: 
   ( ?c rdf:type arm:Character ) ( ?c arm:hasSaga ?s ) ( ?s arm:hasTitle ?t ) 
   -> ( ?c arm:hasSagaTitle ?t ) ]
@@ -35,7 +48,16 @@
   -> ( ?c arm:hasSize ?size ) ]
 
 # Character sheet inherits from the base character
-[ charsheet: ( ?c arm:isCharacter ?b ) ( ?b ?p ?o ) -> ( ?c ?p ?o ) ]
+[ charsheet: ( ?c rdf:type arm:CharacterSheet )
+             ( ?c arm:isCharacter ?b ) ( ?b ?p ?o )
+	     ( ?p rdfs:range arm:GeneralCharacter )
+             noValue(?p,rdf:type,arm:ignoredProperty)
+	     -> ( ?c ?p ?o ) ]
+[ charsheet: ( ?c rdf:type arm:CharacterSheet )
+             ( ?c arm:isCharacter ?b ) ( ?b ?p ?o )
+	     ( ?p rdfs:range arm:Character )
+             noValue(?p,rdf:type,arm:ignoredProperty)
+	     -> ( ?c ?p ?o ) ]
 
 # Trait instances inherit properties from their class
 
