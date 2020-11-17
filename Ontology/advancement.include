@@ -21,6 +21,14 @@ arm:atSeasonTime a   owl:ObjectProperty ;
         rdfs:domain  [ owl:disjointUnionOf ( arm:CharacterSheet
                                              arm:CharacterAdvancement ) ] ;
         rdfs:range   arm:SeasonTime .
+arm:atSeason a   owl:ObjectProperty ;
+        rdfs:domain  [ owl:disjointUnionOf ( arm:CharacterSheet
+                                             arm:CharacterAdvancement ) ] ;
+        rdfs:range   arm:Season .
+arm:inYear a   owl:ObjectProperty ;
+        rdfs:domain  [ owl:disjointUnionOf ( arm:CharacterSheet
+                                             arm:CharacterAdvancement ) ] ;
+        rdfs:range   arm:Year .
 arm:hasNextCharacterSheet a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterSheet ;
         rdfs:range   arm:CharacterSheet .

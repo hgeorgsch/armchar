@@ -12,6 +12,14 @@
   ( ?s1 arm:isYear ?y1 ) ( ?s2 arm:isYear addOne(?y1)  )
   -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
 
+[ seasonanyear: 
+  ( ?r arm:atSeasonTime ?time )
+  ( ?time arm:isSeason ?season )
+  ( ?time arm:isYear ?year )
+  ->
+  ( ?r arm:atSeason ?season )
+  ( ?r arm:inYear ?year ) ]
+
 # Base Character
 
 [ addsg: 
