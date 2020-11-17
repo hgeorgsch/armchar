@@ -9,14 +9,14 @@
   ( ?adv arm:advanceFromCharacterSheet ?cs1 )
   ]
 [ infercharsheet1:
-  ( ?char rdf:type arm:Character )
+  ( ?char rdf:type arm:BaseCharacter )
   ( ?char arm:hasAdvancement ?adv )
   ( ?adv arm:advanceFromCharacterSheet ?cs1 )
   ->
   ( ?cs1 arm:isCharacter ?char )
   ]
 [ infercharsheet2:
-  ( ?char rdf:type arm:Character )
+  ( ?char rdf:type arm:BaseCharacter )
   ( ?char arm:hasAdvancement ?adv )
   ( ?adv arm:advanceToCharacterSheet ?cs2 )
   ->
