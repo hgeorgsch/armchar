@@ -23,9 +23,9 @@ armchar:cieran  arm:hasAdvancement
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1218 ;
   arm:hasAdvancementDescription "Covenant Service 1217- Cieran's adventure 14xp; 3p Rego, 1p Perdo vis" ;
-  arm:advanceTrait [ a armr:infernallore ; arm:addedXP 5 ]  ;
-  arm:advanceTrait [ a armr:parma ; arm:addedXP 5 ]  ;
-  arm:advanceTrait [ a armr:secondsight ; arm:addedXP 4 ]  ;
+  arm:advanceTrait [ a armab:infernallore ; arm:addedXP 5 ]  ;
+  arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 5 ]  ;
+  arm:advanceTrait [ a armab:secondsight ; arm:addedXP 4 ]  ;
   arm:awardsXP 14 ;
   arm:hasAdvancementType arm:Adventure ;
   arm:advanceToCharacterSheet :summer1218 
@@ -33,14 +33,14 @@ armchar:cieran  arm:hasAdvancement
 
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1218 ;
   arm:hasAdvancementDescription "Studies Servants of the People 14xp+3" ;
-  arm:advanceTrait [ a armr:socplore ; arm:addedXP 17 ]  ;
+  arm:advanceTrait [ a armab:socplore ; arm:addedXP 17 ]  ;
   arm:awardsXP 17 ;
   arm:hasAdvancementType arm:Reading ;
   arm:advanceToCharacterSheet :autumn1218 
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1218 ;
   arm:hasAdvancementDescription "Covenant Service 1218 - Enchants Bookstand of Hespera (using 3p He). Earns 3p Terram vis  + 2xp in Parma." ;
-  arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ]  ;
+  arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 2 ]  ;
   arm:awardsXP 2 ;
   arm:hasAdvancementType arm:Exposure ;
   arm:advanceToCharacterSheet :winter1219 
@@ -86,7 +86,7 @@ armchar:cieran  arm:hasAdvancement
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1220 ;
   arm:hasAdvancementDescription "Jerome's Tower 5xp Parma" ;
-  arm:advanceTrait [ a armr:parma ; arm:addedXP 5 ]  ;
+  arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 5 ]  ;
   arm:awardsXP 5 ;
   arm:hasAdvancementType arm:Adventure ;
   arm:advanceToCharacterSheet :summer1220 
@@ -115,15 +115,15 @@ armchar:cieran  arm:hasAdvancement
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1221 ;
   arm:hasAdvancementDescription "Jerome's Tower 10xp (Second Sight 5, Parma 5) 3 conf" ;
-  arm:advanceTrait [ a armr:secondsight ; arm:addedXP 5 ]  ;
-  arm:advanceTrait [ a armr:parma ; arm:addedXP 5 ]  ;
+  arm:advanceTrait [ a armab:secondsight ; arm:addedXP 5 ]  ;
+  arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 5 ]  ;
   arm:awardsXP 10 ;
   arm:hasAdvancementType arm:Adventure ;
   arm:advanceToCharacterSheet :summer1221 
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1221 ;
   arm:hasAdvancementDescription "Read Philosophiæ (Causes and Curies) half xp due to injuries = 8" ;
-  arm:advanceTrait [ a armr:philosophiae ; arm:addedXP 8 ]  ;
+  arm:advanceTrait [ a armab:philosophiae ; arm:addedXP 8 ]  ;
   arm:awardsXP 8 ;
   arm:hasAdvancementType arm:Reading ;
   arm:advanceToCharacterSheet :autumn1221 
@@ -152,7 +152,7 @@ armchar:cieran  arm:hasAdvancement
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1222 ;
   arm:hasAdvancementDescription "Covenant Service 1222. Lab work: ReTe items from text + 2xp parma;  earn 3p vis " ;
-  arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ]  ;
+  arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 2 ]  ;
   arm:awardsXP 2 ;
   arm:hasAdvancementType arm:Exposure ;
   arm:advanceToCharacterSheet :autumn1222 
@@ -167,7 +167,7 @@ armchar:cieran  arm:hasAdvancement
 
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:winter1223 ;
   arm:hasAdvancementDescription "Lab work: InVi5 Sense the Nature of Vis + InVi20 Piercing the magic veil (from texts) + 2xp parma" ;
-  arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ],
+  arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 2 ],
    [ a armr:InVi5Sense  ; arm:addedXP 5 ],
    [ a armr:InVi5PiercingMagical  ; arm:addedXP 5 ] ;
   arm:awardsXP 2 ;
@@ -176,7 +176,7 @@ armchar:cieran  arm:hasAdvancement
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1222 ;
   arm:hasAdvancementDescription "Lab work: spell from text: Stone Tell of Mind that Sits InTe30  + 2xp parma" ;
-  arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ],
+  arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 2 ],
    [ a armr:InTe30Stone  ; arm:addedXP 5 ] ;
   arm:awardsXP 2 ;
   arm:hasAdvancementType arm:Exposure ;
@@ -184,7 +184,7 @@ armchar:cieran  arm:hasAdvancement
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1223 ;
   arm:hasAdvancementDescription "Story (2conf pts) Lab work: InVi5 Spot the Vis + InVi5 Scales of M W + InVi20 Piercing the faerie veil (from texts) (lab total InVi 14 + Int 3 + MT 4 + Aura 5 + similar spell 4 = 30) + 2xp parma" ;
-  arm:advanceTrait [ a armr:parma ; arm:addedXP 2 ],
+  arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 2 ],
    [ a armr:InVi5Spot  ; arm:addedXP 5 ],
    [ a armr:InVi5Scales ; arm:addedXP 5 ],
    [ a armr:InVi5PiercingFaerie  ; arm:addedXP 5 ] ;
