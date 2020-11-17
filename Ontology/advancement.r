@@ -76,7 +76,7 @@
    ( ?cs   arm:hasNextCharacterSheet ?nc ) 
    ( ?cs   ?p ?oldtrait ) 
    -> 
-   ( ?nc ?p ?trait )
+   ( ?nc ?p ?oldtrait )
 ]        
 
 # 2. Traits which already existed are updated
