@@ -9,7 +9,7 @@ arm.ttl: prefix.ttl arm.include trait.include advancement.include spell.include 
 cieran.ttl: prefix.ttl cieran.include advcieran.include seasons.include
 %.ttl: prefix.ttl %.include
 	cat $^ > $@
-logic.rules: prefix.ttl logic.r advancement.r
+logic.rules: prefix.ttl logic.r advancement.r age.r
 	cat $^ > $@
 clean:
 	-rm $A

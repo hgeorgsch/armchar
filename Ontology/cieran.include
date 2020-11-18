@@ -16,6 +16,7 @@ armchar:cieran a arm:Magus ;
 
 armchar:elksrun  a arm:Covenant ; 
                arm:hasName "Elk's Run" ;
+               arm:hasBirthYear 1192 ;
 	       arm:hasSetting "Hibernia" ;
                arm:hasSaga armchar:contestedlands .
 
