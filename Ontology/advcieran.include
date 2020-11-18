@@ -122,7 +122,7 @@ armchar:cieran  arm:hasAdvancement
   arm:advanceToCharacterSheet :summer1221 
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1221 ;
-  arm:hasAdvancementDescription "Read Philosophiæ (Causes and Curies) half xp due to injuries = 8" ;
+  arm:hasAdvancementDescription "Read Philosophiae (Causes and Curies) half xp due to injuries = 8" ;
   arm:advanceTrait [ a armab:philosophiae ; arm:addedXP 8 ]  ;
   arm:awardsXP 8 ;
   arm:hasAdvancementType arm:Reading ;
