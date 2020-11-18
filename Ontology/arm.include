@@ -68,6 +68,12 @@ arm:hasNationality a   owl:DatatypeProperty ;
 arm:hasAlmaMater a   owl:DatatypeProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
+arm:hasBirthYear a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   xsd:int .
+arm:hasAge a   owl:DatatypeProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   xsd:int .
 
 # Seasons and Time
 arm:Season a owl:Class ;
