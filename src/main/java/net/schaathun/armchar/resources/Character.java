@@ -32,16 +32,6 @@ import net.schaathun.armchar.Config ;
 @Path("/Character")
 public class Character {
 
-    String frame = null ;
-       // "{ \"@context\": { " + Config.prefixJS_LD + " },"
-       // + "\"@type\" : [ \"arm:Character\" ]," 
-       // + "\"arm:hasCharacteristic\" : [ \"arm:Characteristic\" ], "
-       // + "\"arm:hasArt\" : [ \"arm:Art\" ], "
-       // + "\"arm:hasVirtue\" : [ \"arm:Virtue\" ], "
-       // + "\"arm:hasFlaw\" : [ \"arm:Flaw\" ], "
-       // + "\"arm:hasAbility\" : [ \"arm:Ability\" ] "
-       // + " }" ;
-
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -83,19 +73,13 @@ public class Character {
 		+ "     NOT EXISTS { ?p2 rdf:type arm:ignoredProperty }  \r\n"
                 + " } \r\n"
                 + "}";
-        String result = ArMModel.construct(queryString,frame);
+        String result = ArMModel.construct(queryString);
         return Response
                 .ok(result)
                 .build();
     }
-    @GET
-    @Path("/{id}/{season}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getCharacter(@PathParam("id") String id,
-                                 @PathParam("season") String season ) {
-
-        String rid = "armchar:" + id ;
-        String queryString = Config.prefix
+    private String queryString(String rid, String season) {
+       return Config.prefix
                 + "CONSTRUCT { \r\n" 
 		+ " ?s ?p1 ?o1 .  \r\n"
 		+ " ?o1 ?p2 ?o2 . \r\n"
@@ -111,7 +95,15 @@ public class Character {
 		+ "     NOT EXISTS { ?p2 rdf:type arm:ignoredProperty }  \r\n"
                 + " } \r\n"
                 + "}";
-        String result = ArMModel.construct(queryString,frame);
+       } 
+    @GET
+    @Path("/{id}/{season}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getCharacter(@PathParam("id") String id,
+                                 @PathParam("season") String season ) {
+
+        String rid = "armchar:" + id ;
+        String result = ArMModel.construct(this.queryString(rid,season));
         return Response
                 .ok(result)
                 .build();
@@ -120,23 +112,24 @@ public class Character {
     @Path("/test/{id}/{season}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response testCharacter(@PathParam("id") String id,
-                                 @PathParam("season") String season ) {
+                                 @PathParam("season") String season ) 
+				 throws IOException {
 
+        String frame = Config.getInstance().charsheetframe ;
         String rid = "armchar:" + id ;
         String queryString = Config.prefix
-                    + "CONSTRUCT { \r\n" 
-		    + " ?s ?p1 ?o1 .  \r\n"
-		    + " ?o1 ?p2 ?o2 . \r\n"
-                    + "} WHERE { \r\n " 
-                    + " ?s arm:isCharacter " + rid + " . \r\n"
-		    + " ?s arm:atSeasonTime arm:" + season + " . \r\n"
-		    + " ?s ?p1 ?o1 . \r\n"
-		    // + " NOT EXISTS { ?p1 rdf:type arm:ignoredProperty }  \r\n"
-                    + "  OPTIONAL { \r\n" 
-                    + "     ?o1 ?p2 ?o2 . \r\n" 
-		    // + "     NOT EXISTS { ?p2 rdf:type arm:ignoredProperty }  \r\n"
-                    + " } \r\n"
-                    + "}";
+                + "CONSTRUCT { \r\n" 
+		+ " ?s ?p1 ?o1 .  \r\n"
+		+ " ?o1 ?p2 ?o2 . \r\n"
+                + "} WHERE { \r\n " 
+                + " ?s arm:isCharacter " + rid + " . \r\n"
+		+ " ?s arm:atSeasonTime arm:" + season + " . \r\n"
+		+ " ?s rdf:type arm:CharacterSheet . \r\n"
+		+ " ?s ?p1 ?o1 . \r\n"
+                + " OPTIONAL { \r\n" 
+                + "     ?o1 ?p2 ?o2 . \r\n" 
+                + " } \r\n"
+                + "}";
         String result = ArMModel.construct(queryString,frame);
         return Response
                 .ok(result)

@@ -1,8 +1,32 @@
 package net.schaathun.armchar ;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
+
 public class Config {
 
     // public static final String location = "/var/onsite/tdb";
+
+   private static String charsheetframefile = "/opt/payara/serverdata/charsheet.frame" ;
+   public final String charsheetframe ;
+   private static Config instance = null ;
+
+   private Config() throws IOException {
+
+      this.charsheetframe = 
+              new String(Files.readAllBytes(Paths.get(charsheetframefile)));
+
+
+
+   }
+   public static Config getInstance() throws IOException {
+      if(instance == null) {
+         instance = new Config();
+      }
+      return instance;
+   }
 
     public static String prefix = 
               "prefix owl: <http://www.w3.org/2002/07/owl#>\r\n"

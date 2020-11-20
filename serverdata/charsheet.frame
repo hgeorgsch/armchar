@@ -1,0 +1,58 @@
+
+{ "@context": { 
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "arm" : "https://hg.schaathun.net/armchar/schema#",
+    "armr" : "https://hg.schaathun.net/armchar/resources#",
+    "armab" : "https://hg.schaathun.net/armchar/resources/abilities#",
+    "armchar" : "https://hg.schaathun.net/armchar/character/"
+  },
+  "@type" : [ "arm:Character" ],
+  "arm:hasName" : { "@type": "xsd:string" },
+  "arm:hasAlmaMater" : { "@type": "xsd:string" },
+  "arm:hasCovenant" : { "@type": "xsd:string" },
+  "arm:hasBirthYear" : { "@type": "xsd:int" },
+  "arm:hasProfession" : { "@type": "xsd:string" },
+  "arm:hasPlayer" : { "@type": "xsd:string" },
+  "arm:hasSG" : { "@type": "xsd:string" },
+  "arm:hasAge" : { "@type": "xsd:int" },
+  "arm:hasSize" : { "@type": "xsd:int" },
+  "arm:hasCharacteristic" : { "@type": "arm:Characteristic",
+                              "arm:hasScore": { "@type": "xsd:int" },
+			      "rdfs:label": { "@type": "xsd:string" }
+			      },
+  "arm:hasPersonalityTrait" : { "@type": "arm:Characteristic",
+                              "arm:hasScore": { "@type": "xsd:int" },
+			      "rdfs:label": { "@type": "xsd:string" }
+			      },
+  "arm:hasArt" : { "@type": "arm:Art",
+                              "arm:hasScore": { "@type": "xsd:int" },
+                              "arm:hasXP": { "@type": "xsd:int" },
+			      "rdfs:label": { "@type": "xsd:string" }
+			      },
+  "arm:hasVirtue" : { "@type": "arm:Virtue",
+			      "rdfs:label": { "@type": "xsd:string" }
+			      },
+  "arm:hasFlaw" : { "@type": "arm:Flaw",
+			      "rdfs:label": { "@type": "xsd:string" }
+			      },
+  "arm:hasAbility" : { "@type": "arm:Ability",
+                              "arm:hasScore": { "@type": "xsd:int" },
+                              "arm:hasXP": { "@type": "xsd:int" },
+                              "arm:hasSpeciality": { "@type": "xsd:int" },
+			      "rdfs:label": { "@type": "xsd:string" }
+			      },
+  "arm:hasReputation" : { "@type": "arm:Spell",
+                              "arm:hasScore": { "@type": "xsd:int" },
+                              "arm:hasXP": { "@type": "xsd:int" },
+			      "rdfs:label": { "@type": "xsd:string" }
+			      },
+  "arm:hasOtherTrait" : { "@type": "arm:OtherTrait",
+                              "arm:hasScore": { "@type": "xsd:int" },
+                              "arm:hasXP": { "@type": "xsd:int" },
+			      "rdfs:label": { "@type": "xsd:string" }
+			      }
+}
