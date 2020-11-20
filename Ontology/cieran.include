@@ -7,6 +7,7 @@
 armchar:cieran a arm:Magus ; 
                arm:hasName "Cieran the Fletcher" ;
 	       arm:hasGender "Male" ;
+               arm:hasBirthYear 1192 ;
 	       arm:hasPlayer "George" ;
                arm:hasOtherTrait [ a arm:Size ; arm:hasScore 0 ] ;
 	       arm:hasProfession "Rusticus (magus ex Miscellanea)" ;
@@ -16,7 +17,6 @@ armchar:cieran a arm:Magus ;
 
 armchar:elksrun  a arm:Covenant ; 
                arm:hasName "Elk's Run" ;
-               arm:hasBirthYear 1192 ;
 	       arm:hasSetting "Hibernia" ;
                arm:hasSaga armchar:contestedlands .
 
