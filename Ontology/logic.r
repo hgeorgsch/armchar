@@ -36,10 +36,10 @@
   ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:Covenant ) 
   -> ( ?s arm:hasCovenant ?c ) ]
 [ charactersaga:
-  ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:baseCharacter ) 
+  ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:BaseCharacter ) 
   -> ( ?s arm:hasCharacter ?c ) ]
 [ covenantname:
-  ( ?c arm:hasCovenant ?cov ) ( ?cov has:hasName ?n ) 
+  ( ?c arm:hasCovenant ?cov ) ( ?cov arm:hasName ?n ) 
   -> ( ?c arm:hasCovenantName ?n ) ]
 
 # Base Character
@@ -165,3 +165,8 @@
 [ spellform:
    ( ?s rdf:type arm:Spell ) ( ?s arm:hasForm ?o ) ( ?o rdfs:label ?st )
    -> ( ?s arm:hasFormString ?st ) ]
+
+# hasTrait
+[ hastrait:
+  ( ?p rdfs:subPropertyOf arm:hasTrait ) 
+  -> ( ?p rdf:type owl:ObjectProperty ) ]

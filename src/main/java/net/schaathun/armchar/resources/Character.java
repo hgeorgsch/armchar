@@ -97,7 +97,7 @@ public class Character {
                 + "}";
        } 
     @GET
-    @Path("/unframce/{id}/{season}")
+    @Path("/unframed/{id}/{season}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCharacter(@PathParam("id") String id,
                                  @PathParam("season") String season ) {
@@ -118,21 +118,25 @@ public class Character {
         String frame = Config.getInstance().charsheetframe ;
         String rid = "armchar:" + id ;
         String queryString = Config.prefix
-		   + "CONSTRUCT { \r\n" 
-		+ " ?s a arm:CharacterSheet . \r\n"
-		+ " ?s ?p1 ?o1 .  \r\n"
-		+ " ?s ?p2 ?o2 . \r\n"
-                + " ?o2 ?p3 ?o3 . \r\n" 
+                + "CONSTRUCT { \r\n" 
+		+ " ?sheet a arm:CharacterSheet . \r\n"
+		+ " ?sheet ?dp ?dval .  \r\n"
+		+ " ?sheet ?op ?oval . \r\n"
+                + " ?oval ?obp ?obval . \r\n" 
+                + " ?oval a ?type . \r\n" 
+		+ " ?sheet ?op ?oval . \r\n"
                 + "} WHERE { \r\n " 
-                + " ?s arm:isCharacter " + rid + " . \r\n"
-		+ " ?s arm:atSeasonTime arm:" + season + " . \r\n"
-		+ " ?s a arm:CharacterSheet . \r\n"
-		+ " ?s ?p1 ?o1 . \r\n"
-		+ " ?s ?p2 ?o2 . \r\n"
-		+ " ?p1 a owl:DatatypeProperty . \r\n"
-		+ " ?p2 a owl:ObjectProperty . \r\n"
-                + " ?o2 ?p3 ?o3 . \r\n" 
-		+ " ?p3 a owl:DatatypeProperty . \r\n"
+                + " ?sheet arm:isCharacter " + rid + " . \r\n"
+		+ " ?sheet arm:atSeasonTime arm:" + season + " . \r\n"
+		+ " ?sheet a arm:CharacterSheet . \r\n"
+		+ " ?sheet ?dp ?dval . \r\n"
+		+ " ?sheet ?op ?oval . \r\n"
+		+ " NOT EXISTS { ?oval a arm:CharacterSheet }\r\n"
+		+ " ?dp a owl:DatatypeProperty . \r\n"
+		+ " ?op a owl:ObjectProperty . \r\n"
+                + " ?oval ?obp ?obval . \r\n" 
+                + " ?oval a ?type . \r\n" 
+		+ " ?obp a owl:DatatypeProperty . \r\n"
                 + "}";
         String result = ArMModel.construct(queryString,frame);
         return Response
@@ -151,22 +155,24 @@ public class Character {
         String rid = "armchar:" + id ;
         String queryString = Config.prefix
                 + "CONSTRUCT { \r\n" 
-		+ " ?s a arm:CharacterSheet . \r\n"
-		+ " ?s ?p1 ?o1 .  \r\n"
-		+ " ?s ?p2 ?o2 . \r\n"
-                + " ?o2 ?p3 ?o3 . \r\n" 
-                + " ?o2 a ?t2 . \r\n" 
+		+ " ?sheet a arm:CharacterSheet . \r\n"
+		+ " ?sheet ?dp ?dval .  \r\n"
+		+ " ?sheet ?op ?oval . \r\n"
+                + " ?oval ?obp ?obval . \r\n" 
+                + " ?oval a ?type . \r\n" 
+		+ " ?sheet ?op ?oval . \r\n"
                 + "} WHERE { \r\n " 
-                + " ?s arm:isCharacter " + rid + " . \r\n"
-		+ " ?s arm:atSeasonTime arm:" + season + " . \r\n"
-		+ " ?s a arm:CharacterSheet . \r\n"
-		+ " ?s ?p1 ?o1 . \r\n"
-		+ " ?s ?p2 ?o2 . \r\n"
-		+ " ?p1 a owl:DatatypeProperty . \r\n"
-		+ " ?p2 a owl:ObjectProperty . \r\n"
-                + " ?o2 ?p3 ?o3 . \r\n" 
-                + " ?o2 a ?t2 . \r\n" 
-		+ " ?p3 a owl:DatatypeProperty . \r\n"
+                + " ?sheet arm:isCharacter " + rid + " . \r\n"
+		+ " ?sheet arm:atSeasonTime arm:" + season + " . \r\n"
+		+ " ?sheet a arm:CharacterSheet . \r\n"
+		+ " ?sheet ?dp ?dval . \r\n"
+		+ " ?sheet ?op ?oval . \r\n"
+		+ " NOT EXISTS { ?oval a arm:CharacterSheet }\r\n"
+		+ " ?dp a owl:DatatypeProperty . \r\n"
+		+ " ?op a owl:ObjectProperty . \r\n"
+                + " ?oval ?obp ?obval . \r\n" 
+                + " ?oval a ?type . \r\n" 
+		+ " ?obp a owl:DatatypeProperty . \r\n"
                 + "}";
         String result = ArMModel.construct(queryString);
         return Response

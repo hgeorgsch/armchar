@@ -13,7 +13,7 @@
   "@type" : [ "arm:CharacterSheet" ],
   "arm:hasName" : {},
   "arm:hasAlmaMater" : {},
-  "arm:hasCovenant" : {},
+  "arm:hasCovenantName" : {},
   "arm:hasBirthYear" : {},
   "arm:hasProfession" : {},
   "arm:hasPlayer" : {},
