@@ -30,35 +30,30 @@
                               "arm:hasSpeciality": {},
                               "arm:hasDescription": {},
                               "arm:hasGeneralDescription": {},
-                              "arm:hasLabel": {},
-			      "rdfs:label": {}
+                              "arm:hasLabel": {}
 			      },
-  "arm:hasPersonalityTrait" : { "@type": [ "arm:Characteristic" ],
+  "arm:hasPersonalityTrait" : { "@type": [ "arm:PersonalityTrait" ],
                               "arm:hasScore": {},
                               "arm:hasDescription": {},
                               "arm:hasGeneralDescription": {},
-                              "arm:hasLabel": {},
-			      "rdfs:label": {}
+                              "arm:hasLabel": {}
 			      },
   "arm:hasArt" : { "@type": [ "arm:Art" ],
                               "arm:hasScore": {},
                               "arm:hasXP": {},
                               "arm:hasDescription": {},
                               "arm:hasGeneralDescription": {},
-                              "arm:hasLabel": {},
-			      "rdfs:label": {}
+                              "arm:hasLabel": {}
 			      },
   "arm:hasVirtue" : { "@type": [ "arm:Virtue" ],
                               "arm:hasDescription": {},
                               "arm:hasGeneralDescription": {},
-                              "arm:hasLabel": {},
-			      "rdfs:label": {}
+                              "arm:hasLabel": {}
 			      },
   "arm:hasFlaw" : { "@type": [ "arm:Flaw" ],
                               "arm:hasDescription": {},
                               "arm:hasGeneralDescription": {},
-                              "arm:hasLabel": {},
-			      "rdfs:label": {}
+                              "arm:hasLabel": {}
 			      },
   "arm:hasAbility" : { "@type": [ "arm:Ability" ],
                               "arm:hasScore": {},
@@ -66,8 +61,7 @@
                               "arm:hasSpeciality": {},
                               "arm:hasDescription": {},
                               "arm:hasGeneralDescription": {},
-                              "arm:hasLabel": {},
-			      "rdfs:label": {}
+                              "arm:hasLabel": {}
 			      },
   "arm:hasReputation" : { "@type": [ "arm:Spell" ],
                               "arm:hasScore": {},
@@ -75,8 +69,7 @@
                               "arm:hasXP": {},
                               "arm:hasDescription": {},
                               "arm:hasGeneralDescription": {},
-                              "arm:hasLabel": {},
-			      "rdfs:label": {}
+                              "arm:hasLabel": {}
 			      },
   "arm:hasOtherTrait" : { "@type": [ "arm:OtherTrait" ],
                               "arm:hasScore": {},
@@ -84,8 +77,7 @@
                               "arm:hasEffect": {},
                               "arm:hasDescription": {},
                               "arm:hasGeneralDescription": {},
-                              "arm:hasLabel": {},
-			      "rdfs:label": {}
+                              "arm:hasLabel": {}
 			      },
   "arm:hasSpell" : { "@type": [ "arm:Spell" ],
                               "arm:hasScore": {},
@@ -97,8 +89,7 @@
                               "arm:hasFormString": {},
                               "arm:hasDescription": {},
                               "arm:hasGeneralDescription": {},
-                              "arm:hasLabel": {},
-			      "rdfs:label": {}
+                              "arm:hasLabel": {}
 			      }
 }
 

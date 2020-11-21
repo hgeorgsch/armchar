@@ -21,6 +21,7 @@ armchar:elksrun  a arm:Covenant ;
                arm:hasSaga armchar:contestedlands .
 
 armchar:contestedlands a arm:Saga ;
+   arm:hasSagaDescription "Played on Discord and Roll20 from Januar 2020." ;
    arm:hasSeasonTime  
 arm:winter1217, arm:spring1217, arm:summer1217, arm:autumn1217, 
 arm:winter1218, arm:spring1218, arm:summer1218, arm:autumn1218, 
