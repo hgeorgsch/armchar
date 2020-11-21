@@ -36,8 +36,11 @@
   ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:Covenant ) 
   -> ( ?s arm:hasCovenant ?c ) ]
 [ charactersaga:
-  ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:BaseCharacter ) 
+  ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:baseCharacter ) 
   -> ( ?s arm:hasCharacter ?c ) ]
+[ covenantname:
+  ( ?c arm:hasCovenant ?cov ) ( ?cov has:hasName ?n ) 
+  -> ( ?c arm:hasCovenantName ?n ) ]
 
 # Base Character
 

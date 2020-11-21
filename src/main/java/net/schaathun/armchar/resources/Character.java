@@ -97,7 +97,7 @@ public class Character {
                 + "}";
        } 
     @GET
-    @Path("/{id}/{season}")
+    @Path("/unframce/{id}/{season}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCharacter(@PathParam("id") String id,
                                  @PathParam("season") String season ) {
@@ -109,7 +109,7 @@ public class Character {
                 .build();
     }
     @GET
-    @Path("/test/{id}/{season}")
+    @Path("/{id}/{season}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response testCharacter(@PathParam("id") String id,
                                  @PathParam("season") String season ) 
