@@ -25,6 +25,7 @@
   "arm:hasGender" : {},
   "arm:hasCharacteristic" : { "@type": [ "arm:Characteristic" ],
                               "arm:hasScore": {},
+                              "arm:hasSpeciality": {},
                               "arm:hasDescription": {},
                               "arm:hasGeneralDescription": {},
                               "arm:hasLabel": {},
