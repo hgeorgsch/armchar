@@ -55,7 +55,22 @@ public class Character {
                 .build();
     }
 
+    private String queryString(String rid, int year, String season) {
+       return this.queryString(
+                " ?sheet arm:isCharacter " + rid + " . \r\n"
+		+ " ?sheet arm:atSeason arm:" + season + " . \r\n"
+		+ " ?sheet arm:inYear arm:" + year + " . \r\n"
+	     ) ;
+    }
+
     private String queryString(String rid, String season) {
+       return this.queryString(
+                " ?sheet arm:isCharacter " + rid + " . \r\n"
+		+ " ?sheet arm:atSeasonTime arm:" + season + " . \r\n"
+	     ) ;
+    }
+
+    private String queryString(String w) {
        return Config.prefix
                 + "CONSTRUCT { \r\n" 
 		+ " ?sheet a arm:CharacterSheet . \r\n"
@@ -65,8 +80,7 @@ public class Character {
                 + " ?oval a ?type . \r\n" 
 		+ " ?sheet ?op ?oval . \r\n"
                 + "} WHERE { \r\n " 
-                + " ?sheet arm:isCharacter " + rid + " . \r\n"
-		+ " ?sheet arm:atSeasonTime arm:" + season + " . \r\n"
+		+ w
 		+ " ?sheet a arm:CharacterSheet . \r\n"
 		+ " ?sheet ?dp ?dval . \r\n"
 		+ " ?sheet ?op ?oval . \r\n"
@@ -93,9 +107,23 @@ public class Character {
                 .ok(result)
                 .build();
     }
+    @Path("/{id}/{year}/{season}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response testCharacter(@PathParam("id") String id,
+                                 @PathParam("year") int year,
+                                 @PathParam("season") String season ) 
+				 throws IOException {
+
+        String frame = Config.getInstance().charsheetframe ;
+        String rid = "armchar:" + id ;
+        String result = ArMModel.construct(this.queryString(rid,year,season),frame);
+        return Response
+                .ok(result)
+                .build();
+    }
 
     @GET
-    @Path("/test1/{id}/{season}")
+    @Path("/unframed/{id}/{season}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response testCharacter1(@PathParam("id") String id,
                                  @PathParam("season") String season ) 

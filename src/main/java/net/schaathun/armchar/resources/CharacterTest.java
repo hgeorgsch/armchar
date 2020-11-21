@@ -30,7 +30,7 @@ import net.schaathun.armchar.ArMModel ;
 import net.schaathun.armchar.Config ;
 
 @Path("/Test")
-public class Character {
+public class CharacterTest {
 
     @GET
     @Path("/{id}")
