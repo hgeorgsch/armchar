@@ -87,6 +87,7 @@ arm:hasPersonalityTrait  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:PersonalityTrait .
 arm:hasAbility  rdfs:subPropertyOf   arm:hasTrait ;
+ a   owl:ObjectProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Ability .
 arm:hasCharacteristic  rdfs:subPropertyOf   arm:hasTrait ;
