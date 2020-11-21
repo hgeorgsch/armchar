@@ -48,6 +48,8 @@ arm:awardsXP a owl:DatatypeProperty ;
 arm:hasNextCharacterSheet a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterSheet ;
         rdfs:range   arm:CharacterSheet .
+arm:hasPrevCharacterSheet a owl:ObjectProperty ;
+        owl:inverseOf  arm:hasNextCharacterSheet .
 
 arm:AdvancementType a owl:Class ;
      owl:oneOf ( arm:Exposure arm:Practice arm:Adventure arm:Training
