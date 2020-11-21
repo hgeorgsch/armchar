@@ -20,6 +20,7 @@ arm:Dsun a arm:Duration ; rdfs:label  "Sun" ; arm:hasMagnitudeCost 2 .
 arm:Dmoon a arm:Duration ; rdfs:label  "Moon" ; arm:hasMagnitudeCost 3 .
 arm:Tind a arm:Target ; rdfs:label  "Individual" ; arm:hasMagnitudeCost 0 .
 arm:Tpart a arm:Target ; rdfs:label  "Part" ; arm:hasMagnitudeCost 1 .
+arm:Troom a arm:Target ; rdfs:label  "Room" ; arm:hasMagnitudeCost 2 .
 arm:Tgroup a arm:Target ; rdfs:label  "Group" ; arm:hasMagnitudeCost 2 .
 arm:Tstr a arm:Target ; rdfs:label  "Structure" ; arm:hasMagnitudeCost 3 .
 arm:Tbound a arm:Target ; rdfs:label  "Boundary" ; arm:hasMagnitudeCost 4 .
@@ -55,3 +56,19 @@ arm:hasTarget a owl:ObjectProperty, arm:TraitProperty ;
 arm:hasSize a owl:DatatypeProperty, arm:TraitProperty ;
              rdfs:domain arm:SpellClass ;
              rdfs:range xsd:int .
+
+arm:hasTechniqueString a owl:DatatypeProperty, arm:TraitProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range xsd:string .
+arm:hasFormString a owl:DatatypeProperty, arm:TraitProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range xsd:string .
+arm:hasRangeString a owl:DatatypeProperty, arm:TraitProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range xsd:string .
+arm:hasDurationString a owl:DatatypeProperty, arm:TraitProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range xsd:string .
+arm:hasTargetString a owl:DatatypeProperty, arm:TraitProperty ;
+             rdfs:domain arm:SpellClass ;
+             rdfs:range xsd:string .
