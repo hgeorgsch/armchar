@@ -23,6 +23,8 @@
   "arm:hasSize" : {},
   "arm:hasNationality" : {},
   "arm:hasGender" : {},
+  "arm:inYear" : {},
+  "arm:atSeason" : {},
   "arm:hasCharacteristic" : { "@type": [ "arm:Characteristic" ],
                               "arm:hasScore": {},
                               "arm:hasSpeciality": {},
