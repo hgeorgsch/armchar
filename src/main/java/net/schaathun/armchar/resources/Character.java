@@ -118,17 +118,21 @@ public class Character {
         String frame = Config.getInstance().charsheetframe ;
         String rid = "armchar:" + id ;
         String queryString = Config.prefix
-                + "CONSTRUCT { \r\n" 
+		   + "CONSTRUCT { \r\n" 
+		+ " ?s a arm:CharacterSheet . \r\n"
 		+ " ?s ?p1 ?o1 .  \r\n"
-		+ " ?o1 ?p2 ?o2 . \r\n"
+		+ " ?s ?p2 ?o2 . \r\n"
+                + " ?o2 ?p3 ?o3 . \r\n" 
                 + "} WHERE { \r\n " 
                 + " ?s arm:isCharacter " + rid + " . \r\n"
 		+ " ?s arm:atSeasonTime arm:" + season + " . \r\n"
-		+ " ?s rdf:type arm:CharacterSheet . \r\n"
+		+ " ?s a arm:CharacterSheet . \r\n"
 		+ " ?s ?p1 ?o1 . \r\n"
-                + " OPTIONAL { \r\n" 
-                + "     ?o1 ?p2 ?o2 . \r\n" 
-                + " } \r\n"
+		+ " ?s ?p2 ?o2 . \r\n"
+		+ " ?p1 a owl:DatatypeProperty . \r\n"
+		+ " ?p2 a owl:ObjectProperty . \r\n"
+                + " ?o2 ?p3 ?o3 . \r\n" 
+		+ " ?p3 a owl:DatatypeProperty . \r\n"
                 + "}";
         String result = ArMModel.construct(queryString,frame);
         return Response
@@ -136,6 +140,39 @@ public class Character {
                 .build();
     }
 
+    @GET
+    @Path("/test1/{id}/{season}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response testCharacter1(@PathParam("id") String id,
+                                 @PathParam("season") String season ) 
+				 throws IOException {
+
+        String frame = Config.getInstance().charsheetframe ;
+        String rid = "armchar:" + id ;
+        String queryString = Config.prefix
+                + "CONSTRUCT { \r\n" 
+		+ " ?s a arm:CharacterSheet . \r\n"
+		+ " ?s ?p1 ?o1 .  \r\n"
+		+ " ?s ?p2 ?o2 . \r\n"
+                + " ?o2 ?p3 ?o3 . \r\n" 
+                + "} WHERE { \r\n " 
+                + " ?s arm:isCharacter " + rid + " . \r\n"
+		+ " ?s arm:atSeasonTime arm:" + season + " . \r\n"
+		+ " ?s a arm:CharacterSheet . \r\n"
+		+ " ?s ?p1 ?o1 . \r\n"
+		+ " ?s ?p2 ?o2 . \r\n"
+		+ " ?s ?p4 ?o4 . \r\n"
+		+ " ?p1 a owl:DatatypeProperty . \r\n"
+		+ " ?p2 a owl:ObjectProperty . \r\n"
+                + " ?o2 ?p3 ?o3 . \r\n" 
+		+ " ?p3 a owl:DatatypeProperty . \r\n"
+		+ " ?p4 a owl:AnnotationProperty . \r\n"
+                + "}";
+        String result = ArMModel.construct(queryString);
+        return Response
+                .ok(result)
+                .build();
+    }
 
 }
 
