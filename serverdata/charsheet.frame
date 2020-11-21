@@ -84,7 +84,7 @@
                               "arm:hasGeneralDescription": {},
                               "arm:hasLabel": {},
 			      "rdfs:label": {}
-			      }
+			      },
   "arm:hasSpell" : { "@type": [ "arm:Spell" ],
                               "arm:hasScore": {},
                               "arm:hasXP": {},
@@ -97,6 +97,6 @@
                               "arm:hasGeneralDescription": {},
                               "arm:hasLabel": {},
 			      "rdfs:label": {}
-			      },
+			      }
 }
 
