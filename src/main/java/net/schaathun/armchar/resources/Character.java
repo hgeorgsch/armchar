@@ -155,18 +155,18 @@ public class Character {
 		+ " ?s ?p1 ?o1 .  \r\n"
 		+ " ?s ?p2 ?o2 . \r\n"
                 + " ?o2 ?p3 ?o3 . \r\n" 
+                + " ?o2 a ?t2 . \r\n" 
                 + "} WHERE { \r\n " 
                 + " ?s arm:isCharacter " + rid + " . \r\n"
 		+ " ?s arm:atSeasonTime arm:" + season + " . \r\n"
 		+ " ?s a arm:CharacterSheet . \r\n"
 		+ " ?s ?p1 ?o1 . \r\n"
 		+ " ?s ?p2 ?o2 . \r\n"
-		+ " ?s ?p4 ?o4 . \r\n"
 		+ " ?p1 a owl:DatatypeProperty . \r\n"
 		+ " ?p2 a owl:ObjectProperty . \r\n"
                 + " ?o2 ?p3 ?o3 . \r\n" 
+                + " ?o2 a ?t2 . \r\n" 
 		+ " ?p3 a owl:DatatypeProperty . \r\n"
-		+ " ?p4 a owl:AnnotationProperty . \r\n"
                 + "}";
         String result = ArMModel.construct(queryString);
         return Response

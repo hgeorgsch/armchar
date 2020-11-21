@@ -27,8 +27,11 @@ arm:hasEffect a owl:DatatypeProperty ;
         rdfs:range   xsd:string .
 arm:hasPoints a owl:DatatypeProperty ;
         rdfs:subPropertyOf arm:hasXP ;
-        rdfs:domain arm:confidence ;
+        rdfs:domain arm:Confidence ;
         rdfs:range   xsd:int .
+arm:hasLabel a owl:DatatypeProperty ;
+        rdfs:domain arm:Trait ;
+        rdfs:range   xsd:string .
     
 
 arm:hasGeneralDescription a owl:DatatypeProperty ;
@@ -98,6 +101,9 @@ arm:hasFlaw  rdfs:subPropertyOf   arm:hasTrait ;
 arm:hasArt  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Art .
+arm:hasReputation  rdfs:subPropertyOf   arm:hasTrait ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:Reputation .
 arm:hasSpell  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Spell .
