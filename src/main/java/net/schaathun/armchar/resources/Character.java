@@ -55,17 +55,17 @@ public class Character {
                 .build();
     }
 
-    private String queryString(String rid, int year, String season) {
+    private String queryString(String id, int year, String season) {
        return this.queryString(
-                " ?sheet arm:isCharacter " + rid + " . \r\n"
-		+ " ?sheet arm:atSeason arm:" + season + " . \r\n"
-		+ " ?sheet arm:inYear arm:" + year + " . \r\n"
+                " ?sheet arm:isCharacter armchar:" + id + " . \r\n"
+		+ " ?sheet arm:atSeason \"" + season + "\" . \r\n"
+		+ " ?sheet arm:inYear " + year + " . \r\n"
 	     ) ;
     }
 
-    private String queryString(String rid, String season) {
+    private String queryString(String id, String season) {
        return this.queryString(
-                " ?sheet arm:isCharacter " + rid + " . \r\n"
+                " ?sheet arm:isCharacter armchar:" + id + " . \r\n"
 		+ " ?sheet arm:atSeasonTime arm:" + season + " . \r\n"
 	     ) ;
     }
@@ -96,27 +96,29 @@ public class Character {
     @GET
     @Path("/{id}/{season}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response testCharacter(@PathParam("id") String id,
+    public Response getCharacterSheet2(@PathParam("id") String id,
                                  @PathParam("season") String season ) 
 				 throws IOException {
 
         String frame = Config.getInstance().charsheetframe ;
-        String rid = "armchar:" + id ;
-        String result = ArMModel.construct(this.queryString(rid,season),frame);
+        String result = ArMModel.construct(this.queryString(id,season),frame);
         return Response
                 .ok(result)
                 .build();
     }
     @Path("/{id}/{year}/{season}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response testCharacter(@PathParam("id") String id,
+    public Response getCharacterSheet(@PathParam("id") String id,
                                  @PathParam("year") int year,
                                  @PathParam("season") String season ) 
 				 throws IOException {
 
         String frame = Config.getInstance().charsheetframe ;
-        String rid = "armchar:" + id ;
-        String result = ArMModel.construct(this.queryString(rid,year,season),frame);
+	String q = this.queryString(id,year,season) ;
+        System.out.println( "getCharacterSheet " + season + year ) ;
+        System.out.println( q ) ;
+        String result = ArMModel.construct(q,frame);
+        System.out.println( result ) ;
         return Response
                 .ok(result)
                 .build();
@@ -125,13 +127,12 @@ public class Character {
     @GET
     @Path("/unframed/{id}/{season}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response testCharacter1(@PathParam("id") String id,
+    public Response getUnframedCharacter(@PathParam("id") String id,
                                  @PathParam("season") String season ) 
 				 throws IOException {
 
         String frame = Config.getInstance().charsheetframe ;
-        String rid = "armchar:" + id ;
-        String result = ArMModel.construct(this.queryString(rid,season));
+        String result = ArMModel.construct(this.queryString(id,season));
         return Response
                 .ok(result)
                 .build();
