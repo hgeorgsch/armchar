@@ -106,6 +106,7 @@ public class Character {
                 .ok(result)
                 .build();
     }
+    @GET
     @Path("/{id}/{year}/{season}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getCharacterSheet(@PathParam("id") String id,
@@ -115,10 +116,10 @@ public class Character {
 
         String frame = Config.getInstance().charsheetframe ;
 	String q = this.queryString(id,year,season) ;
-        System.out.println( "getCharacterSheet " + season + year ) ;
-        System.out.println( q ) ;
+        // System.out.println( "getCharacterSheet " + season + year ) ;
+        // System.out.println( q ) ;
         String result = ArMModel.construct(q,frame);
-        System.out.println( result ) ;
+        // System.out.println( result ) ;
         return Response
                 .ok(result)
                 .build();
