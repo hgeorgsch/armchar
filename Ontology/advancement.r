@@ -91,8 +91,8 @@
    ( ?oldtrait arm:hasTotalXP ?xp1 ) 
    sum(?xp1,?xp2,?xp)
    -> (  ?trait arm:hasTotalXP ?xp ) ]
--> table(arm:hasSpeciality)
--> table(arm:hasTotalXP)
+[ -> table(arm:hasSpeciality) ]
+[ -> table(arm:hasTotalXP) ]
 [ advancetraitSpec:
    ( ?trait arm:advancedFromTrait ?oldtrait  )
    -> [ ( ?trait arm:hasSpeciality ?oldspec ) 
