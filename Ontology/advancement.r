@@ -105,10 +105,11 @@
 
 # 3. Convert addedXP to TotalXP when there was no prior trait.
 [ newtraitXP:
-   ( ?trait arm:addedXP ?xp ) 
+   ( ?trait arm:addedXP ?xp ) -> [
+   (  ?trait arm:hasTotalXP ?xp ) <-
    noValue( ?trait, arm:advancedFromTrait   )
-   noValue( ?trait, arm:hasTotalXP  ) 
-   -> (  ?trait arm:hasTotalXP ?xp ) ]
+   noValue( ?trait, arm:hasTotalXP  )  ]
+]
 
 [ fixhasAbility:
   ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Ability )
