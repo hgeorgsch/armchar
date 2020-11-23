@@ -1,0 +1,24 @@
+
+arm:DieRoll a owl:Class .
+
+arm:hasTimeStamp a owl:ObjectProperty ;
+    rdfs:domain arm:DieRoll ;
+    rdfs:range xsd:dateTime .
+arm:byCharacter a owl:ObjectProperty ;
+    rdfs:domain arm:DieRoll ;
+    rdfs:range arm:CharacterSheet .
+arm:withTraits a owl:ObjectProperty ;
+    rdfs:domain arm:DieRoll ;
+    rdfs:range rdf:List .
+arm:withDie a owl:ObjectProperty ;
+    rdfs:domain arm:DieRoll ;
+    rdfs:range arm:DieType .
+arm:hasResult a owl:ObjectProperty ;
+    rdfs:domain arm:DieRoll ;
+    rdfs:range arm:DieResult .
+arm:hasEaseFactor a owl:ObjectProperty ;
+    rdfs:domain arm:DieRoll ;
+    rdfs:range xsd:int .
+arm:hasBonus a owl:ObjectProperty ;
+    rdfs:domain arm:DieRoll ;
+    rdfs:range xsd:int .

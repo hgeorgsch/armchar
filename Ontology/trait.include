@@ -119,3 +119,8 @@ arm:TechClass rdfs:subClassOf arm:LeafTraitClass .
 arm:FormClass rdfs:subClassOf arm:LeafTraitClass .
 arm:Art owl:disjointUnionOf ( arm:Tech arm:Form ) .
 
+# The following should be redundant
+arm:Tech rdfs:subClassOf arm:Art  .
+arm:Form rdfs:subClassOf arm:Art  .
+
+

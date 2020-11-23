@@ -5,6 +5,7 @@
   ( ?adv arm:advanceCharacter ?c )
   ( ?adv arm:atSeasonTime ?t )
   ( ?cs1 arm:atSeasonTime ?t )
+  ( ?cs1 arm:isCharacter ?char )
   ->
   ( ?adv arm:advanceFromCharacterSheet ?cs1 )
   ]
@@ -61,7 +62,7 @@
 # 2. Trait improved
 # 3. Trait created
 
-# Traits without Advancement are carried forward
+# 1.  Traits without Advancement are carried forward
 [ noadvancetrait:
    ( ?cs   rdf:type arm:CharacterSheet )
    ( ?cs   arm:hasTrait ?oldtrait ) 
@@ -71,13 +72,16 @@
    -> ( ?nc ?p ?oldtrait ) ]
 
 # 2-3. Traits from the CharacterAdvancement are added to the new charactersheet
+# This rule is too costly to compute.
 [ advancementtrait:
-   ( ?cs   rdf:type arm:CharacterSheet )
-   ( ?cs   arm:hasTrait ?oldtrait ) 
-   ( ?cs   arm:hasNextCharacterSheet ?nc ) 
+   ( ?adv rdf:type arm:CharacterAdvancement )
+   ( ?adv  arm:advanceFromCharacterSheet ?cs ) 
+   ( ?adv  arm:advanceToCharacterSheet ?ncs ) 
+   ( ?adv  arm:advanceTrait ?trait )
+   ( ?trait arm:advancedFromTrait ?oldtrait ) 
    ( ?cs   ?p ?oldtrait ) 
    -> 
-   ( ?nc ?p ?oldtrait )
+   ( ?ncs ?p ?trait )
 ]        
 
 # 2. Traits which already existed are updated
@@ -85,7 +89,8 @@
    ( ?trait arm:advancedFromTrait ?oldtrait  )
    ( ?trait arm:addedXP ?xp2 ) 
    ( ?oldtrait arm:hasTotalXP ?xp1 ) 
-   -> (  ?trait arm:hasTotalXP sum(?xp1,?xp2 ) ) ]
+   sum(?xp1,?xp2,?xp)
+   -> (  ?trait arm:hasTotalXP ?xp ) ]
 [ advancetraitSpec:
    ( ?trait arm:advancedFromTrait ?oldtrait  )
    noValue( ?trait arm:hasSpeciality ?spec ) 
@@ -100,10 +105,11 @@
 
 # 3. Convert addedXP to TotalXP when there was no prior trait.
 [ newtraitXP:
-   ( ?trait arm:addedXP ?xp ) 
+   ( ?trait arm:addedXP ?xp ) -> [
+   (  ?trait arm:hasTotalXP ?xp ) <-
    noValue( ?trait, arm:advancedFromTrait   )
-   noValue( ?trait, arm:hasTotalXP  ) 
-   -> (  ?trait arm:hasTotalXP ?xp ) ]
+   noValue( ?trait, arm:hasTotalXP  )  ]
+]
 
 [ fixhasAbility:
   ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Ability )

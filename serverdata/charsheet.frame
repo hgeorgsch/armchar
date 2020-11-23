@@ -90,6 +90,8 @@
                               "arm:hasDescription": {},
                               "arm:hasGeneralDescription": {},
                               "arm:hasLabel": {}
-			      }
+			      },
+  "arm:hasNextCharacterSheet" : { },
+  "arm:hasPrevCharacterSheet" : { }
 }
 

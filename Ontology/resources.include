@@ -21,19 +21,19 @@ arm:Form owl:disjointUnionOf (
 
 ) .
 
-armr:creo  a arm:TechClass ; rdfs:label "Creo" ; arm:abbr "Cr" .
-armr:intellego   a arm:TechClass ; rdfs:label "Intellego" ; arm:abbr "In" .
-armr:muto  a arm:TechClass ; rdfs:label "Muto" ; arm:abbr "Mu" .
-armr:perdo  a arm:TechClass ; rdfs:label "Perdo" ; arm:abbr "Pe" .
-armr:rego   a arm:TechClass ; rdfs:label "Rego" ; arm:abbr "Re" .
+armr:creo  rdfs:subClassOf  arm:Tech ; a arm:TechClass ; rdfs:label "Creo" ; arm:abbr "Cr" .
+armr:intellego   rdfs:subClassOf  arm:Tech ; a arm:TechClass ; rdfs:label "Intellego" ; arm:abbr "In" .
+armr:muto  rdfs:subClassOf  arm:Tech ; a arm:TechClass ; rdfs:label "Muto" ; arm:abbr "Mu" .
+armr:perdo  rdfs:subClassOf  arm:Tech ; a arm:TechClass ; rdfs:label "Perdo" ; arm:abbr "Pe" .
+armr:rego   rdfs:subClassOf  arm:Tech ; a arm:TechClass ; rdfs:label "Rego" ; arm:abbr "Re" .
 
-armr:animal   a arm:FormClass ; rdfs:label "Animal" ; arm:abbr "An" .
-armr:aquam   a arm:FormClass ; rdfs:label "Aquam" ; arm:abbr "Aq" .
-armr:auram   a arm:FormClass ; rdfs:label "Auram" ; arm:abbr "Au" .
-armr:corpus  a arm:FormClass ; rdfs:label "Corpus" ; arm:abbr "Co" .
-armr:herbam  a arm:FormClass ; rdfs:label "Herbam" ; arm:abbr "He" .
-armr:ignem   a arm:FormClass ; rdfs:label "Ignem" ; arm:abbr "Ig" .
-armr:imaginem a arm:FormClass ; rdfs:label "Imaginem" ; arm:abbr "Im" .
-armr:mentem   a arm:FormClass ; rdfs:label "Mentem" ; arm:abbr "Me" .
-armr:terram   a arm:FormClass ; rdfs:label "Terram" ; arm:abbr "Te" .
-armr:vim      a arm:FormClass ; rdfs:label "Vim" ; arm:abbr "Vi" .
+armr:animal   rdfs:subClassOf  arm:Form  ; a arm:FormClass ; rdfs:label "Animal" ; arm:abbr "An" .
+armr:aquam   rdfs:subClassOf  arm:Form  ; a arm:FormClass ; rdfs:label "Aquam" ; arm:abbr "Aq" .
+armr:auram   rdfs:subClassOf  arm:Form  ; a arm:FormClass ; rdfs:label "Auram" ; arm:abbr "Au" .
+armr:corpus  rdfs:subClassOf  arm:Form  ; a arm:FormClass ; rdfs:label "Corpus" ; arm:abbr "Co" .
+armr:herbam  rdfs:subClassOf  arm:Form  ; a arm:FormClass ; rdfs:label "Herbam" ; arm:abbr "He" .
+armr:ignem   rdfs:subClassOf  arm:Form  ; a arm:FormClass ; rdfs:label "Ignem" ; arm:abbr "Ig" .
+armr:imaginem rdfs:subClassOf  arm:Form  ; a arm:FormClass ; rdfs:label "Imaginem" ; arm:abbr "Im" .
+armr:mentem   rdfs:subClassOf  arm:Form  ; a arm:FormClass ; rdfs:label "Mentem" ; arm:abbr "Me" .
+armr:terram   rdfs:subClassOf  arm:Form  ; a arm:FormClass ; rdfs:label "Terram" ; arm:abbr "Te" .
+armr:vim      rdfs:subClassOf  arm:Form  ; a arm:FormClass ; rdfs:label "Vim" ; arm:abbr "Vi" .

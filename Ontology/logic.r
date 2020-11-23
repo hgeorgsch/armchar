@@ -97,26 +97,33 @@
 # Abilities and Arts (XP)
 
 [ artscore:
-  ( ?s arm:hasTotalXP ?xp )
   ( ?s rdf:type arm:AccelleratedTrait )
-  ( ?e rdf:type armpyramid:xpTableEntry )
-  ( ?e armpyramid:xp ?xp )
-  ( ?e armpyramid:artScore ?score )
-  ( ?e armpyramid:artRemainder ?rem )
-  ->
-     ( ?s arm:hasScore ?score )
-     ( ?s arm:hasXP ?rem )
+  -> [ ( ?s arm:hasScore ?score ) <-
+    ( ?s arm:hasTotalXP ?xp )
+    ( ?e armpyramid:xp ?xp )
+    ( ?e armpyramid:artScore ?score )
+    ( ?e rdf:type armpyramid:xpTableEntry )
+  ]
+  [ ( ?s arm:hasXP ?rem ) <-
+    ( ?s arm:hasTotalXP ?xp )
+    ( ?e armpyramid:xp ?xp )
+    ( ?e armpyramid:artRemainder ?rem )
+    ( ?e rdf:type armpyramid:xpTableEntry )
+ ]
  ]
 [ abscore:
-  ( ?s arm:hasTotalXP ?xp )
   ( ?s rdf:type arm:XPTrait )
+  -> [ ( ?s arm:hasScore ?score ) <-
+  ( ?s arm:hasTotalXP ?xp )
   ( ?e rdf:type armpyramid:xpTableEntry )
   ( ?e armpyramid:xp ?xp )
   ( ?e armpyramid:abScore ?score )
+  ] [ ( ?s arm:hasXP ?rem ) <-
+  ( ?s arm:hasTotalXP ?xp )
+  ( ?e rdf:type armpyramid:xpTableEntry )
+  ( ?e armpyramid:xp ?xp )
   ( ?e armpyramid:abRemainder ?rem )
-  ->
-     ( ?s arm:hasScore ?score )
-     ( ?s arm:hasXP ?rem )
+	]
  ]
 
 # Virtues and Flaws
