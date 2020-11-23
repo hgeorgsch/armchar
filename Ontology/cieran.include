@@ -20,17 +20,6 @@ armchar:elksrun  a arm:Covenant ;
 	       arm:hasSetting "Hibernia" ;
                arm:hasSaga armchar:contestedlands .
 
-armchar:contestedlands a arm:Saga ;
-   arm:hasSagaDescription "Played on Discord and Roll20 from Januar 2020." ;
-   arm:hasSeasonTime  
-arm:winter1217, arm:spring1217, arm:summer1217, arm:autumn1217, 
-arm:winter1218, arm:spring1218, arm:summer1218, arm:autumn1218, 
-arm:winter1219, arm:spring1219, arm:summer1219, arm:autumn1219, 
-arm:winter1220, arm:spring1220, arm:summer1220, arm:autumn1220, 
-arm:winter1221, arm:spring1221, arm:summer1221, arm:autumn1221, 
-arm:winter1222, arm:spring1222, arm:summer1222, arm:autumn1222, 
-arm:winter1223, arm:spring1223, arm:summer1223, arm:autumn1223, 
-arm:winter1224, arm:spring1224, arm:summer1224, arm:autumn1224 .
 
 :summer1217 arm:isCharacter armchar:cieran ; a arm:CharacterSheet ;
             arm:atSeasonTime arm:summer1217 .
