@@ -75,13 +75,10 @@
 # This rule is too costly to compute.
 [ advancementtrait:
    ( ?adv rdf:type arm:CharacterAdvancement )
-   ( ?adv  arm:advanceFromCharacterSheet ?cs ) 
    ( ?adv  arm:advanceToCharacterSheet ?ncs ) 
    ( ?adv  arm:advanceTrait ?trait )
-   ( ?trait arm:advancedFromTrait ?oldtrait ) 
-   ( ?cs   ?p ?oldtrait ) 
    -> 
-   ( ?ncs ?p ?trait )
+   ( ?ncs arm:hasTrait ?trait )
 ]        
 
 # 2. Traits which already existed are updated
