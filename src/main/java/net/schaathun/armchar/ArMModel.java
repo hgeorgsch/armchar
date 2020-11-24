@@ -104,6 +104,12 @@ public class ArMModel {
            dataset.end();
         }
 
+        qexec.close();
+	if ( m.isEmpty() ) {
+	   System.out.println( "ArMModel.construct: empty model" ) ;
+	   return null ;
+	}
+
         OutputStream output = new OutputStream() {
                 private StringBuilder string = new StringBuilder();
 

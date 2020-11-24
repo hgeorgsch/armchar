@@ -50,6 +50,9 @@ public class Character {
                 + "} } \r\n"
                 + "}";
         String result = ArMModel.construct(queryString);
+	if ( result == null ) {
+           return Response.status(404).build();
+	}
         return Response
                 .ok(result)
                 .build();
@@ -102,6 +105,9 @@ public class Character {
 
         String frame = Config.getInstance().charsheetframe ;
         String result = ArMModel.construct(this.queryString(id,season),frame);
+	if ( result == null ) {
+           return Response.status(404).build();
+	}
         return Response
                 .ok(result)
                 .build();
@@ -120,6 +126,9 @@ public class Character {
         // System.out.println( q ) ;
         String result = ArMModel.construct(q,frame);
         // System.out.println( result ) ;
+	if ( result == null ) {
+           return Response.status(404).build();
+	}
         return Response
                 .ok(result)
                 .build();
@@ -134,6 +143,9 @@ public class Character {
 
         String frame = Config.getInstance().charsheetframe ;
         String result = ArMModel.construct(this.queryString(id,season));
+	if ( result == null ) {
+           return Response.status(404).build();
+	}
         return Response
                 .ok(result)
                 .build();
