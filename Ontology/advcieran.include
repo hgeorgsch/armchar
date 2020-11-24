@@ -174,7 +174,7 @@ armchar:cieran  arm:hasAdvancement
   arm:hasAdvancementType arm:Exposure ;
   arm:advanceToCharacterSheet :spring1223 
   ],
-[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1222 ;
+[ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1223 ;
   arm:hasAdvancementDescription "Lab work: spell from text: Stone Tell of Mind that Sits InTe30  + 2xp parma" ;
   arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 2 ],
    [ a armr:InTe30Stone  ; arm:addedXP 5 ] ;
