@@ -111,6 +111,7 @@ armr:adeptLaboratoryStudent   rdfs:subClassOf armr:minorHermeticVirtue ;
                               a arm:LeafTraitClass ;
                                rdfs:label "Adept Laboratory Student" .
 armr:affinityWithArt   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
+     arm:hasDescription  "Your Study Totals for one Hermetic Art are increased by one half, rounded up. At character creation, any experience points you put into that Art are also increased by one half (rounded up), and you may exceed the normal recommended limits. You may take this Virtue twice, for two different Arts." ;
                               a arm:LeafTraitClass ;
                           rdfs:label "Affinity with Art" .
 armr:cautiousSorcerer   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
@@ -180,6 +181,7 @@ armr:sideEffect   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   
                               a arm:LeafTraitClass ;
                           rdfs:label "Side Effect" .
 armr:skilledParens   rdfs:subClassOf armr:minorHermeticVirtue ;
+      arm:hasDescription   "Your parens was more powerful, and a better teacher, than is common. You gain an additional 60 experience points and 30 spell levels during apprenticeship. This Virtue has no effect on your study after apprenticeship, but you still have a close relationship with a powerful magus." ;
                      arm:hasReference   "[ArM5]" ;
                      a arm:LeafTraitClass ;
                      rdfs:label "Skilled Parens" .
@@ -281,6 +283,7 @@ armr:berserk    rdfs:subClassOf armr:minorGeneralVirtue ;
                     a arm:LeafTraitClass ;
                     rdfs:label "Berserk" .
 armr:bookLearner    rdfs:subClassOf armr:minorGeneralVirtue ; 
+    arm:hasDescription    "You have a talent for comprehending the writings of others. When studying from books, treat them as if they were three Quality levels higher than they actually are." ;
                     arm:hasReference   "[ArM5]" ;
                     a arm:LeafTraitClass ;
                     rdfs:label "Book Learner" .
@@ -488,6 +491,7 @@ armr:weakMagicResistance    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasRefe
                  a arm:LeafTraitClass ;
                 rdfs:label "Weak Magic Resistance" .
 armr:weakSpontaneousMagic    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
+    arm:hasDescription    "You may not exert yourself when casting spontaneous magic, so you always divide your Casting Total by five. In stressful conditions you must still roll a stress die to see if you botch, but the die roll does not add to your casting total.  You may still use ceremonial casting.  This Flaw may be combined with Difficult Spontaneous Magic to create a magus who cannot cast spontaneous magic at all." ;
                  a arm:LeafTraitClass ;
                 rdfs:label "Weak Spontaneous Magic" .
 
@@ -550,6 +554,7 @@ armr:generous    rdfs:subClassOf  armr:majorPersonalityFlaw ;
                  a arm:LeafTraitClass ;
                  rdfs:label "Generous" .
 armr:meddler rdfs:subClassOf  armr:majorPersonalityFlaw ;
+    arm:hasDescription   "You want to fix other peoples’ lives: arrange matches, teach children to sew “properly,” or tend the sick. You waste a lot of time and energy on such endeavors, and people usually resent it. " ;
                  arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
                  rdfs:label "Meddler" .
@@ -564,6 +569,7 @@ armr:carefree  rdfs:subClassOf  armr:minorPersonalityFlaw ;
                  a arm:LeafTraitClass ;
                  rdfs:label "Carefree" .
 armr:mistakenIdentity  rdfs:subClassOf  armr:majorStoryFlaw ;
+    arm:hasDescription   "Someone, who looks exactly like you and whom you and your companions will most likely never meet, lives near you, and is responsible for an ongoing variety of violent, illegal, obscene, or embarrassing acts. You often have to explain who you are, and sometimes have to deal with the consequences of the other person’s acts." ;
                        arm:hasReference   "[ArM5]" ;
                        a arm:LeafTraitClass ;
                        rdfs:label "Mistaken Identity" .

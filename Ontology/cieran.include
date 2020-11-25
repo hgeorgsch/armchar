@@ -59,22 +59,21 @@ armchar:elksrun  a arm:Covenant ;
 :summer1217 arm:hasCharacteristic [ a armr:dex ; arm:hasScore 2 ] . 
 :summer1217 arm:hasCharacteristic [ a armr:qik ; arm:hasScore -3 ] . 
 
-:summer1217 arm:hasArt [ a armr:creo ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:intellego ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:muto ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:perdo ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:rego ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:animal ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:aquam ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:auram ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:corpus ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:ignem ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:imaginem ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:herbam ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:mentem ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:terram ; arm:hasTotalXP 17 ] . 
-:summer1217 arm:hasArt [ a armr:vim ; arm:hasTotalXP 17 ] . 
-
+:summer1217 arm:hasArt [ a armr:creo ; arm:hasTotalXP 21 ] . 
+:summer1217 arm:hasArt [ a armr:intellego ; arm:hasTotalXP 0 ] . 
+:summer1217 arm:hasArt [ a armr:muto ; arm:hasTotalXP 0 ] . 
+:summer1217 arm:hasArt [ a armr:perdo ; arm:hasTotalXP 36 ] . 
+:summer1217 arm:hasArt [ a armr:rego ; arm:hasTotalXP 36 ] . 
+:summer1217 arm:hasArt [ a armr:animal ; arm:hasTotalXP 0 ] . 
+:summer1217 arm:hasArt [ a armr:aquam ; arm:hasTotalXP 0 ] . 
+:summer1217 arm:hasArt [ a armr:auram ; arm:hasTotalXP 0 ] . 
+:summer1217 arm:hasArt [ a armr:corpus ; arm:hasTotalXP 34 ] . 
+:summer1217 arm:hasArt [ a armr:herbam ; arm:hasTotalXP 0 ] . 
+:summer1217 arm:hasArt [ a armr:ignem ; arm:hasTotalXP 18 ] . 
+:summer1217 arm:hasArt [ a armr:imaginem ; arm:hasTotalXP 53 ] . 
+:summer1217 arm:hasArt [ a armr:mentem ; arm:hasTotalXP 1 ] . 
+:summer1217 arm:hasArt [ a armr:terram ; arm:hasTotalXP 15 ] . 
+:summer1217 arm:hasArt [ a armr:vim ; arm:hasTotalXP 3 ] . 
 
 # General Abilities
 :summer1217 arm:hasAbility
@@ -89,18 +88,18 @@ armchar:elksrun  a arm:Covenant ;
 :summer1217 arm:hasAbility [ a armab:craft-fletching ; arm:hasTotalXP 30  ] . 
 :summer1217 arm:hasAbility [ a armab:folkken ; arm:hasSpeciality "Villagers" ; arm:hasTotalXP 5  ] . 
 :summer1217 arm:hasAbility [ a armab:hermeslore ; arm:hasSpeciality "Hibernia" ; arm:hasTotalXP 5  ] . 
-:summer1217 arm:hasAbility [ a armab:socplore ; arm:hasSpeciality "Self Initiation" ; arm:hasTotalXP 17  ] . 
+:summer1217 arm:hasAbility [ a armab:socplore ; arm:hasSpeciality "Self Initiation" ; arm:hasTotalXP 0  ] . 
 :summer1217 arm:hasAbility [ a armab:stealth ; arm:hasSpeciality "Hiding" ; arm:hasTotalXP 5  ] . 
 
 # Academic Abilities
 :summer1217 arm:hasAbility [ a armab:artlib ; arm:hasTotalXP 5 ; arm:hasSpeciality "rituals" ] . 
-:winter1225 arm:hasAbility [ a armab:philosophiae ; arm:hasTotalXP 7 ; arm:hasSpeciality "rituals" ] . 
-:winter1225 arm:hasAbility [ a armab:latin ; arm:hasTotalXP 50 ; arm:hasSpeciality "Hermetic Usage" ] . 
+:winter1225 arm:hasAbility [ a armab:philosophiae ; arm:hasTotalXP 0 ; arm:hasSpeciality "rituals" ] . 
+:winter1225 arm:hasAbility [ a armab:latin ; arm:hasTotalXP 30 ; arm:hasSpeciality "Hermetic Usage" ] . 
 
 # Arcane Abilities
-:summer1217 arm:hasAbility [ a armab:parmamagica ; arm:hasTotalXP 30 ; arm:hasSpeciality "Mentem" ] . 
+:summer1217 arm:hasAbility [ a armab:parmamagica ; arm:hasTotalXP 5 ; arm:hasSpeciality "Mentem" ] . 
 :summer1217 arm:hasAbility [ a armab:hermescode ; arm:hasTotalXP 5 ; arm:hasSpeciality "Stonehenge" ] . 
-:summer1217 arm:hasAbility [ a armab:infernallore ; arm:hasTotalXP 5 ; arm:hasSpeciality "Undead" ] . 
+:summer1217 arm:hasAbility [ a armab:infernallore ; arm:hasTotalXP 0 ; arm:hasSpeciality "Undead" ] . 
 :summer1217 arm:hasAbility [ a armab:magictheory ; arm:hasTotalXP 30 ; arm:hasSpeciality "Spells" ] . 
 :summer1217 arm:hasAbility [ a armab:penetration ; arm:hasTotalXP 5 ; arm:hasSpeciality "Rego" ] . 
 
@@ -109,7 +108,7 @@ armchar:elksrun  a arm:Covenant ;
 :summer1217 arm:hasAbility [ a armab:thrown ; arm:hasTotalXP 5 ; arm:hasSpeciality "Dart" ] . 
 
 # Supernatural Abilities
-:summer1217 arm:hasAbility [ a armab:secondsight ; arm:hasTotalXP 14 ; arm:hasSpeciality "Faerie Illusions" ] . 
+:summer1217 arm:hasAbility [ a armab:secondsight ; arm:hasTotalXP 5 ; arm:hasSpeciality "Faerie Illusions" ] . 
 
 # Spells
 :summer1217 arm:hasSpell
