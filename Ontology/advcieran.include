@@ -1,4 +1,16 @@
 armchar:cieran  arm:hasAdvancement 
+[ a arm:EarlyChildhoodAdvancement ; 
+  arm:advanceFromCharacterSheet :zero ;
+  arm:advanceToCharacterSheet :early 
+  ],
+[ a arm:LaterLifeAdvancement ; 
+  arm:advanceFromCharacterSheet :early ;
+  arm:advanceToCharacterSheet :laterlife 
+  ],
+[ a arm:ApprenticeshipAdvancement ; 
+  arm:advanceFromCharacterSheet :laterlife ;
+  arm:advanceToCharacterSheet :summer1217 
+  ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1217 ;
   arm:hasAdvancementDescription "Studies Herbam L6 Q21 +3" ;
   arm:advanceTrait [ a armr:herbam ; arm:addedXP 21 ]  ;
