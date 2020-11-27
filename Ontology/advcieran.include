@@ -1,16 +1,3 @@
-armchar:cieran  arm:hasAdvancement 
-[ a arm:EarlyChildhoodAdvancement ; 
-  arm:advanceFromCharacterSheet :zero ;
-  arm:advanceToCharacterSheet :early 
-  ],
-[ a arm:LaterLifeAdvancement ; 
-  arm:advanceFromCharacterSheet :early ;
-  arm:advanceToCharacterSheet :laterlife 
-  ],
-[ a arm:ApprenticeshipAdvancement ; 
-  arm:advanceFromCharacterSheet :laterlife ;
-  arm:advanceToCharacterSheet :summer1217 
-  ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1217 ;
   arm:hasAdvancementDescription "Studies Herbam L6 Q21 +3" ;
   arm:advanceTrait [ a armr:herbam ; arm:addedXP 21 ]  ;
@@ -45,7 +32,7 @@ armchar:cieran  arm:hasAdvancement
 
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1218 ;
   arm:hasAdvancementDescription "Studies Servants of the People 14xp+3" ;
-  arm:advanceTrait [ a armab:socplore ; arm:addedXP 17 ]  ;
+  arm:advanceTrait [ a armab:socplore ; arm:hasSpeciality "Self Initiation" ; arm:addedXP 17 ]  ;
   arm:awardsXP 17 ;
   arm:hasAdvancementType arm:Reading ;
   arm:advanceToCharacterSheet :autumn1218 
@@ -127,8 +114,9 @@ armchar:cieran  arm:hasAdvancement
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:spring1221 ;
   arm:hasAdvancementDescription "Jerome's Tower 10xp (Second Sight 5, Parma 5) 3 conf" ;
-  arm:advanceTrait [ a armab:secondsight ; arm:addedXP 5 ]  ;
-  arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 5 ]  ;
+  arm:advanceTrait [ a armab:secondsight ; arm:addedXP 5 ],
+                   [ a armab:parmamagica ; arm:addedXP 5 ],
+                   [ a arm:Warping ; arm:addedXP 1 ] .
   arm:awardsXP 10 ;
   arm:hasAdvancementType arm:Adventure ;
   arm:advanceToCharacterSheet :summer1221 
