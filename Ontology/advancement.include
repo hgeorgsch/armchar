@@ -8,6 +8,10 @@
 
 # Character Advancement
 arm:CharacterAdvancement a owl:Class .
+arm:EarlyChildhoodAdvancement rdfs:subClassOf arm:CharacterAdvancement .
+arm:LaterLifeAdvancement  rdfs:subClassOf arm:CharacterAdvancement .
+arm:ApprenticeshipAdvancement  rdfs:subClassOf arm:CharacterAdvancement .
+ 
 arm:advanceCharacter a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterAdvancement ;
         rdfs:range   arm:Character .
