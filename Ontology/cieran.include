@@ -21,8 +21,8 @@ armchar:elksrun  a arm:Covenant ;
                arm:hasSaga armchar:contestedlands .
 
 
-:zero arm:isCharacter armchar:cieran ; a arm:CharacterSheet ;
-            arm:atSeasonTime arm:summer1217 .
+:zero arm:isCharacter armchar:cieran ; a arm:CharacterSheet .
+:summer1217   arm:atSeasonTime arm:summer1217 .
 
 :zero arm:hasOtherTrait
   [ a arm:Decrepitude ; arm:hasTotalXP 0  ],
