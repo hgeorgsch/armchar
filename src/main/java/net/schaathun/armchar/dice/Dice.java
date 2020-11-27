@@ -23,7 +23,7 @@ public class Dice {
    }
 
    public static int simpledie() {
-      return this.instance.rand.nextint(10) + 1 ;
+      return instance.rand.nextInt(10) + 1 ;
    }
 
    public static Dice getInstance() {
