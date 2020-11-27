@@ -1,3 +1,4 @@
+armchar:cieran  arm:hasAdvancement 
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1217 ;
   arm:hasAdvancementDescription "Studies Herbam L6 Q21 +3" ;
   arm:advanceTrait [ a armr:herbam ; arm:addedXP 21 ]  ;
@@ -116,7 +117,7 @@
   arm:hasAdvancementDescription "Jerome's Tower 10xp (Second Sight 5, Parma 5) 3 conf" ;
   arm:advanceTrait [ a armab:secondsight ; arm:addedXP 5 ],
                    [ a armab:parmamagica ; arm:addedXP 5 ],
-                   [ a arm:Warping ; arm:addedXP 1 ] .
+                   [ a arm:Warping ; arm:addedXP 1 ] ;
   arm:awardsXP 10 ;
   arm:hasAdvancementType arm:Adventure ;
   arm:advanceToCharacterSheet :summer1221 
