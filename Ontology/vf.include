@@ -222,7 +222,9 @@ armr:premonitions     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasRefe
                               a arm:LeafTraitClass ;
                rdfs:label "Premonitions" .
 armr:secondSight     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
-                              a arm:LeafTraitClass ;
+      arm:hasDescription  "You are able to see through illusionary concealment and disguise, including invisibility, and can also see naturally invisible things such as spirits and the boundaries between regio levels (see page 189). Choosing this Virtue confers the Ability Second Sight 1 (page 67). " ;
+             arm:grantsAbility  armab:secondsight ;
+             a arm:LeafTraitClass ;
                rdfs:label "Second Sight" .
 armr:senseHolinessAndUnholiness     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
