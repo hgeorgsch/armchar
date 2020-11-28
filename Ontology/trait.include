@@ -93,13 +93,13 @@ arm:hasAbility  rdfs:subPropertyOf   arm:hasTrait ;
 arm:hasCharacteristic  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Characteristic .
-arm:hasNewVirtue  rdfs:subPropertyOf   arm:hasVirtue ;
+arm:hasNewVirtue  a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterSheet ;
         rdfs:range   arm:Virtue .
 arm:hasVirtue  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Virtue .
-arm:hasNewFlaw  rdfs:subPropertyOf   arm:hasFlaw ;
+arm:hasNewFlaw  a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterSheet ;
         rdfs:range   arm:Virtue .
 arm:hasFlaw  rdfs:subPropertyOf   arm:hasTrait ;

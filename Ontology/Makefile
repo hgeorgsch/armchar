@@ -10,7 +10,9 @@ resources.ttl: prefix.ttl $R
 arm.ttl: prefix.ttl $A
 
 cieran.ttl: prefix.ttl cieran.include advcieran.include seasons.include 
-logic.rules: prefix.ttl $L
+logic.rules: prefix.ttl $L 
+	cat $^ > $@
+basic.rules: prefix.ttl basic.r
 	cat $^ > $@
 
 %.ttl: prefix.ttl %.include
