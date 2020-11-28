@@ -43,12 +43,13 @@ public class ArMModel {
    private static ArMModel instance = null;
    private Dataset dataset ;
    private InfModel model ;
-   private Reasoner owlR, ourR ;
+   private Reasoner owlR, ourR, ourBR ;
    private Model data ;
 
    public static String schemaFile = "/opt/payara/serverdata/arm.ttl" ;
    public static String resourcesFile = "/opt/payara/serverdata/resources.ttl" ;
    public static String rulesFile = "/opt/payara/serverdata/logic.rules" ;
+   public static String brulesFile = "/opt/payara/serverdata/basic.rules" ;
    public static String tdbLocation = "/opt/payara/tdb" ;
 
    private ArMModel() {
@@ -65,11 +66,14 @@ public class ArMModel {
       // The rules file is similarly constant, and gives
       // rise to a general purpose reasoner on top
       List rules = Rule.rulesFromURL("file:" + rulesFile );
+      List brules = Rule.rulesFromURL("file:" + brulesFile );
+      this.ourBR = new GenericRuleReasoner(brules);
       this.ourR = new GenericRuleReasoner(rules);
 
       // Finally, we establish the inference models.
-      InfModel owlM = ModelFactory.createInfModel(owlR, data);
-      this.model = ModelFactory.createInfModel(ourR, owlM);
+      InfModel ourBM = ModelFactory.createInfModel(this.ourBR, data);
+      InfModel owlM = ModelFactory.createInfModel(this.owlR, ourBM);
+      this.model = ModelFactory.createInfModel(this.ourR, owlM);
    }
 
    public static ArMModel getInstance() {

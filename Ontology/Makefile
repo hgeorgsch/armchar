@@ -1,4 +1,4 @@
-TTL=arm.ttl cieran.ttl logic.rules resources.ttl contested.ttl
+TTL=arm.ttl cieran.ttl logic.rules resources.ttl contested.ttl basic.rules
 all: $A
 install: $(TTL)
 	cp $(TTL) ../serverdata/

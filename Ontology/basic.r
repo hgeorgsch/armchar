@@ -43,3 +43,18 @@
   ( ?v1 arm:grantsFlaw ?v2 )
   ( ?v2 arm:hasScore 0 )
   ]
+
+# Season Sequence
+[ seasonsequence1:
+  ( ?s1 arm:isSeason ?o1 ) ( ?s2 arm:isSeason ?o2 )
+  ( ?s1 arm:isYear ?y1 ) ( ?s2 arm:isYear ?y1 )
+  ( ?o1 arm:precedes ?o2 ) 
+  -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
+
+[ seasonsequence2: 
+  ( ?s1 arm:isSeason arm:Autumn ) 
+  ( ?s1 arm:isYear ?y1 )
+  sum(?y1,1,?y2)
+  ( ?s2 arm:isYear ?y2  )
+  ( ?s2 arm:isSeason arm:Winter )
+  -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
