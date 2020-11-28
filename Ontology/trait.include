@@ -93,6 +93,9 @@ arm:hasAbility  rdfs:subPropertyOf   arm:hasTrait ;
 arm:hasCharacteristic  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Characteristic .
+arm:hasNewVirtue  rdfs:subPropertyOf   arm:hasVirtue ;
+        rdfs:domain  arm:CharacterSheet ;
+        rdfs:range   arm:Virtue .
 arm:hasVirtue  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Virtue .

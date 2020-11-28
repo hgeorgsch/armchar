@@ -37,7 +37,7 @@ armchar:elksrun  a arm:Covenant ;
     [ a arm:personality-meddler ; arm:hasScore 6 ] . 
 
 
-:zero arm:hasVirtue
+:zero arm:hasNewVirtue
     [ a armr:strongFaerieBlood ; arm:hasDetail "Ettin Blood" ],
     [ a armr:craftmagic ; arm:hasScore 0 ],
     [ a armr:spellfoci ; arm:hasScore 0 ],
@@ -62,9 +62,9 @@ armchar:elksrun  a arm:Covenant ;
 
 # General Abilities
 :zero arm:hasAbility
-   [ a armab:gaelic ; arm:hasSpeciality "Leinster" ; arm:hasTotalXP 75  ],
-   [ a armab:secondsight ; arm:hasTotalXP 5 ;
-     arm:hasSpeciality "Faerie Illusions" ] . 
+   [ a armab:gaelic ; arm:hasSpeciality "Leinster" ; arm:hasTotalXP 75  ] .
+###    [ a armab:secondsight ; arm:hasTotalXP 5 ;
+###      arm:hasSpeciality "Faerie Illusions" ] . 
 
 armchar:cieran  arm:hasAdvancement 
 [ a arm:EarlyChildhoodAdvancement ; 
