@@ -33,9 +33,6 @@ armchar:elksrun  a arm:Covenant ;
 :zero arm:hasPersonalityTrait 
     [ a armr:personality-meticulous ; arm:hasScore 3 ],
     [ a armr:personality-villager ; arm:hasScore 1 ] .
-###     [ a armr:personality-carefree ; arm:hasScore 3 ],
-###     [ a armr:personality-meddler ; arm:hasScore 6 ] . 
-
 
 :zero arm:hasNewVirtue
     [ a armr:strongFaerieBlood ; arm:hasDetail "Ettin Blood" ],
