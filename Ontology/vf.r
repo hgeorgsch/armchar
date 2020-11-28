@@ -51,7 +51,7 @@
   ( ?p rdf:type arm:Trait )
   ( ?v arm:grantsPTrait ?p )
   ( ?v arm:grantsTrait ?p )
-  ( ?p arm:hasScore +3 )
+  ( ?p arm:hasScore '+3'^^xsd:int )
   ]
 [ vfpmajor:
   ( ?vc  arm:grantsPTraitClass ?pc )
@@ -64,7 +64,7 @@
   ( ?p rdf:type arm:Trait )
   ( ?v arm:grantsPTrait ?p )
   ( ?v arm:grantsTrait ?p )
-  ( ?p arm:hasScore +6 )
+  ( ?p arm:hasScore '+6'^^xsd:int )
   ]
 [ vfv:
   ( ?vc1  arm:grantsVirtueClass ?vc2 )

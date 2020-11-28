@@ -4,4 +4,5 @@ owl:differentFrom a arm:ignoredProperty .
 # arm:hasNextCharacterSheet a arm:ignoredProperty .
 arm:hasTrait a arm:ignoredProperty .
 arm:hasNewVirtue a arm:ignoredProperty .
+arm:hasNewFlaw a arm:ignoredProperty .
 rdf:type a arm:ignoredProperty .

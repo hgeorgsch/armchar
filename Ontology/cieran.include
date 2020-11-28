@@ -63,12 +63,11 @@ armchar:elksrun  a arm:Covenant ;
 # General Abilities
 :zero arm:hasAbility
    [ a armab:gaelic ; arm:hasSpeciality "Leinster" ; arm:hasTotalXP 75  ] .
-###    [ a armab:secondsight ; arm:hasTotalXP 5 ;
-###      arm:hasSpeciality "Faerie Illusions" ] . 
 
 armchar:cieran  arm:hasAdvancement 
 [ a arm:EarlyChildhoodAdvancement ; 
    arm:advanceTrait 
+   [ a armab:secondsight ; arm:hasSpeciality "Faerie Illusions" ],
    [ a armab:awareness ; arm:hasSpeciality "searching" ; arm:addedXP 15  ],
    [ a armab:brawl ; arm:hasSpeciality "Dodge" ;  arm:addedXP 15  ],
    [ a armab:arealore-munster ; arm:hasSpeciality "Hiding places" ;
