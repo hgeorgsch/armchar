@@ -31,7 +31,7 @@ arm:winter1220, arm:spring1220, arm:summer1220, arm:autumn1220 .
   [ a arm:Confidence ; arm:hasScore 1 ; arm:hasPoints 8 ] .
 
 
-:winter1220 arm:hasPersonalityTrait [ a arm:personality-meticulous ; arm:hasScore 3 ] . 
+:winter1220 arm:hasPersonalityTrait [ a armr:personality-meticulous ; arm:hasScore 3 ] . 
 
 :winter1220 arm:hasVirtue [ a armr:skilledParens ] . 
 :winter1220 arm:hasVirtue [ a armr:bookLearner ] . 

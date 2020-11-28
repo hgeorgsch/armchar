@@ -10,6 +10,10 @@ armr:Flaw owl:disjointUnionOf ( armr:majorFlaw armr:minorFlaw ) .
 arm:grantsTrait a owl:ObjectProperty ;
   rdfs:domain   armr:Virtue ;
   rdfs:range   armr:Trait .
+arm:grantsFlaw a owl:ObjectProperty ;
+  rdfs:subPropertyOf arm:grantsTrait ;
+  rdfs:domain   armr:Flaw ;
+  rdfs:range   armr:Virtue .
 arm:grantsVirtue a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTrait ;
   rdfs:domain   armr:Virtue ;
@@ -18,10 +22,20 @@ arm:grantsAbility a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTrait ;
   rdfs:domain   armr:Virtue ;
   rdfs:range   armr:Ability .
+arm:grantsPTrait a owl:ObjectProperty ;
+  rdfs:domain   armr:Virtue ;
+  rdfs:range   armr:PersonalityTrait .
 arm:grantsTraitClass a owl:ObjectProperty ;
   rdfs:domain   armr:Class ;
   rdfs:range   armr:Class .
+arm:grantsPTraitClass a owl:ObjectProperty ;
+  rdfs:domain   armr:Class ;
+  rdfs:range   armr:Class .
 arm:grantsAbilityClass a owl:ObjectProperty ;
+  rdfs:subPropertyOf arm:grantsTraitClass ;
+  rdfs:domain   armr:Class ;
+  rdfs:range   armr:Class .
+arm:grantsFlawClass a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTraitClass ;
   rdfs:domain   armr:Class ;
   rdfs:range   armr:Class .
@@ -582,7 +596,8 @@ armr:generous    rdfs:subClassOf  armr:majorPersonalityFlaw ;
                  rdfs:label "Generous" .
 armr:meddler rdfs:subClassOf  armr:majorPersonalityFlaw ;
     arm:hasDescription   "You want to fix other peoples’ lives: arrange matches, teach children to sew “properly,” or tend the sick. You waste a lot of time and energy on such endeavors, and people usually resent it. " ;
-                 arm:hasReference   "[ArM5]" ;
+                 arm:grantsPTraitClass armr:personality-meddler ;
+		 arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
                  rdfs:label "Meddler" .
 
@@ -592,6 +607,7 @@ armr:greaterMalediction  rdfs:subClassOf  armr:majorSupernaturalFlaw ;
                  rdfs:label "Greater Malediction" .
 
 armr:carefree  rdfs:subClassOf  armr:minorPersonalityFlaw ;
+                 arm:grantsPTraitClass armr:personality-carefree ;
                  arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
                  rdfs:label "Carefree" .
