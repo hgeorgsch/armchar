@@ -538,7 +538,7 @@ armr:weakSpontaneousMagic    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasRef
                  a arm:LeafTraitClass ;
                 rdfs:label "Weak Spontaneous Magic" .
 
-armr:majorPersonalityFlaw  rdfs:subClassOf armr:majorFlaw ;
+armr:majorPersonalityFlaw  rdfs:subClassOf armr:Flaw ;
                        rdfs:label "Major or Minor Personality Flaw" .
 armr:minorPersonalityFlaw  rdfs:subClassOf armr:minorFlaw ;
                        rdfs:label "Minor Personality Flaw" .
