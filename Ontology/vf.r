@@ -7,7 +7,14 @@
   ( ?adv arm:advanceTrait ?ab )
   ]
 # Grant traits from virtue to CharacterSheet (pre-advancement)
-[ chargenvfgrant:
+[ chargenflawgrant:
+  ( ?cs  arm:hasNewFlaw ?v )
+  ( ?cs  rdf:type arm:CharacterSheet )
+  ( ?v  arm:grantsTrait ?ab )
+  ->
+  ( ?cs arm:hasTrait ?ab )
+  ]
+[ chargenvirtuegrant:
   ( ?cs  arm:hasNewVirtue ?v )
   ( ?cs  rdf:type arm:CharacterSheet )
   ( ?v  arm:grantsTrait ?ab )
@@ -32,7 +39,7 @@
   ( ?cs arm:hasNewFlaw ?ab )
   ]
 
-# Instanciate traits to be granted by virtues.
+# Instantiate traits to be granted by virtues.
 [ vfp:
   ( ?vc arm:grantsPTraitClass ?pc )
   ( ?v  rdf:type ?vc )
