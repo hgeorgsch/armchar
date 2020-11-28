@@ -101,7 +101,7 @@ arm:hasVirtue  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:range   arm:Virtue .
 arm:hasNewFlaw  a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterSheet ;
-        rdfs:range   arm:Virtue .
+        rdfs:range   arm:Flaw .
 arm:hasFlaw  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Flaw .
