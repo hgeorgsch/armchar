@@ -23,6 +23,7 @@ arm:grantsAbility a owl:ObjectProperty ;
   rdfs:domain   armr:Virtue ;
   rdfs:range   armr:Ability .
 arm:grantsPTrait a owl:ObjectProperty ;
+  rdfs:subPropertyOf arm:grantsTrait ;
   rdfs:domain   armr:Virtue ;
   rdfs:range   armr:PersonalityTrait .
 arm:grantsTraitClass a owl:ObjectProperty ;

@@ -6,8 +6,9 @@
   makeTemp( ?p ) 
   ->
   ( ?p rdf:type ?pc )
-  ( ?p rdf:type arm:Flaw )
+  ( ?p rdf:type arm:PersonalityTrait )
   ( ?v arm:grantsPTrait ?p )
+  ( ?v arm:grantsTrait ?p )
   ( ?p arm:hasScore +3 )
   ]
 [ vfpmajor:
@@ -17,8 +18,9 @@
   makeTemp( ?p ) 
   ->
   ( ?p rdf:type ?pc )
-  ( ?p rdf:type arm:Flaw )
+  ( ?p rdf:type arm:PersonalityTrait )
   ( ?v arm:grantsPTrait ?p )
+  ( ?v arm:grantsTrait ?p )
   ( ?p arm:hasScore +6 )
   ]
 [ vfv:
@@ -29,6 +31,7 @@
   ( ?v2 rdf:type ?vc2 )
   ( ?v2 rdf:type arm:Virtue )
   ( ?v1 arm:grantsVirtue ?v2 )
+  ( ?v arm:grantsTrait ?p )
   ( ?v2 arm:hasScore 0 )
   ]
 [ vff:
@@ -39,6 +42,7 @@
   ( ?v2 rdf:type ?vc2 )
   ( ?v2 rdf:type arm:Flaw )
   ( ?v1 arm:grantsFlaw ?v2 )
+  ( ?v arm:grantsTrait ?p )
   ( ?v2 arm:hasScore 0 )
   ]
 [ vfability:
@@ -48,6 +52,7 @@
   ->
   ( ?ab rdf:type ?abclass )
   ( ?ab rdf:type arm:Ability )
+  ( ?v arm:grantsTrait ?p )
   ( ?v arm:grantsAbility ?ab )
   ( ?ab arm:hasTotalXP 5 )
   ]
