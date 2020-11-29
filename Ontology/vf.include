@@ -2,7 +2,7 @@
 armr:Virtue rdfs:subClassOf armr:Trait .
 armr:Flaw rdfs:subClassOf armr:Trait .
 
-armr:theGift rdfs:subClassOf armr:freeVirtue ; rdfs:label "The Gift" .
+armr:theGift rdfs:subClassOf armr:freeVirtue ; arm:hasLabel "The Gift" .
 
 armr:Virtue owl:disjointUnionOf ( armr:majorVirtue armr:minorVirtue armr:freeVirtue ) .
 armr:Flaw owl:disjointUnionOf ( armr:majorFlaw armr:minorFlaw ) .
@@ -47,584 +47,584 @@ arm:grantsVirtueClass a owl:ObjectProperty ;
   rdfs:range   armr:Class .
 
 armr:majorHermeticVirtue rdfs:subClassOf armr:majorVirtue ;
-                         rdfs:label "Hermetic, Major" .
+                         arm:hasLabel "Hermetic, Major" .
 armr:diedneMagic         rdfs:subClassOf armr:majorHermeticVirtue ;
                          a arm:LeafTraitClass ;
                          arm:hasReference   "[ArM5]" ;
-                         rdfs:label "Diedne Magic" .
+                         arm:hasLabel "Diedne Magic" .
 armr:elementalMagic      rdfs:subClassOf armr:majorHermeticVirtue ;
                          a arm:LeafTraitClass ;
                          arm:hasReference   "[ArM5]" ;
-                     rdfs:label "Elemental Magic" .
+                     arm:hasLabel "Elemental Magic" .
 armr:flawlessMagic          rdfs:subClassOf armr:majorHermeticVirtue ;
                          a arm:LeafTraitClass ;
                          arm:hasReference   "[ArM5]" ;
-                        rdfs:label "Flawless Magic" .
+                        arm:hasLabel "Flawless Magic" .
 armr:flexibleFormulaicMagic rdfs:subClassOf armr:majorHermeticVirtue ;
                          a arm:LeafTraitClass ;
                          arm:hasReference   "[ArM5]" ;
-                        rdfs:label "Flexible Formulaic Magic" .
+                        arm:hasLabel "Flexible Formulaic Magic" .
 armr:gentleGift             rdfs:subClassOf armr:majorHermeticVirtue ;
                          a arm:LeafTraitClass ;
                          arm:hasReference   "[ArM5]" ;
-                        rdfs:label "Gentle Gift" .
+                        arm:hasLabel "Gentle Gift" .
 armr:lifeLinkedSpontaneousMagic rdfs:subClassOf armr:majorHermeticVirtue ;
                          a arm:LeafTraitClass ;
                          arm:hasReference   "[ArM5]" ;
-                            rdfs:label "Life-Linked Spontaneous Magic" .
+                            arm:hasLabel "Life-Linked Spontaneous Magic" .
 armr:majorMagicalFocus          rdfs:subClassOf armr:majorHermeticVirtue ;
                          a arm:LeafTraitClass ;
                          arm:hasReference   "[ArM5]" ;
-                            rdfs:label "Major Magical Focus" .
+                            arm:hasLabel "Major Magical Focus" .
 armr:mercurianMagic             rdfs:subClassOf armr:majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                            rdfs:label "Mercurian Magic" .
+                            arm:hasLabel "Mercurian Magic" .
 armr:mythicBlood                rdfs:subClassOf armr:majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                            rdfs:label "Mythic Blood" .
+                            arm:hasLabel "Mythic Blood" .
 armr:secondaryInsight           rdfs:subClassOf armr:majorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                            rdfs:label "Secondary Insight" .
+                            arm:hasLabel "Secondary Insight" .
 
 armr:majorSupernaturalVirtue rdfs:subClassOf armr:majorVirtue ;
-             rdfs:label "Supernatural, Major" .
+             arm:hasLabel "Supernatural, Major" .
 
 armr:entrancement           rdfs:subClassOf  armr:majorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                        rdfs:label "Entrancement" .
+                        arm:hasLabel "Entrancement" .
 armr:greaterImmunity        rdfs:subClassOf  armr:majorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                        rdfs:label "Greater Immunity" .
+                        arm:hasLabel "Greater Immunity" .
 armr:greaterPurifyingTouch  rdfs:subClassOf  armr:majorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                        rdfs:label "Greater Purifying Touch" .
+                        arm:hasLabel "Greater Purifying Touch" .
 armr:shapeshifter           rdfs:subClassOf  armr:majorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                        rdfs:label "Shapeshifter" .
+                        arm:hasLabel "Shapeshifter" .
 armr:strongFaerieBlood      rdfs:subClassOf  armr:majorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
                          arm:grantsVirtueClass armr:secondSight ;
-                        rdfs:label "Strong Faerie Blood" ;
+                        arm:hasLabel "Strong Faerie Blood" ;
 			arm:hasDescription "<p>The blood of the fay is strong in you.  Perhaps one of your parents was actually a faerie, or maybe you were conceived or born in a place of great faerie power. This ancestry grants you several abilities. </p><p>First, you have natural longevity. You start making aging rolls at the age of fifty, rather than the normal 35, and get –3 to Aging Rolls, cumulative with any other bonuses.  </p><p>Second, you have faerie eyes. This gives you the Virtue Second Sight (see page 48) at no cost, and you can see normally in darkness or semi-darkness, such as in deep woods or at night. Your eyes look mostly normal, but are an unusual and vivid color. </p><p> Third, you may learn Faerie Lore during character generation. </p><p> Finally, you get the benefits of a particular type of fay heritage, as given in the Virtue Faerie Blood (page 42). Your specific fay her- itage is clearly visible. Choose one physical quirk, such as small horns, literally blue blood, or eyes without irises and pupils, appropriate to the faeries from which you are descended. </p><p> You may not have both Faerie Blood and Strong Faerie Blood. </p><p> This is a Supernatural Virtue, and you cannot lose it when being trained as a magus (see page 106). If your master cannot preserve the ability, you cannot be trained. </p> ".
 
 armr:majorSocialStatusVirtue rdfs:subClassOf armr:majorVirtue ;
-                         rdfs:label "SOCIAL STATUS, MAJOR" .
+                         arm:hasLabel "SOCIAL STATUS, MAJOR" .
 armr:landedNoble       rdfs:subClassOf armr:majorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                   rdfs:label "Landed Noble" .
+                   arm:hasLabel "Landed Noble" .
 armr:magisterInArtibus rdfs:subClassOf armr:majorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                   rdfs:label "Magister in Artibus" .
+                   arm:hasLabel "Magister in Artibus" .
 armr:redcap            rdfs:subClassOf armr:majorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                   rdfs:label "Redcap" .
+                   arm:hasLabel "Redcap" .
 
 armr:majorGeneralVirtue rdfs:subClassOf  armr:majorVirtue ;
-                        rdfs:label "GENERAL, MAJOR" .
+                        arm:hasLabel "GENERAL, MAJOR" .
 
 armr:deathProphecy    rdfs:subClassOf   armr:majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                  rdfs:label "Death Prophecy" .
+                  arm:hasLabel "Death Prophecy" .
 armr:ghostlyWarder    rdfs:subClassOf   armr:majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                  rdfs:label "Ghostly Warder" .
+                  arm:hasLabel "Ghostly Warder" .
 armr:giantBlood       rdfs:subClassOf   armr:majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                  rdfs:label "Giant Blood" .
+                  arm:hasLabel "Giant Blood" .
 armr:guardianAngel    rdfs:subClassOf   armr:majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                  rdfs:label "Guardian Angel" .
+                  arm:hasLabel "Guardian Angel" .
 armr:trueFaith        rdfs:subClassOf   armr:majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                  rdfs:label "True Faith" .
+                  arm:hasLabel "True Faith" .
 armr:waysOfTheLand    rdfs:subClassOf   armr:majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                  rdfs:label "Ways of the (Land)" .
+                  arm:hasLabel "Ways of the (Land)" .
 armr:wealthy          rdfs:subClassOf   armr:majorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                  rdfs:label "Wealthy" .
+                  arm:hasLabel "Wealthy" .
 
 armr:minorHermeticVirtue rdfs:subClassOf armr:minorVirtue ;
-                         rdfs:label "Hermetic, Minor" .
+                         arm:hasLabel "Hermetic, Minor" .
 armr:adeptLaboratoryStudent   rdfs:subClassOf armr:minorHermeticVirtue ;
                               arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                               rdfs:label "Adept Laboratory Student" .
+                               arm:hasLabel "Adept Laboratory Student" .
 armr:affinityWithArt   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
      arm:hasDescription  "Your Study Totals for one Hermetic Art are increased by one half, rounded up. At character creation, any experience points you put into that Art are also increased by one half (rounded up), and you may exceed the normal recommended limits. You may take this Virtue twice, for two different Arts." ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Affinity with Art" .
+                          arm:hasLabel "Affinity with Art" .
 armr:cautiousSorcerer   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Cautious Sorcerer" .
+                          arm:hasLabel "Cautious Sorcerer" .
 armr:cyclicMagicPositive   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Cyclic Magic (positive)" .
+                          arm:hasLabel "Cyclic Magic (positive)" .
 armr:deftForm   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Deft Form" .
+                          arm:hasLabel "Deft Form" .
 armr:enduringMagic   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Enduring Magic" .
+                          arm:hasLabel "Enduring Magic" .
 armr:theEnigma   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "The Enigma" .
+                          arm:hasLabel "The Enigma" .
 armr:faerieMagic   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Faerie Magic" .
+                          arm:hasLabel "Faerie Magic" .
 armr:fastCaster   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Fast Caster" .
+                          arm:hasLabel "Fast Caster" .
 armr:freeStudy   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Free Study" .
+                          arm:hasLabel "Free Study" .
 armr:harnessedMagic   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Harnessed Magic" .
+                          arm:hasLabel "Harnessed Magic" .
 armr:heartbeast   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Heartbeast" .
+                          arm:hasLabel "Heartbeast" .
 armr:hermeticPrestige   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Hermetic Prestige" .
+                          arm:hasLabel "Hermetic Prestige" .
 armr:inoffensiveToAnimals   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Inoffensive to Animals" .
+                          arm:hasLabel "Inoffensive to Animals" .
 armr:inventiveGenius   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Inventive Genius" .
+                          arm:hasLabel "Inventive Genius" .
 armr:lifeBoost   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Life Boost" .
+                          arm:hasLabel "Life Boost" .
 armr:minorMagicalFocus   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Minor Magical Focus" .
+                          arm:hasLabel "Minor Magical Focus" .
 armr:magicalMemory   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Magical Memory" .
+                          arm:hasLabel "Magical Memory" .
 armr:masteredSpells   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Mastered Spells" .
+                          arm:hasLabel "Mastered Spells" .
 armr:methodCaster   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Method Caster" .
+                          arm:hasLabel "Method Caster" .
 armr:personalVisSource   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Personal Vis Source" .
+                          arm:hasLabel "Personal Vis Source" .
 armr:puissantArt   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Puissant Art" .
+                          arm:hasLabel "Puissant Art" .
 armr:quietMagic   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Quiet Magic" .
+                          arm:hasLabel "Quiet Magic" .
 armr:sideEffect   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Side Effect" .
+                          arm:hasLabel "Side Effect" .
 armr:skilledParens   rdfs:subClassOf armr:minorHermeticVirtue ;
       arm:hasDescription   "Your parens was more powerful, and a better teacher, than is common. You gain an additional 60 experience points and 30 spell levels during apprenticeship. This Virtue has no effect on your study after apprenticeship, but you still have a close relationship with a powerful magus." ;
                      arm:hasReference   "[ArM5]" ;
                      a arm:LeafTraitClass ;
-                     rdfs:label "Skilled Parens" .
+                     arm:hasLabel "Skilled Parens" .
 armr:specialCircumstances   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Special Circumstances" .
+                          arm:hasLabel "Special Circumstances" .
 armr:studyBonus   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Study Bonus" .
+                          arm:hasLabel "Study Bonus" .
 armr:subtleMagic   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Subtle Magic" .
+                          arm:hasLabel "Subtle Magic" .
 armr:verditiusMagic   rdfs:subClassOf armr:minorHermeticVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-                          rdfs:label "Verditius Magic" .
+                          arm:hasLabel "Verditius Magic" .
 
 armr:minorSupernaturalVirtue rdfs:subClassOf armr:minorVirtue ;
-                         rdfs:label "SUPERNATURAL, MINOR" .
+                         arm:hasLabel "SUPERNATURAL, MINOR" .
 armr:animalKen     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-               rdfs:label "Animal Ken" .
+               arm:hasLabel "Animal Ken" .
 armr:dowsing     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-               rdfs:label "Dowsing" .
+               arm:hasLabel "Dowsing" .
 armr:enchantingMusic     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-               rdfs:label "Enchanting Music" .
+               arm:hasLabel "Enchanting Music" .
 armr:lesserImmunity     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-               rdfs:label "Lesser Immunity" .
+               arm:hasLabel "Lesser Immunity" .
 armr:lesserPurifyingTouch     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-               rdfs:label "Lesser Purifying Touch" .
+               arm:hasLabel "Lesser Purifying Touch" .
 armr:magicSensitivity     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-               rdfs:label "Magic Sensitivity" .
+               arm:hasLabel "Magic Sensitivity" .
 armr:premonitions     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-               rdfs:label "Premonitions" .
+               arm:hasLabel "Premonitions" .
 armr:secondSight     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
       arm:hasDescription  "You are able to see through illusionary concealment and disguise, including invisibility, and can also see naturally invisible things such as spirits and the boundaries between regio levels (see page 189). Choosing this Virtue confers the Ability Second Sight 1 (page 67). " ;
              arm:grantsAbilityClass  armab:secondsight ;
              a arm:LeafTraitClass ;
-               rdfs:label "Second Sight" .
+               arm:hasLabel "Second Sight" .
 armr:senseHolinessAndUnholiness     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
              arm:grantsAbilityClass  armab:senseholiness ;
                               a arm:LeafTraitClass ;
-               rdfs:label "Sense Holiness and Unholiness" .
+               arm:hasLabel "Sense Holiness and Unholiness" .
 armr:skinchanger     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-               rdfs:label "Skinchanger" .
+               arm:hasLabel "Skinchanger" .
 armr:wildernessSense     rdfs:subClassOf armr:minorSupernaturalVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-               rdfs:label "Wilderness Sense" .
+               arm:hasLabel "Wilderness Sense" .
 
 armr:minorSocialStatusVirtue rdfs:subClassOf armr:minorVirtue ;
-                         rdfs:label "SOCIAL STATUS, MINOR" .
+                         arm:hasLabel "SOCIAL STATUS, MINOR" .
 armr:clerk       rdfs:subClassOf  armr:minorSocialStatusVirtue ;
                  arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                 rdfs:label "Clerk" .
+                 arm:hasLabel "Clerk" .
 armr:custos      rdfs:subClassOf  armr:minorSocialStatusVirtue ;
                  arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                 rdfs:label "Custos" .
+                 arm:hasLabel "Custos" .
 armr:failedapprentice       rdfs:subClassOf  armr:minorSocialStatusVirtue ;
                             arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-             rdfs:label "Failed Apprentice" .
+             arm:hasLabel "Failed Apprentice" .
 armr:gentleman       rdfs:subClassOf  armr:minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-             rdfs:label "Gentleman/woman" .
+             arm:hasLabel "Gentleman/woman" .
 armr:knight       rdfs:subClassOf  armr:minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-             rdfs:label "Knight" .
+             arm:hasLabel "Knight" .
 armr:mendicantFriar       rdfs:subClassOf  armr:minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                               a arm:LeafTraitClass ;
-             rdfs:label "Mendicant Friar" .
+             arm:hasLabel "Mendicant Friar" .
 armr:mercenaryCaptain       rdfs:subClassOf  armr:minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-             rdfs:label "Mercenary Captain" .
+             arm:hasLabel "Mercenary Captain" .
 armr:priest       rdfs:subClassOf  armr:minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-             rdfs:label "Priest" .
+             arm:hasLabel "Priest" .
 armr:wiseOne       rdfs:subClassOf  armr:minorSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-             rdfs:label "Wise One" .
+             arm:hasLabel "Wise One" .
 
 armr:minorGeneralVirtue rdfs:subClassOf armr:minorVirtue ;
-                    rdfs:label "Minor General Virtue" .
+                    arm:hasLabel "Minor General Virtue" .
 armr:affinityWithAbility    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Affinity with Ability" .
+                        arm:hasLabel "Affinity with Ability" .
 armr:aptStudent    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Apt Student" .
+                        arm:hasLabel "Apt Student" .
 armr:arcaneLore    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Arcane Lore" .
+                        arm:hasLabel "Arcane Lore" .
 armr:berserk    rdfs:subClassOf armr:minorGeneralVirtue ;
                     arm:hasReference   "[ArM5]" ;
                     a arm:LeafTraitClass ;
-                    rdfs:label "Berserk" .
+                    arm:hasLabel "Berserk" .
 armr:bookLearner    rdfs:subClassOf armr:minorGeneralVirtue ; 
     arm:hasDescription    "You have a talent for comprehending the writings of others. When studying from books, treat them as if they were three Quality levels higher than they actually are." ;
                     arm:hasReference   "[ArM5]" ;
                     a arm:LeafTraitClass ;
-                    rdfs:label "Book Learner" .
+                    arm:hasLabel "Book Learner" .
 armr:cautiousWithAbility    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Cautious with Ability" .
+                        arm:hasLabel "Cautious with Ability" .
 armr:clearThinker    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Clear Thinker" .
+                        arm:hasLabel "Clear Thinker" .
 armr:commonSense    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Common Sense" .
+                        arm:hasLabel "Common Sense" .
 armr:educated    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Educated" .
+                        arm:hasLabel "Educated" .
 armr:enduringConstitution    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Enduring Constitution" .
+                        arm:hasLabel "Enduring Constitution" .
 armr:faerieBlood    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Faerie Blood" .
+                        arm:hasLabel "Faerie Blood" .
 armr:famous    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Famous" .
+                        arm:hasLabel "Famous" .
 armr:freeExpression    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Free Expression" .
+                        arm:hasLabel "Free Expression" .
 armr:goodTeacher    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Good Teacher" .
+                        arm:hasLabel "Good Teacher" .
 armr:gossip    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Gossip" .
+                        arm:hasLabel "Gossip" .
 armr:greatCharacteristic    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Great (Characteristic)" .
+                        arm:hasLabel "Great (Characteristic)" .
 armr:improvedCharacteristics    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Improved Characteristics" .
+                        arm:hasLabel "Improved Characteristics" .
 armr:inoffensiveToAnimals    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Inoffensive to Animals" .
+                        arm:hasLabel "Inoffensive to Animals" .
 armr:inspirational    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Inspirational" .
+                        arm:hasLabel "Inspirational" .
 armr:intuition    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Intuition" .
+                        arm:hasLabel "Intuition" .
 armr:keenVision    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Keen Vision" .
+                        arm:hasLabel "Keen Vision" .
 armr:large    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Large" .
+                        arm:hasLabel "Large" .
 armr:latentMagicalAbility    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Latent Magical Ability" .
+                        arm:hasLabel "Latent Magical Ability" .
 armr:learnAbilityFromMistakes    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Learn (Ability) from Mistakes" .
+                        arm:hasLabel "Learn (Ability) from Mistakes" .
 armr:lightTouch    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Light Touch" .
+                        arm:hasLabel "Light Touch" .
 armr:lightningReflexes    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Lightning Reflexes" .
+                        arm:hasLabel "Lightning Reflexes" .
 armr:longWinded    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Long-Winded" .
+                        arm:hasLabel "Long-Winded" .
 armr:luck    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Luck" .
+                        arm:hasLabel "Luck" .
 armr:rapidConvalescence    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Rapid Convalescence" .
+                        arm:hasLabel "Rapid Convalescence" .
 armr:perfectBalance    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Perfect Balance" .
+                        arm:hasLabel "Perfect Balance" .
 armr:piercingGaze    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Piercing Gaze" .
+                        arm:hasLabel "Piercing Gaze" .
 armr:privilegedUpbringing    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Privileged Upbringing" .
+                        arm:hasLabel "Privileged Upbringing" .
 armr:protection    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Protection" .
+                        arm:hasLabel "Protection" .
 armr:puissantAbility    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Puissant Ability" .
+                        arm:hasLabel "Puissant Ability" .
 armr:relic    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Relic" .
+                        arm:hasLabel "Relic" .
 armr:reservesOfStrength    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Reserves of Strength" .
+                        arm:hasLabel "Reserves of Strength" .
 armr:selfConfident    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Self-Confident" .
+                        arm:hasLabel "Self-Confident" .
 armr:sharpEars    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Sharp Ears" .
+                        arm:hasLabel "Sharp Ears" .
 armr:socialContacts    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Social Contacts" .
+                        arm:hasLabel "Social Contacts" .
 armr:strongWilled    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Strong-Willed" .
+                        arm:hasLabel "Strong-Willed" .
 armr:studentOfRealm    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Student of (Realm)" .
+                        arm:hasLabel "Student of (Realm)" .
 armr:temporalInfluence    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                             a arm:LeafTraitClass ;
-                        rdfs:label "Temporal Influence" .
+                        arm:hasLabel "Temporal Influence" .
 armr:tough    rdfs:subClassOf armr:minorGeneralVirtue ;
               arm:hasReference   "[ArM5]" ;
               a arm:LeafTraitClass ;
-              rdfs:label "Tough" .
+              arm:hasLabel "Tough" .
 armr:troupeUpbringing    rdfs:subClassOf armr:minorGeneralVirtue ;
                          arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                         rdfs:label "Troupe Upbringing" .
+                         arm:hasLabel "Troupe Upbringing" .
 armr:trueLovePC    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                        rdfs:label "True Love (PC)" .
+                        arm:hasLabel "True Love (PC)" .
 armr:unaging    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
-                        rdfs:label "Unaging" .
+                        arm:hasLabel "Unaging" .
 armr:venusBlessing    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
-                        rdfs:label "Venus’ Blessing" .
+                        arm:hasLabel "Venus’ Blessing" .
 armr:warrior    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
-                        rdfs:label "Warrior" .
+                        arm:hasLabel "Warrior" .
 armr:wellTraveled    rdfs:subClassOf armr:minorGeneralVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                        rdfs:label "Well-Traveled" .
+                        arm:hasLabel "Well-Traveled" .
 
 armr:freeSocialStatusVirtue  rdfs:subClassOf  armr:freeVirtue ;
-                         rdfs:label "SOCIAL STATUS, FREE" .
+                         arm:hasLabel "SOCIAL STATUS, FREE" .
 armr:covenfolk      rdfs:subClassOf   armr:freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                rdfs:label "Covenfolk" .
+                arm:hasLabel "Covenfolk" .
 armr:craftsman      rdfs:subClassOf   armr:freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                rdfs:label "Craftsman" .
+                arm:hasLabel "Craftsman" .
 armr:hermeticMagus      rdfs:subClassOf   armr:freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                rdfs:label "Hermetic Magus" .
+                arm:hasLabel "Hermetic Magus" .
 armr:merchant      rdfs:subClassOf   armr:freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                rdfs:label "Merchant" .
+                arm:hasLabel "Merchant" .
 armr:peasant      rdfs:subClassOf   armr:freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                rdfs:label "Peasant" .
+                arm:hasLabel "Peasant" .
 armr:wanderer      rdfs:subClassOf   armr:freeSocialStatusVirtue ; arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                rdfs:label "Wanderer" .
+                arm:hasLabel "Wanderer" .
 
 armr:majorHermeticFlaw  rdfs:subClassOf   armr:majorFlaw ;
-                        rdfs:label "Major Hermetic Flaw" .
+                        arm:hasLabel "Major Hermetic Flaw" .
 armr:blatantGift    rdfs:subClassOf armr:majorHermeticFlaw ;
                     arm:hasReference   "[ArM5]" ;
                     a arm:LeafTraitClass ;
-                    rdfs:label "Blatant Gift" .
+                    arm:hasLabel "Blatant Gift" .
 armr:chaoticMagic   rdfs:subClassOf armr:majorHermeticFlaw ;
                     arm:hasReference   "[ArM5]" ;
                     a arm:LeafTraitClass ;
-                    rdfs:label "Chaotic Magic" .
+                    arm:hasLabel "Chaotic Magic" .
 armr:deficientTechnique    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Deficient Technique" .
+                arm:hasLabel "Deficient Technique" .
 armr:difficultLongevityRitual     rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Difficult Longevity Ritual" .
+                arm:hasLabel "Difficult Longevity Ritual" .
 armr:magicAddiction    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Magic Addiction" .
+                arm:hasLabel "Magic Addiction" .
 armr:necessaryCondition    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Necessary Condition" .
+                arm:hasLabel "Necessary Condition" .
 armr:painfulMagic    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Painful Magic" .
+                arm:hasLabel "Painful Magic" .
 armr:restriction    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Restriction" .
+                arm:hasLabel "Restriction" .
 armr:rigidMagic    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Rigid Magic" .
+                arm:hasLabel "Rigid Magic" .
 armr:shortRangedMagic    rdfs:subClassOf armr:majorHermeticFlaw ;
                          arm:hasReference   "[ArM5]" ;
                          a arm:LeafTraitClass ;
-                         rdfs:label "Short-Ranged Magic" .
+                         arm:hasLabel "Short-Ranged Magic" .
 armr:studyRequirement    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Study Requirement" .
+                arm:hasLabel "Study Requirement" .
 armr:twilightProne    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Twilight Prone" .
+                arm:hasLabel "Twilight Prone" .
 armr:unstructuredCaster    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Unstructured Caster" .
+                arm:hasLabel "Unstructured Caster" .
 armr:wasterOfVis    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Waster of Vis" .
+                arm:hasLabel "Waster of Vis" .
 armr:weakMagicResistance    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Weak Magic Resistance" .
+                arm:hasLabel "Weak Magic Resistance" .
 armr:weakSpontaneousMagic    rdfs:subClassOf armr:majorHermeticFlaw ; arm:hasReference   "[ArM5]" ;
     arm:hasDescription    "You may not exert yourself when casting spontaneous magic, so you always divide your Casting Total by five. In stressful conditions you must still roll a stress die to see if you botch, but the die roll does not add to your casting total.  You may still use ceremonial casting.  This Flaw may be combined with Difficult Spontaneous Magic to create a magus who cannot cast spontaneous magic at all." ;
                  a arm:LeafTraitClass ;
-                rdfs:label "Weak Spontaneous Magic" .
+                arm:hasLabel "Weak Spontaneous Magic" .
 
 armr:majorPersonalityFlaw  rdfs:subClassOf armr:Flaw ;
-                       rdfs:label "Major or Minor Personality Flaw" .
+                       arm:hasLabel "Major or Minor Personality Flaw" .
 armr:minorPersonalityFlaw  rdfs:subClassOf armr:minorFlaw ;
-                       rdfs:label "Minor Personality Flaw" .
+                       arm:hasLabel "Minor Personality Flaw" .
 armr:majorSupernaturalFlaw  rdfs:subClassOf  armr:majorFlaw ;
-                        rdfs:label "Major Supernatural Flaw" .
+                        arm:hasLabel "Major Supernatural Flaw" .
 armr:minorSupernaturalFlaw  rdfs:subClassOf  armr:minorFlaw ;
-                        rdfs:label "Minor Supernatural Flaw" .
-armr:majorStoryFlaw  rdfs:subClassOf  armr:majorFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Major Story Flaw" .
-armr:minorStoryFlaw  rdfs:subClassOf  armr:minorFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Minor Story Flaw" .
+                        arm:hasLabel "Minor Supernatural Flaw" .
+armr:majorStoryFlaw  rdfs:subClassOf  armr:majorFlaw ; arm:hasReference   "[ArM5]" ; arm:hasLabel "Major Story Flaw" .
+armr:minorStoryFlaw  rdfs:subClassOf  armr:minorFlaw ; arm:hasReference   "[ArM5]" ; arm:hasLabel "Minor Story Flaw" .
 armr:minorsocialStatusFlaw rdfs:subClassOf  armr:minorFlaw ;
-                       rdfs:label "Minor Social Status Flaw" .
-armr:majorGeneralFlaw rdfs:subClassOf  armr:majorFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Major General Flaw" .
-armr:minorGeneralFlaw rdfs:subClassOf  armr:minorFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Minor General Flaw" .
+                       arm:hasLabel "Minor Social Status Flaw" .
+armr:majorGeneralFlaw rdfs:subClassOf  armr:majorFlaw ; arm:hasReference   "[ArM5]" ; arm:hasLabel "Major General Flaw" .
+armr:minorGeneralFlaw rdfs:subClassOf  armr:minorFlaw ; arm:hasReference   "[ArM5]" ; arm:hasLabel "Minor General Flaw" .
 armr:minorHermeticFlaw  rdfs:subClassOf   armr:minorFlaw ;
-                    rdfs:label "Minor Hermetic Flaw" .
+                    arm:hasLabel "Minor Hermetic Flaw" .
 
 
-armr:weakEnchanter  rdfs:subClassOf   armr:minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Weak Enchanter" ; a arm:LeafTraitClass .
+armr:weakEnchanter  rdfs:subClassOf   armr:minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; arm:hasLabel "Weak Enchanter" ; a arm:LeafTraitClass .
                  
-armr:weakMagic  rdfs:subClassOf   armr:minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Weak Magic" ; a arm:LeafTraitClass .
-armr:weakParens  rdfs:subClassOf   armr:minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label " Weak Parens" ; a arm:LeafTraitClass .
-armr:weakScholar  rdfs:subClassOf   armr:minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label " Weak Scholar" ; a arm:LeafTraitClass .
-armr:weirdMagic  rdfs:subClassOf   armr:minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label " Weird Magic" ; a arm:LeafTraitClass .
+armr:weakMagic  rdfs:subClassOf   armr:minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; arm:hasLabel "Weak Magic" ; a arm:LeafTraitClass .
+armr:weakParens  rdfs:subClassOf   armr:minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; arm:hasLabel " Weak Parens" ; a arm:LeafTraitClass .
+armr:weakScholar  rdfs:subClassOf   armr:minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; arm:hasLabel " Weak Scholar" ; a arm:LeafTraitClass .
+armr:weirdMagic  rdfs:subClassOf   armr:minorHermeticFlaw ; arm:hasReference   "[ArM5]" ; arm:hasLabel " Weird Magic" ; a arm:LeafTraitClass .
 
-armr:mentor    rdfs:subClassOf  armr:minorStoryFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Mentor" ; a arm:LeafTraitClass .
-armr:heir    rdfs:subClassOf  armr:minorStoryFlaw ; arm:hasReference   "[ArM5]" ; rdfs:label "Heir" ; a arm:LeafTraitClass .
+armr:mentor    rdfs:subClassOf  armr:minorStoryFlaw ; arm:hasReference   "[ArM5]" ; arm:hasLabel "Mentor" ; a arm:LeafTraitClass .
+armr:heir    rdfs:subClassOf  armr:minorStoryFlaw ; arm:hasReference   "[ArM5]" ; arm:hasLabel "Heir" ; a arm:LeafTraitClass .
 
 armr:visions  rdfs:subClassOf  armr:minorStoryFlaw, armr:minorSupernaturalFlaw ;
               arm:hasReference   "[ArM5]" ;
               a arm:LeafTraitClass ;
-              rdfs:label " Visions" .
+              arm:hasLabel " Visions" .
 armr:ageQuickly  rdfs:subClassOf   armr:majorSupernaturalFlaw ;
                  arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                 rdfs:label "Age Quickly" .
+                 arm:hasLabel "Age Quickly" .
 
 armr:ambitious     rdfs:subClassOf  armr:majorPersonalityFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-               rdfs:label "Ambitious" .
+               arm:hasLabel "Ambitious" .
 armr:avaricious    rdfs:subClassOf  armr:majorPersonalityFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-               rdfs:label "Avaricious" .
+               arm:hasLabel "Avaricious" .
 armr:compassionate rdfs:subClassOf  armr:majorPersonalityFlaw ; arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                 rdfs:label "Compassionate" .
+                 arm:hasLabel "Compassionate" .
 armr:driven      rdfs:subClassOf  armr:majorPersonalityFlaw ;
                  arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                 rdfs:label "Driven" .
+                 arm:hasLabel "Driven" .
 armr:envious     rdfs:subClassOf  armr:majorPersonalityFlaw ;
                  arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                 rdfs:label "Envious" .
+                 arm:hasLabel "Envious" .
 armr:generous    rdfs:subClassOf  armr:majorPersonalityFlaw ;
                  arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                 rdfs:label "Generous" .
+                 arm:hasLabel "Generous" .
 armr:meddler rdfs:subClassOf  armr:majorPersonalityFlaw ;
     arm:hasDescription   "You want to fix other peoples’ lives: arrange matches, teach children to sew “properly,” or tend the sick. You waste a lot of time and energy on such endeavors, and people usually resent it. " ;
                  arm:grantsPTraitClass armr:personality-meddler ;
 		 arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                 rdfs:label "Meddler" .
+                 arm:hasLabel "Meddler" .
 
 armr:greaterMalediction  rdfs:subClassOf  armr:majorSupernaturalFlaw ;
                  arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                 rdfs:label "Greater Malediction" .
+                 arm:hasLabel "Greater Malediction" .
 
 armr:carefree  rdfs:subClassOf  armr:minorPersonalityFlaw ;
                  arm:grantsPTraitClass armr:personality-carefree ;
                  arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;
-                 rdfs:label "Carefree" .
+                 arm:hasLabel "Carefree" .
 armr:mistakenIdentity  rdfs:subClassOf  armr:majorStoryFlaw ;
     arm:hasDescription   "Someone, who looks exactly like you and whom you and your companions will most likely never meet, lives near you, and is responsible for an ongoing variety of violent, illegal, obscene, or embarrassing acts. You often have to explain who you are, and sometimes have to deal with the consequences of the other person’s acts." ;
                        arm:hasReference   "[ArM5]" ;
                        a arm:LeafTraitClass ;
-                       rdfs:label "Mistaken Identity" .
+                       arm:hasLabel "Mistaken Identity" .
 
 # [HoH:S]
 armr:craftmagic  rdfs:subClassOf  armr:majorSupernaturalVirtue ;
                  a arm:LeafTraitClass ;
                  arm:hasReference   "[HoH:S]" ;
-                 rdfs:label "Craft Magic" .
+                 arm:hasLabel "Craft Magic" .
 armr:spellfoci   rdfs:subClassOf  armr:minorHermeticVirtue ;
                  a arm:LeafTraitClass ;
                  arm:hasReference   "[HoH:S]" ;
-                 rdfs:label "Spell Foci" .
+                 arm:hasLabel "Spell Foci" .

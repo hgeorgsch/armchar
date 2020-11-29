@@ -1,5 +1,5 @@
 TTL=arm.ttl cieran.ttl logic.rules resources.ttl contested.ttl basic.rules
-all: $A
+all: $(TTL)
 install: $(TTL)
 	cp $(TTL) ../serverdata/
 R=resources.include vf.include abilities.include personality.include grimoire.include
