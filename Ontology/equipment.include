@@ -40,5 +40,25 @@ arm:isVisOfArt a owl:ObjectProperty ;
 
 # 2. Weapons
 arm:Weapon rdfs:subClassOf arm:Possession .
+arm:MeleeWeapon rdfs:subClassOf arm:Weapon .
+arm:MissileWeapon rdfs:subClassOf arm:Weapon .
+
+arm:hasWeaponInit a owl:DatatypeProperty ;
+   rdfs:domain arm:Weapon ;
+    rdfs:range xsd:int .
+arm:hasWeaponAtk a owl:DatatypeProperty ;
+   rdfs:domain arm:Weapon ;
+    rdfs:range xsd:int .
+arm:hasWeaponDfn a owl:DatatypeProperty ;
+   rdfs:domain arm:Weapon ;
+    rdfs:range xsd:int .
+arm:hasWeaponDam a owl:DatatypeProperty ;
+   rdfs:domain arm:Weapon ;
+    rdfs:range xsd:int .
+arm:hasWeaponRange a owl:DatatypeProperty ;
+   rdfs:domain arm:MissileWeapon ;
+    rdfs:range xsd:int .
+
+arm:Longbow rdfs:subClassOf arm:MissileWeapon .
 
 # 3. Other Possessions
