@@ -66,6 +66,9 @@ arm:hasXP  a   owl:DatatypeProperty ;
 	rdfs:comment "XP towards next level" ;
         rdfs:domain  arm:Trait ;
         rdfs:range   xsd:int .
+arm:hasDetail  a   owl:DatatypeProperty ;
+        rdfs:domain  [ owl:unionOf ( arm:Virtue arm:Flaw ) ] ;
+        rdfs:range   xsd:string .
 arm:hasSpeciality  a   owl:DatatypeProperty ;
         rdfs:domain  [ owl:unionOf ( arm:Ability arm:Characteristic ) ] ;
         rdfs:range   xsd:string .

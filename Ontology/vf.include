@@ -1,31 +1,31 @@
 
-armr:Virtue rdfs:subClassOf armr:Trait .
-armr:Flaw rdfs:subClassOf armr:Trait .
+arm:Virtue rdfs:subClassOf arm:Trait .
+arm:Flaw rdfs:subClassOf arm:Trait .
 
 armr:theGift rdfs:subClassOf armr:freeVirtue ; arm:hasLabel "The Gift" .
 
-armr:Virtue owl:disjointUnionOf ( armr:majorVirtue armr:minorVirtue armr:freeVirtue ) .
-armr:Flaw owl:disjointUnionOf ( armr:majorFlaw armr:minorFlaw ) .
+arm:Virtue owl:disjointUnionOf ( armr:majorVirtue armr:minorVirtue armr:freeVirtue ) .
+arm:Flaw owl:disjointUnionOf ( armr:majorFlaw armr:minorFlaw ) .
 
 arm:grantsTrait a owl:ObjectProperty ;
-  rdfs:domain   armr:Virtue ;
-  rdfs:range   armr:Trait .
+  rdfs:domain   arm:Virtue ;
+  rdfs:range   arm:Trait .
 arm:grantsFlaw a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTrait ;
-  rdfs:domain   armr:Flaw ;
-  rdfs:range   armr:Virtue .
+  rdfs:domain   arm:Flaw ;
+  rdfs:range   arm:Virtue .
 arm:grantsVirtue a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTrait ;
-  rdfs:domain   armr:Virtue ;
-  rdfs:range   armr:Virtue .
+  rdfs:domain   arm:Virtue ;
+  rdfs:range   arm:Virtue .
 arm:grantsAbility a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTrait ;
-  rdfs:domain   armr:Virtue ;
-  rdfs:range   armr:Ability .
+  rdfs:domain   arm:Virtue ;
+  rdfs:range   arm:Ability .
 arm:grantsPTrait a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTrait ;
-  rdfs:domain   armr:Virtue ;
-  rdfs:range   armr:PersonalityTrait .
+  rdfs:domain   arm:Virtue ;
+  rdfs:range   arm:PersonalityTrait .
 arm:grantsTraitClass a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTraitClass ;
   rdfs:domain   armr:Class ;
