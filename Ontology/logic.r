@@ -1,4 +1,6 @@
 
+### SEASONS
+
 # Season Sequence
 [ seasonsequence1:
   ( ?s1 arm:isSeason ?o1 ) ( ?s2 arm:isSeason ?o2 )
@@ -14,8 +16,7 @@
   ( ?s2 arm:isSeason arm:Winter )
   -> ( ?s1 arm:isPrecedingSeasonOf ?s2 ) ]
 
-# Seasons
-
+# Deduced timestamp on resources
 [ seasonanyear: 
   ( ?r arm:atSeasonTime ?time )
   ( ?time arm:isSeason ?s )
@@ -32,23 +33,28 @@
   strConcat(?st,?y,?l)
   -> ( ?s rdfs:label ?l ) ]
 
-# Saga Affiliation
+### SAGA
+
+# Inverse properties, not inferred by the Micro OWL reasoner
 [ covenantsaga:
   ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:Covenant ) 
   -> ( ?s arm:hasCovenant ?c ) ]
 [ charactersaga:
   ( ?c arm:hasSaga ?s ) ( ?c rdf:type arm:BaseCharacter ) 
   -> ( ?s arm:hasCharacter ?c ) ]
+
+# Infer covenant/saga/sg name 
 [ covenantname:
   ( ?c arm:hasCovenant ?cov ) ( ?cov arm:hasName ?n ) 
   -> ( ?c arm:hasCovenantName ?n ) ]
-
-# Base Character
-
 [ addsg: ( ?c arm:hasSaga ?s ) ( ?s arm:hasSG ?sg ) -> ( ?c arm:hasSG ?sg ) ]
 [ addsaga: 
   ( ?c rdf:type arm:Character ) ( ?c arm:hasSaga ?s ) ( ?s arm:hasTitle ?t ) 
   -> ( ?c arm:hasSagaTitle ?t ) ]
+
+### CHARACTER
+
+# Size Attribute (simpler than treating it as a trait)
 [ addsize: 
   ( ?c rdf:type arm:Character ) ( ?c arm:hasOtherTrait ?s ) 
   ( ?s rdf:type arm:Size ) 
@@ -66,6 +72,8 @@
 	     ( ?p rdfs:domain arm:Character )
              noValue(?p,rdf:type,arm:ignoredProperty)
 	     -> ( ?c ?p ?o ) ]
+
+### TRAITS
 
 # Trait instances inherit properties from their class
 
@@ -174,7 +182,7 @@
    ( ?s rdf:type arm:Spell ) ( ?s arm:hasForm ?o ) ( ?o rdfs:label ?st )
    -> ( ?s arm:hasFormString ?st ) ]
 
-# hasTrait
+# hasTrait (when subProperties are added after OWL reasoning)
 [ hastrait:
   ( ?p rdfs:subPropertyOf arm:hasTrait ) 
   -> ( ?p rdf:type owl:ObjectProperty ) ]

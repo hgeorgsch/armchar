@@ -1,3 +1,5 @@
+# TODO.  Multiple characters have the same spell.  
+# Thus the casting total is ambiguous.  This cannot work.
 
 [ castingtotal:
   ( ?spell rdf:type arm:Spell )
