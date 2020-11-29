@@ -75,27 +75,27 @@
 
 ### TRAITS
 
-# Trait instances inherit properties from their class
-
+# The following two rules should be obsolete, replacing the rdfs:label
+# with arm:hasLabel.
 [ addlabel: 
   ( ?t rdf:type arm:LeafTraitClass )
   ( ?s rdf:type ?t ) 
   ( ?t rdfs:label ?l ) 
   -> [ ( ?s rdfs:label ?l ) <- <- noValue( ?s,rdfs:label ) ]
   ]
+[ label:
+  ( ?s rdf:type arm:Trait )
+  ( ?s rdfs:label ?l )
+  -> [ ( ?s arm:hasLabel ?l ) <- noValue( ?s,arm:hasLabel ) ]
+  ]
+
+# Trait instances inherit properties from their class
 [ addarmlabel: 
   ( ?t rdf:type arm:LeafTraitClass )
   ( ?s rdf:type ?t ) 
   ( ?t arm:hasLabel ?l ) 
   -> [ ( ?s arm:hasLabel ?l ) <- noValue( ?s,arm:hasLabel ) ]
       ]
-#  rdfs:label should be replaced by arm:hasLabel in the turtle files
-#  When that is done, this rule is obsolete
-[ label:
-  ( ?s rdf:type arm:Trait )
-  ( ?s rdfs:label ?l )
-  -> [ ( ?s arm:hasLabel ?l ) <- noValue( ?s,arm:hasLabel ) ]
-  ]
 [ addorder: 
   ( ?t rdf:type arm:LeafTraitClass )
   ( ?s rdf:type ?t ) 
@@ -195,7 +195,3 @@
    ( ?s rdf:type arm:Spell ) ( ?s arm:hasForm ?o ) ( ?o rdfs:label ?st )
    -> ( ?s arm:hasFormString ?st ) ]
 
-# hasTrait (when subProperties are added after OWL reasoning)
-[ hastrait:
-  ( ?p rdfs:subPropertyOf arm:hasTrait ) 
-  -> ( ?p rdf:type owl:ObjectProperty ) ]
