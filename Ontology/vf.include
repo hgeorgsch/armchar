@@ -597,7 +597,7 @@ armr:generous    rdfs:subClassOf  armr:majorPersonalityFlaw ;
                  a arm:LeafTraitClass ;
                  arm:hasLabel "Generous" .
 armr:meddler rdfs:subClassOf  armr:majorPersonalityFlaw ;
-    arm:hasDescription   "You want to fix other peoples’ lives: arrange matches, teach children to sew “properly,” or tend the sick. You waste a lot of time and energy on such endeavors, and people usually resent it. " ;
+    arm:hasDescription   "You want to fix other peoples' lives: arrange matches, teach children to sew `properly', or tend the sick. You waste a lot of time and energy on such endeavors, and people usually resent it. " ;
                  arm:grantsPTraitClass armr:personality-meddler ;
 		 arm:hasReference   "[ArM5]" ;
                  a arm:LeafTraitClass ;

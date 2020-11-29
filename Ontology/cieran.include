@@ -35,7 +35,7 @@ armchar:elksrun  a arm:Covenant ;
     [ a armr:personality-villager ; arm:hasScore 1 ] .
 
 :zero arm:hasNewVirtue
-    [ a armr:strongFaerieBlood ; arm:hasDetail "Ettin Blood" ],
+    [ a armr:strongFaerieBlood ; arm:hasDetail "Ettin Blood, +1 to Stamina" ],
     [ a armr:craftmagic ; arm:hasScore 0 ],
     [ a armr:spellfoci ; arm:hasScore 0 ],
     [ a armr:flawlessMagic ],

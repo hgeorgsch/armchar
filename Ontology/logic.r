@@ -81,7 +81,7 @@
   ( ?t rdf:type arm:LeafTraitClass )
   ( ?s rdf:type ?t ) 
   ( ?t rdfs:label ?l ) 
-  -> [ ( ?s rdfs:label ?l ) <- <- noValue( ?s,rdfs:label ) ]
+  -> [ ( ?s rdfs:label ?l ) <- noValue( ?s,rdfs:label ) ]
   ]
 [ label:
   ( ?s rdf:type arm:Trait )
