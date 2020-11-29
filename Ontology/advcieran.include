@@ -89,7 +89,12 @@ armchar:cieran  arm:hasAdvancement
   arm:advanceTrait [ a armab:parmamagica ; arm:addedXP 5 ]  ;
   arm:awardsXP 5 ;
   arm:hasAdvancementType arm:Adventure ;
-  arm:advanceToCharacterSheet :summer1220 
+  arm:advanceToCharacterSheet :summer1220 ;
+  arm:acquiredPossession 
+    [ arm:isVisOfArt  arm:rego ; 
+      arm:hasQuantity 4 ;
+      arm:hasPossessionDescription "Marbles" ;
+      arm:hasOrigin  "Found on Jerome's body" ]
   ],
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:summer1220 ;
   arm:hasAdvancementDescription "Vim L15Q13 - 16xp" ;

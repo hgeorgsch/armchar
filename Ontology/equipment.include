@@ -8,17 +8,37 @@ arm:hasPossession a owl:ObjectProperty ;
 arm:hasPossessionDescription a owl:DatatypeProperty ;
     rdfs:domain arm:Possession ;
     rdfs:range xsd:string .
+arm:hasOrigin a owl:DatatypeProperty ;
+    rdfs:domain arm:Possession ;
+    rdfs:range xsd:string .
+arm:hasPrice a owl:ObjectProperty ;
+    rdfs:domain arm:Possession ;
+    rdfs:range arm:Value .
 arm:hasQuantity a owl:DatatypeProperty ;
     rdfs:domain arm:Possession ;
     rdfs:range xsd:int .
 
-# 1. Vis
-arm:Vis rdfs:subClassOF arm:Possession .
-arm:ofArt a owl:ObjectProperty ;
-    rdfs:domain arm:Vis ;
+arm:Value a owl:Class ;
+arm:hasPounds a owl:DatatypeProperty ;
+    rdfs:domain arm:Value ;
+    rdfs:range xsd:int .
+arm:hasShillings a owl:DatatypeProperty ;
+    rdfs:domain arm:Value ;
+    rdfs:range xsd:int .
+arm:hasPence a owl:DatatypeProperty ;
+    rdfs:domain arm:Value ;
+    rdfs:range xsd:int .
+arm:hasPawns a owl:DatatypeProperty ;
+    rdfs:domain arm:Value ;
     rdfs:range xsd:int .
 
+# 1. Vis
+arm:Vis rdfs:subClassOF arm:Possession .
+arm:isVisOfArt a owl:ObjectProperty ;
+    rdfs:domain arm:Vis ;
+    rdfs:range arm:ArtClass .
+
 # 2. Weapons
-arm:Weapon rdfs:subClassOF arm:Possession .
+arm:Weapon rdfs:subClassOf arm:Possession .
 
 # 3. Other Possessions
