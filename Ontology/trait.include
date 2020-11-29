@@ -67,7 +67,7 @@ arm:hasXP  a   owl:DatatypeProperty ;
         rdfs:domain  arm:Trait ;
         rdfs:range   xsd:int .
 arm:hasDetail  a   owl:DatatypeProperty ;
-        rdfs:domain  [ owl:unionOf ( arm:Virtue arm:Flaw ) ] ;
+        rdfs:domain  [ owl:unionOf ( arm:Virtue arm:Flaw arm:Spell ) ] ;
         rdfs:range   xsd:string .
 arm:hasSpeciality  a   owl:DatatypeProperty ;
         rdfs:domain  [ owl:unionOf ( arm:Ability arm:Characteristic ) ] ;
