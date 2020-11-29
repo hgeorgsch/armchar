@@ -1,0 +1,24 @@
+
+arm:Possession a owl:Class .
+
+arm:hasPossession a owl:ObjectProperty ;
+    rdfs:domain arm:CharacterSheet ;
+    rdfs:range arm:Possession .
+
+arm:hasPossessionDescription a owl:DatatypeProperty ;
+    rdfs:domain arm:Possession ;
+    rdfs:range xsd:string .
+arm:hasQuantity a owl:DatatypeProperty ;
+    rdfs:domain arm:Possession ;
+    rdfs:range xsd:int .
+
+# 1. Vis
+arm:Vis rdfs:subClassOF arm:Possession .
+arm:ofArt a owl:ObjectProperty ;
+    rdfs:domain arm:Vis ;
+    rdfs:range xsd:int .
+
+# 2. Weapons
+arm:Weapon rdfs:subClassOF arm:Possession .
+
+# 3. Other Possessions
