@@ -1,5 +1,5 @@
 
-
+# Deduce age from birthyear
 [ age:
   ( ?char rdf:type arm:CharacterSheet )
   ( ?char arm:inYear ?current )

@@ -62,12 +62,12 @@
   -> ( ?c arm:hasSize ?size ) ]
 
 # Character sheet inherits from the base character
-[ charsheet: ( ?c rdf:type arm:CharacterSheet )
+[ charsheet1: ( ?c rdf:type arm:CharacterSheet )
              ( ?c arm:isCharacter ?b ) ( ?b ?p ?o )
 	     ( ?p rdfs:domain arm:GeneralCharacter )
              noValue(?p,rdf:type,arm:ignoredProperty)
 	     -> ( ?c ?p ?o ) ]
-[ charsheet: ( ?c rdf:type arm:CharacterSheet )
+[ charsheet2: ( ?c rdf:type arm:CharacterSheet )
              ( ?c arm:isCharacter ?b ) ( ?b ?p ?o )
 	     ( ?p rdfs:domain arm:Character )
              noValue(?p,rdf:type,arm:ignoredProperty)
