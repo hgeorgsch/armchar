@@ -80,9 +80,22 @@
 [ addlabel: 
   ( ?t rdf:type arm:LeafTraitClass )
   ( ?s rdf:type ?t ) 
-  noValue( ?s,rdfs:label )
   ( ?t rdfs:label ?l ) 
-  -> ( ?s rdfs:label ?l ) ]
+  -> [ ( ?s rdfs:label ?l ) <- <- noValue( ?s,rdfs:label ) ]
+  ]
+[ addarmlabel: 
+  ( ?t rdf:type arm:LeafTraitClass )
+  ( ?s rdf:type ?t ) 
+  ( ?t arm:hasLabel ?l ) 
+  -> [ ( ?s arm:hasLabel ?l ) <- noValue( ?s,arm:hasLabel ) ]
+      ]
+#  rdfs:label should be replaced by arm:hasLabel in the turtle files
+#  When that is done, this rule is obsolete
+[ label:
+  ( ?s rdf:type arm:Trait )
+  ( ?s rdfs:label ?l )
+  -> [ ( ?s arm:hasLabel ?l ) <- noValue( ?s,arm:hasLabel ) ]
+  ]
 [ addorder: 
   ( ?t rdf:type arm:LeafTraitClass )
   ( ?s rdf:type ?t ) 
