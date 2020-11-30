@@ -56,6 +56,9 @@ armchar:elksrun  a arm:Covenant ;
     [ a armr:str ; arm:hasScore 2 ], [ a armr:sta ; arm:hasScore 3 ],
     [ a armr:dex ; arm:hasScore 2 ], [ a armr:qik ; arm:hasScore -3 ] . 
 
+:zero arm:hasPossession
+    [ arm:hasPossessionLabel "Assorted magical cookies" ] .
+
 
 # General Abilities
 :zero arm:hasAbility

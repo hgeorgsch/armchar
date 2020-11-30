@@ -5,6 +5,9 @@ arm:hasPossession a owl:ObjectProperty ;
     rdfs:domain arm:CharacterSheet ;
     rdfs:range arm:Possession .
 
+arm:hasPossessionLabel a owl:DatatypeProperty ;
+    rdfs:domain arm:Possession ;
+    rdfs:range xsd:string .
 arm:hasPossessionDescription a owl:DatatypeProperty ;
     rdfs:domain arm:Possession ;
     rdfs:range xsd:string .
