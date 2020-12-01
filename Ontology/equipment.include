@@ -33,7 +33,7 @@ arm:hasQuantity a owl:DatatypeProperty ;
     rdfs:domain arm:Possession ;
     rdfs:range xsd:int .
 
-arm:Value a owl:Class ;
+arm:Value a owl:Class .
 arm:hasPounds a owl:DatatypeProperty ;
     rdfs:domain arm:Value ;
     rdfs:range xsd:int .

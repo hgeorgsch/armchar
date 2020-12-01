@@ -91,6 +91,14 @@
                               "arm:hasGeneralDescription": {},
                               "arm:hasLabel": {}
 			      },
+  "arm:hasEquipment" : { "@type": [ "arm:Equipment" ],
+                              "arm:hasEquipmentLabel": {},
+                              "arm:hasEquipmentDescription": {},
+                              "arm:hasPrice": {},
+                              "arm:hasQuantity": {}
+			      },
+  "arm:hasVis" : { },
+  "arm:hasWeapon" : { },
   "arm:hasNextCharacterSheet" : { },
   "arm:hasPrevCharacterSheet" : { }
 }
