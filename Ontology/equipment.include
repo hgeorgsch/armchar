@@ -4,6 +4,18 @@ arm:Possession a owl:Class .
 arm:hasPossession a owl:ObjectProperty ;
     rdfs:domain arm:CharacterSheet ;
     rdfs:range arm:Possession .
+arm:hasEquipment a owl:ObjectProperty ;
+    rdfs:subPropertyOf arm:hasPossession ;
+    rdfs:domain arm:CharacterSheet ;
+    rdfs:range arm:Equipment .
+arm:hasVis a owl:ObjectProperty ;
+    rdfs:subPropertyOf arm:hasPossession ;
+    rdfs:domain arm:CharacterSheet ;
+    rdfs:range arm:Vis .
+arm:hasWeapon a owl:ObjectProperty ;
+    rdfs:subPropertyOf arm:hasPossession ;
+    rdfs:domain arm:CharacterSheet ;
+    rdfs:range arm:Weapon .
 
 arm:hasPossessionLabel a owl:DatatypeProperty ;
     rdfs:domain arm:Possession ;
@@ -36,7 +48,7 @@ arm:hasPawns a owl:DatatypeProperty ;
     rdfs:range xsd:int .
 
 # 1. Vis
-arm:Vis rdfs:subClassOF arm:Possession .
+arm:Vis rdfs:subClassOf arm:Possession .
 arm:isVisOfArt a owl:ObjectProperty ;
     rdfs:domain arm:Vis ;
     rdfs:range arm:ArtClass .
@@ -65,3 +77,4 @@ arm:hasWeaponRange a owl:DatatypeProperty ;
 arm:Longbow rdfs:subClassOf arm:MissileWeapon .
 
 # 3. Other Possessions
+arm:Euipment rdfs:subClassOf arm:Possession .
