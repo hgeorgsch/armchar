@@ -1,37 +1,43 @@
 
-[ -> table(arm:hasVis) ]
-[ -> table(arm:hasEquipment) ]
-[ -> table(arm:hasWeapon) ]
-[ retainvis:
+[ retainequipment:
    ( ?char arm:hasAdvancement ?adv )
    ( ?adv arm:advanceFromCharacter ?cs1 )
    ( ?adv arm:advanceToCharacter ?cs2 )
+   ( ?cs1 arm:hasPossession ?item )
+   noValue( ?adv arm:lostPossession ?item )
    ->
-   [ ( ?cs2 arm:hasVis ?item ) 
-     <-
-        ( ?cs1 arm:hasVis ?item )
-        noValue( ?adv arm:usedVis ?item )
-       ]
+   ( ?cs2 arm:hasPossession ?item ) 
 ]
-[ retainvis:
+
+[ loseequipment:
    ( ?char arm:hasAdvancement ?adv )
    ( ?adv arm:advanceFromCharacter ?cs1 )
    ( ?adv arm:advanceToCharacter ?cs2 )
+   ( ?cs1 arm:hasPossession ?item )
+   ( ?adv arm:lostPossession ?loss )
+   ( ?loss arm:hasLoss ?item )
+   ( ?loss arm:hasLossQuantity ?lossq )
+   ( ?item arm:hasQuantity ?oldq )
+   ( ?item rdf:type ?type )
+   difference(?oldq,?lossq,?q)
+   makeTemp(?new)
    ->
-   [ ( ?cs2 arm:hasEquipment ?item ) 
-     <-
-        ( ?cs1 arm:hasVis ?item )
-        noValue( ?adv arm:lostEquipment ?item )
-       ]
+   ( ?cs2 arm:hasPossession ?new ) 
+   ( ?new arm:hasQuantity ?q ) 
+   ( ?new rdf:type ?type ) 
+   ( ?new arm:updateOfPossession ?item ) 
 ]
-[ retainvis:
-   ( ?char arm:hasAdvancement ?adv )
-   ( ?adv arm:advanceFromCharacter ?cs1 )
-   ( ?adv arm:advanceToCharacter ?cs2 )
+[ loseequipment2:
+   ( ?new arm:updateOfPossession ?item ) 
+   ( ?item ?p ?o ) 
+   noValue( ?new, ?p )
    ->
-   [ ( ?cs2 arm:hasWeapon ?item ) 
-     <-
-        ( ?cs1 arm:hasVis ?item )
-        noValue( ?adv arm:lostWeapon ?item )
-       ]
+   ( ?new ?p ?o ) 
 ]
+
+[ fixhasvis: ( ?c arm:hasPossession ?item ) ( ?item rdf:type arm:Vis )
+   -> ( ?c arm:hasVis ?item ) ]
+[ fixhaseq: ( ?c arm:hasPossession ?item ) ( ?item rdf:type arm:Equipment )
+   -> ( ?c arm:hasEquipment ?item ) ]
+[ fixhasweapon: ( ?c arm:hasPossession ?item ) ( ?item rdf:type arm:Weapon )
+   -> ( ?c arm:hasWeapon ?item ) ]
