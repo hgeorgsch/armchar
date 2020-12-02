@@ -78,3 +78,45 @@ arm:Longbow rdfs:subClassOf arm:MissileWeapon .
 
 # 3. Other Possessions
 arm:Euipment rdfs:subClassOf arm:Possession .
+
+# Advancement
+
+arm:acquirePossession a owl:ObjectProperty ;
+    rdfs:domain arm:CharacterAdvancement ;
+    rdfs:range arm:Possession .
+arm:acquireEquipment a owl:ObjectProperty ;
+    rdfs:subPropertyOf arm:acquirePossession ;
+    rdfs:domain arm:CharacterAdvancement ;
+    rdfs:range arm:Equipment .
+arm:acquireVis a owl:ObjectProperty ;
+    rdfs:subPropertyOf arm:acquirePossession ;
+    rdfs:domain arm:CharacterAdvancement ;
+    rdfs:range arm:Vis .
+arm:acquireWeapon a owl:ObjectProperty ;
+    rdfs:subPropertyOf arm:acquirePossession ;
+    rdfs:domain arm:CharacterAdvancement ;
+    rdfs:range arm:Weapon .
+
+arm:lostPossession a owl:ObjectProperty ;
+    rdfs:domain arm:CharacterAdvancement ;
+    rdfs:range arm:Possession .
+arm:lostEquipment a owl:ObjectProperty ;
+    rdfs:subPropertyOf arm:lostPossession ;
+    rdfs:domain arm:CharacterAdvancement ;
+    rdfs:range arm:Equipment .
+arm:lostVis a owl:ObjectProperty ;
+    rdfs:subPropertyOf arm:lostPossession ;
+    rdfs:domain arm:CharacterAdvancement ;
+    rdfs:range arm:Vis .
+arm:lostWeapon a owl:ObjectProperty ;
+    rdfs:subPropertyOf arm:lostPossession ;
+    rdfs:domain arm:CharacterAdvancement ;
+    rdfs:range arm:Weapon .
+
+arm:PossessionLoss a owl:Class .
+arm:hasLoss a owl:ObjectProperty ;
+    rdfs:domain arm:CharacterAdvancement ;
+    rdfs:range arm:PossessionLoss .
+arm:hasLossQuantity a owl:ObjectProperty ;
+    rdfs:domain arm:PossessionLoss .
+    rdfs:range xsd:int .
