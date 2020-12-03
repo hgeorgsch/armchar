@@ -54,27 +54,60 @@ arm:isVisOfArt a owl:ObjectProperty ;
     rdfs:range arm:ArtClass .
 
 # 2. Weapons
+arm:WeaponClass a owl:Class .
 arm:Weapon rdfs:subClassOf arm:Possession .
 arm:MeleeWeapon rdfs:subClassOf arm:Weapon .
 arm:MissileWeapon rdfs:subClassOf arm:Weapon .
 
 arm:hasWeaponInit a owl:DatatypeProperty ;
-   rdfs:domain arm:Weapon ;
+    rdfs:domain arm:Weapon ;
     rdfs:range xsd:int .
 arm:hasWeaponAtk a owl:DatatypeProperty ;
-   rdfs:domain arm:Weapon ;
+    rdfs:domain arm:Weapon ;
     rdfs:range xsd:int .
 arm:hasWeaponDfn a owl:DatatypeProperty ;
-   rdfs:domain arm:Weapon ;
+    rdfs:domain arm:Weapon ;
     rdfs:range xsd:int .
 arm:hasWeaponDam a owl:DatatypeProperty ;
-   rdfs:domain arm:Weapon ;
+    rdfs:domain arm:Weapon ;
     rdfs:range xsd:int .
 arm:hasWeaponRange a owl:DatatypeProperty ;
-   rdfs:domain arm:MissileWeapon ;
+    rdfs:domain arm:MissileWeapon ;
     rdfs:range xsd:int .
+arm:hasWeaponStr a owl:DatatypeProperty ;
+    rdfs:domain arm:Weapon ;
+    rdfs:range xsd:int .
+arm:hasWeaponLoad a owl:DatatypeProperty ;
+    rdfs:domain arm:Weapon ;
+    rdfs:range xsd:int .
+arm:hasWeaponCost a owl:DatatypeProperty ;
+    rdfs:domain arm:Weapon ;
+    rdfs:range xsd:string .
+arm:hasWeaponClassInit a owl:DatatypeProperty ;
+    rdfs:domain arm:WeaponClass ;
+    rdfs:range xsd:int .
+arm:hasWeaponClassAtk a owl:DatatypeProperty ;
+    rdfs:domain arm:WeaponClass ;
+    rdfs:range xsd:int .
+arm:hasWeaponClassDfn a owl:DatatypeProperty ;
+    rdfs:domain arm:WeaponClass ;
+    rdfs:range xsd:int .
+arm:hasWeaponClassDam a owl:DatatypeProperty ;
+    rdfs:domain arm:WeaponClass ;
+    rdfs:range xsd:int .
+arm:hasWeaponClassRange a owl:DatatypeProperty ;
+    rdfs:domain arm:MissileWeaponClass ;
+    rdfs:range xsd:int .
+arm:hasWeaponClassStr a owl:DatatypeProperty ;
+    rdfs:domain arm:WeaponClass ;
+    rdfs:range xsd:int .
+arm:hasWeaponClassLoad a owl:DatatypeProperty ;
+    rdfs:domain arm:WeaponClass ;
+    rdfs:range xsd:int .
+arm:hasWeaponClassCost a owl:DatatypeProperty ;
+    rdfs:domain arm:WeaponClass ;
+    rdfs:range xsd:string .
 
-arm:Longbow rdfs:subClassOf arm:MissileWeapon .
 
 # 3. Other Possessions
 arm:Euipment rdfs:subClassOf arm:Possession .
