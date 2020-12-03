@@ -59,7 +59,8 @@ armchar:elksrun  a arm:Covenant ;
 :zero arm:hasEquipment
     [ arm:hasPossessionLabel "Assorted magical cookies" ] .
 :zero arm:hasWeapon
-    [ a arm:Longbow ; arm:hasQuantity 1 ] .
+    [ a arm:Longbow ; arm:hasQuantity 1 ],
+    [ a arm:Dagger ; arm:hasQuantity 1 ] .
 
 
 # General Abilities
