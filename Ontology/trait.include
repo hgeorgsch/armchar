@@ -1,6 +1,6 @@
 arm:Trait a owl:Class .
 arm:TraitProperty a owl:Property .
-rdfs:label a arm:TraitProperty .
+
 arm:XPTrait rdfs:subClassOf arm:Trait .
 arm:AccelleratedTrait rdfs:subClassOf arm:Trait ;
     owl:disjointWith arm:XPTrait .
@@ -29,7 +29,7 @@ arm:hasPoints a owl:DatatypeProperty ;
         rdfs:subPropertyOf arm:hasXP ;
         rdfs:domain arm:Confidence ;
         rdfs:range   xsd:int .
-arm:hasLabel a owl:DatatypeProperty ;
+arm:hasLabel a owl:DatatypeProperty, arm:TraitProperty ;
         rdfs:domain arm:Trait ;
         rdfs:range   xsd:string .
     
@@ -117,7 +117,7 @@ arm:hasReputation  rdfs:subPropertyOf   arm:hasTrait ;
 arm:hasSpell  rdfs:subPropertyOf   arm:hasTrait ;
         rdfs:domain  arm:Character ;
         rdfs:range   arm:Spell .
-arm:hasOrder  a   owl:DatatypeProperty ;
+arm:hasOrder  a   owl:DatatypeProperty, arm:TraitProperty ;
         rdfs:comment  "This is used to sort traits for display purposes" ;
         rdfs:domain  [ owl:unionOf ( arm:Trait arm:LeafTraitClass ) ] ;
         rdfs:range   xsd:float .
