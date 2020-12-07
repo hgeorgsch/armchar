@@ -151,5 +151,5 @@ arm:hasLoss a owl:ObjectProperty ;
     rdfs:domain arm:CharacterAdvancement ;
     rdfs:range arm:PossessionLoss .
 arm:hasLossQuantity a owl:ObjectProperty ;
-    rdfs:domain arm:PossessionLoss .
+    rdfs:domain arm:PossessionLoss ;
     rdfs:range xsd:int .
