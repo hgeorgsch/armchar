@@ -92,8 +92,8 @@
                               "arm:hasLabel": {}
 			      },
   "arm:hasEquipment" : { "@type": [ "arm:Equipment" ],
-                              "arm:hasPosessionLabel": {},
-                              "arm:hasPosessionDescription": {},
+                              "arm:hasPossessionLabel": {},
+                              "arm:hasPossessionDescription": {},
                               "arm:hasPrice": {},
                               "arm:hasQuantity": {}
 			      },

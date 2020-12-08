@@ -21,19 +21,19 @@ arm:hasWeapon a owl:ObjectProperty ;
     rdfs:range arm:Weapon .
 
 arm:hasPossessionLabel a owl:DatatypeProperty, arm:PossessionProperty ;
-    rdfs:domain arm:Possession ;
+    rdfs:domain [ owl:unionOf( arm:Possession owl:Class ) ] ;
     rdfs:range xsd:string .
-arm:hasPossessionDescription a owl:DatatypePropert, arm:PossessionPropertyy ;
-    rdfs:domain arm:Possession ;
+arm:hasPossessionDescription a owl:DatatypeProperty, arm:PossessionProperty ;
+    rdfs:domain [ owl:unionOf( arm:Possession owl:Class ) ] ;
     rdfs:range xsd:string .
-arm:hasOrigin a owl:DatatypePropert, arm:PossessionPropertyy ;
-    rdfs:domain arm:Possession ;
+arm:hasOrigin a owl:DatatypeProperty, arm:PossessionProperty ;
+    rdfs:domain [ owl:unionOf( arm:Possession owl:Class ) ] ;
     rdfs:range xsd:string .
-arm:hasPrice a owl:ObjectPropert, arm:PossessionPropertyy ;
-    rdfs:domain arm:Possession ;
+arm:hasPrice a owl:ObjectProperty, arm:PossessionProperty ;
+    rdfs:domain [ owl:unionOf( arm:Possession owl:Class ) ] ;
     rdfs:range arm:Value .
-arm:hasQuantity a owl:DatatypePropert, arm:PossessionPropertyy ;
-    rdfs:domain arm:Possession ;
+arm:hasQuantity a owl:DatatypeProperty, arm:PossessionProperty ;
+    rdfs:domain [ owl:unionOf( arm:Possession owl:Class ) ] ;
     rdfs:range xsd:int .
 
 arm:Value a owl:Class .

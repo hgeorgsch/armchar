@@ -61,8 +61,8 @@ armchar:elksrun  a arm:Covenant ;
       arm:hasPossessionDescription "The cookies are charged items." 
     ] .
 :zero arm:hasWeapon
-    [ a arm:Longbow ; arm:hasQuantity 1 ],
-    [ a arm:Dagger ; arm:hasQuantity 1 ] .
+    [ a armr:Longbow ; arm:hasQuantity 1 ],
+    [ a armr:Dagger ; arm:hasQuantity 1 ] .
 
 
 # General Abilities
