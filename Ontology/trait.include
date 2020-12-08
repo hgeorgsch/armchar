@@ -30,17 +30,14 @@ arm:hasPoints a owl:DatatypeProperty ;
         rdfs:domain arm:Confidence ;
         rdfs:range   xsd:int .
 arm:hasLabel a owl:DatatypeProperty, arm:TraitProperty ;
-        rdfs:domain arm:Trait ;
+        rdfs:domain arm:SuperTrait ;
         rdfs:range   xsd:string .
+arm:SuperTrait owl:unionOf ( arm:Trait owl:Class ) ;
     
 
-arm:hasGeneralDescription a owl:DatatypeProperty ;
-	rdfs:comment "Description of the trait, inherited from the class." ;
-        rdfs:domain  arm:Trait ;
-        rdfs:range   xsd:string .
 arm:hasDescription a owl:DatatypeProperty ;
 	rdfs:comment "Description of the trait." ;
-        rdfs:domain  owl:Class ;
+        rdfs:domain arm:SuperTrait ;
         rdfs:range   xsd:string .
 arm:hasReference a owl:DatatypeProperty ;
 	rdfs:comment "Source book reference defining the trait" ;
