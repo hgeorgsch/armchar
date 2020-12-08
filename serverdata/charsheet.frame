@@ -92,13 +92,13 @@
                               "arm:hasLabel": {}
 			      },
   "arm:hasEquipment" : { "@type": [ "arm:Equipment" ],
-                              "arm:hasEquipmentLabel": {},
-                              "arm:hasEquipmentDescription": {},
+                              "arm:hasPosessionLabel": {},
+                              "arm:hasPosessionDescription": {},
                               "arm:hasPrice": {},
                               "arm:hasQuantity": {}
 			      },
-  "arm:hasVis" : { },
-  "arm:hasWeapon" : { },
+  "arm:hasVis" : { "@type": [ "arm:Vis" ] },
+  "arm:hasWeapon" : { "@type": [ "arm:Weapon" ] },
   "arm:hasNextCharacterSheet" : { },
   "arm:hasPrevCharacterSheet" : { }
 }

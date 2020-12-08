@@ -39,3 +39,12 @@
    -> ( ?c arm:hasEquipment ?item ) ]
 [ fixhasweapon: ( ?c arm:hasPossession ?item ) ( ?item rdf:type arm:Weapon )
    -> ( ?c arm:hasWeapon ?item ) ]
+
+[ eqinherit: 
+  ( ?t rdf:type owl:Class )
+  ( ?p rdf:type arm:PossessionProperty ) 
+  ( ?t ?p ?o ) 
+  ( ?s rdf:type ?t ) 
+  noValue( ?s,?p ) 
+  -> ( ?s ?p ?o ) 
+      ]

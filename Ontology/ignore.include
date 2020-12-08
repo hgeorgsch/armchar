@@ -5,4 +5,5 @@ owl:differentFrom a arm:ignoredProperty .
 arm:hasTrait a arm:ignoredProperty .
 arm:hasNewVirtue a arm:ignoredProperty .
 arm:hasNewFlaw a arm:ignoredProperty .
+arm:hasPossession a arm:ignoredProperty .
 rdf:type a arm:ignoredProperty .
