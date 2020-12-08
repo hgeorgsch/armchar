@@ -32,7 +32,7 @@ arm:hasPoints a owl:DatatypeProperty ;
 arm:hasLabel a owl:DatatypeProperty, arm:TraitProperty ;
         rdfs:domain arm:SuperTrait ;
         rdfs:range   xsd:string .
-arm:SuperTrait owl:unionOf ( arm:Trait owl:Class ) ;
+arm:SuperTrait owl:unionOf ( arm:Trait owl:Class ) .
     
 
 arm:hasDescription a owl:DatatypeProperty ;
