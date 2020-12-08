@@ -1,7 +1,7 @@
 
 armr:Longbow a arm:WeaponClass ;
      rdfs:subClassOf arm:MissileWeapon ;
-     arm:has:Label  "Longbow" ;
+     arm:hasPossessionLabel  "Longbow" ;
      arm:hasWeaponClassInit -2 ;
      arm:hasWeaponClassAtk +4 ;
      arm:hasWeaponClassDfn 0 ;
@@ -12,7 +12,7 @@ armr:Longbow a arm:WeaponClass ;
      arm:hasWeaponClassCost "Exp." .
 armr:Shortbow a arm:WeaponClass ;
      rdfs:subClassOf arm:MissileWeapon ;
-     arm:has:Label  "Shortbow" ;
+     arm:hasPossessionLabel  "Shortbow" ;
      arm:hasWeaponClassInit -1 ;
      arm:hasWeaponClassAtk +3 ;
      arm:hasWeaponClassDfn 0 ;
@@ -24,7 +24,7 @@ armr:Shortbow a arm:WeaponClass ;
 
 armr:Dagger a arm:WeaponClass ;
      rdfs:subClassOf arm:MeleeeWeapon ;
-     arm:has:Label  "Dagger" ;
+     arm:hasPossessionLabel  "Dagger" ;
      arm:hasWeaponClassInit 0 ;
      arm:hasWeaponClassAtk +2 ;
      arm:hasWeaponClassDfn 0 ;
@@ -34,7 +34,7 @@ armr:Dagger a arm:WeaponClass ;
      arm:hasWeaponClassCost "Inexp." .
 armr:Knife a arm:WeaponClass ;
      rdfs:subClassOf arm:MeleeeWeapon ;
-     arm:has:Label  "Knife" ;
+     arm:hasPossessionLabel  "Knife" ;
      arm:hasWeaponClassInit 0 ;
      arm:hasWeaponClassAtk +1 ;
      arm:hasWeaponClassDfn 0 ;
@@ -45,7 +45,7 @@ armr:Knife a arm:WeaponClass ;
 
 armr:Clib a arm:WeaponClass ;
      rdfs:subClassOf arm:MeleeeWeapon ;
-     arm:has:Label  "Clib" ;
+     arm:hasPossessionLabel  "Clib" ;
      arm:hasWeaponClassInit 1 ;
      arm:hasWeaponClassAtk +2 ;
      arm:hasWeaponClassDfn 1 ;
@@ -55,7 +55,7 @@ armr:Clib a arm:WeaponClass ;
      arm:hasWeaponClassCost "Inexp." .
 armr:Hatchet a arm:WeaponClass ;
      rdfs:subClassOf arm:MeleeeWeapon ;
-     arm:has:Label  "Hatchet" ;
+     arm:hasPossessionLabel  "Hatchet" ;
      arm:hasWeaponClassInit 0 ;
      arm:hasWeaponClassAtk +3 ;
      arm:hasWeaponClassDfn 0 ;
@@ -67,7 +67,7 @@ armr:Hatchet a arm:WeaponClass ;
 
 armr:Axe a arm:WeaponClass ;
      rdfs:subClassOf arm:MeleeeWeapon ;
-     arm:has:Label  "Axe" ;
+     arm:hasPossessionLabel  "Axe" ;
      arm:hasWeaponClassInit 1 ;
      arm:hasWeaponClassAtk +4 ;
      arm:hasWeaponClassDfn 0 ;

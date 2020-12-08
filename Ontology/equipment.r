@@ -1,8 +1,7 @@
 
 [ retainequipment:
-   ( ?char arm:hasAdvancement ?adv )
-   ( ?adv arm:advanceFromCharacter ?cs1 )
-   ( ?adv arm:advanceToCharacter ?cs2 )
+   ( ?adv arm:advanceFromCharacterSheet ?cs1 )
+   ( ?adv arm:advanceToCharacterSheet ?cs2 )
    ( ?cs1 arm:hasPossession ?item )
    noValue( ?adv arm:lostPossession ?item )
    ->
@@ -10,9 +9,8 @@
 ]
 
 [ loseequipment:
-   ( ?char arm:hasAdvancement ?adv )
-   ( ?adv arm:advanceFromCharacter ?cs1 )
-   ( ?adv arm:advanceToCharacter ?cs2 )
+   ( ?adv arm:advanceFromCharacterSheet ?cs1 )
+   ( ?adv arm:advanceToCharacterSheet ?cs2 )
    ( ?cs1 arm:hasPossession ?item )
    ( ?adv arm:lostPossession ?loss )
    ( ?loss arm:hasLoss ?item )

@@ -57,7 +57,9 @@ armchar:elksrun  a arm:Covenant ;
     [ a armr:dex ; arm:hasScore 2 ], [ a armr:qik ; arm:hasScore -3 ] . 
 
 :zero arm:hasEquipment
-    [ arm:hasPossessionLabel "Assorted magical cookies" ] .
+    [ arm:hasPossessionLabel "Assorted magical cookies" ;
+      arm:hasPossessionDescription "The cookies are charged items." 
+    ] .
 :zero arm:hasWeapon
     [ a arm:Longbow ; arm:hasQuantity 1 ],
     [ a arm:Dagger ; arm:hasQuantity 1 ] .
