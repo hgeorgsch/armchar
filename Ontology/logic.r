@@ -132,13 +132,6 @@
 
 # Spells
 
-[ spellstats:
-   ( ?s rdf:type ?t )
-   ( ?t rdf:type arm:SpellClass )
-   ( ?t ?p ?o )
-   ( ?p rdf:type arm:TraitProperty )
-   -> ( ?s ?p ?o ) ]
-
 [ spellrange:
    ( ?s rdf:type arm:Spell ) ( ?s arm:hasRange ?o ) ( ?o rdfs:label ?st )
    -> ( ?s arm:hasRangeString ?st ) ]
@@ -149,9 +142,9 @@
    ( ?s rdf:type arm:Spell ) ( ?s arm:hasTarget ?o ) ( ?o rdfs:label ?st )
    -> ( ?s arm:hasTargetString ?st ) ]
 [ spelltech:
-   ( ?s rdf:type arm:Spell ) ( ?s arm:hasTechnique ?o ) ( ?o rdfs:label ?st )
+   ( ?s rdf:type arm:Spell ) ( ?s arm:hasTechnique ?o ) ( ?o arm:hasLabel ?st )
    -> ( ?s arm:hasTechniqueString ?st ) ]
 [ spellform:
-   ( ?s rdf:type arm:Spell ) ( ?s arm:hasForm ?o ) ( ?o rdfs:label ?st )
+   ( ?s rdf:type arm:Spell ) ( ?s arm:hasForm ?o ) ( ?o arm:hasLabel ?st )
    -> ( ?s arm:hasFormString ?st ) ]
 

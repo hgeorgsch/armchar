@@ -1,11 +1,12 @@
 
 # Trait instances inherit properties from their class
-[ addarmlabel: 
+[ traitinherit: 
   ( ?t rdf:type arm:LeafTraitClass )
-  ( ?s rdf:type ?t ) 
-  ( ?t ?p ?l ) 
   ( ?p rdf:type arm:TraitProperty ) 
-  -> [ ( ?s arm:hasLabel ?l ) <- noValue( ?s,arm:hasLabel ) ]
+  ( ?t ?p ?o ) 
+  ( ?s rdf:type ?t ) 
+  noValue( ?s,?p ) 
+  -> ( ?s ?p ?o ) 
       ]
 [ traitdescription:
   ( ?t rdf:type ?c ) ( ?c rdf:type arm:LeafTraitClass ) 
