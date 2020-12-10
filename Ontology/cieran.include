@@ -72,8 +72,8 @@ armchar:elksrun  a arm:Covenant ;
 :zero arm:hasAbility
    [ a armab:gaelic ; arm:hasSpeciality "Leinster" ; arm:hasTotalXP 75  ] .
 
-armchar:cieran  arm:hasAdvancement 
-[ a arm:EarlyChildhoodAdvancement ; 
+armchar:cieran  arm:hasPregameAdvancementList
+( [ a arm:EarlyChildhoodAdvancement ; 
    arm:advanceTrait 
    [ a armab:secondsight ; arm:hasSpeciality "Faerie Illusions" ],
    [ a armab:awareness ; arm:hasSpeciality "searching" ; arm:addedXP 15  ],
@@ -84,7 +84,7 @@ armchar:cieran  arm:hasAdvancement
    [ a armab:stealth ; arm:hasSpeciality "Hiding" ; arm:hasTotalXP 5  ] ;
   arm:advanceFromCharacterSheet :zero ;
   arm:advanceToCharacterSheet :early 
-  ],
+  ]
 [ a arm:LaterLifeAdvancement ; 
   arm:advanceFromCharacterSheet :early ;
   arm:advanceToCharacterSheet :laterlife ;
@@ -96,7 +96,7 @@ armchar:cieran  arm:hasAdvancement
       [ a armab:craft-fletching ; arm:hasTotalXP 30  ],
       [ a armab:hermeslore ; arm:hasSpeciality "Hibernia" ;
         arm:hasTotalXP 5  ]
-  ],
+  ]
 [ a arm:ApprenticeshipAdvancement ; 
   arm:advanceFromCharacterSheet :laterlife ;
   arm:advanceToCharacterSheet :summer1217 ;
@@ -139,4 +139,4 @@ armchar:cieran  arm:hasAdvancement
    [ a armab:thrown ; arm:addedXP 5 ; arm:hasSpeciality "Dart" ],
    [ a armab:arealore-ireland ; arm:hasSpeciality "Legends" ;
      arm:hasTotalXP 5  ]
-  ] .
+  ] ) .

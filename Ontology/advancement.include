@@ -17,6 +17,12 @@ arm:advanceCharacter a owl:ObjectProperty ;
         rdfs:range   arm:Character .
 arm:hasAdvancement a owl:ObjectProperty ;
 	owl:inverseOf  arm:advanceCharacter  .
+arm:hasAdvancementList a owl:ObjectProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:AdvancementList .
+arm:hasPregameAdvancementList a owl:ObjectProperty ;
+        rdfs:domain  arm:Character ;
+        rdfs:range   arm:AdvancementList .
 arm:advanceFromCharacterSheet a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterAdvancement ;
         rdfs:range   arm:CharacterSheet .
