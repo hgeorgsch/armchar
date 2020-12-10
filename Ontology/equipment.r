@@ -39,6 +39,8 @@
    -> ( ?c arm:hasEquipment ?item ) ]
 [ fixhasweapon: ( ?c arm:hasPossession ?item ) ( ?item rdf:type arm:Weapon )
    -> ( ?c arm:hasWeapon ?item ) ]
+[ vislabel: ( ?v arm:isVisOfArt ?art ) ( ?art arm:hasLabel ?l )
+   -> ( ?v arm:hasPossessionLabel ?l ) ]
 
 [ eqinherit: 
   ( ?t rdf:type owl:Class )

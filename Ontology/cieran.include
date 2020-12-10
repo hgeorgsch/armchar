@@ -63,6 +63,9 @@ armchar:elksrun  a arm:Covenant ;
 :zero arm:hasWeapon
     [ a armr:Longbow ; arm:hasQuantity 1 ],
     [ a armr:Dagger ; arm:hasQuantity 1 ] .
+:zero arm:hasVis
+    [ arm:isVisOfArt armr:rego ; arm:hasPossessionDescription "Marbles" ;  arm:hasQuantity 4 ],
+    [ arm:isVisOfArt armr:perdo ; arm:hasQuantity 1 ] .
 
 
 # General Abilities
