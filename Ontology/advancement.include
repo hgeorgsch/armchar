@@ -76,6 +76,9 @@ arm:Reading  rdfs:label  "Reading" .
 arm:advanceTrait a owl:ObjectProperty ;
         rdfs:domain  arm:CharacterAdvancement ;
         rdfs:range   arm:Trait .
+arm:advanceTraitList a owl:ObjectProperty ;
+        rdfs:domain  arm:CharacterAdvancement ;
+        rdfs:range   arm:TraitList .
 arm:advancedFromTrait a owl:ObjectProperty ;
         rdfs:comment "Reference to a previous trait instance from which this trait instance has been advanced." ;
         rdfs:domain  arm:Trait ;

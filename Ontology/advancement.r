@@ -2,9 +2,12 @@
   ( ?s arm:hasAdvancementList ?l )
   -> listMapAsObject(?s, arm:hasAdvancement, ?l)
  ]
-[ hasAdvancement:
-  ( ?s arm:hasPregameAdvancementList ?l )
+[ ( ?s arm:hasPregameAdvancementList ?l )
   -> listMapAsObject(?s, arm:hasAdvancement, ?l)
+ ]
+[ advanceTrait:
+  ( ?s arm:advanceTraitList ?l )
+  -> listMapAsObject(?s, arm:advanceTrait, ?l)
  ]
 # Infer Character Sheets
 [ infercharsheet1:
