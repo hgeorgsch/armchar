@@ -185,4 +185,4 @@
   -> ( ?node  arm:hasListXP ?xp ) ]
 [ ( ?adv arm:advanceTraitList ?l )
   ( ?l arm:hasListXP ?xp )
-  -> ( ?ad arm:hasSpentXP ?xp ) ]
+  -> ( ?adv arm:hasSpentXP ?xp ) ]
