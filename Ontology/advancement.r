@@ -168,3 +168,21 @@
 [ fixhasCharacteristic:
   ( ?c arm:hasTrait ?t ) ( ?t rdf:type arm:Characteristic )
   -> ( ?c arm:hasCharacteristic ?t ) ]
+
+
+[ ( ?node rdf:first ?trait )
+  noValue( ?trait arm:addedXP ?xp ) 
+  -> ( ?trait  arm:hasListXP 0 ) ]
+[ ( ?node rdf:first ?trait )
+  ( ?trait arm:addedXP ?xp ) 
+  ( ?node rdf:rest rdf:nil )
+  -> ( ?node  arm:hasListXP ?xp ) ]
+[ ( ?node rdf:first ?trait )
+  ( ?trait arm:addedXP ?xp1 ) 
+  ( ?node rdf:rest ?r )
+  ( ?r arm:hasListXP ?xp0 ) 
+  sum(?xp0,?xp1,?xp)
+  -> ( ?node  arm:hasListXP ?xp ) ]
+[ ( ?adv arm:advanceTraitList ?l )
+  ( ?l arm:hasListXP ?xp )
+  -> ( ?ad arm:hasSpentXP ?xp ) ]

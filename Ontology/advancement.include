@@ -87,3 +87,11 @@ arm:addedXP a   owl:DatatypeProperty ;
         rdfs:comment  "XP added in the last advancement of the trait.  This is a bit of a hack, allowing the trait defined as an advancement to be reused as a trait in future character sheets.  Thus we do not depend on creating new nodes in the reasoner." ;
         rdfs:domain  arm:Trait ;
         rdfs:range   xsd:int .
+
+arm:hasListXP  a owl:DatatypeProperty ;
+    rdfs:domain   arm:TraitList ;
+    rdfs:range   xsd:int .
+arm:hasSpentXP  a owl:DatatypeProperty ;
+    rdfs:domain   arm:Advancement ;
+    rdfs:range   xsd:int .
+
