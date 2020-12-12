@@ -79,9 +79,9 @@ armchar:cieran  arm:hasPregameAdvancementList
    [ a armab:awareness ; arm:hasSpeciality "searching" ; arm:addedXP 15  ]
    [ a armab:brawl ; arm:hasSpeciality "Dodge" ;  arm:addedXP 15  ]
    [ a armab:arealore-munster ; arm:hasSpeciality "Hiding places" ;
-     arm:hasTotalXP 5  ]
-   [ a armab:folkken ; arm:hasSpeciality "Villagers" ; arm:hasTotalXP 5  ]
-   [ a armab:stealth ; arm:hasSpeciality "Hiding" ; arm:hasTotalXP 5  ] ) ;
+     arm:addedXP 5  ]
+   [ a armab:folkken ; arm:hasSpeciality "Villagers" ; arm:addedXP 5  ]
+   [ a armab:stealth ; arm:hasSpeciality "Hiding" ; arm:addedXP 5  ] ) ;
   arm:advanceFromCharacterSheet :zero ;
   arm:advanceToCharacterSheet :early 
   ]

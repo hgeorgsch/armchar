@@ -172,7 +172,7 @@
 
 [ ( ?node rdf:first ?trait )
   noValue( ?trait arm:addedXP ?xp ) 
-  -> ( ?trait  arm:hasListXP 0 ) ]
+  -> ( ?trait  arm:addedXP 0 ) ]
 [ ( ?node rdf:first ?trait )
   ( ?trait arm:addedXP ?xp ) 
   ( ?node rdf:rest rdf:nil )
