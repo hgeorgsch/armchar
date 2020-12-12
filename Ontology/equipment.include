@@ -5,6 +5,9 @@ arm:UniqueItem rdfs:subClassOf arm:Possession ;
 arm:StockItem rdfs:subClassOf arm:Possession ;
    rdfs:comment "A stock item can be a weapon, piece of equipment, or vis.  Typically a character has a stock of several items, which tend to be expendable." ;
    owl:disjointFrom arm:UniqueItem .
+arm:StandardItem rdfs:subClassOf arm:Possession ;
+   rdfs:comment "A stock item can be a weapon, piece of equipment, or vis.  Typically a character has a stock of several items, which tend to be expendable." ;
+   owl:disjointFrom arm:UniqueItem, arm:StockItem .
 arm:Equipment rdfs:subClassOf arm:Possession .
 arm:Weapon rdfs:subClassOf arm:Possession .
 arm:Vis rdfs:subClassOf arm:StockItem .
