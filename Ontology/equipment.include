@@ -1,8 +1,14 @@
 
 arm:Possession a owl:Class .
+arm:UniqueItem rdfs:subClassOf arm:Possession ;
+   rdfs:comment "A unique item can be a weapon or piece of equipment.  The notable feature is that it is one of a kind, and the item may have a reputation of its own." .
+arm:StockItem rdfs:subClassOf arm:Possession ;
+   rdfs:comment "A stock item can be a weapon, piece of equipment, or vis.  Typically a character has a stock of several items, which tend to be expendable." ;
+   owl:disjointFrom arm:UniqueItem .
 arm:Equipment rdfs:subClassOf arm:Possession .
 arm:Weapon rdfs:subClassOf arm:Possession .
-arm:Vis rdfs:subClassOf arm:Possession .
+arm:Vis rdfs:subClassOf arm:StockItem .
+arm:SuperPossession owl:unionOf ( arm:Possession owl:Class ) ;
 
 arm:hasPossession a owl:ObjectProperty ;
     rdfs:domain arm:CharacterSheet ;
@@ -21,19 +27,19 @@ arm:hasWeapon a owl:ObjectProperty ;
     rdfs:range arm:Weapon .
 
 arm:hasPossessionLabel a owl:DatatypeProperty, arm:PossessionProperty ;
-    rdfs:domain [ owl:unionOf( arm:Possession owl:Class ) ] ;
+    rdfs:domain arm:SuperPossession  ;
     rdfs:range xsd:string .
 arm:hasPossessionDescription a owl:DatatypeProperty, arm:PossessionProperty ;
-    rdfs:domain [ owl:unionOf( arm:Possession owl:Class ) ] ;
+    rdfs:domain arm:SuperPossession  ;
     rdfs:range xsd:string .
 arm:hasOrigin a owl:DatatypeProperty, arm:PossessionProperty ;
-    rdfs:domain [ owl:unionOf( arm:Possession owl:Class ) ] ;
+    rdfs:domain arm:SuperPossession  ;
     rdfs:range xsd:string .
 arm:hasPrice a owl:ObjectProperty, arm:PossessionProperty ;
-    rdfs:domain [ owl:unionOf( arm:Possession owl:Class ) ] ;
+    rdfs:domain arm:SuperPossession  ;
     rdfs:range arm:Value .
 arm:hasQuantity a owl:DatatypeProperty, arm:PossessionProperty ;
-    rdfs:domain [ owl:unionOf( arm:Possession owl:Class ) ] ;
+    rdfs:domain arm:StockItem  ;
     rdfs:range xsd:int .
 
 arm:Value a owl:Class .

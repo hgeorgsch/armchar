@@ -43,11 +43,14 @@ arm:hasSaga a   owl:ObjectProperty ;
 arm:hasSagaTitle a   owl:DatatypeProperty ;
         rdfs:domain  arm:GeneralCharacter ;
         rdfs:range   xsd:string .
+arm:hasTribunal a   owl:DatatypeProperty ;
+        rdfs:domain  arm:GeneralCharacter ;
+        rdfs:range   xsd:string .
+arm:hasFoundingYear a   owl:DatatypeProperty ;
+        rdfs:domain  arm:GeneralCharacter ;
+        rdfs:range   xsd:int .
 
 # Covenant Properties
-arm:hasTribunal a   owl:DatatypeProperty ;
-        rdfs:domain  arm:Covenant ;
-        rdfs:range   xsd:string .
 arm:hasCovenant a   owl:ObjectProperty ;
         rdfs:domain  arm:Saga ;
         rdfs:range   arm:Covenant .
