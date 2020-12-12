@@ -8,7 +8,7 @@ arm:StockItem rdfs:subClassOf arm:Possession ;
 arm:Equipment rdfs:subClassOf arm:Possession .
 arm:Weapon rdfs:subClassOf arm:Possession .
 arm:Vis rdfs:subClassOf arm:StockItem .
-arm:SuperPossession owl:unionOf ( arm:Possession owl:Class ) ;
+arm:SuperPossession owl:unionOf ( arm:Possession owl:Class ) .
 
 arm:hasPossession a owl:ObjectProperty ;
     rdfs:domain arm:CharacterSheet ;
