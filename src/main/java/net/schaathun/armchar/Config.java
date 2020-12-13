@@ -10,13 +10,17 @@ public class Config {
     // public static final String location = "/var/onsite/tdb";
 
    private static String charsheetframefile = "/opt/payara/serverdata/charsheet.frame" ;
+   private static String advancementframefile = "/opt/payara/serverdata/advancement.frame" ;
    public final String charsheetframe ;
+   public final String advancementframe ;
    private static Config instance = null ;
 
    private Config() throws IOException {
 
       this.charsheetframe = 
               new String(Files.readAllBytes(Paths.get(charsheetframefile)));
+      this.advancementframe = 
+              new String(Files.readAllBytes(Paths.get(advancementframefile)));
 
 
 

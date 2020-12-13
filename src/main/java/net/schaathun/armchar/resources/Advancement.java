@@ -32,14 +32,12 @@ import net.schaathun.armchar.Config ;
 @Path("/Advancement")
 public class Advancement {
 
-    @GET
-    @Path("/{id}")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getCharacter(@PathParam("id") String ID) {
 
-        String queryString = Config.prefix
+        String queryString(String ID) {
+	   return Config.prefix
                 + "CONSTRUCT {"
 		+ "    armchar:" + ID + " arm:hasAdvancementList ?adv . "
+		+ "    armchar:" + ID + " a ?t . "
 		+ "    ?advlistRest rdf:first ?advhead ; rdf:rest ?advtail . "
 		+ "    ?advhead ?p ?o . \n" 
 		+ "    ?advhead  arm:advanceTraitList ?list . "
@@ -47,6 +45,7 @@ public class Advancement {
 		+ "    ?head ?p1 ?o1 . \n" 
                 + "} WHERE {"
                 + "  armchar:" + ID + " arm:hasAdvancementList ?adv . "
+		+ "  armchar:" + ID + " a ?t . "
                 + "  OPTIONAL { \n"
                 + "    ?adv rdf:rest* ?advlistRest . \n"
                 + "    ?advlistRest rdf:first ?advhead ; rdf:rest ?advtail . \n"
@@ -59,7 +58,29 @@ public class Advancement {
                 + "    } \n"
                 + "  } \n"
                 + "}";
-        String result = ArMModel.construct(queryString);
+	}
+
+    @GET
+    @Path("/unframed/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getCharacter(@PathParam("id") String ID) 
+				 throws IOException {
+        String result = ArMModel.construct(queryString(ID));
+	if ( result == null ) {
+           return Response.status(404).build();
+	}
+        return Response
+                .ok(result)
+                .build();
+    }
+
+    @GET
+    @Path("/framed/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getFramed(@PathParam("id") String ID) 
+				 throws IOException {
+        String frame = Config.getInstance().advancementframe ;
+        String result = ArMModel.construct(queryString(ID),frame);
 	if ( result == null ) {
            return Response.status(404).build();
 	}
