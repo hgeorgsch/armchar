@@ -57,8 +57,10 @@ armr:elementalMagic      rdfs:subClassOf armr:majorHermeticVirtue ;
                          arm:hasReference   "[ArM5]" ;
                      arm:hasLabel "Elemental Magic" .
 armr:flawlessMagic          rdfs:subClassOf armr:majorHermeticVirtue ;
+     arm:hasDescription 
+     "<p>You automatically master every spell that you learn. All your spells start with a score of 1 in the corresponding Ability. You may choose a different special ability for every spell you have. Further, all experience points you put into Spell Mastery Abilities are doubled.</p>  "  ;
                          a arm:LeafTraitClass ;
-                         arm:hasReference   "[ArM5]" ;
+                         arm:hasReference   "[ArM5:42]" ;
                         arm:hasLabel "Flawless Magic" .
 armr:flexibleFormulaicMagic rdfs:subClassOf armr:majorHermeticVirtue ;
                          a arm:LeafTraitClass ;
