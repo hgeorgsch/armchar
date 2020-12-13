@@ -28,23 +28,23 @@ arm:grantsPTrait a owl:ObjectProperty ;
   rdfs:range   arm:PersonalityTrait .
 arm:grantsTraitClass a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTraitClass ;
-  rdfs:domain   armr:Class ;
-  rdfs:range   armr:Class .
+  rdfs:domain   owl:Class ;
+  rdfs:range   owl:Class .
 arm:grantsPTraitClass a owl:ObjectProperty ;
-  rdfs:domain   armr:Class ;
-  rdfs:range   armr:Class .
+  rdfs:domain   owl:Class ;
+  rdfs:range   owl:Class .
 arm:grantsAbilityClass a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTraitClass ;
-  rdfs:domain   armr:Class ;
-  rdfs:range   armr:Class .
+  rdfs:domain   owl:Class ;
+  rdfs:range   owl:Class .
 arm:grantsFlawClass a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTraitClass ;
-  rdfs:domain   armr:Class ;
-  rdfs:range   armr:Class .
+  rdfs:domain   owl:Class ;
+  rdfs:range   owl:Class .
 arm:grantsVirtueClass a owl:ObjectProperty ;
   rdfs:subPropertyOf arm:grantsTraitClass ;
-  rdfs:domain   armr:Class ;
-  rdfs:range   armr:Class .
+  rdfs:domain   owl:Class ;
+  rdfs:range   owl:Class .
 
 armr:majorHermeticVirtue rdfs:subClassOf armr:majorVirtue ;
                          arm:hasLabel "Hermetic, Major" .
