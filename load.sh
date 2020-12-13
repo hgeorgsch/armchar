@@ -1,4 +1,3 @@
-curl http://localhost:8080/armchar/Character/cieran/summer1217 > json
-curl http://localhost:8080/armchar/Character/test1/cieran/summer1217 > test1
-curl http://localhost:8080/armchar/Character/unframed/cieran/summer1217 > unframed
+curl http://localhost:8080/armchar/Character/cieran > cieran.json
+curl http://localhost:8080/armchar/Character/cieran/1217/Summer > summer1217.json
 
