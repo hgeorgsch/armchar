@@ -4,7 +4,7 @@
 
 # Saga
 arm:Saga a owl:Class .
-arm:hasSG a   owl:DatatypeProperty ;
+arm:hasSG a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  [ owl:unionOf ( arm:Saga arm:GeneralCharacter ) ] ;
         rdfs:range   xsd:string .
 arm:hasTitle a   owl:DatatypeProperty ;
@@ -40,13 +40,13 @@ arm:hasName a   owl:DatatypeProperty ;
 arm:hasSaga a   owl:ObjectProperty ;
         rdfs:domain  arm:GeneralCharacter ;
         rdfs:range   arm:Saga .
-arm:hasSagaTitle a   owl:DatatypeProperty ;
+arm:hasSagaTitle a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  arm:GeneralCharacter ;
         rdfs:range   xsd:string .
-arm:hasTribunal a   owl:DatatypeProperty ;
+arm:hasTribunal a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  arm:GeneralCharacter ;
         rdfs:range   xsd:string .
-arm:hasFoundingYear a   owl:DatatypeProperty ;
+arm:hasFoundingYear a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  arm:GeneralCharacter ;
         rdfs:range   xsd:int .
 
@@ -54,30 +54,30 @@ arm:hasFoundingYear a   owl:DatatypeProperty ;
 arm:hasCovenant a   owl:ObjectProperty ;
         rdfs:domain  arm:Saga ;
         rdfs:range   arm:Covenant .
-arm:hasCovenantName a   owl:DatatypeProperty ;
+arm:hasCovenantName a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  [ owl:unionOf( arm:Saga arm:GeneralCharacter ) ] ;
         rdfs:range   xsd:string .
 
 # Character Properties
-arm:hasPlayer a   owl:DatatypeProperty ;
+arm:hasPlayer a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
-arm:hasGender a   owl:DatatypeProperty ;
+arm:hasGender a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
-arm:hasProfession a   owl:DatatypeProperty ;
+arm:hasProfession a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
-arm:hasNationality a   owl:DatatypeProperty ;
+arm:hasNationality a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
-arm:hasAlmaMater a   owl:DatatypeProperty ;
+arm:hasAlmaMater a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:string .
-arm:hasBirthYear a   owl:DatatypeProperty ;
+arm:hasBirthYear a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:int .
-arm:hasAge a   owl:DatatypeProperty ;
+arm:hasAge a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  arm:Character ;
         rdfs:range   xsd:int .
 
