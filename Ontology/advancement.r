@@ -171,6 +171,7 @@
 
 
 [ ( ?node rdf:first ?trait )
+  ( ?trait rdf:type arm:Trait )
   noValue( ?trait arm:addedXP ?xp ) 
   -> ( ?trait  arm:addedXP 0 ) ]
 [ ( ?node rdf:first ?trait )
