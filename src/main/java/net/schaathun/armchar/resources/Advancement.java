@@ -149,12 +149,12 @@ public class Advancement {
     @GET
     @Path("/{id}/{year}/{season}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAdv(@PathParam("id") String id,
+    public Response getAdv(@PathParam("id") String ID,
                                  @PathParam("year") int year,
                                  @PathParam("season") String season ) 
 				 throws IOException {
         String frame = Config.getInstance().advancementframe ;
-        String result = ArMModel.construct(queryStringSeason(ID),frame);
+        String result = ArMModel.construct(queryStringSeason(ID,year,season),frame);
 	if ( result == null ) {
            return Response.status(404).build();
 	}
