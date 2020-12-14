@@ -112,7 +112,7 @@ public class Advancement {
     public Response getLite(@PathParam("id") String ID) 
 				 throws IOException {
         String frame = Config.getInstance().advancementframe ;
-        String result = ArMModel.construct(queryString2(ID),frame);
+        String result = ArMModel.construct(queryStringLite(ID),frame);
 	if ( result == null ) {
            return Response.status(404).build();
 	}
