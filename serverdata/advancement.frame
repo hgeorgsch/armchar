@@ -11,9 +11,8 @@
     "armchar" : "https://hg.schaathun.net/armchar/character/"
   },
   "@type" : [ "arm:Character" ],
-  "arm:hasAdvancementList" : { "@type": [ "arm:Advancement" ],
+  "arm:hasAdvancementList" : { "@type": [ "arm:CharacterAdvancement" ],
 			       "arm:advanceTraitList": {
-			              "@type": [ "arm:Trait" ],
 				  }
 			       }
 }
