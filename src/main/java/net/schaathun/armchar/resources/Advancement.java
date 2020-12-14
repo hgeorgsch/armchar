@@ -121,6 +121,47 @@ public class Advancement {
                 .build();
     }
 
+    private String queryStringSeason(String id, int year, String season) {
+       return Config.prefix
+                + "CONSTRUCT { \r\n" 
+		+ " ?adv a arm:CharacterAdvancement . \r\n"
+		+ " ?adv ?dp ?dval .  \r\n"
+		+ " ?adv ?op ?oval . \r\n"
+                + " ?adv ?p ?op . \r\n" 
+		+ "    ?adv  arm:advanceTraitList ?list . "
+		+ "    ?listRest rdf:first ?head ; rdf:rest ?tail . "
+		+ "    ?head ?p1 ?o1 . \n" 
+                + "} WHERE { \r\n " 
+                + " ?adv arm:advanceCharacter armchar:" + id + " . \r\n"
+		+ " ?adv arm:atSeason \"" + season + "\" . \r\n"
+		+ " ?adv arm:inYear " + year + " . \r\n"
+		+ " ?adv a arm:CharacterAdvancement . \r\n"
+		+ " ?adv ?p ?op . \r\n"
+                + "    OPTIONAL { \n"
+                + "       ?adv arm:advanceTraitList ?list . \n"
+                + "       ?list rdf:rest* ?listRest . \n"
+                + "       ?listRest rdf:first ?head ; rdf:rest ?tail . \n"
+                + "       ?head ?p1 ?o1 . \n"
+                + "    } \n"
+                + "}";
+       } 
+
+    @GET
+    @Path("/{id}/{year}/{season}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAdv(@PathParam("id") String id,
+                                 @PathParam("year") int year,
+                                 @PathParam("season") String season ) 
+				 throws IOException {
+        String frame = Config.getInstance().advancementframe ;
+        String result = ArMModel.construct(queryStringSeason(ID),frame);
+	if ( result == null ) {
+           return Response.status(404).build();
+	}
+        return Response
+                .ok(result)
+                .build();
+    }
 
 }
 
