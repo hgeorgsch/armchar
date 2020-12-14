@@ -34,7 +34,7 @@ arm:Grog a owl:Class ;
     owl:disjointWith arm:Companion, arm:Magus .
 
 # Covenant and Character - Shared Properties
-arm:hasName a   owl:DatatypeProperty ;
+arm:hasName a   owl:DatatypeProperty, arm:CharacterProperty ;
         rdfs:domain  arm:GeneralCharacter ;
         rdfs:range   xsd:string .
 arm:hasSaga a   owl:ObjectProperty ;
