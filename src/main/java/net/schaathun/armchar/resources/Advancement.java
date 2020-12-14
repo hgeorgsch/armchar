@@ -59,6 +59,23 @@ public class Advancement {
                 + "  } \n"
                 + "}";
 	}
+        String queryStringLite(String ID) {
+	   return Config.prefix
+                + "CONSTRUCT {"
+		+ "    armchar:" + ID + " arm:hasAdvancementList ?adv . "
+		+ "    armchar:" + ID + " a ?t . "
+		+ "    ?advlistRest rdf:first ?advhead ; rdf:rest ?advtail . "
+		+ "    ?advhead ?p ?o . \n" 
+                + "} WHERE {"
+                + "  armchar:" + ID + " arm:hasAdvancementList ?adv . "
+		+ "  armchar:" + ID + " a ?t . "
+                + "  OPTIONAL { \n"
+                + "    ?adv rdf:rest* ?advlistRest . \n"
+                + "    ?advlistRest rdf:first ?advhead ; rdf:rest ?advtail . \n"
+                + "    ?advhead ?p ?o . \n"
+                + "  } \n"
+                + "}";
+	}
 
     @GET
     @Path("/unframed/{id}")
@@ -81,6 +98,21 @@ public class Advancement {
 				 throws IOException {
         String frame = Config.getInstance().advancementframe ;
         String result = ArMModel.construct(queryString(ID),frame);
+	if ( result == null ) {
+           return Response.status(404).build();
+	}
+        return Response
+                .ok(result)
+                .build();
+    }
+
+    @GET
+    @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getLite(@PathParam("id") String ID) 
+				 throws IOException {
+        String frame = Config.getInstance().advancementframe ;
+        String result = ArMModel.construct(queryString2(ID),frame);
 	if ( result == null ) {
            return Response.status(404).build();
 	}
