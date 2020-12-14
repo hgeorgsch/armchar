@@ -199,7 +199,7 @@ armchar:cieran  arm:hasAdvancementList
   arm:advanceToCharacterSheet :autumn1223 
   ]
 [ a arm:CharacterAdvancement ; arm:atSeasonTime arm:autumn1223 ;
-  arm:hasAdvancementDescription "Read Animàl L15Q14+3" ;
+  arm:hasAdvancementDescription "Read Animal L15Q14+3" ;
   arm:advanceTraitList ( [ a armr:animal ; arm:addedXP 17 ] )   ;
   arm:hasAdvancementType arm:Reading ;
   arm:advanceToCharacterSheet :winter1224 
