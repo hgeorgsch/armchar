@@ -2,7 +2,7 @@
 # Some ideas towards an ArM character generator
 
 These ideas assume an RDF data model and logic inference rules
-for the general reasoner in apache Jena.
+for the general reasoner in Apache Jena (a Java API).
 
 An RDF document is a set of triplets, (subject, predicate, object).
 A set of triplets can be seen to form a graph, where the subjects
@@ -49,7 +49,7 @@ at a later stage.  The special predicate `a` means "instance of class".
 
 The properties described above are supposed to be constant throughout
 the magus' life.  To handle variable traits, we define the character
-at a given time.  For instance, we can have the character at birth
+sheet at a given time.  For instance, we can have the character at birth
 defined as:
 
 ```
@@ -186,3 +186,133 @@ Note that the advancement is coded manually.  A more advance version
 could draw the book from a covenant library document, apply the +3 from
 book learner automatically, and derive the arm:addedXP property.
 
+## Inferring the character sheet at a given time
+
+We want to deduce the character sheet at a given time from the
+character at birth `:zero` and the various advancements made.
+For this, we use the general reasoner of Apache Jena, which has its
+own logic language to write inference rules.
+
+Note the terminology.  We refer to a character as the character's
+identity, independent of time.  A character sheet is a character
+at a given time, with all the stats at that time.
+
+Let's take a quick example first:
+
+```
+[ addsize: 
+  ( ?c rdf:type arm:Character ) ( ?c arm:hasOtherTrait ?s ) 
+  ( ?s rdf:type arm:Size ) 
+  ( ?s arm:hasScore ?size ) 
+  -> ( ?c arm:hasSize ?size ) ]
+```
+
+This should be read as, given that we have a character `c` of
+type `arm:Character` and which has a trait `s` where `s` is of type
+`arm:Size` and has the score `size`, we infer that `c` has size
+`size`.  The identifier `addsize` is just a name for the rule and
+can be ignored.
+
+The character sheet should have all the properties of the character.
+This is handled by this rule:
+
+```
+[ charsheet2: ( ?c rdf:type arm:CharacterSheet )
+             ( ?c arm:isCharacter ?b ) ( ?b ?p ?o )
+	     ( ?p rdfs:domain arm:Character )
+             noValue(?p,rdf:type,arm:ignoredProperty)
+	     -> ( ?c ?p ?o ) ]
+```
+
+The `noValue` clause is an implementation detail.  Properties marked
+to be ignored in the schema are not copied.  This is to avoid generating
+an excessive number of triplets.
+
+Finally, let's take a more intesting example, deducing the ability score
+given a sequence of advancements. 
+
+```
+[ artscore:
+  ( ?s rdf:type arm:AccelleratedTrait )
+  -> [ ( ?s arm:hasScore ?score ) <-
+    ( ?s arm:hasTotalXP ?xp )
+    ( ?e armpyramid:xp ?xp )
+    ( ?e armpyramid:artScore ?score )
+    ( ?e rdf:type armpyramid:xpTableEntry )
+  ]
+  [ ( ?s arm:hasXP ?rem ) <-
+    ( ?s arm:hasTotalXP ?xp )
+    ( ?e armpyramid:xp ?xp )
+    ( ?e armpyramid:artRemainder ?rem )
+    ( ?e rdf:type armpyramid:xpTableEntry )
+ ]
+ ]
+[ abscore:
+  ( ?s rdf:type arm:XPTrait )
+  -> [ ( ?s arm:hasScore ?score ) <-
+  ( ?s arm:hasTotalXP ?xp )
+  ( ?e rdf:type armpyramid:xpTableEntry )
+  ( ?e armpyramid:xp ?xp )
+  ( ?e armpyramid:abScore ?score )
+  ] [ ( ?s arm:hasXP ?rem ) <-
+  ( ?s arm:hasTotalXP ?xp )
+  ( ?e rdf:type armpyramid:xpTableEntry )
+  ( ?e armpyramid:xp ?xp )
+  ( ?e armpyramid:abRemainder ?rem )
+	]
+ ]
+```
+
+Apologies for badly chosen identifiers here.  The logic does not
+need to distinguish between accellerated abilities and Hermetic arts,
+so we refer instead to a class of traits with XP on the arts scale and
+one with XP on the abilities scale.  An instance can be a member of
+any number of classes (unless the classes are explicitly disjoint), so
+we can still have Arts and Abilities classes orthogonally on the 
+Accellerated/Difficult classes.
+
+## An implementation in Jena
+
+Jena support the following basic operations which we need.
+
+1.  Load an RDF graph from a text file.  A number of different formats
+    are supported, including the turtle format used here.  The result
+    is an RDF graph stored internally in Jena.
+2.  Multiple documents can be loaded and merged into a union graph.
+    In particular, we load additional graphs specifying canon traits.
+3.  The Jena inference engine can load a rule set as exemplified above,
+    and apply it to an underlying RDF graph (the character).  The
+    result is a virtual RDF graph containing all the inferred properties.
+4.  The character sheet can be serialised in JSON-LD (or any RDF format).
+    The export can be made complete or selective, and in particular, it
+    is possible to define which properties to include in an RDF document,
+    which can be loaded.
+5.  Editing the character should change only the underlying graph
+    (journal).  An updated character can be exported to a file (same
+    as the import).  Working on the underlying graph, any inferences
+    are excluded.
+
+
+## A Web Services Architecture
+
+One approach is to make separate web services for the character journal
+and the character sheet.  The latter would be read only.
+
+Separate Client components could then be made to edit the journal and to 
+view the character sheet, each client communicating with its own web services.
+This modularises the system into very small components.
+
+Additional web services to manage covenants and sagas could pull data
+from the first two services, without worrying about their internal logic.
+
+## Caveats
+
+1.  Some inferences can be difficult to code in the rules language,
+    and may require superior skills in formal logic.
+2.  Inferences may be computationally expensive.  This has to be tested,
+    but it may require the inference graphs to be retained in memory to
+    avoid recomputation.
+3.  An open server may not be able to scale for hundreds of sagas, because
+    of the large inference graphs created for each character.
+    This is unlikely to be an issue for a single saga with a limited
+    number of characters.
