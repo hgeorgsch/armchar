@@ -1,3 +1,10 @@
+#!/bin/sh
+# This is made for testing.
+# It downloads JSON files from the server for validation.
+# A side effect is that it forces the server to load the data files
+# and infer the derived graphs, which may be useful when the server
+# is restarted.
+
 # curl http://localhost:8080/armchar/Advancement/cieran > adv.json
 curl http://localhost:8080/armchar/Advancement/framed/cieran > framed.json
 curl http://localhost:8080/armchar/Advancement/unframed/cieran > unframed.json
