@@ -1,3 +1,7 @@
+#!/bin/sh
+# Build the system and deploy it in a payara docker instance.
+# This is not intended to be portable.
+
 ( cd Ontology ; make install )
 mvn install || exit
 docker stop armchar
