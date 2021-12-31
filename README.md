@@ -23,7 +23,10 @@ mkdir -p tdb
 $JDIR/tdbloader2 --loc tdb Ontology/cieran.ttl Ontology/contested.ttl 
 ```
 
-Finally, we build and start the web server:
+Finally, we build and start the web server.
+This requires docker.  Depending on the docker installation, you may
+or may not need to change the permissions and ownership of the tdb
+directory.
 
 ```
 mvn install || exit
@@ -37,13 +40,8 @@ The server takes a while to start.  You can test it by downloading
 character data, for instance,
 
 ```sh
-curl http://localhost:8080/armchar/Advancement/framed/cieran > framed.json
-curl http://localhost:8080/armchar/Advancement/unframed/cieran > unframed.json
-curl http://localhost:8080/armchar/Character/cieran > cieran.json
 curl http://localhost:8080/armchar/Character/cieran/1217/Summer > summer1217.json
-curl http://localhost:8080/armchar/dump/jsonld-inf > dump.json
 ```
 
-Note that it takes a long time to initialise, easily ten minutes, or more
-on a slow box. This is a one-time cost, however, as the inference graph is
-built.
+Note that it takes a couple of minutes to initialise.
+This is a one-time cost, however, as the inference graph is built.
