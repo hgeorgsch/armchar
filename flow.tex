@@ -1,9 +1,15 @@
 \documentclass{standalone}
 
 \usepackage{tikz}
+\author{George}
+\title{An ArM System Sketch}
 
 \begin{document}
+\maketitle
 
+This is a sketch for discussion.
+
+\begin{figure}
 \begin{tikzpicture}
    \tikzstyle{file}=[fill=green!20,rounded corners,draw]
    \tikzstyle{transform}=[fill=red!10,draw]
@@ -31,9 +37,31 @@
    \path [arrow] (tgen) -- (tex) ;
    \path [arrow] (tex) -- (luatex) ;
    \path [arrow] (luatex) -- (pdf) ;
-   \node (web) [draw,right of=tgen,node distance=2in] {Web Client} ;
+   \node (web) [draw,right of=tgen,node distance=2in] {Web View} ;
    \path [arrow] (sheet) -> (web) ;
    \path [arrow] (sheet2) -> (web) ;
 \end{tikzpicture}
+   \caption{System flow, with files in green and transformation in red.}
+\end{figure}
+
+\begin{itemize}
+        \item 
+File formats could be either JSON-LD, (custom) JSON, or any RDF
+serialisation.
+        \item 
+           Only the Journal file should be edited.
+        \item 
+           The diagrams is shown in terms of files, but this does not
+           have to imply files on disk.  They could be files transmitted
+           between micro-services and clients over the network, or
+           data structures within one monolithic system.
+        \item 
+           The system will depend on additional resource files;
+           most importantly canon trait descriptions, possibly also
+           other rulesets.  It is an open question what should be
+           hard coded and what should be defined in customisable files.
+\end{itemize}
+
+
 
 \end{document}
