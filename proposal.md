@@ -13,7 +13,8 @@
         + a pre-game stage (early childhood, etc.)
     + Activity objects each of which contains
         + narrative description (String)
-        + TraitDelta objects
+        + collection of TraitDelta objects
+        + collection of EquipmentDelta objects
         + (more mechanical properties may be added later, but for an MVP,
           I am only interested in the TraitDelta)
 + CharacterSheet object contains
@@ -22,6 +23,10 @@
     + collection of Trait objects which contains
         + method to apply a single TraitDelta object to make a 
           new Trait object
+    + collection of Equipment objects
+        - in particular weapons for generation of combat stats
+        - it may be a challenge to handle natural weapons, artificial
+          weapons and other equipment consistently
     + method to apply a sequence of TraitDelta object to 
       return a CharacterSheet for the next Time
         + (we might feed in a JournalEntry, but I assume here that
