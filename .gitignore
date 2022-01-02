@@ -32,3 +32,10 @@ json
 autumn
 test
 *.json
+
+# TeX
+*.aux
+*.log
+*.blg
+*.bbl
+flow.pdf
